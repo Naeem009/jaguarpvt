@@ -1,0 +1,5 @@
+Before generating any code for this project, read /docs/00-PROJECT-OVERVIEW.md,
+   /docs/01-BRAND-DESIGN-SYSTEM.md, and /docs/06-COMPONENT-LIBRARY-SPEC.md.
+   This is a B2B apparel manufacturer website — never add e-commerce patterns
+   (cart, checkout, pricing, "buy now"). Follow the design system tokens exactly.
+   Match the voice defined in /docs/03-CONTENT-STRATEGY-COPY.md.
