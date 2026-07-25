@@ -26,7 +26,6 @@ export function Footer({ className }: { className?: string }) {
       links: [
         { label: t("wovens"), href: "/products/wovens" as const },
         { label: t("knits"), href: "/products/knits" as const },
-        { label: t("denim"), href: "/products/denim" as const },
         { label: t("babyWear"), href: "/products/baby-wear" as const },
       ],
     },

@@ -3,7 +3,6 @@ import { z } from "zod";
 export const productCategoryValues = [
   "wovens",
   "knits",
-  "denim",
   "baby-wear",
   "multiple",
 ] as const;
@@ -54,7 +53,6 @@ export type ContactFormValues = z.infer<typeof contactFormSchema>;
 export const productCategoryLabels: Record<(typeof productCategoryValues)[number], string> = {
   wovens: "Wovens",
   knits: "Knits",
-  denim: "Denim",
   "baby-wear": "Baby Wear",
   multiple: "Multiple categories",
 };

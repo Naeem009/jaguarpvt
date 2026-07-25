@@ -19,14 +19,12 @@ export type MatcherResult = {
 const categoryLabels: Record<string, string> = {
   wovens: "Wovens",
   knits: "Knits",
-  denim: "Denim",
   "baby-wear": "Baby Wear",
 };
 
 const certificationMap: Record<string, string[]> = {
   wovens: ["OEKO-TEX", "WRAP"],
   knits: ["GOTS", "OEKO-TEX"],
-  denim: ["OEKO-TEX", "WRAP"],
   "baby-wear": ["GOTS", "OEKO-TEX", "WRAP"],
 };
 

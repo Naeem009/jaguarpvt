@@ -1,4 +1,4 @@
-export type ProductCategorySlug = "wovens" | "knits" | "denim" | "baby-wear";
+export type ProductCategorySlug = "wovens" | "knits" | "baby-wear";
 
 export type ProductCategoryContent = {
   slug: ProductCategorySlug;
@@ -110,50 +110,6 @@ export const productCategories: Record<ProductCategorySlug, ProductCategoryConte
     innovation: {
       title: "Performance knit development",
       body: "Development support for moisture management, stretch recovery, and hand-feel targets — from lab dips through bulk validation for activewear and lifestyle programs.",
-    },
-  },
-  denim: {
-    slug: "denim",
-    name: "Denim",
-    headline: "Denim",
-    subhead: "Denim development, washing, and finishing with process control from fabric through garment.",
-    heroImage: "/images/products/denim/hero.svg",
-    gridDescription:
-      "Denim development, washing, and finishing with process control from fabric through garment.",
-    timelineSteps: [
-      {
-        title: "Fabric development and approval",
-        description:
-          "Denim programs start with fabric trials — weight, weave, indigo shade, and shrinkage profiles are locked before cutting to protect wash consistency.",
-        image: processImages("denim").step1,
-      },
-      {
-        title: "Cutting, sewing, and dry processes",
-        description:
-          "Cutting, sewing, and dry finishing (hand-sand, laser, whisker) are sequenced to buyer wash recipes with shade and measurement control.",
-        image: processImages("denim").step2,
-      },
-      {
-        title: "Washing, finishing, and audit",
-        description:
-          "Garment washing and finishing follow approved recipes — with water-recycling systems at selected facilities and final audit before dispatch.",
-        image: processImages("denim").step3,
-      },
-    ],
-    specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Laser finishing, ozone/wash units, drying tunnels, modular sewing" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Wash capabilities", value: "Indigo, black, grey, eco-wash recipes — facility-specific" },
-      { label: "Water management", value: "Recycling and low-liquor systems at [X] selected denim facilities" },
-    ],
-    sustainability: {
-      title: "Water reduction in denim finishing",
-      body: "Denim washing is the highest-impact stage in many programs. Our published approach includes low-liquor wash recipes, water recycling at selected facilities, and ongoing measurement against internal benchmarks — not a guarantee of outcomes for every order.",
-    },
-    innovation: {
-      title: "Wash recipe and shade consistency",
-      body: "Development support for wash recipes, shade continuity across bulk, and finishing techniques that reduce re-wash rates — supporting brands with consistent denim storytelling at scale.",
     },
   },
   "baby-wear": {

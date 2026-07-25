@@ -32,17 +32,17 @@
   {
     "id": "chennai-denim-hub",
     "slug": "chennai-denim-hub",
-    "name": "Chennai Denim Hub",
+    "name": "Chennai Woven & Finishing Hub",
     "country": "India",
     "city": "Chennai",
     "region": "South Asia",
     "latitude": 13.0827,
     "longitude": 80.2707,
-    "categories": ["denim", "wovens"],
+    "categories": ["wovens"],
     "certifications": ["OEKO-TEX", "WRAP"],
     "employees": 3500,
     "establishedYear": 2001,
-    "description": "Denim washing, finishing, and woven bottom-weight production."
+    "description": "Woven bottom-weight production and garment finishing."
   },
   {
     "id": "ho-chi-minh-apparel",
@@ -62,17 +62,17 @@
   {
     "id": "istanbul-denim",
     "slug": "istanbul-denim",
-    "name": "Istanbul Denim & Woven Center",
+    "name": "Istanbul Woven Center",
     "country": "Turkey",
     "city": "Istanbul",
     "region": "Europe & Middle East",
     "latitude": 41.0082,
     "longitude": 28.9784,
-    "categories": ["denim", "wovens"],
+    "categories": ["wovens"],
     "certifications": ["GOTS", "OEKO-TEX"],
     "employees": 2900,
     "establishedYear": 1995,
-    "description": "Denim development and woven shirting with proximity to European markets."
+    "description": "Woven shirting with proximity to European markets."
   },
   {
     "id": "cairo-wovens",
@@ -137,16 +137,16 @@
   {
     "id": "los-angeles-denim-lab",
     "slug": "los-angeles-denim-lab",
-    "name": "Los Angeles Denim Development Lab",
+    "name": "Los Angeles Development Lab",
     "country": "United States",
     "city": "Los Angeles",
     "region": "North America",
     "latitude": 34.0522,
     "longitude": -118.2437,
-    "categories": ["denim"],
+    "categories": ["wovens"],
     "certifications": ["OEKO-TEX"],
     "employees": 320,
     "establishedYear": 2018,
-    "description": "Denim wash development, sampling, and buyer-facing technical support."
+    "description": "Sampling and buyer-facing technical support for woven programs."
   }
 ]

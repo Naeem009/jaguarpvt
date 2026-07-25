@@ -30,7 +30,6 @@ const categoryAliases: Record<string, string[]> = {
   knits: ["knits"],
   woven: ["wovens"],
   wovens: ["wovens"],
-  denim: ["denim"],
   "baby wear": ["baby-wear"],
   "baby-wear": ["baby-wear"],
 };

@@ -19,7 +19,6 @@ import { ESG_REPORT_URL } from "@/lib/our-impact/content";
 const categoryOptions: Array<{ value: EstimatorCategory; label: string }> = [
   { value: "wovens", label: "Wovens" },
   { value: "knits", label: "Knits" },
-  { value: "denim", label: "Denim" },
   { value: "baby-wear", label: "Baby Wear" },
 ];
 

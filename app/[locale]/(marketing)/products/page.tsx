@@ -20,13 +20,13 @@ export default async function ProductsHubPage({ params }: PageProps) {
       <Hero
         variant="inner"
         headline="Products"
-        subhead="Four core categories — wovens, knits, denim, and baby wear — supported by integrated manufacturing, compliance systems, and development capability."
+        subhead="Three core categories — wovens, knits, and baby wear — supported by integrated manufacturing, compliance systems, and development capability."
         primaryCTA={{ label: "Contact Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore categories", href: "#categories" }}
         media={{
           type: "image",
           src: "/images/products/wovens/hero.svg",
-          alt: "Apparel product categories across wovens, knits, denim, and baby wear",
+          alt: "Apparel product categories across wovens, knits, and baby wear",
         }}
       />
 

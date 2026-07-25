@@ -9,6 +9,7 @@ import {
   StatBar,
   TrustStrip,
 } from "@/components/sections";
+import { productHubGridItems } from "@/lib/products/content";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -27,7 +28,7 @@ export default async function HomePage({ params }: PageProps) {
       <Hero
         variant="home"
         headline="Manufacturing, engineered for what's next."
-        subhead="Vertically integrated production across wovens, knits, denim, and baby wear — serving global brands at [X] facilities in [Y] countries."
+        subhead="Vertically integrated production across wovens, knits, and baby wear — serving global brands at [X] facilities in [Y] countries."
         primaryCTA={{ label: "Contact Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore Products", href: "/products" }}
         media={{
@@ -46,39 +47,7 @@ export default async function HomePage({ params }: PageProps) {
         ]}
       />
 
-      <ProductGrid
-        items={[
-          {
-            title: "Wovens",
-            href: "/products/wovens",
-            image: "/images/products/wovens/hero.svg",
-            description:
-              "Structured shirting, bottoms, and uniform programs with integrated cutting, sewing, and finishing.",
-          },
-          {
-            title: "Knits",
-            href: "/products/knits",
-            image: "/images/products/knits/hero.svg",
-            description:
-              "Jersey, fleece, and performance knits with capacity for large programs and certified organic options.",
-          },
-          {
-            title: "Denim",
-            href: "/products/denim",
-            image: "/images/products/denim/hero.svg",
-            description:
-              "Denim development, washing, and finishing with process control from fabric through garment.",
-          },
-          {
-            title: "Baby Wear",
-            href: "/products/baby-wear",
-            image: "/images/products/baby-wear/hero.svg",
-            description:
-              "Soft-hand baby and infant apparel with compliance-focused construction and finishing.",
-            badge: "Catalogue",
-          },
-        ]}
-      />
+      <ProductGrid items={productHubGridItems} />
 
       <AIChatWidget
         mode="embedded"
@@ -105,7 +74,7 @@ export default async function HomePage({ params }: PageProps) {
             alt: "Jaguar logo mark",
           },
           {
-            label: "Denim programs",
+            label: "Woven programs",
             image: "/logos/logo-mark.svg",
             alt: "Jaguar logo mark",
           },

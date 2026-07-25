@@ -16,7 +16,6 @@ export const marketingRoutes = [
   "/products",
   "/products/wovens",
   "/products/knits",
-  "/products/denim",
   "/products/baby-wear",
 ] as const;
 
@@ -33,7 +32,6 @@ export type PageMetadataKey =
   | "products"
   | "wovens"
   | "knits"
-  | "denim"
   | "babyWear";
 
 export const pageMetadata: Record<
@@ -44,7 +42,7 @@ export const pageMetadata: Record<
     path: "",
     title: "Vertically Integrated Apparel Manufacturer",
     description:
-      "Manufacturing partnerships across wovens, knits, denim, and baby wear for global brands.",
+      "Manufacturing partnerships across wovens, knits, and baby wear for global brands.",
   },
   about: {
     path: "/about",
@@ -89,7 +87,7 @@ export const pageMetadata: Record<
   products: {
     path: "/products",
     title: "Products",
-    description: "Explore wovens, knits, denim, and baby wear manufacturing capabilities.",
+    description: "Explore wovens, knits, and baby wear manufacturing capabilities.",
   },
   wovens: {
     path: "/products/wovens",
@@ -100,11 +98,6 @@ export const pageMetadata: Record<
     path: "/products/knits",
     title: "Knits",
     description: "Jersey, fleece, and performance knit manufacturing programs.",
-  },
-  denim: {
-    path: "/products/denim",
-    title: "Denim",
-    description: "Denim development, washing, and finishing capabilities.",
   },
   babyWear: {
     path: "/products/baby-wear",

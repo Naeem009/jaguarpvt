@@ -33,7 +33,6 @@ const steps = [
 const categoryOptions = [
   { value: "wovens", label: "Wovens" },
   { value: "knits", label: "Knits" },
-  { value: "denim", label: "Denim" },
   { value: "baby-wear", label: "Baby Wear" },
 ];
 
@@ -48,7 +47,6 @@ const materialOptions = [
   { value: "cotton", label: "Cotton" },
   { value: "organic-cotton", label: "Organic cotton" },
   { value: "polyester", label: "Polyester / blends" },
-  { value: "denim-indigo", label: "Denim / indigo" },
   { value: "recycled-fiber", label: "Recycled fiber inputs" },
 ];
 

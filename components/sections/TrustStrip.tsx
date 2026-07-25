@@ -15,7 +15,7 @@ export type TrustStripProps = {
 };
 
 export function TrustStrip({
-  title = "Trusted by leading activewear, denim, and lifestyle brands",
+  title = "Trusted by leading activewear and lifestyle brands",
   categories,
   className,
 }: TrustStripProps) {

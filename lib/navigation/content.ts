@@ -1,33 +1,7 @@
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
-import { productCategories } from "@/lib/products/content";
+import { productHubGridItems } from "@/lib/products/content";
 
-export const productsMegaMenuItems = [
-  {
-    title: productCategories.wovens.name,
-    href: "/products/wovens",
-    description: productCategories.wovens.gridDescription,
-    image: productCategories.wovens.heroImage,
-  },
-  {
-    title: productCategories.knits.name,
-    href: "/products/knits",
-    description: productCategories.knits.gridDescription,
-    image: productCategories.knits.heroImage,
-  },
-  {
-    title: productCategories.denim.name,
-    href: "/products/denim",
-    description: productCategories.denim.gridDescription,
-    image: productCategories.denim.heroImage,
-  },
-  {
-    title: productCategories["baby-wear"].name,
-    href: "/products/baby-wear",
-    description: productCategories["baby-wear"].gridDescription,
-    image: productCategories["baby-wear"].heroImage,
-    badge: "Catalogue",
-  },
-];
+export const productsMegaMenuItems = productHubGridItems;
 
 export const impactMegaMenuItems = [
   {
@@ -68,7 +42,6 @@ export const footerColumns = [
     links: [
       { label: "Wovens", href: "/products/wovens" },
       { label: "Knits", href: "/products/knits" },
-      { label: "Denim", href: "/products/denim" },
       { label: "Baby Wear", href: "/products/baby-wear" },
     ],
   },

@@ -1,4 +1,4 @@
-export type EstimatorCategory = "wovens" | "knits" | "denim" | "baby-wear";
+export type EstimatorCategory = "wovens" | "knits" | "baby-wear";
 
 export type EstimatorMaterial = "conventional" | "organic-cotton" | "recycled";
 
@@ -43,12 +43,6 @@ const categoryBenchmarks: Record<
     co2PerUnit: 2.9,
     industryWaterPerUnit: 3.6,
     industryCo2PerUnit: 3.8,
-  },
-  denim: {
-    waterPerUnit: 7.5,
-    co2PerUnit: 5.2,
-    industryWaterPerUnit: 10.2,
-    industryCo2PerUnit: 7.1,
   },
   "baby-wear": {
     waterPerUnit: 2.2,

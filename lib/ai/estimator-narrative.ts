@@ -3,7 +3,6 @@ import type { EstimatorInput, EstimatorOutput } from "@/lib/our-impact/estimator
 const categoryLabels: Record<string, string> = {
   wovens: "wovens",
   knits: "knits",
-  denim: "denim",
   "baby-wear": "baby wear",
 };
 

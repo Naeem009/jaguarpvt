@@ -38,9 +38,9 @@ const defaultPrompts: ExamplePrompt[] = [
       "Based on our published capability data, we support certified organic cotton knits across selected facilities. Capacity varies by season and program — connect with our team for a current availability review.",
   },
   {
-    question: "Which of your facilities handle denim finishing and washing?",
+    question: "Which of your facilities support GOTS-certified organic cotton programs?",
     answer:
-      "Denim finishing and washing are listed among our denim category capabilities. Specific facility assignments depend on order profile and compliance requirements.",
+      "GOTS-certified organic cotton programs are listed among our knit and baby wear capabilities at selected facilities. Specific facility assignments depend on order profile and compliance requirements.",
   },
   {
     question: "What sustainability certifications do you currently hold?",

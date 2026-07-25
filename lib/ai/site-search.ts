@@ -18,7 +18,7 @@ const siteSearchIndex: SiteSearchEntry[] = [
     id: "home",
     title: "Home",
     href: "/",
-    snippet: "Manufacturing capability across wovens, knits, denim, and baby wear.",
+    snippet: "Manufacturing capability across wovens, knits, and baby wear.",
     keywords: ["home", "manufacturing", "apparel", "capabilities"],
   },
   {
@@ -48,13 +48,6 @@ const siteSearchIndex: SiteSearchEntry[] = [
     href: "/products/knits",
     snippet: "Jersey, fleece, and performance knit programs.",
     keywords: ["knits", "jersey", "fleece", "organic cotton"],
-  },
-  {
-    id: "denim",
-    title: "Denim",
-    href: "/products/denim",
-    snippet: "Denim development, washing, and finishing.",
-    keywords: ["denim", "washing", "indigo", "finishing"],
   },
   {
     id: "baby-wear",

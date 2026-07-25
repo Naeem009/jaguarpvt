@@ -32,13 +32,13 @@ export const aboutContent = {
       {
         title: "Regional expansion",
         description:
-          "Knits, denim, and baby wear capabilities were added as buyer programs scaled — each category supported by dedicated process control and compliance systems.",
+          "Knits and baby wear capabilities were added as buyer programs scaled — each category supported by dedicated process control and compliance systems.",
         image: "/images/about/history-02.svg",
       },
       {
         title: "Global footprint today",
         description:
-          "The current network spans [Y] countries with [X] facilities, serving global brands across wovens, knits, denim, and baby wear.",
+          "The current network spans [Y] countries with [X] facilities, serving global brands across wovens, knits, and baby wear.",
         image: "/images/about/history-03.svg",
       },
     ],
