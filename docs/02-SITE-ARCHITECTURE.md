@@ -2,79 +2,83 @@
 
 ## Sitemap
 
+Every route below is served under a locale prefix (`/en/...`, `/ar/...`, `/zh/...`, `/es/...`, `/fr/...`, `/de/...`) via `next-intl` — see `05-TECHNICAL-SPEC-STACK.md` for the routing/middleware setup. The paths below are shown without the prefix for readability; English is configured as the default and doesn't force a visible `/en` in the URL.
+
 ```
 Home (/)
-├── Company (/company)
-│   ├── About Us (/company/about)
-│   ├── Leadership (/company/leadership)
-│   ├── Our History (/company/history)
-│   └── Awards & Recognition (/company/awards)
-├── Capabilities (/capabilities)
-│   ├── Wovens (/capabilities/wovens)
-│   ├── Knits (/capabilities/knits)
-│   ├── Denim (/capabilities/denim)
-│   ├── Design & Product Development (/capabilities/design-development)
-│   └── Quality & Compliance (/capabilities/quality-compliance)
-├── Innovation & Technology (/innovation)
-│   ├── AI in Manufacturing (/innovation/ai) — see 04-AI-FEATURES-SPEC.md
-│   ├── R&D and Material Innovation (/innovation/material-lab)
-│   └── Digital Supply Chain (/innovation/digital-supply-chain)
-├── Sustainability (/sustainability)
-│   ├── Environmental Impact (/sustainability/environment)
-│   ├── People & Communities (/sustainability/people)
-│   ├── Governance & Ethics (/sustainability/governance)
-│   └── ESG Reports & Downloads (/sustainability/reports)
-├── Global Footprint (/global-footprint)      — interactive facility map
-├── Certifications & Compliance (/certifications)
-├── Newsroom / Insights (/newsroom)
-│   └── /newsroom/[slug]
+├── About (/about)
+│   └── (sections on one page: Company Overview, Leadership, History, Awards —
+│        kept as a single scrollable page rather than sub-pages, see note below)
+├── Products (/products)
+│   ├── Wovens (/products/wovens)
+│   ├── Knits (/products/knits)
+│   ├── Denim (/products/denim)
+│   └── Baby Wear (/products/baby-wear)          — includes embedded e-catalogue, see below
+├── Our Impact (/our-impact)                       — sustainability/ESG + certifications
+│   ├── Environment (/our-impact/environment)
+│   ├── People & Communities (/our-impact/people)
+│   └── Governance & Certifications (/our-impact/governance)
+├── Facility (/facility)                           — interactive global facility map
 ├── Careers (/careers)
 │   └── /careers/[department]
-├── Partner With Us (/partner)                 — primary conversion page (RFI/RFQ form)
-└── Contact (/contact)
+└── Contact (/contact)                             — primary conversion page (RFI/RFQ form)
 ```
 
-## Primary navigation (desktop mega-menu)
+**Note on collapsing the IA**: this is a leaner structure than earlier drafts of this doc. Certifications and the AI/Innovation hub are no longer standalone nav items — certifications now live as a section inside **Our Impact → Governance**, and the AI features (chat assistant, capability matcher, sustainability estimator, smart search) are now *distributed components embedded within the relevant pages* rather than a dedicated "Innovation" page (see `04-AI-FEATURES-SPEC.md` for the updated per-feature locations). Newsroom/Insights is not part of the primary nav in this version — treat it as optional, footer-linked-only content for a later phase, not a v1 requirement.
+
+## Primary navigation (desktop)
 
 ```
-[Logo]   Capabilities ▾   Innovation ▾   Sustainability ▾   Global Footprint   Newsroom   [Partner With Us →]
+[Logo]   Home   About   Products ▾   Our Impact ▾   Facility   Careers   [🌐 EN ▾]   [Contact →]
 ```
 
-- **Capabilities** mega-menu: 5 columns (Wovens, Knits, Denim, Design & Development, Quality & Compliance), each with a small representative image + one-line description — Stripe's product-menu pattern applied to manufacturing categories.
-- **Innovation** mega-menu: 3 items (AI in Manufacturing, Material Lab, Digital Supply Chain), each with icon + description.
-- **Sustainability** mega-menu: 4 items plus a "Download 2025 ESG Report" CTA pinned at the bottom.
-- **Partner With Us** is the persistent primary CTA button in the nav, styled solid-accent, present on every page.
-- Nav is sticky; transparent over the hero on Home, solid `--color-white` with hairline border once scrolled or on inner pages.
+- **Home**, **Facility**, and **Careers** are flat links — no dropdown.
+- **Products** opens a mega-menu with 4 columns: Wovens, Knits, Denim, Baby Wear — each with a small representative image + one-line description (Stripe's product-menu pattern). Baby Wear's menu item can carry a small "Catalogue" badge to hint at the embedded e-catalogue on that page.
+- **Our Impact** opens a mega-menu with 3 items: Environment, People & Communities, Governance & Certifications, plus a "Download ESG Report" CTA pinned at the bottom.
+- **`[🌐 EN ▾]`** is the `LanguageSwitcher` (see `06-COMPONENT-LIBRARY-SPEC.md`) — a small dropdown showing the current language and revealing the other five on click, positioned just before the Contact button.
+- **Contact** is the persistent primary CTA button in the nav, styled solid-accent (`--color-accent`), present on every page — this replaces the earlier "Partner With Us" button; the RFI/RFQ form now lives at `/contact` directly rather than a separate `/partner` route.
+- Nav is sticky; transparent over the hero on Home, solid `--color-white` with hairline border once scrolled or on inner pages. In RTL locales the entire nav mirrors (logo right-aligned, menu order reversed) rather than just the text direction flipping.
+
+## Mobile navigation
+
+Collapse to a standard slide-out/hamburger menu in the same order as desktop: Home, About, Products (expandable to show the 4 categories), Our Impact (expandable to show the 3 sections), Facility, Careers, a language row (same `LanguageSwitcher`, shown as a horizontal list of language chips rather than a dropdown on mobile), Contact (as a full-width button at the bottom of the menu, not just a link).
 
 ## Footer structure
 
 4-column footer (Apple/Stripe pattern):
 
-| Company | Capabilities | Resources | Connect |
+| Company | Products | Our Impact | Connect |
 |---|---|---|---|
-| About | Wovens | Newsroom | Contact |
-| Leadership | Knits | ESG Reports | Partner With Us |
-| Careers | Denim | Certifications | LinkedIn |
-| Awards | Design & Development | Careers | — |
+| About | Wovens | Environment | Contact |
+| Careers | Knits | People & Communities | LinkedIn |
+| Facility | Denim | Governance & Certifications | — |
+| — | Baby Wear | ESG Reports | — |
 
-Below: legal row (Privacy Policy, Terms, Cookie Preferences, Modern Slavery Statement — apparel manufacturers are expected to publish this), copyright, global footprint mini-stat ("XX facilities · XX countries · XX,000+ employees").
+Below: legal row (Privacy Policy, Terms, Cookie Preferences, Modern Slavery Statement — apparel manufacturers are expected to publish this), copyright, global footprint mini-stat ("XX facilities · XX countries · XX,000+ employees"). Optionally repeat the `LanguageSwitcher` in the footer as a secondary access point — cheap to add once the nav version exists, and helps visitors who scroll straight to the footer without noticing the nav control.
 
 ## URL & content model notes
 
-- Use static generation (SSG/ISR) for all Capability, Sustainability, and Company pages — content changes infrequently.
-- Newsroom uses the CMS with dynamic routes; support categories (Sustainability, Innovation, Company News, Awards).
+- Use static generation (SSG/ISR) for About, Products, and Our Impact pages — content changes infrequently.
+- `Products/Baby Wear` needs one dynamic piece: the embedded e-catalogue file (see below) — everything else on that page is static.
 - Careers can start as a simple listing page linking out to an ATS (Greenhouse/Lever) rather than building a full application flow — keep v1 scope tight.
-- `/partner` is the single most important conversion point on the site — every CTA across the site ("Partner With Us," "Request Capability Deck," "Start a Conversation") routes here or opens a variant of this form as a modal.
+- `/contact` is the single most important conversion point on the site — every CTA across the site ("Contact Us," "Request a Catalogue," "Start a Conversation") routes here or opens a variant of this form as a modal.
+
+## Baby Wear e-catalogue — space reservation
+
+On `/products/baby-wear`, reserve a dedicated full-width section (below the standard hero/process/specs sections that every Products category page has) titled something like **"Browse the Baby Wear Catalogue"**:
+
+- Layout: a contained panel (max-width ~960px, centered, `Card` styling with a slightly taller shadow to lift it off the page) housing an embedded document viewer.
+- File: a single PDF uploaded to `/public/catalogues/baby-wear-catalogue.pdf` (see `05-TECHNICAL-SPEC-STACK.md` for the exact component and embed approach).
+- Above the embed: one line of context copy ("Explore our full Baby Wear range — fabrics, sizing, and finishing options.") and a **Download PDF** button as a fallback for anyone who'd rather not scroll an embedded viewer.
+- Below the embed: the standard Contact/RFQ CTA, since browsing the catalogue is exactly the moment a buyer is most likely to want to start a conversation.
+- Until the real file is uploaded, show a clearly-labeled placeholder state ("Catalogue coming soon") rather than a broken embed — see the component spec for the empty-state pattern.
 
 ## Page priority for v1 launch
 
 1. Home
-2. Capabilities (hub + 3 category pages: Wovens, Knits, Denim)
-3. Sustainability (hub)
-4. Innovation & AI (hub)
-5. Global Footprint (map)
-6. Partner With Us
-7. About / Company
-8. Certifications
-9. Newsroom (can launch with 3–5 seed articles)
-10. Careers (can launch as a simple page, expand later)
+2. Products (hub + Wovens, Knits, Denim, **Baby Wear with catalogue embed**)
+3. Our Impact (hub + Environment/People/Governance)
+4. Facility (map)
+5. Contact
+6. About
+7. Careers (can launch as a simple page, expand later)

@@ -1,5 +1,9 @@
+Treat everything in /docs as the source of truth for this project. If code
+you're about to write contradicts something in /docs, stop and flag the
+conflict instead of silently deviating.
+
 Before generating any code for this project, read /docs/00-PROJECT-OVERVIEW.md,
    /docs/01-BRAND-DESIGN-SYSTEM.md, and /docs/06-COMPONENT-LIBRARY-SPEC.md.
    This is a B2B apparel manufacturer website — never add e-commerce patterns
    (cart, checkout, pricing, "buy now"). Follow the design system tokens exactly.
-   Match the voice defined in /docs/03-CONTENT-STRATEGY-COPY.md.
+   Match the voice defined in /docs/03-CONTENT-STRATEGY-COPY.md
