@@ -74,14 +74,14 @@ export function Navbar() {
               <div className="flex-1 overflow-y-auto px-4 py-4">
                 <Link
                   href="/"
-                  className="relative mb-6 block h-12 w-[200px]"
+                  className="relative mb-6 block h-[3.6rem] w-[240px]"
                   onClick={closeMobileMenu}
                 >
                   <Image
                     src={LOGO_SRC}
                     alt="Jaguar (Pvt) Ltd."
                     fill
-                    sizes="200px"
+                    sizes="240px"
                     className="object-contain object-start"
                   />
                 </Link>
@@ -182,16 +182,16 @@ export function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-ink/8 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/75">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:gap-4 md:px-6 md:py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-2 md:gap-4 md:px-5 md:py-3">
           <Link
             href="/"
-            className="relative block h-12 w-[min(52vw,200px)] shrink-0 sm:h-14 sm:w-[220px] lg:h-[4.5rem] lg:w-[340px]"
+            className="relative block h-[3.6rem] w-[min(62.4vw,240px)] shrink-0 sm:h-[4.2rem] sm:w-[264px] lg:h-[5.4rem] lg:w-[408px]"
           >
             <Image
               src={LOGO_SRC}
               alt="Jaguar (Pvt) Ltd."
               fill
-              sizes="(max-width: 640px) 200px, (max-width: 1024px) 220px, 340px"
+              sizes="(max-width: 640px) 270px, (max-width: 1024px) 294px, 438px"
               className="object-contain object-start"
               priority
             />
