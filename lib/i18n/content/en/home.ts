@@ -2,7 +2,7 @@ export const home = {
   hero: {
     headline: "Manufacturing, engineered for what's next.",
     subhead:
-      "Vertically integrated production across wovens, knits, and baby wear — serving global brands at [X] facilities in [Y] countries.",
+      "Vertically integrated production across wovens, knits, and baby wear — serving global brands at 04 facilities in 03 countries.",
     heroAlt: "Wide-angle view of a modern apparel manufacturing facility",
   },
   stats: {
