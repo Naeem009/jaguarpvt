@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -18,12 +19,14 @@ function catalogueExists(fileUrl: string) {
   return fs.existsSync(absolutePath);
 }
 
-export function CatalogueEmbed({
+export async function CatalogueEmbed({
   fileUrl,
-  title = "Browse the Baby Wear Catalogue",
+  title,
   emptyState,
   className,
 }: CatalogueEmbedProps) {
+  const t = await getTranslations("catalogue");
+  const resolvedTitle = title ?? t("defaultTitle");
   const hasFile = !emptyState && catalogueExists(fileUrl);
 
   return (
@@ -31,9 +34,9 @@ export function CatalogueEmbed({
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Card className="mx-auto max-w-4xl shadow-[var(--shadow-card-hover)]">
           <SectionHeading
-            eyebrow="Catalogue"
-            title={title}
-            subhead="Explore our full Baby Wear range — fabrics, sizing, and finishing options."
+            eyebrow={t("eyebrow")}
+            title={resolvedTitle}
+            subhead={t("subhead")}
             className="mb-8"
           />
 
@@ -52,9 +55,9 @@ export function CatalogueEmbed({
                   download
                   className="inline-flex min-h-11 items-center justify-center rounded-full border border-ink/10 bg-transparent px-6 text-base font-medium text-ink transition-colors hover:border-accent hover:text-accent"
                 >
-                  Download PDF
+                  {t("downloadPdf")}
                 </a>
-                <Button href="/contact?category=baby-wear">Request This Catalogue</Button>
+                <Button href="/contact?category=baby-wear">{t("requestCatalogue")}</Button>
               </div>
             </>
           ) : (
@@ -62,13 +65,12 @@ export function CatalogueEmbed({
               <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-mist text-2xl text-graphite">
                 📄
               </div>
-              <h3 className="font-display text-xl font-semibold text-ink">Catalogue coming soon</h3>
+              <h3 className="font-display text-xl font-semibold text-ink">{t("comingSoonTitle")}</h3>
               <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-graphite">
-                The Baby Wear e-catalogue will be available here once uploaded. Request a copy from
-                our team in the meantime.
+                {t("comingSoonBody")}
               </p>
               <div className="mt-8 flex justify-center">
-                <Button href="/contact?category=baby-wear">Request This Catalogue</Button>
+                <Button href="/contact?category=baby-wear">{t("requestCatalogue")}</Button>
               </div>
             </div>
           )}

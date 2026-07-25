@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
@@ -39,6 +40,8 @@ const defaultValues: ContactFormValues = {
 };
 
 export function ContactForm({ className }: { className?: string }) {
+  const t = useTranslations("contact");
+  const tCommon = useTranslations("common");
   const searchParams = useSearchParams();
   const prefill = useMemo(() => getContactFormDefaults(searchParams), [searchParams]);
   const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -77,17 +80,15 @@ export function ContactForm({ className }: { className?: string }) {
       setSubmitState("success");
     } catch (error) {
       setSubmitState("error");
-      setSubmitError(error instanceof Error ? error.message : "Unable to submit the form right now.");
+      setSubmitError(error instanceof Error ? error.message : t("submitError"));
     }
   }
 
   if (submitState === "success") {
     return (
       <Card className={cn("max-w-3xl", className)}>
-        <h2 className="font-display text-2xl font-semibold text-ink">Thank you — we received your inquiry.</h2>
-        <p className="mt-4 text-sm leading-relaxed text-graphite">
-          A member of our team will review your request and respond within 2 business days with clear next steps.
-        </p>
+        <h2 className="font-display text-2xl font-semibold text-ink">{t("successTitle")}</h2>
+        <p className="mt-4 text-sm leading-relaxed text-graphite">{t("successBody")}</p>
       </Card>
     );
   }
@@ -97,13 +98,13 @@ export function ContactForm({ className }: { className?: string }) {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
         <div className="grid gap-6 md:grid-cols-2">
           <Input
-            label="Company name"
+            label={t("companyName")}
             {...register("companyName")}
             error={errors.companyName?.message}
             autoComplete="organization"
           />
           <Input
-            label="Contact name"
+            label={t("contactName")}
             {...register("contactName")}
             error={errors.contactName?.message}
             autoComplete="name"
@@ -112,16 +113,16 @@ export function ContactForm({ className }: { className?: string }) {
 
         <div className="grid gap-6 md:grid-cols-2">
           <Input
-            label="Email"
+            label={t("email")}
             type="email"
             {...register("email")}
             error={errors.email?.message}
             autoComplete="email"
           />
           <Input
-            label="Brand / company website"
+            label={t("website")}
             type="url"
-            placeholder="https://"
+            placeholder={t("websitePlaceholder")}
             {...register("website")}
             error={errors.website?.message}
             autoComplete="url"
@@ -130,7 +131,7 @@ export function ContactForm({ className }: { className?: string }) {
 
         <div className="grid gap-6 md:grid-cols-2">
           <Select
-            label="Product category"
+            label={t("category")}
             options={productCategoryValues.map((value) => ({
               value,
               label: productCategoryLabels[value],
@@ -139,7 +140,7 @@ export function ContactForm({ className }: { className?: string }) {
             error={errors.category?.message}
           />
           <Select
-            label="Estimated annual volume"
+            label={t("annualVolume")}
             options={annualVolumeValues.map((value) => ({
               value,
               label: annualVolumeLabels[value],
@@ -150,7 +151,7 @@ export function ContactForm({ className }: { className?: string }) {
         </div>
 
         <fieldset className="space-y-3">
-          <legend className="text-sm font-medium text-ink">Sustainability requirements</legend>
+          <legend className="text-sm font-medium text-ink">{t("sustainability")}</legend>
           <Controller
             name="sustainability"
             control={control}
@@ -178,8 +179,8 @@ export function ContactForm({ className }: { className?: string }) {
         </fieldset>
 
         <Textarea
-          label="Message"
-          placeholder="Tell us what you're building — product type, timing, compliance needs, and any context we should know."
+          label={t("message")}
+          placeholder={t("messagePlaceholder")}
           {...register("message")}
           error={errors.message?.message}
         />
@@ -192,7 +193,7 @@ export function ContactForm({ className }: { className?: string }) {
         {submitError ? <p className="text-sm text-error">{submitError}</p> : null}
 
         <Button type="submit" size="lg" disabled={submitState === "submitting"}>
-          {submitState === "submitting" ? "Submitting..." : "Contact Us"}
+          {submitState === "submitting" ? tCommon("submitting") : tCommon("contactUs")}
         </Button>
       </form>
     </Card>

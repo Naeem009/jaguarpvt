@@ -1,10 +1,15 @@
 import { setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { CertificationGrid, ImpactSubPageTemplate } from "@/components/sections";
 import { certifications, governanceContent } from "@/lib/our-impact/content";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export function generateMetadata() {
+  return createPageMetadata("governance");
+}
 
 export default async function GovernancePage({ params }: PageProps) {
   const { locale } = await params;

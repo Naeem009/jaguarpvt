@@ -1,3 +1,2 @@
-// Claude API client wrapper and RAG retrieval helper — wired in a later phase.
-
-export {};
+export { generateAssistantResponse } from "@/lib/ai/assistant";
+export { retrieveKnowledge } from "@/lib/ai/knowledge-base";

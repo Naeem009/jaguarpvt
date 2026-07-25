@@ -1,0 +1,66 @@
+[
+  {
+    "id": "products-wovens",
+    "title": "Wovens",
+    "source": "Wovens Product Page",
+    "href": "/products/wovens",
+    "keywords": ["wovens", "shirting", "uniform", "woven", "cut and sew"],
+    "content": "We produce structured shirting, bottoms, and uniform programs with integrated cutting, sewing, and finishing. Monthly capacity is program-dependent. Certifications such as GOTS, OEKO-TEX, and WRAP may apply depending on facility and program scope."
+  },
+  {
+    "id": "products-knits",
+    "title": "Knits",
+    "source": "Knits Product Page",
+    "href": "/products/knits",
+    "keywords": ["knits", "jersey", "fleece", "organic cotton", "performance knit"],
+    "content": "We support jersey, fleece, and performance knit programs with capacity for large programs and certified organic options. GOTS and OEKO-TEX may apply at selected facilities."
+  },
+  {
+    "id": "products-denim",
+    "title": "Denim",
+    "source": "Denim Product Page",
+    "href": "/products/denim",
+    "keywords": ["denim", "washing", "indigo", "finishing", "laser"],
+    "content": "Denim development, washing, and finishing are supported from fabric through garment. Water management and low-liquor wash recipes are part of published programs at selected facilities."
+  },
+  {
+    "id": "products-baby-wear",
+    "title": "Baby Wear",
+    "source": "Baby Wear Product Page",
+    "href": "/products/baby-wear",
+    "keywords": ["baby wear", "infant", "catalogue", "bodysuit", "romper"],
+    "content": "Baby wear programs focus on soft-hand construction, secure attachments, and compliance-focused finishing. A Baby Wear catalogue is available on the Baby Wear page."
+  },
+  {
+    "id": "impact-governance",
+    "title": "Governance & Certifications",
+    "source": "Governance & Certifications",
+    "href": "/our-impact/governance",
+    "keywords": ["GOTS", "OEKO-TEX", "WRAP", "ISO 14001", "certification", "compliance"],
+    "content": "Published certifications include GOTS, OEKO-TEX Standard 100, WRAP, and ISO 14001 at selected facilities. Certification scope varies by facility and product line."
+  },
+  {
+    "id": "impact-environment",
+    "title": "Environment",
+    "source": "Environment Programs",
+    "href": "/our-impact/environment",
+    "keywords": ["water", "renewable", "solar", "sustainability", "environment"],
+    "content": "Environmental programs include water stewardship, renewable energy installations, and waste reduction tracked against published benchmarks."
+  },
+  {
+    "id": "facility-footprint",
+    "title": "Global Facilities",
+    "source": "Facility Map",
+    "href": "/facility",
+    "keywords": ["facility", "facilities", "footprint", "location", "manufacturing sites"],
+    "content": "Facilities are published across multiple regions including South Asia, Southeast Asia, East Asia, Europe & Middle East, Central America, Africa, and North America. Specific capabilities and certifications vary by site."
+  },
+  {
+    "id": "contact-rfi",
+    "title": "Contact & RFQ",
+    "source": "Contact Page",
+    "href": "/contact",
+    "keywords": ["contact", "rfi", "rfq", "quote", "sourcing", "inquiry"],
+    "content": "Qualified RFIs and RFQs can be submitted through the Contact page. The team responds within 2 business days with clear next steps. The assistant cannot provide pricing or real-time capacity guarantees."
+  }
+]

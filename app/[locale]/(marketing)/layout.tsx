@@ -1,3 +1,4 @@
+import { AIChatWidgetLazy } from "@/components/sections/AIChatWidgetLazy";
 import { CommandSearch } from "@/components/sections/CommandSearch";
 import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/sections/Navbar";
@@ -9,6 +10,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
       {children}
       <Footer />
       <CommandSearch />
+      <AIChatWidgetLazy />
     </>
   );
 }

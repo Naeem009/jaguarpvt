@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import {
   CTASection,
   Hero,
@@ -15,6 +16,10 @@ import {
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export function generateMetadata() {
+  return createPageMetadata("ourImpact");
+}
 
 export default async function OurImpactHubPage({ params }: PageProps) {
   const { locale } = await params;

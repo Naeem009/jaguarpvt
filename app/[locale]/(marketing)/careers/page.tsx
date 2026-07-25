@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { Hero } from "@/components/sections";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -8,6 +9,10 @@ import { careersContent, CAREERS_ATS_URL } from "@/lib/careers/content";
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export function generateMetadata() {
+  return createPageMetadata("careers");
+}
 
 export default async function CareersPage({ params }: PageProps) {
   const { locale } = await params;

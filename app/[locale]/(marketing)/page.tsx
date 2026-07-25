@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import {
   AIChatWidget,
   CTASection,
@@ -12,6 +13,10 @@ import {
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export function generateMetadata() {
+  return createPageMetadata("home");
+}
 
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;

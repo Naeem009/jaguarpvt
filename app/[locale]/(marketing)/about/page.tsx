@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import {
   CTASection,
   Hero,
@@ -14,6 +15,10 @@ import { aboutContent } from "@/lib/about/content";
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export function generateMetadata() {
+  return createPageMetadata("about");
+}
 
 export default async function AboutPage({ params }: PageProps) {
   const { locale } = await params;

@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import {
   AlternativeContact,
   ContactExpectations,
@@ -10,6 +11,10 @@ import {
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export function generateMetadata() {
+  return createPageMetadata("contact");
+}
 
 export default async function ContactPage({ params }: PageProps) {
   const { locale } = await params;

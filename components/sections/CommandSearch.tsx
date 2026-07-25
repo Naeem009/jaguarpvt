@@ -1,8 +1,10 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import type { Locale } from "@/i18n/routing";
 
 type SearchResult = {
   id: string;
@@ -12,6 +14,8 @@ type SearchResult = {
 };
 
 export function CommandSearch() {
+  const t = useTranslations("search");
+  const locale = useLocale() as Locale;
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -59,7 +63,7 @@ export function CommandSearch() {
         const response = await fetch("/api/ai/search", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query, scope: "global" }),
+          body: JSON.stringify({ query, scope: "global", locale }),
         });
 
         if (!response.ok) {
@@ -70,7 +74,7 @@ export function CommandSearch() {
         setResults(data.results ?? []);
         setActiveIndex(0);
       } catch {
-        setError("Unable to search right now.");
+        setError(t("error"));
         setResults([]);
       } finally {
         setLoading(false);
@@ -78,16 +82,16 @@ export function CommandSearch() {
     }, 200);
 
     return () => window.clearTimeout(timeout);
-  }, [open, query]);
+  }, [locale, open, query, t]);
 
   const hasResults = results.length > 0;
   const helperText = useMemo(() => {
-    if (loading) return "Searching...";
+    if (loading) return t("searching");
     if (error) return error;
-    if (!query) return "Suggested pages";
-    if (!hasResults) return "No results found.";
-    return "Navigate with ↑ ↓ and press Enter";
-  }, [error, hasResults, loading, query]);
+    if (!query) return t("suggested");
+    if (!hasResults) return t("noResults");
+    return t("navigateHint");
+  }, [error, hasResults, loading, query, t]);
 
   function navigateToResult(result: SearchResult) {
     setOpen(false);
@@ -120,7 +124,7 @@ export function CommandSearch() {
       <button
         type="button"
         className="absolute inset-0"
-        aria-label="Close search overlay"
+        aria-label={t("closeOverlay")}
         onClick={() => setOpen(false)}
       />
 
@@ -131,9 +135,9 @@ export function CommandSearch() {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             onKeyDown={handleInputKeyDown}
-            placeholder="Search pages, products, certifications, facilities..."
+            placeholder={t("placeholder")}
             className="w-full bg-transparent text-base text-ink outline-none placeholder:text-graphite"
-            aria-label="Site search"
+            aria-label={t("ariaLabel")}
           />
           <p className="mt-2 text-xs text-graphite">{helperText}</p>
         </div>
@@ -157,9 +161,10 @@ export function CommandSearch() {
         </ul>
 
         <div className="border-t border-ink/8 px-4 py-3 text-xs text-graphite">
-          Press <kbd className="rounded bg-mist px-1.5 py-0.5">Esc</kbd> to close ·{" "}
-          <kbd className="rounded bg-mist px-1.5 py-0.5">Ctrl</kbd>+
-          <kbd className="rounded bg-mist px-1.5 py-0.5">K</kbd> to open
+          {t("footerHint", {
+            esc: t("esc"),
+            ctrlK: `${t("ctrl")}+${t("k")}`,
+          })}
         </div>
       </div>
     </div>

@@ -1,10 +1,15 @@
 import { setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { ImpactSubPageTemplate } from "@/components/sections";
 import { environmentContent } from "@/lib/our-impact/content";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export function generateMetadata() {
+  return createPageMetadata("environment");
+}
 
 export default async function EnvironmentPage({ params }: PageProps) {
   const { locale } = await params;

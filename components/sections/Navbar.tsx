@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -9,7 +10,6 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MegaMenu } from "./MegaMenu";
 import {
   impactMegaMenuItems,
-  primaryNavItems,
   productsMegaMenuItems,
 } from "@/lib/navigation/content";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
@@ -26,6 +26,8 @@ function useIsHomePage() {
 }
 
 export function Navbar() {
+  const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
   const pathname = usePathname();
   const isHome = useIsHomePage();
   const { scrollY } = useScroll();
@@ -74,31 +76,26 @@ export function Navbar() {
 
           <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
             <Link href="/" className={linkClass}>
-              Home
+              {t("home")}
             </Link>
             <Link href="/about" className={linkClass}>
-              About
+              {t("about")}
             </Link>
+            <MegaMenu label={t("products")} items={productsMegaMenuItems} inverted={transparent} />
             <MegaMenu
-              label="Products"
-              items={productsMegaMenuItems}
-              inverted={transparent}
-            />
-            <MegaMenu
-              label="Our Impact"
+              label={t("ourImpact")}
               items={impactMegaMenuItems}
-              footerAction={{ label: "Download ESG Report", href: ESG_REPORT_URL }}
+              footerAction={{ label: t("downloadEsg"), href: ESG_REPORT_URL }}
               inverted={transparent}
             />
-            {primaryNavItems
-              .filter((item) => item.href === "/facility" || item.href === "/careers")
-              .map((item) => (
-                <Link key={item.href} href={item.href} className={linkClass}>
-                  {item.label}
-                </Link>
-              ))}
+            <Link href="/facility" className={linkClass}>
+              {t("facility")}
+            </Link>
+            <Link href="/careers" className={linkClass}>
+              {t("careers")}
+            </Link>
             <LanguageSwitcher inverted={transparent} />
-            <Button href="/contact">Contact</Button>
+            <Button href="/contact">{tCommon("contact")}</Button>
           </nav>
 
           <button
@@ -108,7 +105,7 @@ export function Navbar() {
               transparent ? "border-white/20 text-white" : "border-ink/10 text-ink",
             )}
             aria-expanded={mobileOpen}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
             onClick={() => setMobileOpen((value) => !value)}
           >
             {mobileOpen ? "✕" : "☰"}
@@ -121,13 +118,13 @@ export function Navbar() {
           <button
             type="button"
             className="absolute inset-0 bg-charcoal/50"
-            aria-label="Close menu overlay"
+            aria-label={t("closeMenuOverlay")}
             onClick={() => setMobileOpen(false)}
           />
           <div className="absolute inset-y-0 end-0 flex w-full max-w-sm flex-col bg-white shadow-[var(--shadow-card-hover)]">
             <div className="flex items-center justify-between border-b border-ink/8 px-4 py-4">
-              <p className="font-medium text-ink">Menu</p>
-              <button type="button" onClick={() => setMobileOpen(false)} aria-label="Close menu">
+              <p className="font-medium text-ink">{t("menu")}</p>
+              <button type="button" onClick={() => setMobileOpen(false)} aria-label={t("closeMenu")}>
                 ✕
               </button>
             </div>
@@ -135,10 +132,10 @@ export function Navbar() {
             <div className="flex-1 overflow-y-auto px-4 py-6">
               <div className="space-y-4">
                 <Link href="/" className="block text-base font-medium text-ink" onClick={() => setMobileOpen(false)}>
-                  Home
+                  {t("home")}
                 </Link>
                 <Link href="/about" className="block text-base font-medium text-ink" onClick={() => setMobileOpen(false)}>
-                  About
+                  {t("about")}
                 </Link>
 
                 <div>
@@ -148,7 +145,7 @@ export function Navbar() {
                     aria-expanded={mobileProductsOpen}
                     onClick={() => setMobileProductsOpen((value) => !value)}
                   >
-                    Products
+                    {t("products")}
                     <span aria-hidden>{mobileProductsOpen ? "−" : "+"}</span>
                   </button>
                   {mobileProductsOpen ? (
@@ -157,7 +154,7 @@ export function Navbar() {
                         <li key={item.href}>
                           <Link href={item.href} className="block text-sm text-graphite" onClick={() => setMobileOpen(false)}>
                             {item.title}
-                            {item.badge ? ` · ${item.badge}` : ""}
+                            {item.badge ? ` · ${t("catalogueBadge")}` : ""}
                           </Link>
                         </li>
                       ))}
@@ -172,7 +169,7 @@ export function Navbar() {
                     aria-expanded={mobileImpactOpen}
                     onClick={() => setMobileImpactOpen((value) => !value)}
                   >
-                    Our Impact
+                    {t("ourImpact")}
                     <span aria-hidden>{mobileImpactOpen ? "−" : "+"}</span>
                   </button>
                   {mobileImpactOpen ? (
@@ -186,7 +183,7 @@ export function Navbar() {
                       ))}
                       <li>
                         <a href={ESG_REPORT_URL} className="block text-sm text-accent">
-                          Download ESG Report
+                          {t("downloadEsg")}
                         </a>
                       </li>
                     </ul>
@@ -194,14 +191,14 @@ export function Navbar() {
                 </div>
 
                 <Link href="/facility" className="block text-base font-medium text-ink" onClick={() => setMobileOpen(false)}>
-                  Facility
+                  {t("facility")}
                 </Link>
                 <Link href="/careers" className="block text-base font-medium text-ink" onClick={() => setMobileOpen(false)}>
-                  Careers
+                  {t("careers")}
                 </Link>
 
                 <div className="pt-2">
-                  <p className="mb-3 text-sm font-medium text-graphite">Language</p>
+                  <p className="mb-3 text-sm font-medium text-graphite">{t("language")}</p>
                   <LanguageSwitcher variant="chips" />
                 </div>
               </div>
@@ -209,7 +206,7 @@ export function Navbar() {
 
             <div className="border-t border-ink/8 p-4">
               <Button href="/contact" className="w-full">
-                Contact
+                {tCommon("contact")}
               </Button>
             </div>
           </div>

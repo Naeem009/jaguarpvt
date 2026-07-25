@@ -1,10 +1,15 @@
 import { setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { FacilityMapLazy, Hero } from "@/components/sections";
 import { FACILITY_HERO_IMAGE, getFacilities } from "@/lib/facilities";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export function generateMetadata() {
+  return createPageMetadata("facility");
+}
 
 export default async function FacilityPage({ params }: PageProps) {
   const { locale } = await params;

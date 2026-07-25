@@ -1,10 +1,15 @@
 import { setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { ImpactSubPageTemplate } from "@/components/sections";
 import { peopleContent } from "@/lib/our-impact/content";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export function generateMetadata() {
+  return createPageMetadata("people");
+}
 
 export default async function PeoplePage({ params }: PageProps) {
   const { locale } = await params;
