@@ -19,7 +19,6 @@ export function MegaMenu({
   label,
   items,
   footerAction,
-  inverted = false,
 }: {
   label: string;
   items: MegaMenuItem[];
@@ -27,32 +26,35 @@ export function MegaMenu({
   inverted?: boolean;
 }) {
   const [open, setOpen] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClick(event: MouseEvent) {
-      if (!containerRef.current?.contains(event.target as Node)) {
-        setOpen(false);
-      }
-    }
-
     function handleEscape(event: KeyboardEvent) {
       if (event.key === "Escape") {
         setOpen(false);
       }
     }
 
-    document.addEventListener("mousedown", handleClick);
+    function handlePointerDown(event: PointerEvent) {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+
+    if (!open) return;
+
     document.addEventListener("keydown", handleEscape);
+    document.addEventListener("pointerdown", handlePointerDown);
+
     return () => {
-      document.removeEventListener("mousedown", handleClick);
       document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("pointerdown", handlePointerDown);
     };
-  }, []);
+  }, [open]);
 
   return (
     <div
-      ref={containerRef}
+      ref={rootRef}
       className="relative"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
@@ -60,18 +62,21 @@ export function MegaMenu({
       <button
         type="button"
         aria-expanded={open}
+        aria-haspopup="true"
         onClick={() => setOpen((value) => !value)}
-        className={cn(
-          "inline-flex min-h-10 items-center gap-1 text-sm font-medium transition-colors",
-          inverted ? "text-white hover:text-white/80" : "text-ink hover:text-accent",
-        )}
+        className="inline-flex min-h-10 items-center gap-1 text-sm font-medium text-ink transition-colors hover:text-accent"
       >
         {label}
         <span aria-hidden>▾</span>
       </button>
 
-      {open ? (
-        <div className="absolute start-0 top-full z-50 mt-3 w-[min(100vw-2rem,720px)] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-[var(--shadow-card-hover)]">
+      <div
+        className={cn(
+          "absolute start-0 top-full z-[200] pt-2",
+          open ? "block" : "hidden",
+        )}
+      >
+        <div className="w-[min(calc(100vw-2rem),720px)] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-[var(--shadow-card-hover)]">
           <div className="grid gap-1 p-2 sm:grid-cols-2">
             {items.map((item) => (
               <Link
@@ -106,7 +111,7 @@ export function MegaMenu({
             </div>
           ) : null}
         </div>
-      ) : null}
+      </div>
     </div>
   );
 }

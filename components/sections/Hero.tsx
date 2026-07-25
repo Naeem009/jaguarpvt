@@ -60,7 +60,7 @@ export function Hero({
             className="object-cover"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/60" />
       </div>
 
       <div className="relative mx-auto w-full max-w-7xl px-4 pb-24 pt-32 md:px-6 md:pb-32 md:pt-40">

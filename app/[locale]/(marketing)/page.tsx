@@ -39,10 +39,10 @@ export default async function HomePage({ params }: PageProps) {
 
       <StatBar
         stats={[
-          { value: 0, placeholder: "[X]", label: "Facilities" },
-          { value: 0, placeholder: "[Y]", label: "Countries" },
-          { value: 0, placeholder: "[Z]+", label: "Employees" },
-          { value: 0, placeholder: "[N]", label: "Years in operation" },
+          { value: 0, placeholder: "[6]", label: "Facilities" },
+          { value: 0, placeholder: "[5]", label: "Countries" },
+          { value: 0, placeholder: "[900]+", label: "Employees" },
+          { value: 0, placeholder: "[40]", label: "Years in operation" },
         ]}
       />
 
@@ -101,23 +101,23 @@ export default async function HomePage({ params }: PageProps) {
         categories={[
           {
             label: "Activewear programs",
-            image: "/logos/logo-light.svg",
-            alt: "Placeholder mark for activewear category",
+            image: "/logos/logo-mark.svg",
+            alt: "Jaguar logo mark",
           },
           {
             label: "Denim programs",
-            image: "/logos/logo-dark.svg",
-            alt: "Placeholder mark for denim category",
+            image: "/logos/logo-mark.svg",
+            alt: "Jaguar logo mark",
           },
           {
             label: "Lifestyle apparel",
-            image: "/images/home/trust-strip-03.svg",
-            alt: "Placeholder mark for lifestyle category",
+            image: "/logos/logo-mark.svg",
+            alt: "Jaguar logo mark",
           },
           {
             label: "Footwear & accessories",
-            image: "/images/home/trust-strip-04.svg",
-            alt: "Placeholder mark for footwear and accessories category",
+            image: "/logos/logo-mark.svg",
+            alt: "Jaguar logo mark",
           },
         ]}
       />

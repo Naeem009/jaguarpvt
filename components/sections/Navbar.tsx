@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
-import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -13,32 +13,24 @@ import {
   productsMegaMenuItems,
 } from "@/lib/navigation/content";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
-import { cn } from "@/lib/utils";
-import { routing, type Locale } from "@/i18n/routing";
 
-function useIsHomePage() {
-  const pathname = usePathname();
-  const segments = pathname.split("/").filter(Boolean);
-  return (
-    segments.length === 0 ||
-    (segments.length === 1 && routing.locales.includes(segments[0] as Locale))
-  );
-}
+const LOGO_SRC = "/logos/logo-dark.svg";
+
+const navLinkClass = "text-sm font-medium text-ink transition-colors hover:text-accent";
 
 export function Navbar() {
   const t = useTranslations("nav");
   const tCommon = useTranslations("common");
   const pathname = usePathname();
-  const isHome = useIsHomePage();
-  const { scrollY } = useScroll();
-  const [scrolled, setScrolled] = useState(false);
+  const previousPathname = useRef(pathname);
+  const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileImpactOpen, setMobileImpactOpen] = useState(false);
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 24);
-  });
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -48,170 +40,202 @@ export function Navbar() {
   }, [mobileOpen]);
 
   useEffect(() => {
+    if (previousPathname.current === pathname) return;
+    previousPathname.current = pathname;
     setMobileOpen(false);
+    setMobileProductsOpen(false);
+    setMobileImpactOpen(false);
   }, [pathname]);
 
-  const transparent = isHome && !scrolled;
-  const logoSrc = transparent ? "/logos/logo-light.svg" : "/logos/logo-dark.svg";
+  function closeMobileMenu() {
+    setMobileOpen(false);
+    setMobileProductsOpen(false);
+    setMobileImpactOpen(false);
+  }
 
-  const linkClass = cn(
-    "text-sm font-medium transition-colors",
-    transparent ? "text-white hover:text-white/80" : "text-ink hover:text-accent",
-  );
+  const mobileMenu =
+    mobileOpen && mounted
+      ? createPortal(
+          <div className="fixed inset-0 z-[9999] lg:hidden" role="dialog" aria-modal="true" aria-label={t("menu")}>
+            <button
+              type="button"
+              className="absolute inset-0 bg-charcoal/50"
+              aria-label={t("closeMenuOverlay")}
+              onClick={closeMobileMenu}
+            />
+            <div className="absolute inset-y-0 end-0 flex w-full max-w-sm flex-col bg-white shadow-[var(--shadow-card-hover)]">
+              <div className="flex items-center justify-between border-b border-ink/8 px-4 py-4">
+                <p className="font-medium text-ink">{t("menu")}</p>
+                <button type="button" onClick={closeMobileMenu} aria-label={t("closeMenu")}>
+                  ✕
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto px-4 py-4">
+                <Link
+                  href="/"
+                  className="relative mb-6 block h-12 w-[200px]"
+                  onClick={closeMobileMenu}
+                >
+                  <Image
+                    src={LOGO_SRC}
+                    alt="Jaguar (Pvt) Ltd."
+                    fill
+                    sizes="200px"
+                    className="object-contain object-start"
+                  />
+                </Link>
+
+                <div className="space-y-4">
+                  <Link href="/" className="block text-base font-medium text-ink" onClick={closeMobileMenu}>
+                    {t("home")}
+                  </Link>
+                  <Link href="/about" className="block text-base font-medium text-ink" onClick={closeMobileMenu}>
+                    {t("about")}
+                  </Link>
+
+                  <div>
+                    <button
+                      type="button"
+                      className="flex w-full items-center justify-between text-base font-medium text-ink"
+                      aria-expanded={mobileProductsOpen}
+                      onClick={() => setMobileProductsOpen((value) => !value)}
+                    >
+                      {t("products")}
+                      <span aria-hidden>{mobileProductsOpen ? "−" : "+"}</span>
+                    </button>
+                    {mobileProductsOpen ? (
+                      <ul className="mt-3 space-y-2 ps-4">
+                        {productsMegaMenuItems.map((item) => (
+                          <li key={item.href}>
+                            <Link
+                              href={item.href}
+                              className="block text-sm text-graphite"
+                              onClick={closeMobileMenu}
+                            >
+                              {item.title}
+                              {item.badge ? ` · ${t("catalogueBadge")}` : ""}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+
+                  <div>
+                    <button
+                      type="button"
+                      className="flex w-full items-center justify-between text-base font-medium text-ink"
+                      aria-expanded={mobileImpactOpen}
+                      onClick={() => setMobileImpactOpen((value) => !value)}
+                    >
+                      {t("ourImpact")}
+                      <span aria-hidden>{mobileImpactOpen ? "−" : "+"}</span>
+                    </button>
+                    {mobileImpactOpen ? (
+                      <ul className="mt-3 space-y-2 ps-4">
+                        {impactMegaMenuItems.map((item) => (
+                          <li key={item.href}>
+                            <Link
+                              href={item.href}
+                              className="block text-sm text-graphite"
+                              onClick={closeMobileMenu}
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                        <li>
+                          <a href={ESG_REPORT_URL} className="block text-sm text-accent">
+                            {t("downloadEsg")}
+                          </a>
+                        </li>
+                      </ul>
+                    ) : null}
+                  </div>
+
+                  <Link href="/facility" className="block text-base font-medium text-ink" onClick={closeMobileMenu}>
+                    {t("facility")}
+                  </Link>
+                  <Link href="/careers" className="block text-base font-medium text-ink" onClick={closeMobileMenu}>
+                    {t("careers")}
+                  </Link>
+
+                  <div className="pt-2">
+                    <p className="mb-3 text-sm font-medium text-graphite">{t("language")}</p>
+                    <LanguageSwitcher variant="chips" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t border-ink/8 p-4">
+                <Button href="/contact" className="w-full">
+                  {tCommon("contact")}
+                </Button>
+              </div>
+            </div>
+          </div>,
+          document.body,
+        )
+      : null;
 
   return (
     <>
-      <header
-        className={cn(
-          "sticky top-0 z-50 transition-colors duration-300",
-          transparent
-            ? "bg-transparent"
-            : "border-b border-ink/8 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90",
-        )}
-      >
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-6">
-          <Link href="/" className="relative block h-8 w-36 shrink-0">
-            <Image src={logoSrc} alt="Jaguar (Pvt) Ltd." fill sizes="144px" className="object-contain object-start" priority />
+      <header className="sticky top-0 z-50 border-b border-ink/8 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/75">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:gap-4 md:px-6 md:py-4">
+          <Link
+            href="/"
+            className="relative block h-12 w-[min(52vw,200px)] shrink-0 sm:h-14 sm:w-[220px] lg:h-[4.5rem] lg:w-[340px]"
+          >
+            <Image
+              src={LOGO_SRC}
+              alt="Jaguar (Pvt) Ltd."
+              fill
+              sizes="(max-width: 640px) 200px, (max-width: 1024px) 220px, 340px"
+              className="object-contain object-start"
+              priority
+            />
           </Link>
 
           <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
-            <Link href="/" className={linkClass}>
+            <Link href="/" className={navLinkClass}>
               {t("home")}
             </Link>
-            <Link href="/about" className={linkClass}>
+            <Link href="/about" className={navLinkClass}>
               {t("about")}
             </Link>
-            <MegaMenu label={t("products")} items={productsMegaMenuItems} inverted={transparent} />
+            <MegaMenu label={t("products")} items={productsMegaMenuItems} />
             <MegaMenu
               label={t("ourImpact")}
               items={impactMegaMenuItems}
               footerAction={{ label: t("downloadEsg"), href: ESG_REPORT_URL }}
-              inverted={transparent}
             />
-            <Link href="/facility" className={linkClass}>
+            <Link href="/facility" className={navLinkClass}>
               {t("facility")}
             </Link>
-            <Link href="/careers" className={linkClass}>
+            <Link href="/careers" className={navLinkClass}>
               {t("careers")}
             </Link>
-            <LanguageSwitcher inverted={transparent} />
+            <LanguageSwitcher />
             <Button href="/contact">{tCommon("contact")}</Button>
           </nav>
 
           <button
             type="button"
-            className={cn(
-              "inline-flex size-11 items-center justify-center rounded-full border lg:hidden",
-              transparent ? "border-white/20 text-white" : "border-ink/10 text-ink",
-            )}
+            className="inline-flex size-11 shrink-0 touch-manipulation items-center justify-center rounded-full border border-ink/10 bg-white text-ink lg:hidden"
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
-            onClick={() => setMobileOpen((value) => !value)}
+            onPointerUp={(event) => {
+              event.preventDefault();
+              setMobileOpen((value) => !value);
+            }}
           >
             {mobileOpen ? "✕" : "☰"}
           </button>
         </div>
       </header>
 
-      {mobileOpen ? (
-        <div className="fixed inset-0 z-40 lg:hidden">
-          <button
-            type="button"
-            className="absolute inset-0 bg-charcoal/50"
-            aria-label={t("closeMenuOverlay")}
-            onClick={() => setMobileOpen(false)}
-          />
-          <div className="absolute inset-y-0 end-0 flex w-full max-w-sm flex-col bg-white shadow-[var(--shadow-card-hover)]">
-            <div className="flex items-center justify-between border-b border-ink/8 px-4 py-4">
-              <p className="font-medium text-ink">{t("menu")}</p>
-              <button type="button" onClick={() => setMobileOpen(false)} aria-label={t("closeMenu")}>
-                ✕
-              </button>
-            </div>
-
-            <div className="flex-1 overflow-y-auto px-4 py-6">
-              <div className="space-y-4">
-                <Link href="/" className="block text-base font-medium text-ink" onClick={() => setMobileOpen(false)}>
-                  {t("home")}
-                </Link>
-                <Link href="/about" className="block text-base font-medium text-ink" onClick={() => setMobileOpen(false)}>
-                  {t("about")}
-                </Link>
-
-                <div>
-                  <button
-                    type="button"
-                    className="flex w-full items-center justify-between text-base font-medium text-ink"
-                    aria-expanded={mobileProductsOpen}
-                    onClick={() => setMobileProductsOpen((value) => !value)}
-                  >
-                    {t("products")}
-                    <span aria-hidden>{mobileProductsOpen ? "−" : "+"}</span>
-                  </button>
-                  {mobileProductsOpen ? (
-                    <ul className="mt-3 space-y-2 ps-4">
-                      {productsMegaMenuItems.map((item) => (
-                        <li key={item.href}>
-                          <Link href={item.href} className="block text-sm text-graphite" onClick={() => setMobileOpen(false)}>
-                            {item.title}
-                            {item.badge ? ` · ${t("catalogueBadge")}` : ""}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </div>
-
-                <div>
-                  <button
-                    type="button"
-                    className="flex w-full items-center justify-between text-base font-medium text-ink"
-                    aria-expanded={mobileImpactOpen}
-                    onClick={() => setMobileImpactOpen((value) => !value)}
-                  >
-                    {t("ourImpact")}
-                    <span aria-hidden>{mobileImpactOpen ? "−" : "+"}</span>
-                  </button>
-                  {mobileImpactOpen ? (
-                    <ul className="mt-3 space-y-2 ps-4">
-                      {impactMegaMenuItems.map((item) => (
-                        <li key={item.href}>
-                          <Link href={item.href} className="block text-sm text-graphite" onClick={() => setMobileOpen(false)}>
-                            {item.title}
-                          </Link>
-                        </li>
-                      ))}
-                      <li>
-                        <a href={ESG_REPORT_URL} className="block text-sm text-accent">
-                          {t("downloadEsg")}
-                        </a>
-                      </li>
-                    </ul>
-                  ) : null}
-                </div>
-
-                <Link href="/facility" className="block text-base font-medium text-ink" onClick={() => setMobileOpen(false)}>
-                  {t("facility")}
-                </Link>
-                <Link href="/careers" className="block text-base font-medium text-ink" onClick={() => setMobileOpen(false)}>
-                  {t("careers")}
-                </Link>
-
-                <div className="pt-2">
-                  <p className="mb-3 text-sm font-medium text-graphite">{t("language")}</p>
-                  <LanguageSwitcher variant="chips" />
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t border-ink/8 p-4">
-              <Button href="/contact" className="w-full">
-                {tCommon("contact")}
-              </Button>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      {mobileMenu}
     </>
   );
 }

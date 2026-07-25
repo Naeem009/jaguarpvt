@@ -28,6 +28,10 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Jaguar (Pvt) Ltd.",
   description: "Vertically integrated apparel manufacturer.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export function generateStaticParams() {
