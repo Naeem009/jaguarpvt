@@ -1,7 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -22,49 +23,13 @@ type MatcherResponse = {
   caveat: string;
 };
 
-const steps = [
-  { id: "category", title: "Product category" },
-  { id: "volume", title: "Estimated monthly volume" },
-  { id: "materials", title: "Key materials" },
-  { id: "sustainability", title: "Sustainability requirements" },
-  { id: "region", title: "Target delivery region" },
-] as const;
+const stepIds = ["category", "volume", "materials", "sustainability", "region"] as const;
 
-const categoryOptions = [
-  { value: "wovens", label: "Wovens" },
-  { value: "knits", label: "Knits" },
-  { value: "baby-wear", label: "Baby Wear" },
-];
-
-const volumeOptions = [
-  { value: "under-10k", label: "Under 10,000 units / month" },
-  { value: "10k-50k", label: "10,000 – 50,000 units / month" },
-  { value: "50k-200k", label: "50,000 – 200,000 units / month" },
-  { value: "200k-plus", label: "200,000+ units / month" },
-];
-
-const materialOptions = [
-  { value: "cotton", label: "Cotton" },
-  { value: "organic-cotton", label: "Organic cotton" },
-  { value: "polyester", label: "Polyester / blends" },
-  { value: "recycled-fiber", label: "Recycled fiber inputs" },
-];
-
-const sustainabilityOptions = [
-  { value: "gots", label: "GOTS certification required" },
-  { value: "oeko-tex", label: "OEKO-TEX required" },
-  { value: "wrap", label: "WRAP required" },
-  { value: "recycled-content", label: "Recycled content targets" },
-  { value: "low-impact-finishing", label: "Low-impact finishing" },
-];
-
-const regionOptions = [
-  { value: "north-america", label: "North America" },
-  { value: "europe", label: "Europe" },
-  { value: "asia", label: "Asia" },
-  { value: "middle-east", label: "Middle East" },
-  { value: "global", label: "Global / multi-region" },
-];
+const categoryValues = ["wovens", "knits", "baby-wear"] as const;
+const volumeValues = ["under-10k", "10k-50k", "50k-200k", "200k-plus"] as const;
+const materialValues = ["cotton", "organic-cotton", "polyester", "recycled-fiber"] as const;
+const sustainabilityValues = ["gots", "oeko-tex", "wrap", "recycled-content", "low-impact-finishing"] as const;
+const regionValues = ["north-america", "europe", "asia", "middle-east", "global"] as const;
 
 const initialState: MatcherFormState = {
   category: "",
@@ -92,11 +57,42 @@ function buildContactHref(form: MatcherFormState, summary: string) {
 }
 
 export function CapabilityMatcher({ className }: { className?: string }) {
+  const t = useTranslations("matcher");
   const [stepIndex, setStepIndex] = useState(0);
   const [form, setForm] = useState<MatcherFormState>(initialState);
   const [result, setResult] = useState<MatcherResponse | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const steps = useMemo(
+    () => stepIds.map((id) => ({ id, title: t(`steps.${id}`) })),
+    [t],
+  );
+
+  const categoryOptions = useMemo(
+    () => categoryValues.map((value) => ({ value, label: t(`categories.${value}`) })),
+    [t],
+  );
+
+  const volumeOptions = useMemo(
+    () => volumeValues.map((value) => ({ value, label: t(`volumes.${value}`) })),
+    [t],
+  );
+
+  const materialOptions = useMemo(
+    () => materialValues.map((value) => ({ value, label: t(`materials.${value}`) })),
+    [t],
+  );
+
+  const sustainabilityOptions = useMemo(
+    () => sustainabilityValues.map((value) => ({ value, label: t(`sustainability.${value}`) })),
+    [t],
+  );
+
+  const regionOptions = useMemo(
+    () => regionValues.map((value) => ({ value, label: t(`regions.${value}`) })),
+    [t],
+  );
 
   const currentStep = steps[stepIndex];
   const isLastStep = stepIndex === steps.length - 1;
@@ -124,7 +120,7 @@ export function CapabilityMatcher({ className }: { className?: string }) {
       const data = (await response.json()) as MatcherResponse;
       setResult(data);
     } catch {
-      setError("We could not generate a match summary right now. Try again or contact our team directly.");
+      setError(t("error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -159,15 +155,15 @@ export function CapabilityMatcher({ className }: { className?: string }) {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Card className="mx-auto max-w-3xl">
             <SectionHeading
-              eyebrow="Capability match"
-              title="Your program match summary"
-              subhead="Review this summary with our team to confirm capacity, certifications, and lead times."
+              eyebrow={t("result.eyebrow")}
+              title={t("result.title")}
+              subhead={t("result.subhead")}
               className="mb-6"
             />
             <p className="text-base leading-relaxed text-ink">{result.summary}</p>
             <p className="mt-4 text-sm text-graphite">{result.caveat}</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href={buildContactHref(form, result.summary)}>Send to our team</Button>
+              <Button href={buildContactHref(form, result.summary)}>{t("result.sendToTeam")}</Button>
               <Button
                 variant="secondary"
                 onClick={() => {
@@ -176,7 +172,7 @@ export function CapabilityMatcher({ className }: { className?: string }) {
                   setForm(initialState);
                 }}
               >
-                Start over
+                {t("result.startOver")}
               </Button>
             </div>
           </Card>
@@ -189,16 +185,16 @@ export function CapabilityMatcher({ className }: { className?: string }) {
     <section className={cn("bg-mist py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
-          eyebrow="Capability matcher"
-          title="Find the right manufacturing fit"
-          subhead="Answer five short questions to generate a grounded match summary based on our published capability data."
+          eyebrow={t("heading.eyebrow")}
+          title={t("heading.title")}
+          subhead={t("heading.subhead")}
           className="mb-10 md:mb-12"
         />
 
         <Card className="mx-auto max-w-3xl">
           <div className="mb-8 flex items-center justify-between gap-4">
             <p className="text-sm font-medium text-graphite">
-              Step {stepIndex + 1} of {steps.length}
+              {t("progress", { current: stepIndex + 1, total: steps.length })}
             </p>
             <div className="flex gap-2">
               {steps.map((step, index) => (
@@ -281,10 +277,10 @@ export function CapabilityMatcher({ className }: { className?: string }) {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Button variant="secondary" onClick={handleBack} disabled={stepIndex === 0}>
-              Back
+              {t("back")}
             </Button>
             <Button onClick={handleNext} disabled={!canContinue() || isSubmitting}>
-              {isSubmitting ? "Generating..." : isLastStep ? "Generate match" : "Continue"}
+              {isSubmitting ? t("generating") : isLastStep ? t("generateMatch") : t("continue")}
             </Button>
           </div>
         </Card>

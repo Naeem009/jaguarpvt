@@ -1,0 +1,58 @@
+export const matcher = {
+  steps: {
+    category: "Product category",
+    volume: "Estimated monthly volume",
+    materials: "Key materials",
+    sustainability: "Sustainability requirements",
+    region: "Target delivery region",
+  },
+  categories: {
+    wovens: "Wovens",
+    knits: "Knits",
+    "baby-wear": "Baby Wear",
+  },
+  volumes: {
+    "under-10k": "Under 10,000 units / month",
+    "10k-50k": "10,000 – 50,000 units / month",
+    "50k-200k": "50,000 – 200,000 units / month",
+    "200k-plus": "200,000+ units / month",
+  },
+  materials: {
+    cotton: "Cotton",
+    "organic-cotton": "Organic cotton",
+    polyester: "Polyester / blends",
+    "recycled-fiber": "Recycled fiber inputs",
+  },
+  sustainability: {
+    gots: "GOTS certification required",
+    "oeko-tex": "OEKO-TEX required",
+    wrap: "WRAP required",
+    "recycled-content": "Recycled content targets",
+    "low-impact-finishing": "Low-impact finishing",
+  },
+  regions: {
+    "north-america": "North America",
+    europe: "Europe",
+    asia: "Asia",
+    "middle-east": "Middle East",
+    global: "Global / multi-region",
+  },
+  heading: {
+    eyebrow: "Capability matcher",
+    title: "Find the right manufacturing fit",
+    subhead: "Answer five short questions to generate a grounded match summary based on our published capability data.",
+  },
+  result: {
+    eyebrow: "Capability match",
+    title: "Your program match summary",
+    subhead: "Review this summary with our team to confirm capacity, certifications, and lead times.",
+    sendToTeam: "Send to our team",
+    startOver: "Start over",
+  },
+  progress: "Step {current} of {total}",
+  back: "Back",
+  continue: "Continue",
+  generateMatch: "Generate match",
+  generating: "Generating...",
+  error: "We could not generate a match summary right now. Try again or contact our team directly.",
+};

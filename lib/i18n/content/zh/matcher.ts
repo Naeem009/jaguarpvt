@@ -1,0 +1,58 @@
+export const matcher = {
+  steps: {
+    category: "产品品类",
+    volume: "预估月产量",
+    materials: "主要材料",
+    sustainability: "可持续发展要求",
+    region: "目标交付区域",
+  },
+  categories: {
+    wovens: "梭织",
+    knits: "针织",
+    "baby-wear": "婴童服饰",
+  },
+  volumes: {
+    "under-10k": "10,000 件以下 / 月",
+    "10k-50k": "10,000 – 50,000 件 / 月",
+    "50k-200k": "50,000 – 200,000 件 / 月",
+    "200k-plus": "200,000 件以上 / 月",
+  },
+  materials: {
+    cotton: "棉",
+    "organic-cotton": "有机棉",
+    polyester: "聚酯 / 混纺",
+    "recycled-fiber": "再生纤维原料",
+  },
+  sustainability: {
+    gots: "需要 GOTS 认证",
+    "oeko-tex": "需要 OEKO-TEX",
+    wrap: "需要 WRAP",
+    "recycled-content": "再生含量目标",
+    "low-impact-finishing": "低影响后整",
+  },
+  regions: {
+    "north-america": "北美",
+    europe: "欧洲",
+    asia: "亚洲",
+    "middle-east": "中东",
+    global: "全球 / 多区域",
+  },
+  heading: {
+    eyebrow: "能力匹配",
+    title: "找到合适的制造方案",
+    subhead: "回答五个简短问题，基于我们已发布的产能数据生成有据可依的匹配摘要。",
+  },
+  result: {
+    eyebrow: "能力匹配",
+    title: "您的项目匹配摘要",
+    subhead: "与我们的团队一起审阅此摘要，确认产能、认证及交期。",
+    sendToTeam: "发送给我们的团队",
+    startOver: "重新开始",
+  },
+  progress: "第 {current} 步，共 {total} 步",
+  back: "返回",
+  continue: "继续",
+  generateMatch: "生成匹配",
+  generating: "正在生成...",
+  error: "目前无法生成匹配摘要。请重试或直接联系我们的团队。",
+};

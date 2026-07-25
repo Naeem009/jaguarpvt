@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { z } from "zod";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Checkbox } from "@/components/ui/Checkbox";
@@ -13,12 +14,8 @@ import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { getContactFormDefaults } from "@/lib/contact/prefill";
 import {
-  annualVolumeLabels,
   annualVolumeValues,
-  contactFormSchema,
-  productCategoryLabels,
   productCategoryValues,
-  sustainabilityLabels,
   sustainabilityValues,
   type ContactFormValues,
 } from "@/lib/contact/schema";
@@ -46,6 +43,37 @@ export function ContactForm({ className }: { className?: string }) {
   const prefill = useMemo(() => getContactFormDefaults(searchParams), [searchParams]);
   const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const contactFormSchema = useMemo(
+    () =>
+      z.object({
+        companyName: z.string().trim().min(1, t("validation.companyNameRequired")),
+        contactName: z.string().trim().min(1, t("validation.contactNameRequired")),
+        email: z.string().trim().email(t("validation.emailInvalid")),
+        website: z
+          .string()
+          .trim()
+          .optional()
+          .refine(
+            (value) =>
+              !value || /^https?:\/\/.+/i.test(value) || /^[a-z0-9.-]+\.[a-z]{2,}/i.test(value),
+            t("validation.websiteInvalid"),
+          ),
+        category: z.enum(productCategoryValues, {
+          message: t("validation.categoryRequired"),
+        }),
+        annualVolume: z.enum(annualVolumeValues, {
+          message: t("validation.volumeRequired"),
+        }),
+        sustainability: z.array(z.enum(sustainabilityValues)).default([]),
+        message: z.string().trim().min(10, t("validation.messageMin")),
+        matchSummary: z.string().trim().optional(),
+        matcherVolume: z.string().trim().optional(),
+        matcherMaterials: z.string().trim().optional(),
+        matcherRegion: z.string().trim().optional(),
+      }),
+    [t],
+  );
 
   const {
     register,
@@ -134,7 +162,7 @@ export function ContactForm({ className }: { className?: string }) {
             label={t("category")}
             options={productCategoryValues.map((value) => ({
               value,
-              label: productCategoryLabels[value],
+              label: t(`categories.${value}`),
             }))}
             {...register("category")}
             error={errors.category?.message}
@@ -143,7 +171,7 @@ export function ContactForm({ className }: { className?: string }) {
             label={t("annualVolume")}
             options={annualVolumeValues.map((value) => ({
               value,
-              label: annualVolumeLabels[value],
+              label: t(`volumes.${value}`),
             }))}
             {...register("annualVolume")}
             error={errors.annualVolume?.message}
@@ -162,7 +190,7 @@ export function ContactForm({ className }: { className?: string }) {
                   return (
                     <Checkbox
                       key={value}
-                      label={sustainabilityLabels[value]}
+                      label={t(`sustainabilityOptions.${value}`)}
                       checked={checked}
                       onChange={(isChecked) => {
                         const next = isChecked

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
 
@@ -16,17 +17,24 @@ export type TimelineSectionProps = {
   className?: string;
 };
 
-export function TimelineSection({
-  eyebrow = "Process",
-  title = "From fiber to finished garment",
-  subhead = "Integrated steps across cutting, sewing, finishing, and quality control — managed under one manufacturing system.",
+export async function TimelineSection({
+  eyebrow,
+  title,
+  subhead,
   steps,
   className,
 }: TimelineSectionProps) {
+  const t = await getTranslations("sections.timeline");
+
   return (
     <section className={cn("bg-paper py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <SectionHeading eyebrow={eyebrow} title={title} subhead={subhead} className="mb-12 md:mb-16" />
+        <SectionHeading
+          eyebrow={eyebrow ?? t("eyebrow")}
+          title={title ?? t("defaultTitle")}
+          subhead={subhead ?? t("defaultSubhead")}
+          className="mb-12 md:mb-16"
+        />
 
         <ol className="space-y-12 md:space-y-16">
           {steps.map((step, index) => (
@@ -51,7 +59,7 @@ export function TimelineSection({
 
               <div className="space-y-4">
                 <p className="text-sm font-medium uppercase tracking-[0.06em] text-accent">
-                  Step {String(index + 1).padStart(2, "0")}
+                  {t("stepLabel", { number: String(index + 1).padStart(2, "0") })}
                 </p>
                 <h3 className="font-display text-2xl font-semibold text-ink md:text-3xl">
                   {step.title}

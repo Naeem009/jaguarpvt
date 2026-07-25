@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
 
@@ -14,27 +15,34 @@ export type ProductSpecsTableProps = {
   className?: string;
 };
 
-export function ProductSpecsTable({
-  eyebrow = "Technical specs",
-  title = "Capacity, machinery, and compliance",
-  subhead = "Representative ranges from published capability data — confirm current capacity and certification scope with our team.",
+export async function ProductSpecsTable({
+  eyebrow,
+  title,
+  subhead,
   rows,
   className,
 }: ProductSpecsTableProps) {
+  const t = await getTranslations("sections.productSpecs");
+
   return (
     <section className={cn("bg-white py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <SectionHeading eyebrow={eyebrow} title={title} subhead={subhead} className="mb-10 md:mb-12" />
+        <SectionHeading
+          eyebrow={eyebrow ?? t("eyebrow")}
+          title={title ?? t("title")}
+          subhead={subhead ?? t("subhead")}
+          className="mb-10 md:mb-12"
+        />
 
         <div className="overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 shadow-[var(--shadow-card)]">
           <table className="w-full border-collapse text-start">
             <thead className="bg-mist">
               <tr>
                 <th scope="col" className="px-6 py-4 text-sm font-medium uppercase tracking-[0.06em] text-graphite">
-                  Specification
+                  {t("specHeader")}
                 </th>
                 <th scope="col" className="px-6 py-4 text-sm font-medium uppercase tracking-[0.06em] text-graphite">
-                  Details
+                  {t("detailsHeader")}
                 </th>
               </tr>
             </thead>

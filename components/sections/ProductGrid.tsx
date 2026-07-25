@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
@@ -21,17 +22,24 @@ export type ProductGridProps = {
   className?: string;
 };
 
-export function ProductGrid({
-  eyebrow = "Products",
-  title = "Built across four core categories",
-  subhead = "From woven shirting to certified baby wear, each category is supported by integrated manufacturing and quality systems.",
+export async function ProductGrid({
+  eyebrow,
+  title,
+  subhead,
   items,
   className,
 }: ProductGridProps) {
+  const t = await getTranslations("sections.productGrid");
+
   return (
     <section className={cn("bg-white py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <SectionHeading eyebrow={eyebrow} title={title} subhead={subhead} className="mb-12 md:mb-16" />
+        <SectionHeading
+          eyebrow={eyebrow ?? t("eyebrow")}
+          title={title ?? t("defaultTitle")}
+          subhead={subhead ?? t("defaultSubhead")}
+          className="mb-12 md:mb-16"
+        />
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {items.map((item) => (

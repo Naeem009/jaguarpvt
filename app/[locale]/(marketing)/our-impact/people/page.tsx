@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { ImpactSubPageTemplate } from "@/components/sections";
 import { peopleContent } from "@/lib/our-impact/content";
@@ -7,26 +7,36 @@ type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export function generateMetadata() {
+export async function generateMetadata() {
   return createPageMetadata("people");
 }
 
 export default async function PeoplePage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("impact.people");
+  const tCommon = await getTranslations("common");
+  const blocks = t.raw("blocks") as Array<{ title: string; body: string; imageAlt: string }>;
 
   return (
     <main className="flex-1">
       <ImpactSubPageTemplate
-        headline="People & Communities"
-        subhead="Worker welfare, training, and community programs across the manufacturing communities we operate in."
+        headline={t("headline")}
+        subhead={t("subhead")}
         heroImage={peopleContent.heroImage}
-        stats={peopleContent.stats}
-        blocks={peopleContent.blocks}
+        stats={[
+          { value: 0, placeholder: "[X]", label: t("stats.workerPrograms") },
+          { value: 0, placeholder: "[X]+", label: t("stats.training") },
+          { value: 0, placeholder: "[X]", label: t("stats.community") },
+        ]}
+        blocks={blocks.map((block, index) => ({
+          ...block,
+          image: peopleContent.blocks[index]?.image,
+        }))}
         cta={{
-          title: "Discuss social compliance requirements",
+          title: t("cta.title"),
           href: "/contact",
-          label: "Contact Us",
+          label: tCommon("contactUs"),
         }}
       />
     </main>

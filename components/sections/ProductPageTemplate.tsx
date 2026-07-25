@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { getTranslations } from "next-intl/server";
 import { CTASection } from "./CTASection";
 import { Hero } from "./Hero";
 import { InnovationNote } from "./InnovationNote";
@@ -12,8 +13,11 @@ export type ProductPageTemplateProps = {
   catalogueSection?: ReactNode;
 };
 
-export function ProductPageTemplate({ content, catalogueSection }: ProductPageTemplateProps) {
+export async function ProductPageTemplate({ content, catalogueSection }: ProductPageTemplateProps) {
+  const t = await getTranslations("productCategories");
   const contactHref = `/contact?category=${content.slug}`;
+  const discussLabel = t("discussProgram", { category: content.name });
+  const discussTitle = t("discussProgramLower", { category: content.name });
 
   return (
     <>
@@ -22,13 +26,13 @@ export function ProductPageTemplate({ content, catalogueSection }: ProductPageTe
         headline={content.headline}
         subhead={content.subhead}
         primaryCTA={{
-          label: `Discuss a ${content.name} Program`,
+          label: discussLabel,
           href: contactHref,
         }}
         media={{
           type: "image",
           src: content.heroImage,
-          alt: `${content.name} manufacturing and product development`,
+          alt: t("heroAlt", { category: content.name }),
         }}
       />
 
@@ -45,10 +49,10 @@ export function ProductPageTemplate({ content, catalogueSection }: ProductPageTe
       {catalogueSection}
 
       <CTASection
-        title={`Discuss a ${content.name} program with our team`}
-        subhead="Share your volume, material, and compliance requirements. We respond to qualified RFIs with clear next steps."
+        title={discussTitle}
+        subhead={t("discussSubhead")}
         cta={{
-          label: `Discuss a ${content.name} Program`,
+          label: discussLabel,
           href: contactHref,
         }}
       />

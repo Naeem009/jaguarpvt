@@ -1,7 +1,4 @@
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
-import { productHubGridItems } from "@/lib/products/content";
-
-export const productsMegaMenuItems = productHubGridItems;
 
 export const impactMegaMenuItems = [
   {

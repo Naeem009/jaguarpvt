@@ -79,7 +79,21 @@
     "closeChat": "Fermer le chat",
     "chatAriaLabel": "Chat assistant sourcing",
     "preparing": "L'assistant prépare une réponse.",
-    "fallbackError": "Impossible de joindre l'assistant. Utilisez la page Contact et notre équipe répondra directement."
+    "fallbackError": "Impossible de joindre l'assistant. Utilisez la page Contact et notre équipe répondra directement.",
+    "prompts": [
+      {
+        "question": "Pouvez-vous produire des mailles en coton biologique certifié GOTS à [X] unités par mois ?",
+        "answer": "D'après nos données de capacité publiées, nous prenons en charge les mailles en coton biologique certifié dans des sites sélectionnés. La capacité varie selon la saison et le programme — contactez notre équipe pour une vérification de disponibilité actuelle."
+      },
+      {
+        "question": "Quels sites prennent en charge les programmes de coton biologique certifié GOTS ?",
+        "answer": "Les programmes de coton biologique certifié GOTS figurent parmi nos capacités mailles et layette sur des sites sélectionnés. L'attribution du site dépend du profil de commande et des exigences de conformité."
+      },
+      {
+        "question": "Quelles certifications durabilité détenez-vous actuellement ?",
+        "answer": "Des certifications dont GOTS, OEKO-TEX et WRAP apparaissent dans nos documents de gouvernance publiés. La portée de la certification varie selon le site et la gamme de produits."
+      }
+    ]
   },
   "contact": {
     "companyName": "Nom de l'entreprise",
@@ -94,7 +108,35 @@
     "messagePlaceholder": "Dites-nous ce que vous développez — type de produit, calendrier, conformité et contexte utile.",
     "submitError": "Impossible d'envoyer le formulaire pour le moment.",
     "successTitle": "Merci — nous avons reçu votre demande.",
-    "successBody": "Un membre de notre équipe examinera votre demande et répondra sous 2 jours ouvrés avec les prochaines étapes."
+    "successBody": "Un membre de notre équipe examinera votre demande et répondra sous 2 jours ouvrés avec les prochaines étapes.",
+    "categories": {
+      "wovens": "Tissés",
+      "knits": "Maille",
+      "baby-wear": "Layette",
+      "multiple": "Plusieurs catégories"
+    },
+    "volumes": {
+      "under-50k": "Moins de 50 000 unités / an",
+      "50k-250k": "50 000 – 250 000 unités / an",
+      "250k-1m": "250 000 – 1 000 000 unités / an",
+      "1m-plus": "Plus de 1 000 000 unités / an"
+    },
+    "sustainabilityOptions": {
+      "gots": "Certification GOTS requise",
+      "oeko-tex": "OEKO-TEX requis",
+      "wrap": "WRAP requis",
+      "recycled-content": "Objectifs de contenu recyclé",
+      "low-impact-finishing": "Finition à faible impact"
+    },
+    "validation": {
+      "companyNameRequired": "Le nom de l'entreprise est requis.",
+      "contactNameRequired": "Le nom du contact est requis.",
+      "emailInvalid": "Entrez une adresse e-mail valide.",
+      "websiteInvalid": "Entrez une URL de site web valide.",
+      "categoryRequired": "Sélectionnez une catégorie de produit.",
+      "volumeRequired": "Sélectionnez une fourchette de volume annuel estimé.",
+      "messageMin": "Veuillez ajouter un court message (au moins 10 caractères)."
+    }
   },
   "catalogue": {
     "eyebrow": "Catalogue",

@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import {
   FACILITY_PLACEHOLDER_IMAGE,
-  formatCategoryLabel,
   getFacilityThumbnailPath,
   type Facility,
 } from "@/lib/facilities";
@@ -25,6 +25,8 @@ export function FacilityCard({
   className,
   onFocusMarker,
 }: FacilityCardProps) {
+  const t = useTranslations("facilityMap");
+  const tCategories = useTranslations("facilityMap.categories");
   const [imageSrc, setImageSrc] = useState(getFacilityThumbnailPath(facility.slug));
 
   return (
@@ -40,7 +42,7 @@ export function FacilityCard({
       <div className={cn("relative", variant === "popover" ? "aspect-[16/10]" : "aspect-[16/9]")}>
         <Image
           src={imageSrc}
-          alt={`${facility.name} facility`}
+          alt={t("card.facilityAlt", { name: facility.name })}
           fill
           sizes="(max-width: 768px) 100vw, 320px"
           className="object-cover"
@@ -60,11 +62,11 @@ export function FacilityCard({
 
         <dl className="grid grid-cols-2 gap-4 text-sm">
           <div>
-            <dt className="font-medium text-graphite">Employees</dt>
+            <dt className="font-medium text-graphite">{t("card.employees")}</dt>
             <dd className="text-ink">{facility.employees.toLocaleString()}+</dd>
           </div>
           <div>
-            <dt className="font-medium text-graphite">Established</dt>
+            <dt className="font-medium text-graphite">{t("card.established")}</dt>
             <dd className="text-ink">{facility.establishedYear}</dd>
           </div>
         </dl>
@@ -72,7 +74,7 @@ export function FacilityCard({
         <div className="flex flex-wrap gap-2">
           {facility.categories.map((category) => (
             <Badge key={category} tone="neutral">
-              {formatCategoryLabel(category)}
+              {tCategories(category as "wovens" | "knits" | "baby-wear")}
             </Badge>
           ))}
         </div>

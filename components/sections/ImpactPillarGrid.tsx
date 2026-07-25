@@ -1,23 +1,60 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
-import type { ImpactPillar } from "@/lib/our-impact/content";
+
+const pillarConfig = [
+  {
+    key: "environment",
+    href: "/our-impact/environment",
+    image: "/images/our-impact/environment/solar.svg",
+    placeholders: ["[X]M", "[X]%"],
+  },
+  {
+    key: "people",
+    href: "/our-impact/people",
+    image: "/images/our-impact/people/community.svg",
+    placeholders: ["[X]", "[X]+"],
+  },
+  {
+    key: "governance",
+    href: "/our-impact/governance",
+    image: "/images/our-impact/governance/hero.svg",
+    placeholders: ["[X]", "[X]"],
+  },
+] as const;
 
 export type ImpactPillarGridProps = {
-  pillars: ImpactPillar[];
   className?: string;
 };
 
-export function ImpactPillarGrid({ pillars, className }: ImpactPillarGridProps) {
+export async function ImpactPillarGrid({ className }: ImpactPillarGridProps) {
+  const t = await getTranslations("impact.hub.pillars");
+
+  const pillars = pillarConfig.map((config) => {
+    const metrics = t.raw(`${config.key}.metrics`) as string[];
+
+    return {
+      title: t(`${config.key}.title`),
+      href: config.href,
+      image: config.image,
+      description: t(`${config.key}.description`),
+      metrics: metrics.map((label, index) => ({
+        label,
+        placeholder: config.placeholders[index] ?? "[X]",
+      })),
+    };
+  });
+
   return (
     <section className={cn("bg-white py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
-          eyebrow="Our pillars"
-          title="Environment, people, and governance"
-          subhead="Three areas where we publish measurable programs and audit-ready documentation — each with deeper reporting on its dedicated page."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          subhead={t("subhead")}
           className="mb-12 md:mb-16"
         />
 

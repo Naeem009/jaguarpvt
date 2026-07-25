@@ -1,36 +1,42 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { CertificationGrid, ImpactSubPageTemplate } from "@/components/sections";
-import { certifications, governanceContent } from "@/lib/our-impact/content";
+import { governanceContent } from "@/lib/our-impact/content";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export function generateMetadata() {
+export async function generateMetadata() {
   return createPageMetadata("governance");
 }
 
 export default async function GovernancePage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("impact.governance");
+  const tCommon = await getTranslations("common");
 
   return (
     <main className="flex-1">
       <ImpactSubPageTemplate
-        headline="Governance & Certifications"
-        subhead="Certifications, compliance systems, and governance structures that support buyer audit and due diligence."
+        headline={t("headline")}
+        subhead={t("subhead")}
         heroImage={governanceContent.heroImage}
-        stats={governanceContent.stats}
-        intro={governanceContent.intro}
+        stats={[
+          { value: 0, placeholder: "[X]", label: t("stats.certifications") },
+          { value: 0, placeholder: "[X]", label: t("stats.auditFacilities") },
+          { value: 0, placeholder: "[X]", label: t("stats.policyReviews") },
+        ]}
+        intro={t("intro")}
         cta={{
-          title: "Request certification scope for your program",
-          subhead: "Confirm which credentials apply to your product category, facility, and compliance requirements.",
+          title: t("cta.title"),
+          subhead: t("cta.subhead"),
           href: "/contact",
-          label: "Contact Us",
+          label: tCommon("contactUs"),
         }}
       >
-        <CertificationGrid certifications={certifications} />
+        <CertificationGrid />
       </ImpactSubPageTemplate>
     </main>
   );

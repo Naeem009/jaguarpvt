@@ -79,7 +79,21 @@
     "closeChat": "关闭聊天",
     "chatAriaLabel": "采购助手聊天",
     "preparing": "助手正在准备回复。",
-    "fallbackError": "暂时无法连接助手。请使用联系页面，我们的团队将直接回复。"
+    "fallbackError": "暂时无法连接助手。请使用联系页面，我们的团队将直接回复。",
+    "prompts": [
+      {
+        "question": "能否以每月 [X] 件的产量生产 GOTS 认证有机棉针织品？",
+        "answer": "根据我们已发布的能力数据，我们在部分工厂支持 GOTS 认证有机棉针织项目。产能因季节和项目而异——请联系我们的团队了解当前可用性。"
+      },
+      {
+        "question": "哪些工厂支持 GOTS 认证有机棉项目？",
+        "answer": "GOTS 认证有机棉项目列于我们在部分工厂的针织和婴童服装能力中。具体工厂分配取决于订单概况和合规要求。"
+      },
+      {
+        "question": "你们目前持有哪些可持续发展认证？",
+        "answer": "GOTS、OEKO-TEX 和 WRAP 等认证出现在我们已发布的治理材料中。认证范围因工厂和产品线而异。"
+      }
+    ]
   },
   "contact": {
     "companyName": "公司名称",
@@ -94,7 +108,35 @@
     "messagePlaceholder": "告诉我们您正在开发的内容 — 产品类型、时间、合规需求及其他背景。",
     "submitError": "暂时无法提交表单。",
     "successTitle": "谢谢 — 我们已收到您的咨询。",
-    "successBody": "我们的团队成员将在 2 个工作日内审核并回复明确的后续步骤。"
+    "successBody": "我们的团队成员将在 2 个工作日内审核并回复明确的后续步骤。",
+    "categories": {
+      "wovens": "梭织",
+      "knits": "针织",
+      "baby-wear": "婴童服装",
+      "multiple": "多个品类"
+    },
+    "volumes": {
+      "under-50k": "每年少于 50,000 件",
+      "50k-250k": "每年 50,000 – 250,000 件",
+      "250k-1m": "每年 250,000 – 1,000,000 件",
+      "1m-plus": "每年 1,000,000 件以上"
+    },
+    "sustainabilityOptions": {
+      "gots": "需要 GOTS 认证",
+      "oeko-tex": "需要 OEKO-TEX",
+      "wrap": "需要 WRAP",
+      "recycled-content": "再生含量目标",
+      "low-impact-finishing": "低影响后整理"
+    },
+    "validation": {
+      "companyNameRequired": "请填写公司名称。",
+      "contactNameRequired": "请填写联系人姓名。",
+      "emailInvalid": "请输入有效的电子邮件地址。",
+      "websiteInvalid": "请输入有效的网站 URL。",
+      "categoryRequired": "请选择产品品类。",
+      "volumeRequired": "请选择预计年采购量范围。",
+      "messageMin": "请填写简短留言（至少 10 个字符）。"
+    }
   },
   "catalogue": {
     "eyebrow": "目录",

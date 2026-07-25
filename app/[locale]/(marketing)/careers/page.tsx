@@ -1,47 +1,62 @@
 import Image from "next/image";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { Hero } from "@/components/sections";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { careersContent, CAREERS_ATS_URL } from "@/lib/careers/content";
+import { CAREERS_ATS_URL } from "@/lib/careers/content";
+
+const departmentHrefs = [
+  `${CAREERS_ATS_URL}?department=manufacturing-operations`,
+  `${CAREERS_ATS_URL}?department=quality-compliance`,
+  `${CAREERS_ATS_URL}?department=product-development`,
+  `${CAREERS_ATS_URL}?department=sustainability`,
+  `${CAREERS_ATS_URL}?department=commercial-corporate`,
+];
+
+const cultureImages = [
+  "/images/careers/culture-01.svg",
+  "/images/careers/culture-02.svg",
+];
 
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export function generateMetadata() {
+export async function generateMetadata() {
   return createPageMetadata("careers");
 }
 
 export default async function CareersPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
-
-  const { hero, culture, departments } = careersContent;
+  const t = await getTranslations("careers");
+  const tCommon = await getTranslations("common");
+  const cultureValues = t.raw("culture.values") as Array<{ title: string; body: string; alt: string }>;
+  const departments = t.raw("departments") as Array<{ name: string; description: string }>;
 
   return (
     <main className="flex-1">
       <Hero
         variant="inner"
-        headline={hero.headline}
-        subhead={hero.subhead}
-        primaryCTA={{ label: "View open roles", href: "#open-roles" }}
-        secondaryCTA={{ label: "Contact Us", href: "/contact" }}
-        media={{ type: "image", src: hero.image, alt: hero.alt }}
+        headline={t("hero.headline")}
+        subhead={t("hero.subhead")}
+        primaryCTA={{ label: t("hero.viewRoles"), href: "#open-roles" }}
+        secondaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
+        media={{ type: "image", src: "/images/careers/hero.svg", alt: t("hero.alt") }}
       />
 
       <section className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionHeading
-            eyebrow={culture.eyebrow}
-            title={culture.title}
-            subhead={culture.subhead}
+            eyebrow={t("culture.eyebrow")}
+            title={t("culture.title")}
+            subhead={t("culture.subhead")}
             className="mb-12 md:mb-16"
           />
 
           <div className="space-y-16">
-            {culture.values.map((value, index) => (
+            {cultureValues.map((value, index) => (
               <div
                 key={value.title}
                 className={`grid items-center gap-8 md:grid-cols-2 md:gap-12 ${
@@ -50,7 +65,7 @@ export default async function CareersPage({ params }: PageProps) {
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 shadow-[var(--shadow-card)]">
                   <Image
-                    src={value.image}
+                    src={cultureImages[index] ?? cultureImages[0]}
                     alt={value.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -72,14 +87,14 @@ export default async function CareersPage({ params }: PageProps) {
       <section id="open-roles" className="bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionHeading
-            eyebrow="Open roles"
-            title="Explore opportunities by department"
-            subhead="Applications are handled through our external applicant tracking system — select a department to view current openings."
+            eyebrow={t("openRoles.eyebrow")}
+            title={t("openRoles.title")}
+            subhead={t("openRoles.subhead")}
             className="mb-12 md:mb-16"
           />
 
           <ul className="grid gap-4 md:grid-cols-2">
-            {departments.map((department) => (
+            {departments.map((department, index) => (
               <li key={department.name}>
                 <Card variant="interactive" className="flex h-full flex-col justify-between gap-6">
                   <div className="space-y-3">
@@ -87,12 +102,12 @@ export default async function CareersPage({ params }: PageProps) {
                     <p className="text-sm leading-relaxed text-graphite">{department.description}</p>
                   </div>
                   <a
-                    href={department.href}
+                    href={departmentHrefs[index] ?? CAREERS_ATS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex min-h-11 items-center gap-2 text-base font-medium text-accent hover:text-accent-dark"
                   >
-                    View openings
+                    {t("openRoles.viewOpenings")}
                     <span aria-hidden>→</span>
                   </a>
                 </Card>

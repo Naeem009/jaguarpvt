@@ -1,41 +1,44 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { CapabilityMatcher, Hero, ProductGrid } from "@/components/sections";
-import { productHubGridItems } from "@/lib/products/content";
+import { getProductHubGridItems } from "@/lib/products/get-content";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export function generateMetadata() {
+export async function generateMetadata() {
   return createPageMetadata("products");
 }
 
 export default async function ProductsHubPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("productsHub");
+  const tCommon = await getTranslations("common");
+  const productItems = await getProductHubGridItems();
 
   return (
     <main className="flex-1">
       <Hero
         variant="inner"
-        headline="Products"
-        subhead="Three core categories — wovens, knits, and baby wear — supported by integrated manufacturing, compliance systems, and development capability."
-        primaryCTA={{ label: "Contact Us", href: "/contact" }}
-        secondaryCTA={{ label: "Explore categories", href: "#categories" }}
+        headline={t("hero.headline")}
+        subhead={t("hero.subhead")}
+        primaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
+        secondaryCTA={{ label: t("hero.exploreCategories"), href: "#categories" }}
         media={{
           type: "image",
           src: "/images/products/wovens/hero.svg",
-          alt: "Apparel product categories across wovens, knits, and baby wear",
+          alt: t("hero.alt"),
         }}
       />
 
       <div id="categories">
         <ProductGrid
-          eyebrow="Categories"
-          title="Select a product category"
-          subhead="Each category page outlines process steps, technical specs, and sustainability programs — with baby wear including a browsable catalogue."
-          items={productHubGridItems}
+          eyebrow={t("grid.eyebrow")}
+          title={t("grid.title")}
+          subhead={t("grid.subhead")}
+          items={productItems}
         />
       </div>
 

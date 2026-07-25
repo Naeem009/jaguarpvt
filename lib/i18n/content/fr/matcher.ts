@@ -1,0 +1,58 @@
+export const matcher = {
+  steps: {
+    category: "Catégorie de produits",
+    volume: "Volume mensuel estimé",
+    materials: "Matières principales",
+    sustainability: "Exigences de durabilité",
+    region: "Région de livraison cible",
+  },
+  categories: {
+    wovens: "Tissés",
+    knits: "Mailles",
+    "baby-wear": "Layette",
+  },
+  volumes: {
+    "under-10k": "Moins de 10 000 unités / mois",
+    "10k-50k": "10 000 – 50 000 unités / mois",
+    "50k-200k": "50 000 – 200 000 unités / mois",
+    "200k-plus": "200 000+ unités / mois",
+  },
+  materials: {
+    cotton: "Coton",
+    "organic-cotton": "Coton biologique",
+    polyester: "Polyester / mélanges",
+    "recycled-fiber": "Intrants en fibres recyclées",
+  },
+  sustainability: {
+    gots: "Certification GOTS requise",
+    "oeko-tex": "OEKO-TEX requis",
+    wrap: "WRAP requis",
+    "recycled-content": "Objectifs de contenu recyclé",
+    "low-impact-finishing": "Finition à faible impact",
+  },
+  regions: {
+    "north-america": "Amérique du Nord",
+    europe: "Europe",
+    asia: "Asie",
+    "middle-east": "Moyen-Orient",
+    global: "Mondial / multi-régions",
+  },
+  heading: {
+    eyebrow: "Matching de capacités",
+    title: "Trouvez la bonne correspondance de manufacture",
+    subhead: "Répondez à cinq questions courtes pour générer un résumé de correspondance fondé sur nos données de capacité publiées.",
+  },
+  result: {
+    eyebrow: "Correspondance de capacités",
+    title: "Résumé de correspondance de votre programme",
+    subhead: "Examinez ce résumé avec notre équipe pour confirmer capacité, certifications et délais.",
+    sendToTeam: "Envoyer à notre équipe",
+    startOver: "Recommencer",
+  },
+  progress: "Étape {current} sur {total}",
+  back: "Retour",
+  continue: "Continuer",
+  generateMatch: "Générer la correspondance",
+  generating: "Génération en cours...",
+  error: "Impossible de générer un résumé de correspondance pour le moment. Réessayez ou contactez directement notre équipe.",
+};

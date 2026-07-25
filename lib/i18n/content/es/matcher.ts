@@ -1,0 +1,58 @@
+export const matcher = {
+  steps: {
+    category: "Categoría de producto",
+    volume: "Volumen mensual estimado",
+    materials: "Materiales clave",
+    sustainability: "Requisitos de sostenibilidad",
+    region: "Región de entrega objetivo",
+  },
+  categories: {
+    wovens: "Tejidos planos",
+    knits: "Punto",
+    "baby-wear": "Ropa para bebé",
+  },
+  volumes: {
+    "under-10k": "Menos de 10.000 unidades / mes",
+    "10k-50k": "10.000 – 50.000 unidades / mes",
+    "50k-200k": "50.000 – 200.000 unidades / mes",
+    "200k-plus": "Más de 200.000 unidades / mes",
+  },
+  materials: {
+    cotton: "Algodón",
+    "organic-cotton": "Algodón orgánico",
+    polyester: "Poliéster / mezclas",
+    "recycled-fiber": "Insumos de fibra reciclada",
+  },
+  sustainability: {
+    gots: "Certificación GOTS requerida",
+    "oeko-tex": "OEKO-TEX requerido",
+    wrap: "WRAP requerido",
+    "recycled-content": "Metas de contenido reciclado",
+    "low-impact-finishing": "Acabado de bajo impacto",
+  },
+  regions: {
+    "north-america": "Norteamérica",
+    europe: "Europa",
+    asia: "Asia",
+    "middle-east": "Medio Oriente",
+    global: "Global / multirregional",
+  },
+  heading: {
+    eyebrow: "Buscador de capacidades",
+    title: "Encuentre el ajuste de manufactura adecuado",
+    subhead: "Responda cinco preguntas breves para generar un resumen de coincidencia basado en nuestros datos de capacidad publicados.",
+  },
+  result: {
+    eyebrow: "Coincidencia de capacidad",
+    title: "Resumen de coincidencia de su programa",
+    subhead: "Revise este resumen con nuestro equipo para confirmar capacidad, certificaciones y plazos de entrega.",
+    sendToTeam: "Enviar a nuestro equipo",
+    startOver: "Empezar de nuevo",
+  },
+  progress: "Paso {current} de {total}",
+  back: "Atrás",
+  continue: "Continuar",
+  generateMatch: "Generar coincidencia",
+  generating: "Generando...",
+  error: "No pudimos generar un resumen de coincidencia en este momento. Inténtelo de nuevo o contacte directamente a nuestro equipo.",
+};

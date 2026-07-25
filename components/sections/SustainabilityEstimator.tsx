@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -16,24 +17,9 @@ import {
 } from "@/lib/our-impact/estimator";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
 
-const categoryOptions: Array<{ value: EstimatorCategory; label: string }> = [
-  { value: "wovens", label: "Wovens" },
-  { value: "knits", label: "Knits" },
-  { value: "baby-wear", label: "Baby Wear" },
-];
-
-const volumeOptions: Array<{ value: EstimatorVolume; label: string }> = [
-  { value: "under-10k", label: "Under 10,000 units" },
-  { value: "10k-50k", label: "10,000 – 50,000 units" },
-  { value: "50k-200k", label: "50,000 – 200,000 units" },
-  { value: "200k-plus", label: "200,000+ units" },
-];
-
-const materialOptions: Array<{ value: EstimatorMaterial; label: string }> = [
-  { value: "conventional", label: "Conventional materials" },
-  { value: "organic-cotton", label: "Certified organic cotton" },
-  { value: "recycled", label: "Recycled fiber inputs" },
-];
+const categoryValues: EstimatorCategory[] = ["wovens", "knits", "baby-wear"];
+const volumeValues: EstimatorVolume[] = ["under-10k", "10k-50k", "50k-200k", "200k-plus"];
+const materialValues: EstimatorMaterial[] = ["conventional", "organic-cotton", "recycled"];
 
 function formatLiters(value: number) {
   if (value >= 1_000_000) {
@@ -49,11 +35,15 @@ function ComparisonBar({
   label,
   conventionalValue,
   companyValue,
+  baselineLabel,
+  companyLabel,
   formatter,
 }: {
   label: string;
   conventionalValue: number;
   companyValue: number;
+  baselineLabel: string;
+  companyLabel: string;
   formatter: (value: number) => string;
 }) {
   const max = Math.max(conventionalValue, companyValue, 1);
@@ -64,7 +54,7 @@ function ComparisonBar({
       <div className="space-y-2">
         <div className="space-y-1">
           <div className="flex justify-between text-xs text-graphite">
-            <span>Conventional baseline</span>
+            <span>{baselineLabel}</span>
             <span>{formatter(conventionalValue)}</span>
           </div>
           <div className="h-3 overflow-hidden rounded-full bg-mist">
@@ -78,7 +68,7 @@ function ComparisonBar({
         </div>
         <div className="space-y-1">
           <div className="flex justify-between text-xs text-graphite">
-            <span>Modeled company process</span>
+            <span>{companyLabel}</span>
             <span>{formatter(companyValue)}</span>
           </div>
           <div className="h-3 overflow-hidden rounded-full bg-mist">
@@ -96,12 +86,28 @@ function ComparisonBar({
 }
 
 export function SustainabilityEstimator({ className }: { className?: string }) {
+  const t = useTranslations("estimator");
   const [category, setCategory] = useState<EstimatorCategory>("knits");
   const [volume, setVolume] = useState<EstimatorVolume>("50k-200k");
   const [material, setMaterial] = useState<EstimatorMaterial>("organic-cotton");
   const [result, setResult] = useState<EstimatorOutput | null>(null);
   const [narrative, setNarrative] = useState<string | null>(null);
   const [isLoadingNarrative, setIsLoadingNarrative] = useState(false);
+
+  const categoryOptions = useMemo(
+    () => categoryValues.map((value) => ({ value, label: t(`categories.${value}`) })),
+    [t],
+  );
+
+  const volumeOptions = useMemo(
+    () => volumeValues.map((value) => ({ value, label: t(`volumes.${value}`) })),
+    [t],
+  );
+
+  const materialOptions = useMemo(
+    () => materialValues.map((value) => ({ value, label: t(`materials.${value}`) })),
+    [t],
+  );
 
   const preview = useMemo(
     () => calculateImpactEstimate({ category, volume, material }),
@@ -136,9 +142,9 @@ export function SustainabilityEstimator({ className }: { className?: string }) {
     <section className={cn("bg-earth-tint py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
-          eyebrow="Impact estimator"
-          title="Model environmental impact at your volume"
-          subhead="Compare modeled water use and CO2e against a conventional industry baseline using published benchmark data — not a guarantee for any specific order."
+          eyebrow={t("heading.eyebrow")}
+          title={t("heading.title")}
+          subhead={t("heading.subhead")}
           className="mb-10 md:mb-12 [&_h2]:text-earth"
         />
 
@@ -146,37 +152,41 @@ export function SustainabilityEstimator({ className }: { className?: string }) {
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="space-y-6">
               <FieldSelect
-                label="Product category"
+                label={t("fields.category")}
                 value={category}
                 options={categoryOptions}
                 onChange={(value) => setCategory(value as EstimatorCategory)}
               />
               <FieldSelect
-                label="Order volume"
+                label={t("fields.volume")}
                 value={volume}
                 options={volumeOptions}
                 onChange={(value) => setVolume(value as EstimatorVolume)}
               />
               <FieldSelect
-                label="Material choice"
+                label={t("fields.material")}
                 value={material}
                 options={materialOptions}
                 onChange={(value) => setMaterial(value as EstimatorMaterial)}
               />
-              <Button onClick={handleEstimate}>Calculate estimate</Button>
+              <Button onClick={handleEstimate}>{t("calculate")}</Button>
             </div>
 
             <div className="space-y-6 rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper p-6">
               <ComparisonBar
-                label="Modeled water use"
+                label={t("comparison.water")}
                 conventionalValue={activeResult.industryWaterLiters}
                 companyValue={activeResult.companyWaterLiters}
+                baselineLabel={t("comparison.baseline")}
+                companyLabel={t("comparison.company")}
                 formatter={formatLiters}
               />
               <ComparisonBar
-                label="Modeled CO2e"
+                label={t("comparison.co2")}
                 conventionalValue={activeResult.industryCo2Kg}
                 companyValue={activeResult.companyCo2Kg}
+                baselineLabel={t("comparison.baseline")}
+                companyLabel={t("comparison.company")}
                 formatter={(value) => `${value.toLocaleString()} kg`}
               />
 
@@ -186,17 +196,16 @@ export function SustainabilityEstimator({ className }: { className?: string }) {
                 </p>
               ) : isLoadingNarrative ? (
                 <p className="border-t border-ink/8 pt-4 text-sm text-graphite">
-                  Generating summary...
+                  {t("generating")}
                 </p>
               ) : null}
 
               <p className="text-xs leading-relaxed text-graphite">
-                Modeled figures based on representative industry and internal benchmark data.
-                See our{" "}
+                {t("disclaimerPrefix")}{" "}
                 <Link href={ESG_REPORT_URL} className="font-medium text-accent hover:text-accent-dark">
-                  ESG report
+                  {t("esgReport")}
                 </Link>{" "}
-                for methodology.
+                {t("disclaimerSuffix")}
               </p>
             </div>
           </div>

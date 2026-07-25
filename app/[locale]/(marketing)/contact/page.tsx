@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import {
   AlternativeContact,
@@ -12,13 +12,14 @@ type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export function generateMetadata() {
+export async function generateMetadata() {
   return createPageMetadata("contact");
 }
 
 export default async function ContactPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("contactPage");
 
   return (
     <main className="flex-1">
@@ -29,7 +30,7 @@ export default async function ContactPage({ params }: PageProps) {
           <Suspense
             fallback={
               <div className="max-w-3xl rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper p-8 text-sm text-graphite">
-                Loading form...
+                {t("loading")}
               </div>
             }
           >

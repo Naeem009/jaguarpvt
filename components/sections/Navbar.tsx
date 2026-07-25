@@ -8,10 +8,6 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MegaMenu } from "./MegaMenu";
-import {
-  impactMegaMenuItems,
-  productsMegaMenuItems,
-} from "@/lib/navigation/content";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
 
 const LOGO_SRC = "/logos/logo-dark.svg";
@@ -21,12 +17,43 @@ const navLinkClass = "text-sm font-medium text-ink transition-colors hover:text-
 export function Navbar() {
   const t = useTranslations("nav");
   const tCommon = useTranslations("common");
+  const tProducts = useTranslations("productCategories");
+  const tNavigation = useTranslations("navigation");
   const pathname = usePathname();
   const previousPathname = useRef(pathname);
   const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileImpactOpen, setMobileImpactOpen] = useState(false);
+
+  const productsMegaMenuItems = [
+    {
+      title: tProducts("wovens.name"),
+      href: "/products/wovens" as const,
+      description: tProducts("wovens.gridDescription"),
+      image: "/images/products/wovens/hero.svg",
+    },
+    {
+      title: tProducts("knits.name"),
+      href: "/products/knits" as const,
+      description: tProducts("knits.gridDescription"),
+      image: "/images/products/knits/hero.svg",
+    },
+    {
+      title: tProducts("baby-wear.name"),
+      href: "/products/baby-wear" as const,
+      description: tProducts("baby-wear.gridDescription"),
+      image: "/images/products/baby-wear/hero.svg",
+      badge: tProducts("catalogueBadge"),
+    },
+  ];
+
+  const impactMegaMenuItems = (
+    tNavigation.raw("impactMenu") as Array<{ title: string; description: string }>
+  ).map((item, index) => ({
+    ...item,
+    href: (["/our-impact/environment", "/our-impact/people", "/our-impact/governance"] as const)[index],
+  }));
 
   useEffect(() => {
     setMounted(true);
@@ -182,7 +209,7 @@ export function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-ink/8 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/75">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-2 md:gap-4 md:px-5 md:py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:gap-4 md:px-6 md:py-4">
           <Link
             href="/"
             className="relative block h-[3.6rem] w-[min(62.4vw,240px)] shrink-0 sm:h-[4.2rem] sm:w-[264px] lg:h-[5.4rem] lg:w-[408px]"
@@ -191,7 +218,7 @@ export function Navbar() {
               src={LOGO_SRC}
               alt="Jaguar (Pvt) Ltd."
               fill
-              sizes="(max-width: 640px) 270px, (max-width: 1024px) 294px, 438px"
+              sizes="(max-width: 640px) 240px, (max-width: 1024px) 264px, 408px"
               className="object-contain object-start"
               priority
             />

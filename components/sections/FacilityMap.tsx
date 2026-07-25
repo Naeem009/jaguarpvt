@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { FacilityCard } from "./FacilityCard";
@@ -25,6 +26,7 @@ type SearchResponse = {
 };
 
 export function FacilityMap({ facilities, filterEnabled = false, className }: FacilityMapProps) {
+  const t = useTranslations("facilityMap");
   const [selectedId, setSelectedId] = useState<string | null>(facilities[0]?.id ?? null);
   const [visibleIds, setVisibleIds] = useState<string[] | null>(null);
   const [filterQuery, setFilterQuery] = useState("");
@@ -65,7 +67,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
         setSelectedId(null);
       }
     } catch {
-      setSearchError("Unable to filter facilities right now. Try again or browse the list below.");
+      setSearchError(t("error"));
     } finally {
       setIsSearching(false);
     }
@@ -81,34 +83,34 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
 
   return (
     <div className={cn("bg-charcoal text-white", className)}>
-      <section className="py-16 md:py-24" aria-label="Interactive facility map">
+      <section className="py-16 md:py-24" aria-label={t("list.ariaLabel")}>
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionHeading
-            eyebrow="Global footprint"
-            title="Where we manufacture"
-            subhead="Select a facility marker to review location, capabilities, certifications, and headcount from our published facility data."
+            eyebrow={t("heading.eyebrow")}
+            title={t("heading.title")}
+            subhead={t("heading.subhead")}
             className="mb-8 md:mb-10 [&_h2]:text-white [&_p]:text-white/75"
           />
 
           {filterEnabled ? (
             <form onSubmit={handleFilterSubmit} className="mb-8 space-y-3">
               <label htmlFor="facility-filter" className="block text-sm font-medium text-white/80">
-                Natural-language facility filter
+                {t("filterLabel")}
               </label>
               <div className="flex flex-col gap-3 md:flex-row">
                 <input
                   id="facility-filter"
                   value={filterQuery}
                   onChange={(event) => setFilterQuery(event.target.value)}
-                  placeholder='Try "GOTS-certified knit facilities in South Asia"'
+                  placeholder={t("filterPlaceholder")}
                   className="min-h-12 flex-1 rounded-full border border-white/15 bg-white/10 px-5 text-sm text-white placeholder:text-white/50 outline-none focus:border-accent"
                 />
                 <div className="flex gap-3">
                   <Button type="submit" disabled={isSearching}>
-                    {isSearching ? "Filtering..." : "Filter map"}
+                    {isSearching ? t("filtering") : t("filterButton")}
                   </Button>
                   <Button type="button" variant="secondary" className="border-white/20 text-white hover:border-white hover:text-white" onClick={handleClearFilter}>
-                    Clear
+                    {t("clear")}
                   </Button>
                 </div>
               </div>
@@ -116,9 +118,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
                 <p className="text-sm text-white/70">{searchExplanation}</p>
               ) : null}
               {searchError ? <p className="text-sm text-error">{searchError}</p> : null}
-              <p className="text-xs text-white/50">
-                Filter results are based on published facility data and are not a real-time capacity guarantee.
-              </p>
+              <p className="text-xs text-white/50">{t("disclaimer")}</p>
             </form>
           ) : null}
 
@@ -127,7 +127,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
               <div className="relative aspect-[16/10] w-full">
                 <Image
                   src={FACILITY_MAP_BACKGROUND}
-                  alt="Stylized world map showing manufacturing facility locations"
+                  alt={t("mapAlt")}
                   fill
                   sizes="(max-width: 1024px) 100vw, 960px"
                   className="object-cover opacity-90"
@@ -166,7 +166,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
                 <FacilityCard facility={selectedFacility} variant="popover" />
               ) : (
                 <div className="rounded-[var(--radius-card-lg)] border border-white/10 bg-white/5 p-8 text-sm text-white/70">
-                  Select a facility marker to view details.
+                  {t("emptySelection")}
                 </div>
               )}
             </div>

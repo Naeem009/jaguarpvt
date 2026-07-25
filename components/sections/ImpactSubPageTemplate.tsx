@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { CTASection } from "./CTASection";
 import { Hero } from "./Hero";
 import { StatBar } from "./StatBar";
@@ -23,7 +24,7 @@ export type ImpactSubPageTemplateProps = {
   };
 };
 
-export function ImpactSubPageTemplate({
+export async function ImpactSubPageTemplate({
   headline,
   subhead,
   heroImage,
@@ -33,17 +34,20 @@ export function ImpactSubPageTemplate({
   children,
   cta,
 }: ImpactSubPageTemplateProps) {
+  const t = await getTranslations("impact.impactSubPage");
+  const tCommon = await getTranslations("common");
+
   return (
     <>
       <Hero
         variant="inner"
         headline={headline}
         subhead={subhead}
-        primaryCTA={{ label: "Contact Us", href: "/contact" }}
+        primaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
         media={{
           type: "image",
           src: heroImage,
-          alt: `${headline} — sustainability and impact reporting`,
+          alt: t("heroAlt", { headline }),
         }}
       />
 
@@ -90,10 +94,10 @@ export function ImpactSubPageTemplate({
       {children}
 
       <CTASection
-        title={cta?.title ?? "Discuss impact requirements with our team"}
-        subhead={cta?.subhead ?? "Share your compliance and sustainability criteria — we respond to qualified inquiries with clear next steps."}
+        title={cta?.title ?? t("defaultCtaTitle")}
+        subhead={cta?.subhead ?? t("defaultCtaSubhead")}
         cta={{
-          label: cta?.label ?? "Contact Us",
+          label: cta?.label ?? tCommon("contactUs"),
           href: cta?.href ?? "/contact",
         }}
       />

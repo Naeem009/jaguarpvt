@@ -31,33 +31,17 @@ type ChatMessage = {
   citations?: Array<{ title: string; href: string }>;
 };
 
-const defaultPrompts: ExamplePrompt[] = [
-  {
-    question: "Can you produce GOTS-certified organic cotton knits at [X] units per month?",
-    answer:
-      "Based on our published capability data, we support certified organic cotton knits across selected facilities. Capacity varies by season and program — connect with our team for a current availability review.",
-  },
-  {
-    question: "Which of your facilities support GOTS-certified organic cotton programs?",
-    answer:
-      "GOTS-certified organic cotton programs are listed among our knit and baby wear capabilities at selected facilities. Specific facility assignments depend on order profile and compliance requirements.",
-  },
-  {
-    question: "What sustainability certifications do you currently hold?",
-    answer:
-      "Certifications including GOTS, OEKO-TEX, and WRAP appear in our published governance materials. Certification scope varies by facility and product line.",
-  },
-];
-
 export function AIChatWidget({
   mode,
   context,
   title,
   subhead,
-  examplePrompts = defaultPrompts,
+  examplePrompts,
   className,
 }: AIChatWidgetProps) {
   const t = useTranslations("ai");
+  const defaultPrompts = t.raw("prompts") as ExamplePrompt[];
+  const resolvedPrompts = examplePrompts ?? defaultPrompts;
 
   if (mode === "floating") {
     return <FloatingAIChatWidget />;
@@ -68,7 +52,7 @@ export function AIChatWidget({
       context={context}
       title={title ?? t("title")}
       subhead={subhead ?? t("subhead")}
-      examplePrompts={examplePrompts}
+      examplePrompts={resolvedPrompts}
       className={className}
     />
   );

@@ -1,0 +1,58 @@
+export const matcher = {
+  steps: {
+    category: "Produktkategorie",
+    volume: "Geschätztes monatliches Volumen",
+    materials: "Hauptmaterialien",
+    sustainability: "Nachhaltigkeitsanforderungen",
+    region: "Ziel-Lieferregion",
+  },
+  categories: {
+    wovens: "Webwaren",
+    knits: "Strickwaren",
+    "baby-wear": "Babybekleidung",
+  },
+  volumes: {
+    "under-10k": "Unter 10.000 Einheiten / Monat",
+    "10k-50k": "10.000 – 50.000 Einheiten / Monat",
+    "50k-200k": "50.000 – 200.000 Einheiten / Monat",
+    "200k-plus": "200.000+ Einheiten / Monat",
+  },
+  materials: {
+    cotton: "Baumwolle",
+    "organic-cotton": "Bio-Baumwolle",
+    polyester: "Polyester / Mischungen",
+    "recycled-fiber": "Recycelte Fasereinsätze",
+  },
+  sustainability: {
+    gots: "GOTS-Zertifizierung erforderlich",
+    "oeko-tex": "OEKO-TEX erforderlich",
+    wrap: "WRAP erforderlich",
+    "recycled-content": "Recyclinganteil-Ziele",
+    "low-impact-finishing": "Veredelung mit geringerer Umweltbelastung",
+  },
+  regions: {
+    "north-america": "Nordamerika",
+    europe: "Europa",
+    asia: "Asien",
+    "middle-east": "Naher Osten",
+    global: "Global / Multi-Region",
+  },
+  heading: {
+    eyebrow: "Kapazitäts-Matcher",
+    title: "Die passende Fertigung finden",
+    subhead: "Beantworten Sie fünf kurze Fragen, um eine fundierte Übereinstimmungszusammenfassung auf Basis unserer veröffentlichten Kapazitätsdaten zu erhalten.",
+  },
+  result: {
+    eyebrow: "Kapazitätsübereinstimmung",
+    title: "Ihre Programm-Übereinstimmungszusammenfassung",
+    subhead: "Besprechen Sie diese Zusammenfassung mit unserem Team, um Kapazität, Zertifizierungen und Lieferzeiten zu bestätigen.",
+    sendToTeam: "An unser Team senden",
+    startOver: "Neu beginnen",
+  },
+  progress: "Schritt {current} von {total}",
+  back: "Zurück",
+  continue: "Weiter",
+  generateMatch: "Übereinstimmung generieren",
+  generating: "Wird generiert...",
+  error: "Wir konnten derzeit keine Übereinstimmungszusammenfassung erstellen. Versuchen Sie es erneut oder kontaktieren Sie unser Team direkt.",
+};

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
 
@@ -14,17 +15,15 @@ export type TrustStripProps = {
   className?: string;
 };
 
-export function TrustStrip({
-  title = "Trusted by leading activewear and lifestyle brands",
-  categories,
-  className,
-}: TrustStripProps) {
+export async function TrustStrip({ title, categories, className }: TrustStripProps) {
+  const t = await getTranslations("sections.trustStrip");
+
   return (
     <section className={cn("border-y border-ink/8 bg-mist py-16 md:py-20", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
-          eyebrow="Partnership"
-          title={title}
+          eyebrow={t("eyebrow")}
+          title={title ?? t("defaultTitle")}
           align="center"
           className="mb-10 md:mb-12"
         />

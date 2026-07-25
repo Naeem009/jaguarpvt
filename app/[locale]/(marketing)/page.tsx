@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import {
   AIChatWidget,
@@ -9,92 +9,76 @@ import {
   StatBar,
   TrustStrip,
 } from "@/components/sections";
-import { productHubGridItems } from "@/lib/products/content";
+import { getProductHubGridItems } from "@/lib/products/get-content";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export function generateMetadata() {
+export async function generateMetadata() {
   return createPageMetadata("home");
 }
 
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("home");
+  const tCommon = await getTranslations("common");
+  const productItems = await getProductHubGridItems();
 
   return (
     <main className="flex-1">
       <Hero
         variant="home"
-        headline="Manufacturing, engineered for what's next."
-        subhead="Vertically integrated production across wovens, knits, and baby wear — serving global brands at [X] facilities in [Y] countries."
-        primaryCTA={{ label: "Contact Us", href: "/contact" }}
-        secondaryCTA={{ label: "Explore Products", href: "/products" }}
+        headline={t("hero.headline")}
+        subhead={t("hero.subhead")}
+        primaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
+        secondaryCTA={{ label: tCommon("exploreProducts"), href: "/products" }}
         media={{
           type: "image",
           src: "/images/home/hero.svg",
-          alt: "Wide-angle view of a modern apparel manufacturing facility",
+          alt: t("hero.heroAlt"),
         }}
       />
 
       <StatBar
         stats={[
-          { value: 0, placeholder: "[6]", label: "Facilities" },
-          { value: 0, placeholder: "[5]", label: "Countries" },
-          { value: 0, placeholder: "[900]+", label: "Employees" },
-          { value: 0, placeholder: "[40]", label: "Years in operation" },
+          { value: 0, placeholder: "[6]", label: t("stats.facilities") },
+          { value: 0, placeholder: "[5]", label: t("stats.countries") },
+          { value: 0, placeholder: "[900]+", label: t("stats.employees") },
+          { value: 0, placeholder: "[40]", label: t("stats.yearsInOperation") },
         ]}
       />
 
-      <ProductGrid items={productHubGridItems} />
+      <ProductGrid items={productItems} />
 
-      <AIChatWidget
-        mode="embedded"
-        context="Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected."
-      />
+      <AIChatWidget mode="embedded" context={t("aiContext")} />
 
       <StatBar
         variant="impact"
         stats={[
-          { value: 0, placeholder: "[X]M", label: "Liters of water saved annually" },
-          { value: 0, placeholder: "[X]%", label: "Renewable energy share" },
-          { value: 0, placeholder: "[X]", label: "Certified facilities" },
+          { value: 0, placeholder: "[X]M", label: t("impactStats.waterSaved") },
+          { value: 0, placeholder: "[X]%", label: t("impactStats.renewableEnergy") },
+          { value: 0, placeholder: "[X]", label: t("impactStats.certifiedFacilities") },
         ]}
-        footerLink={{ href: "/our-impact", label: "Explore our impact" }}
+        footerLink={{ href: "/our-impact", label: t("impactStats.exploreImpact") }}
       />
 
       <FacilityMapTeaser image="/images/home/facility-teaser.svg" />
 
       <TrustStrip
         categories={[
-          {
-            label: "Activewear programs",
-            image: "/logos/logo-mark.svg",
-            alt: "Jaguar logo mark",
-          },
-          {
-            label: "Woven programs",
-            image: "/logos/logo-mark.svg",
-            alt: "Jaguar logo mark",
-          },
-          {
-            label: "Lifestyle apparel",
-            image: "/logos/logo-mark.svg",
-            alt: "Jaguar logo mark",
-          },
-          {
-            label: "Footwear & accessories",
-            image: "/logos/logo-mark.svg",
-            alt: "Jaguar logo mark",
-          },
+          { label: t("trustStrip.activewear"), image: "/logos/logo-mark.svg", alt: t("trustStrip.logoAlt") },
+          { label: t("trustStrip.wovens"), image: "/logos/logo-mark.svg", alt: t("trustStrip.logoAlt") },
+          { label: t("trustStrip.lifestyle"), image: "/logos/logo-mark.svg", alt: t("trustStrip.logoAlt") },
+          { label: t("trustStrip.footwear"), image: "/logos/logo-mark.svg", alt: t("trustStrip.logoAlt") },
         ]}
       />
 
       <CTASection
-        title="Ready to start a sourcing conversation?"
-        subhead="Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps."
-        cta={{ label: "Contact Us", href: "/contact" }}
+        title={t("cta.title")}
+        subhead={t("cta.subhead")}
+        cta={{ label: tCommon("contactUs"), href: "/contact" }}
       />
     </main>
   );

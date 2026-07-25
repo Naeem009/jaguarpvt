@@ -79,7 +79,21 @@
     "closeChat": "Cerrar chat",
     "chatAriaLabel": "Chat del asistente de abastecimiento",
     "preparing": "El asistente está preparando una respuesta.",
-    "fallbackError": "No pudimos conectar con el asistente. Use la página de contacto y nuestro equipo responderá directamente."
+    "fallbackError": "No pudimos conectar con el asistente. Use la página de contacto y nuestro equipo responderá directamente.",
+    "prompts": [
+      {
+        "question": "¿Pueden producir tejidos de punto de algodón orgánico certificado GOTS a [X] unidades por mes?",
+        "answer": "Según nuestros datos de capacidad publicados, apoyamos tejidos de punto de algodón orgánico certificado en instalaciones seleccionadas. La capacidad varía según la temporada y el programa — contacte a nuestro equipo para una revisión de disponibilidad actual."
+      },
+      {
+        "question": "¿Cuáles de sus instalaciones apoyan programas de algodón orgánico certificado GOTS?",
+        "answer": "Los programas de algodón orgánico certificado GOTS figuran entre nuestras capacidades de punto y ropa para bebés en instalaciones seleccionadas. La asignación de instalaciones depende del perfil del pedido y los requisitos de cumplimiento."
+      },
+      {
+        "question": "¿Qué certificaciones de sostenibilidad tienen actualmente?",
+        "answer": "Certificaciones como GOTS, OEKO-TEX y WRAP aparecen en nuestros materiales de gobernanza publicados. El alcance de la certificación varía según la instalación y la línea de producto."
+      }
+    ]
   },
   "contact": {
     "companyName": "Nombre de la empresa",
@@ -94,7 +108,35 @@
     "messagePlaceholder": "Cuéntenos qué está desarrollando — tipo de producto, plazos, necesidades de cumplimiento y contexto relevante.",
     "submitError": "No se puede enviar el formulario en este momento.",
     "successTitle": "Gracias — recibimos su consulta.",
-    "successBody": "Un miembro de nuestro equipo revisará su solicitud y responderá en 2 días hábiles con los siguientes pasos."
+    "successBody": "Un miembro de nuestro equipo revisará su solicitud y responderá en 2 días hábiles con los siguientes pasos.",
+    "categories": {
+      "wovens": "Tejidos planos",
+      "knits": "Tejidos de punto",
+      "baby-wear": "Ropa para bebés",
+      "multiple": "Varias categorías"
+    },
+    "volumes": {
+      "under-50k": "Menos de 50.000 unidades / año",
+      "50k-250k": "50.000 – 250.000 unidades / año",
+      "250k-1m": "250.000 – 1.000.000 unidades / año",
+      "1m-plus": "Más de 1.000.000 unidades / año"
+    },
+    "sustainabilityOptions": {
+      "gots": "Certificación GOTS requerida",
+      "oeko-tex": "OEKO-TEX requerido",
+      "wrap": "WRAP requerido",
+      "recycled-content": "Objetivos de contenido reciclado",
+      "low-impact-finishing": "Acabado de bajo impacto"
+    },
+    "validation": {
+      "companyNameRequired": "El nombre de la empresa es obligatorio.",
+      "contactNameRequired": "El nombre de contacto es obligatorio.",
+      "emailInvalid": "Introduzca una dirección de correo válida.",
+      "websiteInvalid": "Introduzca una URL de sitio web válida.",
+      "categoryRequired": "Seleccione una categoría de producto.",
+      "volumeRequired": "Seleccione un rango de volumen anual estimado.",
+      "messageMin": "Añada un mensaje breve (al menos 10 caracteres)."
+    }
   },
   "catalogue": {
     "eyebrow": "Catálogo",

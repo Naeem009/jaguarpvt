@@ -1,25 +1,14 @@
+import { getTranslations } from "next-intl/server";
 import { Card } from "@/components/ui/Card";
 import { cn } from "@/lib/utils";
 
-const steps = [
-  {
-    title: "We review your inquiry",
-    body: "Your submission is routed to the team best suited to your category, volume, and compliance requirements.",
-  },
-  {
-    title: "We respond within 2 business days",
-    body: "Expect a direct reply with clarifying questions or a suggested next step — not an automated quote.",
-  },
-  {
-    title: "We align on scope and documentation",
-    body: "If there is a fit, we follow up with capability detail, certification scope, and the right contacts for your program.",
-  },
-];
+export async function ContactExpectations({ className }: { className?: string }) {
+  const t = await getTranslations("contactPage.expectations");
+  const steps = t.raw("steps") as Array<{ title: string; body: string }>;
 
-export function ContactExpectations({ className }: { className?: string }) {
   return (
     <Card className={cn("h-fit", className)}>
-      <h2 className="font-display text-xl font-semibold text-ink">What happens next</h2>
+      <h2 className="font-display text-xl font-semibold text-ink">{t("title")}</h2>
       <ol className="mt-6 space-y-6">
         {steps.map((step, index) => (
           <li key={step.title} className="flex gap-4">

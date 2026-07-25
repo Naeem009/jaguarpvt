@@ -79,7 +79,21 @@
     "closeChat": "Chat schließen",
     "chatAriaLabel": "Sourcing-Assistent-Chat",
     "preparing": "Assistent bereitet Antwort vor.",
-    "fallbackError": "Assistent derzeit nicht erreichbar. Bitte nutzen Sie die Kontaktseite — unser Team antwortet direkt."
+    "fallbackError": "Assistent derzeit nicht erreichbar. Bitte nutzen Sie die Kontaktseite — unser Team antwortet direkt.",
+    "prompts": [
+      {
+        "question": "Können Sie GOTS-zertifizierte Bio-Baumwoll-Strickwaren in [X] Einheiten pro Monat produzieren?",
+        "answer": "Laut unseren veröffentlichten Leistungsdaten unterstützen wir zertifizierte Bio-Baumwoll-Strickwaren an ausgewählten Standorten. Die Kapazität variiert je nach Saison und Programm — kontaktieren Sie unser Team für eine aktuelle Verfügbarkeitsprüfung."
+      },
+      {
+        "question": "Welche Ihrer Standorte unterstützen GOTS-zertifizierte Bio-Baumwoll-Programme?",
+        "answer": "GOTS-zertifizierte Bio-Baumwoll-Programme sind unter unseren Strick- und Babywear-Kapazitäten an ausgewählten Standorten aufgeführt. Die Standortzuweisung hängt vom Bestellprofil und den Compliance-Anforderungen ab."
+      },
+      {
+        "question": "Welche Nachhaltigkeitszertifizierungen halten Sie derzeit?",
+        "answer": "Zertifizierungen wie GOTS, OEKO-TEX und WRAP erscheinen in unseren veröffentlichten Governance-Materialien. Der Zertifizierungsumfang variiert je nach Standort und Produktlinie."
+      }
+    ]
   },
   "contact": {
     "companyName": "Firmenname",
@@ -94,7 +108,35 @@
     "messagePlaceholder": "Beschreiben Sie Ihr Vorhaben — Produkttyp, Timing, Compliance und relevanten Kontext.",
     "submitError": "Formular kann derzeit nicht gesendet werden.",
     "successTitle": "Danke — wir haben Ihre Anfrage erhalten.",
-    "successBody": "Ein Teammitglied prüft Ihre Anfrage und antwortet innerhalb von 2 Werktagen mit den nächsten Schritten."
+    "successBody": "Ein Teammitglied prüft Ihre Anfrage und antwortet innerhalb von 2 Werktagen mit den nächsten Schritten.",
+    "categories": {
+      "wovens": "Wovenware",
+      "knits": "Strick",
+      "baby-wear": "Babybekleidung",
+      "multiple": "Mehrere Kategorien"
+    },
+    "volumes": {
+      "under-50k": "Unter 50.000 Einheiten / Jahr",
+      "50k-250k": "50.000 – 250.000 Einheiten / Jahr",
+      "250k-1m": "250.000 – 1.000.000 Einheiten / Jahr",
+      "1m-plus": "1.000.000+ Einheiten / Jahr"
+    },
+    "sustainabilityOptions": {
+      "gots": "GOTS-Zertifizierung erforderlich",
+      "oeko-tex": "OEKO-TEX erforderlich",
+      "wrap": "WRAP erforderlich",
+      "recycled-content": "Recyclinganteil-Ziele",
+      "low-impact-finishing": "Veredelung mit geringer Umweltbelastung"
+    },
+    "validation": {
+      "companyNameRequired": "Firmenname ist erforderlich.",
+      "contactNameRequired": "Ansprechpartner ist erforderlich.",
+      "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "websiteInvalid": "Geben Sie eine gültige Website-URL ein.",
+      "categoryRequired": "Wählen Sie eine Produktkategorie.",
+      "volumeRequired": "Wählen Sie einen geschätzten Jahresvolumenbereich.",
+      "messageMin": "Bitte fügen Sie eine kurze Nachricht hinzu (mindestens 10 Zeichen)."
+    }
   },
   "catalogue": {
     "eyebrow": "Katalog",

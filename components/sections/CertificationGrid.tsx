@@ -1,27 +1,40 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
-import type { Certification } from "@/lib/our-impact/content";
+
+const certificationLogos = [
+  "/certifications/cert-01.svg",
+  "/certifications/cert-02.svg",
+  "/certifications/cert-03.svg",
+  "/certifications/cert-04.svg",
+];
 
 export type CertificationGridProps = {
-  certifications: Certification[];
   className?: string;
 };
 
-export function CertificationGrid({ certifications, className }: CertificationGridProps) {
+export async function CertificationGrid({ className }: CertificationGridProps) {
+  const t = await getTranslations("impact.governance.certifications");
+  const items = t.raw("items") as Array<{
+    name: string;
+    description: string;
+    issuer: string;
+  }>;
+
   return (
     <section className={cn("bg-white py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
-          eyebrow="Certifications"
-          title="Audit-ready credentials"
-          subhead="Certification scope varies by facility and product line — confirm applicability for your program with our team."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          subhead={t("subhead")}
           className="mb-12 md:mb-16"
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {certifications.map((certification) => (
+          {items.map((certification, index) => (
             <Card
               key={certification.name}
               variant="interactive"
@@ -29,8 +42,8 @@ export function CertificationGrid({ certifications, className }: CertificationGr
             >
               <div className="relative mb-5 h-16 w-full max-w-[120px]">
                 <Image
-                  src={certification.logo}
-                  alt={`${certification.name} certification logo`}
+                  src={certificationLogos[index] ?? certificationLogos[0]}
+                  alt={t("logoAlt", { name: certification.name })}
                   fill
                   sizes="120px"
                   className="object-contain"

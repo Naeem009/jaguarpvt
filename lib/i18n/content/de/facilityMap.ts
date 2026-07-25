@@ -1,0 +1,33 @@
+export const facilityMap = {
+  heading: {
+    eyebrow: "Globales Netzwerk",
+    title: "Wo wir produzieren",
+    subhead: "Wählen Sie einen Standortmarker, um Standort, Kategorien, Zertifizierungen und veröffentlichte Kapazitätsdaten einzusehen.",
+  },
+  filterLabel: "Standortfilter in natürlicher Sprache",
+  filterPlaceholder: 'Versuchen Sie „GOTS-zertifizierte Strickstandorte in Südasien"',
+  filtering: "Filter wird angewendet...",
+  filterButton: "Karte filtern",
+  clear: "Zurücksetzen",
+  disclaimer: "Filterergebnisse basieren auf veröffentlichten Standortdaten — keine Echtzeitgarantie für Kapazität oder Verfügbarkeit.",
+  emptySelection: "Wählen Sie einen Standortmarker, um Details anzuzeigen.",
+  error: "Standorte können derzeit nicht gefiltert werden. Versuchen Sie es erneut oder durchsuchen Sie die vollständige Standortliste unten.",
+  mapAlt: "Stilisierte Weltkarte mit Fertigungsstandorten",
+  list: {
+    eyebrow: "Alle Standorte",
+    title: "Vollständige Standortliste durchsuchen",
+    subhead: "Barrierefreie Listenansicht aller veröffentlichten Standorte — mit demselben Filter wie auf der Karte oben.",
+    empty: "Keine Standorte entsprechen dem aktuellen Filter. Setzen Sie die Suche zurück, um alle Standorte anzuzeigen.",
+    ariaLabel: "Standortliste",
+  },
+  card: {
+    employees: "Mitarbeitende",
+    established: "Gegründet",
+    facilityAlt: "Standort {name}",
+  },
+  categories: {
+    wovens: "Webwaren",
+    knits: "Strickwaren",
+    "baby-wear": "Babybekleidung",
+  },
+};

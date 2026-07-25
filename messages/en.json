@@ -79,7 +79,21 @@
     "closeChat": "Close chat",
     "chatAriaLabel": "Sourcing assistant chat",
     "preparing": "Assistant is preparing a response.",
-    "fallbackError": "I couldn't reach the assistant right now. Please use the Contact page and our team will respond directly."
+    "fallbackError": "I couldn't reach the assistant right now. Please use the Contact page and our team will respond directly.",
+    "prompts": [
+      {
+        "question": "Can you produce GOTS-certified organic cotton knits at [X] units per month?",
+        "answer": "Based on our published capability data, we support certified organic cotton knits across selected facilities. Capacity varies by season and program — connect with our team for a current availability review."
+      },
+      {
+        "question": "Which of your facilities support GOTS-certified organic cotton programs?",
+        "answer": "GOTS-certified organic cotton programs are listed among our knit and baby wear capabilities at selected facilities. Specific facility assignments depend on order profile and compliance requirements."
+      },
+      {
+        "question": "What sustainability certifications do you currently hold?",
+        "answer": "Certifications including GOTS, OEKO-TEX, and WRAP appear in our published governance materials. Certification scope varies by facility and product line."
+      }
+    ]
   },
   "contact": {
     "companyName": "Company name",
@@ -94,7 +108,35 @@
     "messagePlaceholder": "Tell us what you're building — product type, timing, compliance needs, and any context we should know.",
     "submitError": "Unable to submit the form right now.",
     "successTitle": "Thank you — we received your inquiry.",
-    "successBody": "A member of our team will review your request and respond within 2 business days with clear next steps."
+    "successBody": "A member of our team will review your request and respond within 2 business days with clear next steps.",
+    "categories": {
+      "wovens": "Wovens",
+      "knits": "Knits",
+      "baby-wear": "Baby Wear",
+      "multiple": "Multiple categories"
+    },
+    "volumes": {
+      "under-50k": "Under 50,000 units / year",
+      "50k-250k": "50,000 – 250,000 units / year",
+      "250k-1m": "250,000 – 1,000,000 units / year",
+      "1m-plus": "1,000,000+ units / year"
+    },
+    "sustainabilityOptions": {
+      "gots": "GOTS certification required",
+      "oeko-tex": "OEKO-TEX required",
+      "wrap": "WRAP required",
+      "recycled-content": "Recycled content targets",
+      "low-impact-finishing": "Low-impact finishing"
+    },
+    "validation": {
+      "companyNameRequired": "Company name is required.",
+      "contactNameRequired": "Contact name is required.",
+      "emailInvalid": "Enter a valid email address.",
+      "websiteInvalid": "Enter a valid website URL.",
+      "categoryRequired": "Select a product category.",
+      "volumeRequired": "Select an estimated annual volume range.",
+      "messageMin": "Please add a short message (at least 10 characters)."
+    }
   },
   "catalogue": {
     "eyebrow": "Catalogue",
