@@ -44,7 +44,7 @@ export const about = {
     eyebrow: "领导团队",
     title: "制造与商务职能领域的资深运营者",
     subhead: "发布前请将占位姓名与头像替换为经批准的领导层资料。",
-    name: "[Leadership Name]",
+    name: "Mr. Asim ul Haq",
     role: "首席执行官",
     alt: "首席执行官头像占位图",
   },

@@ -44,7 +44,7 @@ export const about = {
     eyebrow: "Direction",
     title: "Des dirigeants expérimentés en manufacture et fonctions commerciales",
     subhead: "Remplacez les noms et photos provisoires par les profils de direction approuvés avant publication.",
-    name: "[Leadership Name]",
+    name: "Mr. Asim ul Haq",
     role: "Directeur général",
     alt: "Photo provisoire du directeur général",
   },

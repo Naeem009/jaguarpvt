@@ -44,7 +44,7 @@ export const about = {
     eyebrow: "Leadership",
     title: "Experienced operators across manufacturing and commercial functions",
     subhead: "Replace placeholder names and headshots with approved leadership profiles before publishing.",
-    name: "[Leadership Name]",
+    name: "Mr. Asim ul Haq",
     role: "Chief Executive Officer",
     alt: "Chief Executive Officer headshot placeholder",
   },

@@ -44,7 +44,7 @@ export const about = {
     eyebrow: "Führung",
     title: "Erfahrene Führungskräfte in Fertigung und Commercial Functions",
     subhead: "Ersetzen Sie Platzhalternamen und Porträts durch genehmigte Führungsprofile vor der Veröffentlichung.",
-    name: "[Leadership Name]",
+    name: "Mr. Asim ul Haq",
     role: "Chief Executive Officer",
     alt: "Platzhalter für Porträt des Chief Executive Officer",
   },

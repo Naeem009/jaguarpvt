@@ -85,7 +85,7 @@ export default async function AboutPage({ params }: PageProps) {
             <Card className="overflow-hidden p-0">
               <div className="relative aspect-[4/5] bg-mist">
                 <Image
-                  src="/images/about/leadership-01.svg"
+                  src="/images/about/leadership-01.png"
                   alt={t("leadership.alt")}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"

@@ -45,9 +45,9 @@ export const aboutContent = {
   },
   leadership: [
     {
-      name: "[Leadership Name]",
+      name: "Mr. Asim ul Haq",
       title: "Chief Executive Officer",
-      image: "/images/about/leadership-01.svg",
+      image: "/images/about/leadership-01.png",
       alt: "Chief Executive Officer headshot placeholder",
     },
   ],
