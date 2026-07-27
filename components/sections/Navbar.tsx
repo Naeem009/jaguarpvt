@@ -208,8 +208,8 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-ink/8 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/75">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-1.5 md:px-2 md:py-2">
+      <header className="sticky top-0 z-50 w-full border-b border-ink/8 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/75">
+        <div className="flex w-full items-center justify-between gap-2 py-1.5 pe-4 ps-0 md:py-2 md:pe-6">
           <Link
             href="/"
             className="relative block h-[3.75rem] w-[min(88vw,340px)] shrink-0 sm:h-[4rem] sm:w-[360px] lg:h-[4.25rem] lg:w-[440px]"
