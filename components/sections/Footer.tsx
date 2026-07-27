@@ -44,7 +44,7 @@ export function Footer({ className }: { className?: string }) {
         { label: tCommon("contact"), href: "/contact" as const },
         {
           label: t("linkedin"),
-          href: "https://www.linkedin.com/company/placeholder",
+          href: "https://www.linkedin.com/company/jaguar-pvt-ltd/",
           external: true,
         },
       ],

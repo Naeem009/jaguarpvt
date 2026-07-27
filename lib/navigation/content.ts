@@ -55,7 +55,7 @@ export const footerColumns = [
     title: "Connect",
     links: [
       { label: "Contact", href: "/contact" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/company/placeholder", external: true },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/jaguar-pvt-ltd/", external: true },
     ],
   },
 ] as const;
