@@ -43,10 +43,23 @@ export const about = {
   leadership: {
     eyebrow: "Liderazgo",
     title: "Operadores con experiencia en funciones de manufactura y comerciales",
-    subhead: "Reemplace los nombres y fotografías provisionales con perfiles de liderazgo aprobados antes de publicar.",
-    name: "Mr. Asim ul Haq",
-    role: "Director Ejecutivo",
-    alt: "Marcador de posición para fotografía del Director Ejecutivo",
+    members: [
+      {
+        name: "Mr. Asim ul Haq",
+        role: "Director Ejecutivo",
+        alt: "Sr. Asim ul Haq, Director Ejecutivo",
+      },
+      {
+        name: "Aleem Asim",
+        role: "Director Ejecutivo",
+        alt: "Aleem Asim, Director Ejecutivo",
+      },
+      {
+        name: "Usama Asim",
+        role: "Director Ejecutivo",
+        alt: "Usama Asim, Director Ejecutivo",
+      },
+    ],
   },
   recognition: {
     eyebrow: "Reconocimientos",

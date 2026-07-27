@@ -43,10 +43,23 @@ export const about = {
   leadership: {
     eyebrow: "القيادة",
     title: "مشغّلون ذوو خبرة في التصنيع والوظائف التجارية",
-    subhead: "استبدل الأسماء والصور المؤقتة بملفات القيادة المعتمدة قبل النشر.",
-    name: "Mr. Asim ul Haq",
-    role: "الرئيس التنفيذي",
-    alt: "صورة مؤقتة للرئيس التنفيذي",
+    members: [
+      {
+        name: "Mr. Asim ul Haq",
+        role: "الرئيس التنفيذي",
+        alt: "السيد Asim ul Haq، الرئيس التنفيذي",
+      },
+      {
+        name: "Aleem Asim",
+        role: "مدير تنفيذي",
+        alt: "Aleem Asim، مدير تنفيذي",
+      },
+      {
+        name: "Usama Asim",
+        role: "مدير تنفيذي",
+        alt: "Usama Asim، مدير تنفيذي",
+      },
+    ],
   },
   recognition: {
     eyebrow: "التقدير",

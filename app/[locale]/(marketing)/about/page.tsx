@@ -26,6 +26,12 @@ export default async function AboutPage({ params }: PageProps) {
   const tCommon = await getTranslations("common");
   const historySteps = t.raw("history.steps") as Array<{ title: string; description: string }>;
   const awards = t.raw("recognition.awards") as Array<{ title: string; year: string; issuer: string }>;
+  const leaders = t.raw("leadership.members") as Array<{ name: string; role: string; alt: string }>;
+  const leaderImages = [
+    "/images/about/leadership-01.png",
+    "/images/about/leadership-02.png",
+    "/images/about/leadership-03.png",
+  ];
 
   return (
     <main className="flex-1">
@@ -77,26 +83,27 @@ export default async function AboutPage({ params }: PageProps) {
           <SectionHeading
             eyebrow={t("leadership.eyebrow")}
             title={t("leadership.title")}
-            subhead={t("leadership.subhead")}
             className="mb-12 md:mb-16"
           />
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <Card className="overflow-hidden p-0">
-              <div className="relative aspect-[4/5] bg-mist">
-                <Image
-                  src="/images/about/leadership-01.png"
-                  alt={t("leadership.alt")}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="space-y-2 p-6">
-                <h3 className="font-display text-xl font-semibold text-ink">{t("leadership.name")}</h3>
-                <p className="text-sm text-graphite">{t("leadership.role")}</p>
-              </div>
-            </Card>
+            {leaders.map((leader, index) => (
+              <Card key={`${leader.name}-${index}`} className="overflow-hidden p-0">
+                <div className="relative aspect-[4/5] bg-mist">
+                  <Image
+                    src={leaderImages[index]}
+                    alt={leader.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="space-y-2 p-6">
+                  <h3 className="font-display text-xl font-semibold text-ink">{leader.name}</h3>
+                  <p className="text-sm text-graphite">{leader.role}</p>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

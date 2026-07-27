@@ -43,10 +43,23 @@ export const about = {
   leadership: {
     eyebrow: "Leadership",
     title: "Experienced operators across manufacturing and commercial functions",
-    subhead: "Replace placeholder names and headshots with approved leadership profiles before publishing.",
-    name: "Mr. Asim ul Haq",
-    role: "Chief Executive Officer",
-    alt: "Chief Executive Officer headshot placeholder",
+    members: [
+      {
+        name: "Mr. Asim ul Haq",
+        role: "Chief Executive Officer",
+        alt: "Mr. Asim ul Haq, Chief Executive Officer",
+      },
+      {
+        name: "Aleem Asim",
+        role: "Executive Director",
+        alt: "Aleem Asim, Executive Director",
+      },
+      {
+        name: "Usama Asim",
+        role: "Executive Director",
+        alt: "Usama Asim, Executive Director",
+      },
+    ],
   },
   recognition: {
     eyebrow: "Recognition",

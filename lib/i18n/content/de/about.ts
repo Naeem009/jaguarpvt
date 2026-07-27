@@ -43,10 +43,23 @@ export const about = {
   leadership: {
     eyebrow: "Führung",
     title: "Erfahrene Führungskräfte in Fertigung und Commercial Functions",
-    subhead: "Ersetzen Sie Platzhalternamen und Porträts durch genehmigte Führungsprofile vor der Veröffentlichung.",
-    name: "Mr. Asim ul Haq",
-    role: "Chief Executive Officer",
-    alt: "Platzhalter für Porträt des Chief Executive Officer",
+    members: [
+      {
+        name: "Mr. Asim ul Haq",
+        role: "Chief Executive Officer",
+        alt: "Mr. Asim ul Haq, Chief Executive Officer",
+      },
+      {
+        name: "Aleem Asim",
+        role: "Executive Director",
+        alt: "Aleem Asim, Executive Director",
+      },
+      {
+        name: "Usama Asim",
+        role: "Executive Director",
+        alt: "Usama Asim, Executive Director",
+      },
+    ],
   },
   recognition: {
     eyebrow: "Anerkennung",

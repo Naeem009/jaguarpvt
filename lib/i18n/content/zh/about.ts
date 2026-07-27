@@ -43,10 +43,23 @@ export const about = {
   leadership: {
     eyebrow: "领导团队",
     title: "制造与商务职能领域的资深运营者",
-    subhead: "发布前请将占位姓名与头像替换为经批准的领导层资料。",
-    name: "Mr. Asim ul Haq",
-    role: "首席执行官",
-    alt: "首席执行官头像占位图",
+    members: [
+      {
+        name: "Mr. Asim ul Haq",
+        role: "首席执行官",
+        alt: "Asim ul Haq 先生，首席执行官",
+      },
+      {
+        name: "Aleem Asim",
+        role: "执行董事",
+        alt: "Aleem Asim，执行董事",
+      },
+      {
+        name: "Usama Asim",
+        role: "执行董事",
+        alt: "Usama Asim，执行董事",
+      },
+    ],
   },
   recognition: {
     eyebrow: "荣誉",

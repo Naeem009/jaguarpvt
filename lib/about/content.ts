@@ -48,7 +48,19 @@ export const aboutContent = {
       name: "Mr. Asim ul Haq",
       title: "Chief Executive Officer",
       image: "/images/about/leadership-01.png",
-      alt: "Chief Executive Officer headshot placeholder",
+      alt: "Mr. Asim ul Haq, Chief Executive Officer",
+    },
+    {
+      name: "Aleem Asim",
+      title: "Executive Director",
+      image: "/images/about/leadership-02.png",
+      alt: "Aleem Asim, Executive Director",
+    },
+    {
+      name: "Usama Asim",
+      title: "Executive Director",
+      image: "/images/about/leadership-03.png",
+      alt: "Usama Asim, Executive Director",
     },
   ],
   awards: [
