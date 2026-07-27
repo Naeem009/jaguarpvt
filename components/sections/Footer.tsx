@@ -60,14 +60,14 @@ export function Footer({ className }: { className?: string }) {
 
   return (
     <footer className={cn("border-t border-ink/8 bg-charcoal text-white", className)}>
-      <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-10">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
           {columns.map((column) => (
             <div key={column.title}>
               <h2 className="text-sm font-medium uppercase tracking-[0.06em] text-white/70">
                 {column.title}
               </h2>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-3 space-y-2">
                 {column.links.map((link) => (
                   <li key={link.label}>
                     {"external" in link && link.external ? (
@@ -91,8 +91,8 @@ export function Footer({ className }: { className?: string }) {
           ))}
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-8">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-8 border-t border-white/10 pt-6">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <ul className="flex flex-wrap gap-x-6 gap-y-2">
               {legalLinks.map((link) => (
                 <li key={link.label}>
@@ -105,7 +105,7 @@ export function Footer({ className }: { className?: string }) {
             <LanguageSwitcher variant="chips" inverted />
           </div>
 
-          <div className="mt-8 flex flex-col gap-2 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
+          <div className="mt-4 flex flex-col gap-1.5 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
             <p>{t("copyright", { year })}</p>
             <p>{t("footprint")}</p>
           </div>
