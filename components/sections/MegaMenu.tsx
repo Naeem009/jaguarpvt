@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -26,7 +26,41 @@ export function MegaMenu({
   inverted?: boolean;
 }) {
   const [open, setOpen] = useState(false);
+  const [panelOffset, setPanelOffset] = useState(0);
   const rootRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    if (!open || !rootRef.current) {
+      setPanelOffset(0);
+      return;
+    }
+
+    function updatePanelOffset() {
+      const root = rootRef.current;
+      if (!root) return;
+
+      const trigger = root.getBoundingClientRect();
+      const padding = 16;
+      const viewportWidth = window.innerWidth;
+      const panelWidth = Math.min(720, viewportWidth - padding * 2);
+      const isRtl = getComputedStyle(root).direction === "rtl";
+      const defaultLeft = isRtl ? trigger.right - panelWidth : trigger.left;
+
+      let left = defaultLeft;
+      if (left + panelWidth > viewportWidth - padding) {
+        left = viewportWidth - padding - panelWidth;
+      }
+      if (left < padding) {
+        left = padding;
+      }
+
+      setPanelOffset(left - defaultLeft);
+    }
+
+    updatePanelOffset();
+    window.addEventListener("resize", updatePanelOffset);
+    return () => window.removeEventListener("resize", updatePanelOffset);
+  }, [open, items]);
 
   useEffect(() => {
     function handleEscape(event: KeyboardEvent) {
@@ -75,6 +109,7 @@ export function MegaMenu({
           "absolute start-0 top-full z-[200] pt-2",
           open ? "block" : "hidden",
         )}
+        style={{ transform: panelOffset ? `translateX(${panelOffset}px)` : undefined }}
       >
         <div className="w-[min(calc(100vw-2rem),720px)] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-[var(--shadow-card-hover)]">
           <div className="grid gap-1 p-2 sm:grid-cols-2">
