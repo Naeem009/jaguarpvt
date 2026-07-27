@@ -1,4 +1,4 @@
-export const CAREERS_ATS_URL = "https://jobs.example.com/jaguar-careers";
+export const CAREERS_ATS_URL = "https://www.linkedin.com/company/jaguar-pvt-ltd";
 
 export const careersContent = {
   hero: {

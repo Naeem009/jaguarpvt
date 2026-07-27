@@ -87,7 +87,7 @@
   robots.txt                         → if not generated at build time
 ```
 
-**Image sourcing convention**: every page-level folder above should contain a `hero.*` file at minimum. Name files descriptively and consistently (`hero.jpg`, `process-01.jpg`, `process-02.jpg`, not `IMG_4821.jpg`) so Cursor-generated code can reference predictable paths like `/images/products/wovens/hero.jpg`. Until real photography is available, use clearly-named placeholder files (e.g. a solid brand-color `.svg` placeholder) rather than external stock-photo URLs, so nothing depends on a third-party domain at build or run time.
+**Image sourcing convention**: every page-level folder above should contain a `hero.*` file at minimum. Name files descriptively and consistently (`hero.jpg`, `process-01.jpg`, `process-02.jpg`, not `IMG_4821.jpg`) so Cursor-generated code can reference predictable paths like `/images/products/wovens/hero.svg`. Until real photography is available, use clearly-named placeholder files (e.g. a solid brand-color `.svg` placeholder) rather than external stock-photo URLs, so nothing depends on a third-party domain at build or run time.
 
 **Baby Wear catalogue file**: reserve `/public/catalogues/baby-wear-catalogue.pdf` now, even before the real file is ready — build the `CatalogueEmbed` component (see `06-COMPONENT-LIBRARY-SPEC.md`) to reference this exact path so the day the real PDF is uploaded, it just works with no code changes. Keep the PDF reasonably sized (under ~15MB) for a smooth in-browser preview; if the real catalogue is much larger, consider a compressed "web preview" version for the embed alongside a full-resolution version behind the Download button.
 
