@@ -35,7 +35,7 @@ export function SectionHeading({
         {title}
       </h2>
       {subhead ? (
-        <p className="text-lg text-graphite md:text-xl">{subhead}</p>
+        <p className="font-display text-lg text-graphite md:text-xl">{subhead}</p>
       ) : null}
     </div>
   );

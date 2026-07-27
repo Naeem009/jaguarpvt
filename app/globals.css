@@ -24,7 +24,7 @@
   --color-error: #c0392b;
 
   /* Typography */
-  --font-display: var(--font-inter-tight), "SF Pro Display", -apple-system, sans-serif;
+  --font-display: var(--font-montserrat), "Montserrat", -apple-system, sans-serif;
   --font-body: var(--font-inter), "SF Pro Text", -apple-system, sans-serif;
   --font-mono: var(--font-ibm-plex-mono), "SF Mono", monospace;
 

@@ -68,7 +68,7 @@ export function Hero({
           <h1 className="font-display text-4xl font-semibold tracking-[-0.02em] md:text-6xl lg:text-7xl">
             {headline}
           </h1>
-          <p className="max-w-2xl text-lg text-white/80 md:text-xl">{subhead}</p>
+          <p className="font-display max-w-2xl text-lg text-white/80 md:text-xl">{subhead}</p>
           <div className="flex flex-wrap gap-4 pt-2">
             <Button href={primaryCTA.href} size="lg">
               {primaryCTA.label}

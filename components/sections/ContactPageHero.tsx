@@ -16,7 +16,7 @@ export async function ContactPageHero({ className }: ContactPageHeroProps) {
           <h1 className="font-display text-4xl font-semibold tracking-[-0.02em] text-ink md:text-5xl">
             {t("headline")}
           </h1>
-          <p className="text-lg leading-relaxed text-graphite">{t("body")}</p>
+          <p className="font-display text-lg leading-relaxed text-graphite">{t("body")}</p>
         </div>
       </div>
     </section>
