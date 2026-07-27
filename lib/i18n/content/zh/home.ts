@@ -3,7 +3,7 @@ export const home = {
     headline: "面向未来的工程化制造。",
     subhead:
       "梭织、针织与婴童服饰的垂直整合生产——在 [Y] 个国家的 [X] 座工厂为全球品牌服务。",
-    heroAlt: "现代化服装制造工厂广角视图",
+    heroAlt: "工业缝纫机缝制布料的特写镜头",
   },
   stats: {
     facilities: "工厂",

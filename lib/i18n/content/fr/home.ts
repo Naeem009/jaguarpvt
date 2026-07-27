@@ -3,7 +3,7 @@ export const home = {
     headline: "La manufacture, conçue pour l'avenir.",
     subhead:
       "Production intégrée verticalement pour les tissés, les mailles et la layette — au service de marques internationales dans [X] sites de production répartis dans [Y] pays.",
-    heroAlt: "Vue d'ensemble d'une usine moderne de fabrication de vêtements",
+    heroAlt: "Gros plan de tissu cousu sur une machine à coudre industrielle",
   },
   stats: {
     facilities: "Sites de production",

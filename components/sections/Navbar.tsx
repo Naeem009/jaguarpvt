@@ -101,14 +101,14 @@ export function Navbar() {
               <div className="flex-1 overflow-y-auto px-4 py-4">
                 <Link
                   href="/"
-                  className="relative mb-6 block h-[3.6rem] w-[240px]"
+                  className="relative mb-6 block h-[4.5rem] w-[min(88vw,340px)]"
                   onClick={closeMobileMenu}
                 >
                   <Image
                     src={LOGO_SRC}
                     alt="Jaguar (Pvt) Ltd."
                     fill
-                    sizes="240px"
+                    sizes="(max-width: 1024px) 340px, 340px"
                     className="object-contain object-start"
                   />
                 </Link>
@@ -209,16 +209,16 @@ export function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-ink/8 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/75">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:gap-4 md:px-6 md:py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-1.5 md:px-2 md:py-2">
           <Link
             href="/"
-            className="relative block h-[3.6rem] w-[min(62.4vw,240px)] shrink-0 sm:h-[4.2rem] sm:w-[264px] lg:h-[5.4rem] lg:w-[408px]"
+            className="relative block h-[3.75rem] w-[min(88vw,340px)] shrink-0 sm:h-[4rem] sm:w-[360px] lg:h-[4.25rem] lg:w-[440px]"
           >
             <Image
               src={LOGO_SRC}
               alt="Jaguar (Pvt) Ltd."
               fill
-              sizes="(max-width: 640px) 240px, (max-width: 1024px) 264px, 408px"
+              sizes="(max-width: 640px) 340px, (max-width: 1024px) 360px, 440px"
               className="object-contain object-start"
               priority
             />
@@ -249,7 +249,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="inline-flex size-11 shrink-0 touch-manipulation items-center justify-center rounded-full border border-ink/10 bg-white text-ink lg:hidden"
+            className="inline-flex size-10 shrink-0 touch-manipulation items-center justify-center rounded-full border border-ink/10 bg-white text-ink lg:hidden"
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
             onPointerUp={(event) => {

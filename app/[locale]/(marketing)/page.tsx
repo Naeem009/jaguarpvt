@@ -35,8 +35,9 @@ export default async function HomePage({ params }: PageProps) {
         primaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
         secondaryCTA={{ label: tCommon("exploreProducts"), href: "/products" }}
         media={{
-          type: "image",
-          src: "/images/home/hero.svg",
+          type: "video",
+          src: "/videos/home/hero-stitching.mp4",
+          poster: "/images/home/hero.svg",
           alt: t("hero.heroAlt"),
         }}
       />

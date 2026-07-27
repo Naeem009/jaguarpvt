@@ -48,7 +48,7 @@ export function Hero({
             className="h-full w-full object-cover"
             aria-label={media.alt}
           >
-            <source src={media.src} />
+            <source src={media.src} type="video/mp4" />
           </video>
         ) : (
           <Image

@@ -3,7 +3,7 @@ export const home = {
     headline: "Manufactura diseñada para lo que viene.",
     subhead:
       "Producción con integración vertical en tejidos planos, punto y ropa para bebé — atendiendo a marcas globales en [X] instalaciones en [Y] países.",
-    heroAlt: "Vista panorámica de una moderna planta de manufactura de indumentaria",
+    heroAlt: "Primer plano de tela siendo cosida en una máquina de coser industrial",
   },
   stats: {
     facilities: "Instalaciones",

@@ -3,7 +3,7 @@ export const home = {
     headline: "Produktion, entwickelt für das, was als Nächstes kommt.",
     subhead:
       "Vertikal integrierte Fertigung in den Bereichen Webwaren, Strickwaren und Babybekleidung — für globale Marken an [X] Standorten in [Y] Ländern.",
-    heroAlt: "Weitwinkelansicht einer modernen Bekleidungsproduktionsstätte",
+    heroAlt: "Nahaufnahme von Stoff, der an einer Industrienähmaschine genäht wird",
   },
   stats: {
     facilities: "Standorte",

@@ -3,7 +3,7 @@ export const home = {
     headline: "Manufacturing, engineered for what's next.",
     subhead:
       "Vertically integrated production across wovens, knits, and baby wear — serving global brands at 04 facilities in 03 countries.",
-    heroAlt: "Wide-angle view of a modern apparel manufacturing facility",
+    heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
   },
   stats: {
     facilities: "Facilities",
