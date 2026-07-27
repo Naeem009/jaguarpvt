@@ -36,7 +36,7 @@ def extract_emblem_svg(full_svg: str) -> str:
 </svg>'''
 
 
-LOGO_VIEWBOX = 'width="890" height="500" viewBox="60 90 890 500"'
+LOGO_VIEWBOX = 'width="860" height="256" viewBox="50 258 860 256"'
 
 
 def write_logo(path: Path, content: str) -> None:
