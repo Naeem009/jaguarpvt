@@ -47,6 +47,22 @@ def write_logo(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
 
 
+def remove_matte_fringe(img: Image.Image) -> Image.Image:
+    """Drop opaque near-black / near-white matte pixels; keep logo artwork intact."""
+    rgba = img.convert("RGBA")
+    pixels = list(rgba.getdata())
+    cleaned = []
+    for r, g, b, a in pixels:
+        if a > 0 and r < 25 and g < 25 and b < 25:
+            cleaned.append((0, 0, 0, 0))
+        elif a > 0 and r > 250 and g > 250 and b > 250:
+            cleaned.append((0, 0, 0, 0))
+        else:
+            cleaned.append((r, g, b, a))
+    rgba.putdata(cleaned)
+    return rgba
+
+
 doc = fitz.open(PDF)
 page = doc[0]
 svg = page.get_svg_image(matrix=fitz.Identity)
@@ -60,22 +76,30 @@ emblem_svg = extract_emblem_svg(svg)
 (LOGOS / "logo-mark.svg").write_text(emblem_svg, encoding="utf-8")
 (LOGOS / "logo-mark-light.svg").write_text(make_light_variant(emblem_svg), encoding="utf-8")
 
-# Favicon from emblem only.
+# Favicon from emblem only — preserve original framing, transparent background only.
 clip = fitz.Rect(60, 120, 280, 360)
 matrix = fitz.Matrix(6, 6)
 pix = page.get_pixmap(matrix=matrix, clip=clip, alpha=True)
 icon_png_path = PUBLIC / "favicon.png"
 pix.save(icon_png_path)
 
-img = Image.open(icon_png_path).convert("RGBA")
+img = remove_matte_fringe(Image.open(icon_png_path))
 width, height = img.size
 size = min(width, height)
 left = (width - size) // 2
 top = (height - size) // 2
 icon_square = img.crop((left, top, left + size, top + size)).resize((512, 512), Image.Resampling.LANCZOS)
+
 icon_square.save(icon_png_path)
 icon_square.save(APP / "icon.png")
+icon_square.save(APP / "apple-icon.png")
+icon_square.save(
+    APP / "favicon.ico",
+    format="ICO",
+    sizes=[(16, 16), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)],
+)
 
-(APP / "apple-icon.png").write_bytes(icon_png_path.read_bytes())
-
-print("Generated logo-dark.svg, logo-light.svg, logo-mark.svg, favicon.png, app/icon.png")
+print(
+    "Generated logo-dark.svg, logo-light.svg, logo-mark.svg, favicon.png, "
+    "app/icon.png, app/favicon.ico"
+)
