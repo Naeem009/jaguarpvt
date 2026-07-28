@@ -92,7 +92,7 @@ export const impact = {
     subhead: "Certifications, compliance systems, and governance structures that support buyer audit requirements.",
     heroAlt: "Governance and certification programs",
     intro:
-      "Governance and certification programs provide the audit trail global brands require. Certification scope varies by facility, product line, and program — always confirm applicability for your order profile.",
+      "We’re proud to walk the talk when it comes to sustainability. Our use of eco-friendly materials, ethical labor practices, and transparent operations is reflected in our certifications and memberships, including SEDEX and BSCI. We’re not just checking boxes; we’re setting a new standard for responsible manufacturing. Our ethical practices haven’t gone unnoticed. We’ve received numerous accolades for our efforts in sustainability, fair trade, and corporate social responsibility. These achievements are a reflection of our belief that doing what’s right isn’t just an obligation—it’s the foundation for lasting success.",
     cta: {
       title: "Request certification scope for your program",
       subhead: "Confirm which credentials apply to your product category, volume, and delivery region.",

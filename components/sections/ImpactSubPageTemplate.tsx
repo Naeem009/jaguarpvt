@@ -55,8 +55,8 @@ export async function ImpactSubPageTemplate({
 
       {intro ? (
         <section className="bg-paper py-16 md:py-20">
-          <div className="mx-auto max-w-3xl px-4 md:px-6">
-            <p className="text-lg leading-relaxed text-graphite">{intro}</p>
+          <div className="mx-auto max-w-3xl px-2 md:px-4">
+            <p className="text-xl leading-relaxed text-graphite">{intro}</p>
           </div>
         </section>
       ) : null}
