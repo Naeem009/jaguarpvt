@@ -27,7 +27,7 @@ export const contactPage = {
     body: "Reach a regional contact directly if you would rather not use the form.",
     regions: [
       { region: "Americas", email: "americas@jaguarpvt.com", note: "North and Latin America sourcing inquiries" },
-      { region: "EMEA", email: "emea@jaguarpvt.com", note: "Europe, Middle East, and Africa programs" },
+      { region: "EMEA", email: "emea@jaguarpvt.com", note: "Europe, Middle East, and Africa regions" },
       { region: "Asia Pacific", email: "apac@jaguarpvt.com", note: "Asia Pacific manufacturing and development inquiries" },
     ],
   },

@@ -1,4 +1,23 @@
+import { sendContactSubmissionEmail } from "@/lib/contact/send-submission-email";
 import { contactFormSchema } from "@/lib/contact/schema";
+
+async function forwardToCrm(payload: Record<string, unknown>) {
+  const webhookUrl = process.env.CRM_WEBHOOK_URL;
+
+  if (!webhookUrl) {
+    return;
+  }
+
+  const webhookResponse = await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  if (!webhookResponse.ok) {
+    throw new Error("Unable to forward submission to CRM.");
+  }
+}
 
 export async function POST(request: Request) {
   try {
@@ -18,21 +37,23 @@ export async function POST(request: Request) {
       source: "website-contact-form",
     };
 
-    const webhookUrl = process.env.CRM_WEBHOOK_URL;
-
-    if (webhookUrl) {
-      const webhookResponse = await fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+    try {
+      await sendContactSubmissionEmail(parsed.data, {
+        submittedAt: payload.submittedAt,
+        source: payload.source,
       });
+    } catch (error) {
+      console.error("[contact-form] Failed to send email:", error);
+      return Response.json(
+        { error: "Unable to deliver your inquiry by email. Please try again shortly." },
+        { status: 502 },
+      );
+    }
 
-      if (!webhookResponse.ok) {
-        return Response.json({ error: "Unable to forward submission to CRM." }, { status: 502 });
-      }
-    } else {
-      // TODO: Configure CRM_WEBHOOK_URL in the environment for production lead routing.
-      console.log("[contact-form] CRM_WEBHOOK_URL not configured. Submission payload:", payload);
+    try {
+      await forwardToCrm(payload);
+    } catch (error) {
+      console.error("[contact-form] CRM forwarding failed:", error);
     }
 
     return Response.json({ success: true });
