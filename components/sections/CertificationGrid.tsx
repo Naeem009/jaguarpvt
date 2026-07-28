@@ -19,7 +19,7 @@ export async function CertificationGrid({ className }: CertificationGridProps) {
           eyebrow={t("eyebrow")}
           title={t("title")}
           subhead={t("subhead")}
-          align="center"
+          align="start"
           className="mb-10 md:mb-12"
         />
 
