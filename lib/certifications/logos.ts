@@ -9,18 +9,23 @@ export type CertificationLogo = {
   alt: string;
 };
 
-/**
- * Register certification logo filenames here.
- * Place the matching files in `public/certifications/`.
- *
- * Example:
- *   { file: "gots.svg", alt: "GOTS certification logo" }
- */
 export const certificationLogoEntries: Array<{ file: string; alt?: string }> = [
-  { file: "cert-01.svg", alt: "GOTS certification logo" },
-  { file: "cert-02.svg", alt: "OEKO-TEX Standard 100 certification logo" },
-  { file: "cert-03.svg", alt: "WRAP certification logo" },
-  { file: "cert-04.svg", alt: "ISO 14001 certification logo" },
+  { file: "1-01.png", alt: "Global Recycled Standard logo" },
+  { file: "2-01.png", alt: "ISO 9001:2015 logo" },
+  { file: "3-01.png", alt: "GOTS logo" },
+  { file: "4-01.png", alt: "Organic Blended logo" },
+  { file: "5-01.png", alt: "OEKO-TEX Standard logo" },
+  { file: "6-01.png", alt: "OEKO-TEX Standard 100 logo" },
+  { file: "7-01.png", alt: "Organic 100 logo" },
+  { file: "8-01.png", alt: "Recycled Blended logo" },
+  { file: "9-01.png", alt: "BSCI logo" },
+  { file: "10-01.png", alt: "BCI logo" },
+  { file: "11-01.png", alt: "Inditex logo" },
+  { file: "12-01.png", alt: "HIGG Index logo" },
+  { file: "13-01.png", alt: "Sedex logo" },
+  { file: "14-01.png", alt: "Amfori logo" },
+  { file: "15-01.png", alt: "Textile Exchange logo" },
+  { file: "16-01.png", alt: "Better Cotton Initiative logo" },
 ];
 
 function humanizeFilename(filename: string): string {

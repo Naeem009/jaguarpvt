@@ -24,19 +24,19 @@ export function CertificationMarquee({
       )}
       aria-label="Certification logos"
     >
-      <ul className="flex w-max animate-customer-marquee items-center gap-12 py-3 motion-reduce:animate-none md:gap-16 md:py-4">
+      <ul className="flex w-max animate-customer-marquee items-center gap-6 py-4 motion-reduce:animate-none md:gap-12 md:py-6">
         {loop.map((logo, index) => (
           <li
             key={`${logo.src}-${index}`}
-            className="flex h-14 w-36 shrink-0 items-center justify-center md:h-16 md:w-40"
+            className="flex h-64 w-80 shrink-0 items-center justify-center"
           >
             <Image
               src={logo.src}
               alt=""
-              width={160}
-              height={64}
-              sizes="160px"
-              className="max-h-14 w-auto object-contain opacity-60 grayscale transition-[opacity,filter] duration-300 hover:opacity-100 hover:grayscale-0 md:max-h-16"
+              width={400}
+              height={280}
+              sizes="500px"
+              className="max-h-56 w-auto max-w-full object-contain opacity-60 grayscale transition-[opacity,filter] duration-200 hover:opacity-100 hover:grayscale-0"
             />
           </li>
         ))}
