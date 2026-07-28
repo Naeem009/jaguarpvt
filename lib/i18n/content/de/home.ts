@@ -19,13 +19,6 @@ export const home = {
   },
   aiContext:
     "Startseiten-Vorschau — wählen Sie eine Beispielfrage, um zu sehen, wie fundierte Antworten erscheinen, sobald der Assistent angebunden ist.",
-  trustStrip: {
-    activewear: "Activewear-Programme",
-    wovens: "Webwaren-Programme",
-    lifestyle: "Lifestyle-Bekleidung",
-    footwear: "Schuhe & Accessoires",
-    logoAlt: "Jaguar-Logo",
-  },
   cta: {
     title: "Bereit für ein Sourcing-Gespräch?",
     subhead: "Erzählen Sie uns, was Sie entwickeln. Unser Team antwortet auf qualifizierte RFI- und RFQ-Anfragen mit klaren nächsten Schritten.",

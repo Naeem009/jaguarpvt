@@ -67,14 +67,7 @@ export default async function HomePage({ params }: PageProps) {
 
       <FacilityMapTeaser image="/images/home/facility-teaser.svg" />
 
-      <TrustStrip
-        categories={[
-          { label: t("trustStrip.activewear"), image: "/logos/logo-mark.svg", alt: t("trustStrip.logoAlt") },
-          { label: t("trustStrip.wovens"), image: "/logos/logo-mark.svg", alt: t("trustStrip.logoAlt") },
-          { label: t("trustStrip.lifestyle"), image: "/logos/logo-mark.svg", alt: t("trustStrip.logoAlt") },
-          { label: t("trustStrip.footwear"), image: "/logos/logo-mark.svg", alt: t("trustStrip.logoAlt") },
-        ]}
-      />
+      <TrustStrip />
 
       <CTASection
         title={t("cta.title")}

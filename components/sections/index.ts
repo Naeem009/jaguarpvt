@@ -47,4 +47,4 @@ export { SustainabilityEstimator } from "./SustainabilityEstimator";
 export { TimelineSection } from "./TimelineSection";
 export type { TimelineSectionProps, TimelineStep } from "./TimelineSection";
 export { TrustStrip } from "./TrustStrip";
-export type { TrustStripCategory, TrustStripProps } from "./TrustStrip";
+export type { TrustStripProps } from "./TrustStrip";

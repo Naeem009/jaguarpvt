@@ -19,13 +19,6 @@ export const home = {
   },
   aiContext:
     "Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected.",
-  trustStrip: {
-    activewear: "Activewear programs",
-    wovens: "Woven programs",
-    lifestyle: "Lifestyle apparel",
-    footwear: "Footwear & accessories",
-    logoAlt: "Jaguar logo mark",
-  },
   cta: {
     title: "Ready to start a sourcing conversation?",
     subhead: "Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps.",

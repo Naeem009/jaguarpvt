@@ -72,6 +72,33 @@
   }
 }
 
+@keyframes customer-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-customer-marquee {
+  animation: customer-marquee 55s linear infinite;
+}
+
+.group:hover .animate-customer-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-customer-marquee {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
 body {
   background-color: var(--color-paper);
   color: var(--color-ink);
