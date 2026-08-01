@@ -31,8 +31,13 @@ export function getFacilityById(id: string): Facility | undefined {
   return getFacilities().find((facility) => facility.id === id);
 }
 
+const FACILITY_THUMBNAILS: Record<string, string> = {
+  "city-unit": "/images/facility/facility-thumb-01.svg",
+  "dyeing-unit": "/images/facility/facility-thumb-02.svg",
+};
+
 export function getFacilityThumbnailPath(slug: string) {
-  return `/images/facility/${slug}.jpg`;
+  return FACILITY_THUMBNAILS[slug] ?? FACILITY_PLACEHOLDER_IMAGE;
 }
 
 export { projectFacilityToMapPosition } from "./map-projection";
