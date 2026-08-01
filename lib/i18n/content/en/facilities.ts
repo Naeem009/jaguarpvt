@@ -1,6 +1,6 @@
 export const facilities = {
-  "lahore-campus": {
-    name: "Lahore Manufacturing Campus",
+  "city-unit": {
+    name: "Faisalabad City Unit",
     description: "Integrated cut-and-sew and finishing for woven shirting and knit programs.",
   },
   "dhaka-knit-center": {

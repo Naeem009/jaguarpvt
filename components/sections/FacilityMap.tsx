@@ -124,13 +124,13 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
 
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
             <div className="relative overflow-hidden rounded-[var(--radius-card-lg)] border border-white/10 bg-charcoal">
-              <div className="relative aspect-[16/10] w-full">
+              <div className="relative aspect-[950/620] w-full">
                 <Image
                   src={FACILITY_MAP_BACKGROUND}
                   alt={t("mapAlt")}
                   fill
                   sizes="(max-width: 1024px) 100vw, 960px"
-                  className="object-cover opacity-90"
+                  className="object-contain object-center opacity-90"
                   priority
                 />
 

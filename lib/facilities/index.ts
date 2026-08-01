@@ -9,6 +9,9 @@ export type Facility = {
   region: string;
   latitude: number;
   longitude: number;
+  /** Optional percent position (0–100) on map-background.svg when lat/lng overlap or need fine tuning. */
+  mapX?: number;
+  mapY?: number;
   categories: string[];
   certifications: string[];
   employees: number;
@@ -32,12 +35,7 @@ export function getFacilityThumbnailPath(slug: string) {
   return `/images/facility/${slug}.jpg`;
 }
 
-export function projectFacilityToMapPosition(facility: Facility) {
-  return {
-    x: ((facility.longitude + 180) / 360) * 100,
-    y: ((90 - facility.latitude) / 180) * 100,
-  };
-}
+export { projectFacilityToMapPosition } from "./map-projection";
 
 export function formatCategoryLabel(category: string) {
   return category

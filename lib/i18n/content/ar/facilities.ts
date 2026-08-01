@@ -1,5 +1,5 @@
 export const facilities = {
-  "lahore-campus": {
+  "city-unit": {
     name: "حرم تصنيع لاهور",
     description: "قص وخياطة وتشطيب متكامل لبرامج القمصان المنسوجة والمحبوكة.",
   },

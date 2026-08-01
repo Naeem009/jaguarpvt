@@ -1,5 +1,5 @@
 export const facilities = {
-  "lahore-campus": {
+  "city-unit": {
     name: "拉合尔制造园区",
     description: "梭织衬衫与针织项目的集成裁剪缝制及后整。",
   },

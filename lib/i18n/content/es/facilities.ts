@@ -1,5 +1,5 @@
 export const facilities = {
-  "lahore-campus": {
+  "city-unit": {
     name: "Campus de manufactura de Lahore",
     description: "Corte y confección integrados y acabado para programas de camisas de tejido plano y punto.",
   },
