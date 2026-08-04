@@ -5,7 +5,7 @@ import { buildAlternateLanguages, pageMetadata, siteName, type PageMetadataKey }
 export async function createPageMetadata(page: PageMetadataKey): Promise<Metadata> {
   const t = await getTranslations("metadata");
   const entry = pageMetadata[page];
-  const title = `${t(`${page}.title`)} | ${siteName}`;
+  const title = `${siteName} | ${t(`${page}.title`)}`;
   const description = t(`${page}.description`);
   const languages = buildAlternateLanguages(entry.path);
 
