@@ -9,19 +9,19 @@ const pillarConfig = [
   {
     key: "environment",
     href: "/our-impact/environment",
-    image: "/images/our-impact/environment/solar.svg",
+    image: "/images/our-impact/environment/solar.jpg",
     placeholders: ["[X]M", "[X]%"],
   },
   {
     key: "people",
     href: "/our-impact/people",
-    image: "/images/our-impact/people/community.svg",
+    image: "/images/our-impact/people/community.jpg",
     placeholders: ["[X]", "[X]+"],
   },
   {
     key: "governance",
     href: "/our-impact/governance",
-    image: "/images/our-impact/governance/hero.svg",
+    image: "/images/our-impact/governance/hero.jpg",
     placeholders: ["[X]", "[X]"],
   },
 ] as const;

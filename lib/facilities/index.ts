@@ -19,9 +19,9 @@ export type Facility = {
   description: string;
 };
 
-export const FACILITY_PLACEHOLDER_IMAGE = "/images/facility/facility-thumb-01.svg";
+export const FACILITY_PLACEHOLDER_IMAGE = "/images/facility/facility-thumb-01.jpg";
 export const FACILITY_MAP_BACKGROUND = "/images/facility/map-background.svg";
-export const FACILITY_HERO_IMAGE = "/images/facility/map-background.svg";
+export const FACILITY_HERO_IMAGE = "/images/facility/hero.jpg";
 
 export function getFacilities(): Facility[] {
   return facilitiesData as Facility[];
@@ -32,8 +32,8 @@ export function getFacilityById(id: string): Facility | undefined {
 }
 
 const FACILITY_THUMBNAILS: Record<string, string> = {
-  "city-unit": "/images/facility/facility-thumb-01.svg",
-  "dyeing-unit": "/images/facility/facility-thumb-02.svg",
+  "city-unit": "/images/facility/facility-thumb-01.jpg",
+  "dyeing-unit": "/images/facility/facility-thumb-02.jpg",
 };
 
 export function getFacilityThumbnailPath(slug: string) {

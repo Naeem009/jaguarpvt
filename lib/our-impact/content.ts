@@ -33,7 +33,7 @@ export const impactPillars: ImpactPillar[] = [
   {
     title: "Environment",
     href: "/our-impact/environment",
-    image: "/images/our-impact/environment/solar.svg",
+    image: "/images/our-impact/environment/solar.jpg",
     description:
       "Water stewardship, renewable energy, and waste reduction programs measured against published benchmarks — not marketing claims.",
     metrics: [
@@ -44,7 +44,7 @@ export const impactPillars: ImpactPillar[] = [
   {
     title: "People & Communities",
     href: "/our-impact/people",
-    image: "/images/our-impact/people/community.svg",
+    image: "/images/our-impact/people/community.jpg",
     description:
       "Worker welfare, training, and community programs across manufacturing communities — documented and auditable.",
     metrics: [
@@ -55,7 +55,7 @@ export const impactPillars: ImpactPillar[] = [
   {
     title: "Governance & Certifications",
     href: "/our-impact/governance",
-    image: "/images/our-impact/governance/hero.svg",
+    image: "/images/our-impact/governance/hero.jpg",
     description:
       "Certifications, compliance systems, and governance structures that support buyer audit requirements.",
     metrics: [
@@ -68,32 +68,32 @@ export const impactPillars: ImpactPillar[] = [
 export const certifications: Certification[] = [
   {
     name: "GOTS",
-    logo: "/certifications/cert-01.svg",
+    logo: "/certifications/cert-01.jpg",
     description: "Organic fiber handling and chemical management for certified organic programs.",
     issuer: "Global Organic Textile Standard",
   },
   {
     name: "OEKO-TEX Standard 100",
-    logo: "/certifications/cert-02.svg",
+    logo: "/certifications/cert-02.jpg",
     description: "Product-level testing for harmful substances across selected product lines.",
     issuer: "OEKO-TEX Association",
   },
   {
     name: "WRAP",
-    logo: "/certifications/cert-03.svg",
+    logo: "/certifications/cert-03.jpg",
     description: "Social compliance principles covering labor practices and facility standards.",
     issuer: "Worldwide Responsible Accredited Production",
   },
   {
     name: "ISO 14001",
-    logo: "/certifications/cert-04.svg",
+    logo: "/certifications/cert-04.jpg",
     description: "Environmental management systems at selected manufacturing facilities.",
     issuer: "International Organization for Standardization",
   },
 ];
 
 export const environmentContent = {
-  heroImage: "/images/our-impact/environment/hero.svg",
+  heroImage: "/images/our-impact/environment/hero.jpg",
   stats: [
     { value: 0, placeholder: "[X]M", label: "Liters of water recycled annually" },
     { value: 0, placeholder: "[X]%", label: "Renewable energy share" },
@@ -103,20 +103,20 @@ export const environmentContent = {
     {
       title: "Water stewardship",
       body: "Water use in textile manufacturing is measurable and manageable. Our published programs include low-liquor processing, recycling at selected facilities, and internal benchmarks tracked against [X] baseline targets — confirm current metrics with our sustainability team.",
-      image: "/images/our-impact/environment/water-treatment.svg",
+      image: "/images/our-impact/environment/water-treatment.jpg",
       imageAlt: "Water treatment infrastructure at a manufacturing facility",
     },
     {
       title: "Renewable energy",
       body: "Solar and other renewable installations at selected sites contribute to a reported [X]% renewable energy share across the footprint — facility-level coverage varies by location and program.",
-      image: "/images/our-impact/environment/solar.svg",
+      image: "/images/our-impact/environment/solar.jpg",
       imageAlt: "Solar panel installation at a manufacturing site",
     },
   ] satisfies ImpactContentBlock[],
 };
 
 export const peopleContent = {
-  heroImage: "/images/our-impact/people/hero.svg",
+  heroImage: "/images/our-impact/people/hero.jpg",
   stats: [
     { value: 0, placeholder: "[X]", label: "Worker welfare programs" },
     { value: 0, placeholder: "[X]+", label: "Employees covered by training initiatives" },
@@ -126,20 +126,20 @@ export const peopleContent = {
     {
       title: "Worker welfare and safety",
       body: "Manufacturing communities are the foundation of reliable production. Programs cover safety training, fair workplace standards, and grievance mechanisms aligned with buyer audit expectations — scope and coverage vary by facility.",
-      image: "/images/our-impact/people/worker-program.svg",
+      image: "/images/our-impact/people/worker-program.jpg",
       imageAlt: "Worker training and welfare program",
     },
     {
       title: "Communities",
       body: "Community initiatives include education support, health programs, and local partnerships at selected manufacturing locations — documented in our published impact materials.",
-      image: "/images/our-impact/people/community.svg",
+      image: "/images/our-impact/people/community.jpg",
       imageAlt: "Community engagement program",
     },
   ] satisfies ImpactContentBlock[],
 };
 
 export const governanceContent = {
-  heroImage: "/images/our-impact/governance/hero.svg",
+  heroImage: "/images/our-impact/governance/hero.jpg",
   stats: [
     { value: 0, placeholder: "[X]", label: "Active certifications" },
     { value: 0, placeholder: "[X]", label: "Facilities under compliance audit" },

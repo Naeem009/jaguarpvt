@@ -5,7 +5,7 @@ export const careersContent = {
     headline: "Careers",
     subhead:
       "Join a global manufacturing organization where precision, compliance, and continuous improvement are operational standards — not talking points.",
-    image: "/images/careers/hero.svg",
+    image: "/images/careers/hero.jpg",
     alt: "Team members at an apparel manufacturing facility",
   },
   culture: {
@@ -17,13 +17,13 @@ export const careersContent = {
       {
         title: "Safety and dignity at work",
         body: "Modern facilities, clear standards, and training programs that treat production teams as skilled professionals.",
-        image: "/images/careers/culture-01.svg",
+        image: "/images/careers/culture-01.jpg",
         alt: "Manufacturing team culture and workplace standards",
       },
       {
         title: "Continuous improvement",
         body: "Process discipline across quality, sustainability, and technology — with room to grow across functions and regions.",
-        image: "/images/careers/culture-02.svg",
+        image: "/images/careers/culture-02.jpg",
         alt: "Continuous improvement and team collaboration",
       },
     ],

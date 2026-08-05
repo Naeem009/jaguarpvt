@@ -3,14 +3,14 @@ export const aboutContent = {
     headline: "About",
     subhead:
       "A vertically integrated apparel manufacturer built on scale, compliance, and long-term partnerships with global brands.",
-    image: "/images/about/hero.svg",
+    image: "/images/about/hero.jpg",
     alt: "Modern apparel manufacturing facility exterior",
   },
   mission: {
     eyebrow: "Mission",
     title: "Manufacturing partnerships built on proof, not promises.",
     body: "We integrate product development, manufacturing, and compliance under one system — so sourcing teams get clear answers on capability, certification scope, and delivery planning. Our role is to work inside your product development process, not just your purchase orders.",
-    image: "/images/about/mission-block.svg",
+    image: "/images/about/mission-block.jpg",
     alt: "Mission and manufacturing capability overview",
   },
   stats: [
@@ -27,19 +27,19 @@ export const aboutContent = {
         title: "Foundation and first facilities",
         description:
           "Operations began with woven apparel production, establishing the integrated cutting, sewing, and finishing model still used across programs today.",
-        image: "/images/about/history-01.svg",
+        image: "/images/about/history-01.jpg",
       },
       {
         title: "Regional expansion",
         description:
           "Knits and baby wear capabilities were added as buyer programs scaled — each category supported by dedicated process control and compliance systems.",
-        image: "/images/about/history-02.svg",
+        image: "/images/about/history-02.jpg",
       },
       {
         title: "Global footprint today",
         description:
           "The current network spans [Y] countries with [X] facilities, serving global brands across wovens, knits, and baby wear.",
-        image: "/images/about/history-03.svg",
+        image: "/images/about/history-03.jpg",
       },
     ],
   },
@@ -47,19 +47,19 @@ export const aboutContent = {
     {
       name: "Mr. Asim ul Haq",
       title: "Chief Executive Officer",
-      image: "/images/about/leadership-01.png",
+      image: "/images/about/leadership-01.jpg",
       alt: "Mr. Asim ul Haq, Chief Executive Officer",
     },
     {
       name: "Aleem Asim",
       title: "Executive Director",
-      image: "/images/about/leadership-02.png",
+      image: "/images/about/leadership-02.jpg",
       alt: "Aleem Asim, Executive Director",
     },
     {
       name: "Usama Asim",
       title: "Executive Director",
-      image: "/images/about/leadership-03.png",
+      image: "/images/about/leadership-03.jpg",
       alt: "Usama Asim, Executive Director",
     },
   ],

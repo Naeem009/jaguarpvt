@@ -7,11 +7,14 @@ import { StatBar } from "./StatBar";
 import { cn } from "@/lib/utils";
 import type { ImpactContentBlock } from "@/lib/our-impact/content";
 import type { StatBarItem } from "./StatBar";
+import { heroVideoMedia } from "@/lib/media/hero-media";
+import type { HeroVideoKey } from "@/lib/media/hero-videos";
 
 export type ImpactSubPageTemplateProps = {
   headline: string;
   subhead: string;
   heroImage: string;
+  heroVideo?: HeroVideoKey;
   stats: StatBarItem[];
   blocks?: ImpactContentBlock[];
   intro?: string;
@@ -28,6 +31,7 @@ export async function ImpactSubPageTemplate({
   headline,
   subhead,
   heroImage,
+  heroVideo = "sustainability",
   stats,
   blocks = [],
   intro,
@@ -44,11 +48,7 @@ export async function ImpactSubPageTemplate({
         headline={headline}
         subhead={subhead}
         primaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
-        media={{
-          type: "image",
-          src: heroImage,
-          alt: t("heroAlt", { headline }),
-        }}
+        media={heroVideoMedia(heroImage, t("heroAlt", { headline }), heroVideo)}
       />
 
       <StatBar stats={stats} variant="impact" />

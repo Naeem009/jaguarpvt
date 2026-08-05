@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CAREERS_ATS_URL } from "@/lib/careers/content";
+import { heroVideoMedia } from "@/lib/media/hero-media";
 
 const departmentHrefs = [
   `${CAREERS_ATS_URL}?department=manufacturing-operations`,
@@ -15,8 +16,8 @@ const departmentHrefs = [
 ];
 
 const cultureImages = [
-  "/images/careers/culture-01.svg",
-  "/images/careers/culture-02.svg",
+  "/images/careers/culture-01.jpg",
+  "/images/careers/culture-02.jpg",
 ];
 
 type PageProps = {
@@ -43,7 +44,7 @@ export default async function CareersPage({ params }: PageProps) {
         subhead={t("hero.subhead")}
         primaryCTA={{ label: t("hero.viewRoles"), href: "#open-roles" }}
         secondaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
-        media={{ type: "image", src: "/images/careers/hero.svg", alt: t("hero.alt") }}
+        media={heroVideoMedia("/images/careers/hero.jpg", t("hero.alt"), "manufacturing")}
       />
 
       <section className="bg-white py-16 md:py-24">

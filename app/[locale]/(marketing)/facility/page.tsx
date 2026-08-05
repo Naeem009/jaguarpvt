@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { FacilityMapLazy, Hero } from "@/components/sections";
 import { FACILITY_HERO_IMAGE, getFacilities } from "@/lib/facilities";
+import { heroVideoMedia } from "@/lib/media/hero-media";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -25,11 +26,7 @@ export default async function FacilityPage({ params }: PageProps) {
         headline={t("hero.headline")}
         subhead={t("hero.subhead")}
         primaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
-        media={{
-          type: "image",
-          src: FACILITY_HERO_IMAGE,
-          alt: t("hero.alt"),
-        }}
+        media={heroVideoMedia(FACILITY_HERO_IMAGE, t("hero.alt"), "manufacturing")}
       />
 
       <FacilityMapLazy facilities={facilities} filterEnabled />

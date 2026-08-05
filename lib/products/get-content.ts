@@ -4,9 +4,9 @@ import type { ProductCategorySlug, ProductCategoryContent } from "./content";
 const SLUGS: ProductCategorySlug[] = ["wovens", "knits", "baby-wear"];
 
 const processImages = (category: ProductCategorySlug) => ({
-  step1: `/images/products/${category}/process-01.svg`,
-  step2: `/images/products/${category}/process-02.svg`,
-  step3: `/images/products/${category}/process-03.svg`,
+  step1: `/images/products/${category}/process-01.jpg`,
+  step2: `/images/products/${category}/process-02.jpg`,
+  step3: `/images/products/${category}/process-03.jpg`,
 });
 
 function buildCategory(
@@ -22,7 +22,7 @@ function buildCategory(
     name: t(`${slug}.name`),
     headline: t(`${slug}.headline`),
     subhead: t(`${slug}.subhead`),
-    heroImage: `/images/products/${slug}/hero.svg`,
+    heroImage: `/images/products/${slug}/hero.jpg`,
     gridDescription: t(`${slug}.gridDescription`),
     timelineSteps: steps.map((step, index) => ({
       ...step,

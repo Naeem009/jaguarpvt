@@ -7,6 +7,7 @@ import { ProductSpecsTable } from "./ProductSpecsTable";
 import { SustainabilityCallout } from "./SustainabilityCallout";
 import { TimelineSection } from "./TimelineSection";
 import type { ProductCategoryContent } from "@/lib/products/content";
+import { heroVideoMedia } from "@/lib/media/hero-media";
 
 export type ProductPageTemplateProps = {
   content: ProductCategoryContent;
@@ -29,11 +30,7 @@ export async function ProductPageTemplate({ content, catalogueSection }: Product
           label: discussLabel,
           href: contactHref,
         }}
-        media={{
-          type: "image",
-          src: content.heroImage,
-          alt: t("heroAlt", { category: content.name }),
-        }}
+        media={heroVideoMedia(content.heroImage, t("heroAlt", { category: content.name }), "products")}
       />
 
       <TimelineSection steps={content.timelineSteps} />

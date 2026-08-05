@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { CapabilityMatcher, Hero, ProductGrid } from "@/components/sections";
 import { getProductHubGridItems } from "@/lib/products/get-content";
+import { heroVideoMedia } from "@/lib/media/hero-media";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -26,11 +27,7 @@ export default async function ProductsHubPage({ params }: PageProps) {
         subhead={t("hero.subhead")}
         primaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
         secondaryCTA={{ label: t("hero.exploreCategories"), href: "#categories" }}
-        media={{
-          type: "image",
-          src: "/images/products/wovens/hero.svg",
-          alt: t("hero.alt"),
-        }}
+        media={heroVideoMedia("/images/products/wovens/hero.jpg", t("hero.alt"), "products")}
       />
 
       <div id="categories">

@@ -18,9 +18,9 @@ export type ProductCategoryContent = {
 };
 
 const processImages = (category: ProductCategorySlug) => ({
-  step1: `/images/products/${category}/process-01.svg`,
-  step2: `/images/products/${category}/process-02.svg`,
-  step3: `/images/products/${category}/process-03.svg`,
+  step1: `/images/products/${category}/process-01.jpg`,
+  step2: `/images/products/${category}/process-02.jpg`,
+  step3: `/images/products/${category}/process-03.jpg`,
 });
 
 export const productCategories: Record<ProductCategorySlug, ProductCategoryContent> = {
@@ -29,7 +29,7 @@ export const productCategories: Record<ProductCategorySlug, ProductCategoryConte
     name: "Wovens",
     headline: "Wovens",
     subhead: "Structured shirting, bottoms, and uniform programs with integrated cutting, sewing, and finishing.",
-    heroImage: "/images/products/wovens/hero.svg",
+    heroImage: "/images/products/wovens/hero.jpg",
     gridDescription:
       "Structured shirting, bottoms, and uniform programs with integrated cutting, sewing, and finishing.",
     timelineSteps: [
@@ -73,7 +73,7 @@ export const productCategories: Record<ProductCategorySlug, ProductCategoryConte
     name: "Knits",
     headline: "Knits",
     subhead: "Jersey, fleece, and performance knits with capacity for large programs and certified organic options.",
-    heroImage: "/images/products/knits/hero.svg",
+    heroImage: "/images/products/knits/hero.jpg",
     gridDescription:
       "Jersey, fleece, and performance knits with capacity for large programs and certified organic options.",
     timelineSteps: [
@@ -117,7 +117,7 @@ export const productCategories: Record<ProductCategorySlug, ProductCategoryConte
     name: "Baby Wear",
     headline: "Baby Wear",
     subhead: "Soft-hand baby and infant apparel with compliance-focused construction and finishing.",
-    heroImage: "/images/products/baby-wear/hero.svg",
+    heroImage: "/images/products/baby-wear/hero.jpg",
     gridDescription:
       "Soft-hand baby and infant apparel with compliance-focused construction and finishing.",
     timelineSteps: [

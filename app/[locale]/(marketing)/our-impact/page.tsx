@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
+import { heroVideoMedia } from "@/lib/media/hero-media";
 import {
   CTASection,
   Hero,
@@ -32,11 +33,7 @@ export default async function OurImpactHubPage({ params }: PageProps) {
         subhead={t("hero.subhead")}
         primaryCTA={{ label: tNav("downloadEsg"), href: ESG_REPORT_URL }}
         secondaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
-        media={{
-          type: "image",
-          src: "/images/our-impact/environment/hero.svg",
-          alt: t("hero.alt"),
-        }}
+        media={heroVideoMedia("/images/our-impact/environment/hero.jpg", t("hero.alt"), "sustainability")}
       />
 
       <StatBar

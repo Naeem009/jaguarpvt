@@ -31,19 +31,19 @@ export function Navbar() {
       title: tProducts("wovens.name"),
       href: "/products/wovens" as const,
       description: tProducts("wovens.gridDescription"),
-      image: "/images/products/wovens/hero.svg",
+      image: "/images/products/wovens/hero.jpg",
     },
     {
       title: tProducts("knits.name"),
       href: "/products/knits" as const,
       description: tProducts("knits.gridDescription"),
-      image: "/images/products/knits/hero.svg",
+      image: "/images/products/knits/hero.jpg",
     },
     {
       title: tProducts("baby-wear.name"),
       href: "/products/baby-wear" as const,
       description: tProducts("baby-wear.gridDescription"),
-      image: "/images/products/baby-wear/hero.svg",
+      image: "/images/products/baby-wear/hero.jpg",
       badge: tProducts("catalogueBadge"),
     },
   ];

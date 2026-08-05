@@ -37,7 +37,7 @@ export default async function HomePage({ params }: PageProps) {
         media={{
           type: "video",
           src: "/videos/home/hero-stitching.mp4",
-          poster: "/images/home/hero.svg",
+          poster: "/images/home/hero.jpg",
           alt: t("hero.heroAlt"),
         }}
       />
@@ -65,7 +65,7 @@ export default async function HomePage({ params }: PageProps) {
         footerLink={{ href: "/our-impact", label: t("impactStats.exploreImpact") }}
       />
 
-      <FacilityMapTeaser image="/images/home/facility-teaser.svg" />
+      <FacilityMapTeaser image="/images/home/facility-teaser.jpg" />
 
       <TrustStrip />
 
