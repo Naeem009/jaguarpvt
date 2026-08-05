@@ -69,9 +69,7 @@ ASSETS: dict[str, str] = {
     "images/about/history-01.jpg": "historical textile factory workers",
     "images/about/history-02.jpg": "garment factory expansion industrial",
     "images/about/history-03.jpg": "modern textile manufacturing facility",
-    "images/about/leadership-01.jpg": "professional business executive portrait man",
-    "images/about/leadership-02.jpg": "professional business executive portrait",
-    "images/about/leadership-03.jpg": "professional business portrait executive",
+    # Leadership headshots are brand assets — not downloaded by this script.
     "images/careers/hero.jpg": "factory workers team manufacturing",
     "images/careers/culture-01.jpg": "workplace training factory workers",
     "images/careers/culture-02.jpg": "diverse team meeting workplace",
@@ -113,9 +111,6 @@ FALLBACK_URLS: dict[str, str] = {
     "images/products/baby-wear/hero.jpg": "https://live.staticflickr.com/2817/9560424310_c9bd78dc12_b.jpg",
     "images/our-impact/environment/solar.jpg": "https://live.staticflickr.com/2771/4278495827_0b65f72132_b.jpg",
     "images/our-impact/environment/water-treatment.jpg": "https://live.staticflickr.com/228/503411286_b3dced3af8_b.jpg",
-    "images/about/leadership-01.jpg": "https://live.staticflickr.com/4153/5025000123_471782fb43_b.jpg",
-    "images/about/leadership-02.jpg": "https://live.staticflickr.com/2909/14202199100_c1d8c57e35_b.jpg",
-    "images/about/leadership-03.jpg": "https://live.staticflickr.com/8250/8650257318_7c47f64f64_b.jpg",
 }
 
 # Pexels free stock (replace with brand footage later)

@@ -29,9 +29,9 @@ export default async function AboutPage({ params }: PageProps) {
   const awards = t.raw("recognition.awards") as Array<{ title: string; year: string; issuer: string }>;
   const leaders = t.raw("leadership.members") as Array<{ name: string; role: string; alt: string }>;
   const leaderImages = [
-    "/images/about/leadership-01.jpg",
-    "/images/about/leadership-02.jpg",
-    "/images/about/leadership-03.jpg",
+    "/images/about/leadership-01.png",
+    "/images/about/leadership-02.png",
+    "/images/about/leadership-03.png",
   ];
 
   return (
