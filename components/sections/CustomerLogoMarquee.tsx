@@ -24,19 +24,19 @@ export function CustomerLogoMarquee({
       )}
       aria-label="Customer brand logos"
     >
-      <ul className="flex w-max animate-customer-marquee items-center gap-10 py-2 motion-reduce:animate-none md:gap-16">
+      <ul className="flex w-max animate-customer-marquee items-center gap-8 py-6 motion-reduce:animate-none md:gap-12 md:py-8">
         {loop.map((logo, index) => (
           <li
             key={`${logo.src}-${index}`}
-            className="flex h-12 w-32 shrink-0 items-center justify-center md:h-14 md:w-40"
+            className="flex h-64 w-80 shrink-0 items-center justify-center md:h-72 md:w-96"
           >
             <Image
               src={logo.src}
               alt=""
-              width={160}
-              height={56}
-              sizes="160px"
-              className="max-h-12 w-auto object-contain opacity-70 grayscale transition-[opacity,filter] duration-300 group-hover:opacity-100 group-hover:grayscale-0 md:max-h-14"
+              width={480}
+              height={336}
+              sizes="(max-width: 768px) 320px, 384px"
+              className="max-h-56 w-auto max-w-full object-contain opacity-70 grayscale transition-[opacity,filter] duration-300 group-hover:opacity-100 group-hover:grayscale-0 md:max-h-64"
             />
           </li>
         ))}
