@@ -1,43 +1,49 @@
+import fs from "node:fs";
+import path from "node:path";
 import facilitiesData from "@/data/facilities.json";
+import {
+  FACILITY_HERO_IMAGE,
+  FACILITY_MAP_BACKGROUND,
+  FACILITY_PLACEHOLDER_IMAGE,
+  getFacilityThumbnailCandidates,
+  type Facility,
+} from "./types";
 
-export type Facility = {
-  id: string;
-  slug: string;
-  name: string;
-  country: string;
-  city: string;
-  region: string;
-  latitude: number;
-  longitude: number;
-  /** Optional percent position (0–100) on map-background.svg when lat/lng overlap or need fine tuning. */
-  mapX?: number;
-  mapY?: number;
-  categories: string[];
-  certifications: string[];
-  employees: number;
-  establishedYear: number;
-  description: string;
-};
+export type { Facility } from "./types";
+export {
+  FACILITY_HERO_IMAGE,
+  FACILITY_MAP_BACKGROUND,
+  FACILITY_PLACEHOLDER_IMAGE,
+  getFacilityThumbnailCandidates,
+} from "./types";
 
-export const FACILITY_PLACEHOLDER_IMAGE = "/images/facility/facility-thumb-01.jpg";
-export const FACILITY_MAP_BACKGROUND = "/images/facility/map-background.svg";
-export const FACILITY_HERO_IMAGE = "/images/facility/hero.jpg";
+function resolveFacilityThumbnail(slug: string): string {
+  const baseDir = path.join(process.cwd(), "public", "images", "facility");
+
+  for (const candidate of getFacilityThumbnailCandidates(slug)) {
+    const relativePath = candidate.replace(/^\/images\/facility\//, "");
+    if (fs.existsSync(path.join(baseDir, relativePath))) {
+      return candidate;
+    }
+  }
+
+  return FACILITY_PLACEHOLDER_IMAGE;
+}
 
 export function getFacilities(): Facility[] {
-  return facilitiesData as Facility[];
+  return (facilitiesData as Omit<Facility, "thumbnail">[]).map((facility) => ({
+    ...facility,
+    thumbnail: resolveFacilityThumbnail(facility.slug),
+  }));
 }
 
 export function getFacilityById(id: string): Facility | undefined {
   return getFacilities().find((facility) => facility.id === id);
 }
 
-const FACILITY_THUMBNAILS: Record<string, string> = {
-  "city-unit": "/images/facility/facility-thumb-01.jpg",
-  "dyeing-unit": "/images/facility/facility-thumb-02.jpg",
-};
-
+/** @deprecated Use `facility.thumbnail` from `getFacilities()` instead. */
 export function getFacilityThumbnailPath(slug: string) {
-  return FACILITY_THUMBNAILS[slug] ?? FACILITY_PLACEHOLDER_IMAGE;
+  return resolveFacilityThumbnail(slug);
 }
 
 export { projectFacilityToMapPosition } from "./map-projection";

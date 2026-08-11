@@ -18,7 +18,7 @@ export default async function GovernancePage({ params }: PageProps) {
   const tCommon = await getTranslations("common");
 
   return (
-    <main className="flex-1">
+    <main>
       <ImpactSubPageTemplate
         headline={t("headline")}
         subhead={t("subhead")}

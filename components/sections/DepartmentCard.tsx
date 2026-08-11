@@ -25,7 +25,7 @@ export function DepartmentCard({ department, className }: DepartmentCardProps) {
           alt={department.name}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover"
+          className="object-contain object-center p-1"
           onError={() => {
             if (imageSrc !== placeholderSvg) {
               setImageSrc(placeholderSvg);

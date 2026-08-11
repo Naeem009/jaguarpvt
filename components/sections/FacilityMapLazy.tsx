@@ -1,7 +1,7 @@
 "use client";
 
 import { FacilityMap } from "./FacilityMap";
-import type { Facility } from "@/lib/facilities";
+import type { Facility } from "@/lib/facilities/types";
 
 export function FacilityMapLazy({
   facilities,

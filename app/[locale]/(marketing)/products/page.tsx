@@ -20,7 +20,7 @@ export default async function ProductsHubPage({ params }: PageProps) {
   const productItems = await getProductHubGridItems();
 
   return (
-    <main className="flex-1">
+    <main>
       <Hero
         variant="inner"
         headline={t("hero.headline")}

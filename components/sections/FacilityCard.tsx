@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import {
   FACILITY_PLACEHOLDER_IMAGE,
-  getFacilityThumbnailPath,
+  getFacilityThumbnailCandidates,
   type Facility,
-} from "@/lib/facilities";
+} from "@/lib/facilities/types";
 import { cn } from "@/lib/utils";
 
 export type FacilityCardProps = {
@@ -27,26 +27,45 @@ export function FacilityCard({
 }: FacilityCardProps) {
   const t = useTranslations("facilityMap");
   const tCategories = useTranslations("facilityMap.categories");
-  const [imageSrc, setImageSrc] = useState(getFacilityThumbnailPath(facility.slug));
+  const candidates = useMemo(
+    () => getFacilityThumbnailCandidates(facility.slug),
+    [facility.slug],
+  );
+  const [candidateIndex, setCandidateIndex] = useState(() =>
+    Math.max(0, candidates.indexOf(facility.thumbnail)),
+  );
+  const imageSrc = candidates[candidateIndex] ?? FACILITY_PLACEHOLDER_IMAGE;
+
+  function handleImageError() {
+    setCandidateIndex((current) => {
+      const next = current + 1;
+      return next < candidates.length ? next : current;
+    });
+  }
 
   return (
     <Card
       variant={variant === "list" ? "interactive" : "default"}
       className={cn(
-        variant === "popover" ? "max-w-sm p-0 overflow-hidden shadow-[var(--shadow-card-hover)]" : "p-0 overflow-hidden",
+        variant === "popover" ? "max-w-md overflow-hidden p-0 shadow-[var(--shadow-card-hover)]" : "overflow-hidden p-0",
         className,
       )}
       onMouseEnter={onFocusMarker}
       onFocus={onFocusMarker}
     >
-      <div className={cn("relative", variant === "popover" ? "aspect-[16/10]" : "aspect-[16/9]")}>
+      <div
+        className={cn(
+          "relative w-full overflow-hidden bg-ink/5",
+          variant === "popover" ? "h-44 sm:h-48" : "h-52 sm:h-60",
+        )}
+      >
         <Image
           src={imageSrc}
           alt={t("card.facilityAlt", { name: facility.name })}
           fill
-          sizes="(max-width: 768px) 100vw, 320px"
-          className="object-cover"
-          onError={() => setImageSrc(FACILITY_PLACEHOLDER_IMAGE)}
+          sizes={variant === "popover" ? "320px" : "(max-width: 768px) 100vw, 400px"}
+          className="object-cover object-center"
+          onError={handleImageError}
         />
       </div>
 

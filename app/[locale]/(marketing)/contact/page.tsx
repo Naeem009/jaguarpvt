@@ -22,7 +22,7 @@ export default async function ContactPage({ params }: PageProps) {
   const t = await getTranslations("contactPage");
 
   return (
-    <main className="flex-1">
+    <main>
       <ContactPageHero />
 
       <section className="bg-white py-16 md:py-24">

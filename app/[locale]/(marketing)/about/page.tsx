@@ -35,7 +35,7 @@ export default async function AboutPage({ params }: PageProps) {
   ];
 
   return (
-    <main className="flex-1">
+    <main>
       <Hero
         variant="inner"
         headline={t("hero.headline")}

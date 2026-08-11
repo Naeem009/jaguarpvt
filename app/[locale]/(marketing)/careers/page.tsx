@@ -37,7 +37,7 @@ export default async function CareersPage({ params }: PageProps) {
   const departments = t.raw("departments") as Array<{ name: string; description: string }>;
 
   return (
-    <main className="flex-1">
+    <main>
       <Hero
         variant="inner"
         headline={t("hero.headline")}

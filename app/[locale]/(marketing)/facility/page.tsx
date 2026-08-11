@@ -23,7 +23,7 @@ export default async function FacilityPage({ params }: PageProps) {
   const departmentCategories = getDepartmentCategories();
 
   return (
-    <main className="flex-1">
+    <main>
       <Hero
         variant="inner"
         headline={t("hero.headline")}

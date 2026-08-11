@@ -1,4 +1,4 @@
-import type { Facility } from "./index";
+import type { Facility } from "./types";
 
 /** Matches map-background.svg viewBox="0 0 950 620". */
 export const FACILITY_MAP_VIEWBOX = { width: 950, height: 620 } as const;

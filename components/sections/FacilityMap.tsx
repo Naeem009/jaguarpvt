@@ -7,11 +7,8 @@ import { Button } from "@/components/ui/Button";
 import { FacilityCard } from "./FacilityCard";
 import { FacilityList } from "./FacilityList";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import {
-  FACILITY_MAP_BACKGROUND,
-  projectFacilityToMapPosition,
-  type Facility,
-} from "@/lib/facilities";
+import { projectFacilityToMapPosition } from "@/lib/facilities/map-projection";
+import { FACILITY_MAP_BACKGROUND, type Facility } from "@/lib/facilities/types";
 import { cn } from "@/lib/utils";
 
 export type FacilityMapProps = {

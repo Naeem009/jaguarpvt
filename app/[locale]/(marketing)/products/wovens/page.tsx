@@ -17,7 +17,7 @@ export default async function WovensPage({ params }: PageProps) {
   const categories = await getProductCategories();
 
   return (
-    <main className="flex-1">
+    <main>
       <ProductPageTemplate content={categories.wovens} />
     </main>
   );

@@ -26,7 +26,7 @@ export default async function OurImpactHubPage({ params }: PageProps) {
   const tNav = await getTranslations("nav");
 
   return (
-    <main className="flex-1">
+    <main>
       <Hero
         variant="inner"
         headline={t("hero.headline")}

@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { FacilityCard } from "./FacilityCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import type { Facility } from "@/lib/facilities";
+import type { Facility } from "@/lib/facilities/types";
 import { cn } from "@/lib/utils";
 
 export type FacilityListProps = {

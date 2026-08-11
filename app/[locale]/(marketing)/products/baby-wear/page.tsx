@@ -18,7 +18,7 @@ export default async function BabyWearPage({ params }: PageProps) {
   const categories = await getProductCategories();
 
   return (
-    <main className="flex-1">
+    <main>
       <ProductPageTemplate
         content={categories["baby-wear"]}
         catalogueSection={<CatalogueEmbed fileUrl={BABY_WEAR_CATALOGUE_URL} />}

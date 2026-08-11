@@ -19,7 +19,7 @@ export default async function EnvironmentPage({ params }: PageProps) {
   const blocks = t.raw("blocks") as Array<{ title: string; body: string; imageAlt: string }>;
 
   return (
-    <main className="flex-1">
+    <main>
       <ImpactSubPageTemplate
         headline={t("headline")}
         subhead={t("subhead")}

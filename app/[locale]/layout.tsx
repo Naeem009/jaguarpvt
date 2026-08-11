@@ -56,8 +56,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       dir={locale === "ar" ? "rtl" : "ltr"}
       className={`${inter.variable} ${montserrat.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-paper text-ink">
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+      <body className="flex min-h-dvh flex-col bg-paper text-ink">
+        <NextIntlClientProvider messages={messages}>
+          <div className="flex flex-1 flex-col">{children}</div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
