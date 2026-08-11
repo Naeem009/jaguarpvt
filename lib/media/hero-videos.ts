@@ -5,6 +5,7 @@ export const HERO_VIDEOS = {
   sustainability: "/videos/heroes/sustainability.mp4",
   products: "/videos/heroes/products.mp4",
   contact: "/videos/heroes/contact.mp4",
+  careers: "/videos/heroes/careers.mp4",
 } as const;
 
 export type HeroVideoKey = keyof typeof HERO_VIDEOS;

@@ -44,7 +44,7 @@ export default async function CareersPage({ params }: PageProps) {
         subhead={t("hero.subhead")}
         primaryCTA={{ label: t("hero.viewRoles"), href: "#open-roles" }}
         secondaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
-        media={heroVideoMedia("/images/careers/hero.jpg", t("hero.alt"), "manufacturing")}
+        media={heroVideoMedia("/images/careers/hero.jpg", t("hero.alt"), "careers")}
       />
 
       <section className="bg-white py-16 md:py-24">

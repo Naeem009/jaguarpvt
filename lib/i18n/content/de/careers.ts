@@ -3,7 +3,7 @@ export const careers = {
     headline: "Karriere",
     subhead:
       "Werden Sie Teil einer globalen Fertigungsorganisation, in der Präzision, Compliance und kontinuierliche Verbesserung operative Standards sind — keine Schlagworte.",
-    alt: "Teammitglieder in einer Bekleidungsproduktionsstätte",
+    alt: "Vielfältiges Team in einer professionellen Arbeitsbesprechung",
     viewRoles: "Offene Stellen ansehen",
   },
   culture: {

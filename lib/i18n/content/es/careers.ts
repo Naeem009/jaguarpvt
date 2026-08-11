@@ -3,7 +3,7 @@ export const careers = {
     headline: "Carreras",
     subhead:
       "Únase a una organización global de manufactura donde la precisión, el cumplimiento normativo y la mejora continua son estándares operativos — no simples declaraciones.",
-    alt: "Miembros del equipo en una planta de manufactura de indumentaria",
+    alt: "Equipo diverso colaborando en una reunión profesional",
     viewRoles: "Ver vacantes abiertas",
   },
   culture: {

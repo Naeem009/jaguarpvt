@@ -120,6 +120,7 @@ VIDEO_ASSETS: dict[str, str] = {
     "videos/heroes/sustainability.mp4": "https://videos.pexels.com/video-files/856973/856973-sd_640_360_25fps.mp4",
     "videos/heroes/products.mp4": "https://videos.pexels.com/video-files/856973/856973-sd_640_360_25fps.mp4",
     "videos/heroes/contact.mp4": "https://videos.pexels.com/video-files/6774848/6774848-hd_1920_1080_30fps.mp4",
+    "videos/heroes/careers.mp4": "https://videos.pexels.com/video-files/7507666/7507666-hd_1920_1080_25fps.mp4",
 }
 
 

@@ -3,7 +3,7 @@ export const careers = {
     headline: "职业发展",
     subhead:
       "加入一家全球制造企业，在这里，精准、合规与持续改进是运营标准——而非空谈。",
-    alt: "服装制造工厂中的团队成员",
+    alt: "多元化团队在专业工作会议中协作",
     viewRoles: "查看开放职位",
   },
   culture: {

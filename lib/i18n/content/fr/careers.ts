@@ -3,7 +3,7 @@ export const careers = {
     headline: "Carrières",
     subhead:
       "Rejoignez une organisation de manufacture mondiale où la précision, la conformité et l'amélioration continue sont des standards opérationnels — pas des slogans.",
-    alt: "Membres de l'équipe dans une usine de fabrication de vêtements",
+    alt: "Équipe diversifiée collaborant lors d'une réunion professionnelle",
     viewRoles: "Voir les postes ouverts",
   },
   culture: {

@@ -3,7 +3,7 @@ export const careers = {
     headline: "Careers",
     subhead:
       "Join a global manufacturing organization where precision, compliance, and continuous improvement are operational standards — not talking points.",
-    alt: "Team members at an apparel manufacturing facility",
+    alt: "Diverse team collaborating in a professional workplace meeting",
     viewRoles: "View open roles",
   },
   culture: {
