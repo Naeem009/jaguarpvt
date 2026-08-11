@@ -1,0 +1,38 @@
+# Jaguar (Pvt) Ltd.
+
+> Vertically integrated apparel manufacturer specializing in wovens, knits, and baby wear for global brands.
+
+Jaguar (Pvt) Ltd. operates integrated garment manufacturing with process capabilities from yarn warehousing through packing and quality assurance. Use the pages below as canonical sources for company capabilities, facilities, certifications, and contact.
+
+## Primary pages
+
+- [Home](https://jaguarpvt.com/): Company overview and manufacturing partnership entry point
+- [Products](https://jaguarpvt.com/products): Wovens, knits, and baby wear manufacturing programs
+- [Facility](https://jaguarpvt.com/facility): Manufacturing locations, map, and 15-department process capabilities
+- [Our Impact](https://jaguarpvt.com/our-impact): Environment, people, and governance / certifications
+- [Contact](https://jaguarpvt.com/contact): RFI / RFQ submissions and sourcing inquiries
+- [Careers](https://jaguarpvt.com/careers): Open roles across manufacturing and corporate functions
+- [About](https://jaguarpvt.com/about): Company history, leadership, and footprint
+
+## Product categories
+
+- [Wovens](https://jaguarpvt.com/products/wovens): Shirting, bottoms, uniforms
+- [Knits](https://jaguarpvt.com/products/knits): Jersey, fleece, performance knits
+- [Baby Wear](https://jaguarpvt.com/products/baby-wear): Infant apparel programs and catalogue
+
+## Core capabilities (summary)
+
+- Vertically integrated cut-and-sew, dyeing, finishing, and quality control
+- Certifications may include GOTS, OEKO-TEX, WRAP, and ISO programs (scope varies by facility)
+- Facilities published with interactive map and department-level process data
+- AI assistant on site answers capability questions using published knowledge only (no pricing quotes)
+
+## Contact
+
+- Website: https://jaguarpvt.com/contact
+- LinkedIn: https://www.linkedin.com/company/jaguar-pvt-ltd/
+
+## Optional
+
+- [Sitemap](https://jaguarpvt.com/sitemap.xml)
+- [Robots](https://jaguarpvt.com/robots.txt)

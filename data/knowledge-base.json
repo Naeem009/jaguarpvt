@@ -1,10 +1,25 @@
 [
   {
+    "id": "company-overview",
+    "title": "Jaguar (Pvt) Ltd. — Apparel Manufacturer",
+    "source": "Company Overview",
+    "href": "/",
+    "keywords": [
+      "jaguar pvt ltd",
+      "apparel manufacturer",
+      "garment manufacturer",
+      "vertically integrated",
+      "clothing supplier",
+      "textile manufacturing partner"
+    ],
+    "content": "Jaguar (Pvt) Ltd. is a vertically integrated apparel manufacturer supporting global brands with wovens, knits, and baby wear programs. The company emphasizes audited compliance, scalable production, and long-term manufacturing partnerships."
+  },
+  {
     "id": "products-wovens",
     "title": "Wovens",
     "source": "Wovens Product Page",
     "href": "/products/wovens",
-    "keywords": ["wovens", "shirting", "uniform", "woven", "cut and sew"],
+    "keywords": ["wovens", "shirting", "uniform", "woven", "cut and sew", "woven apparel manufacturer"],
     "content": "We produce structured shirting, bottoms, and uniform programs with integrated cutting, sewing, and finishing. Monthly capacity is program-dependent. Certifications such as GOTS, OEKO-TEX, and WRAP may apply depending on facility and program scope."
   },
   {
@@ -12,7 +27,7 @@
     "title": "Knits",
     "source": "Knits Product Page",
     "href": "/products/knits",
-    "keywords": ["knits", "jersey", "fleece", "organic cotton", "performance knit"],
+    "keywords": ["knits", "jersey", "fleece", "organic cotton", "performance knit", "knitwear manufacturer"],
     "content": "We support jersey, fleece, and performance knit programs with capacity for large programs and certified organic options. GOTS and OEKO-TEX may apply at selected facilities."
   },
   {
@@ -20,7 +35,7 @@
     "title": "Baby Wear",
     "source": "Baby Wear Product Page",
     "href": "/products/baby-wear",
-    "keywords": ["baby wear", "infant", "catalogue", "bodysuit", "romper"],
+    "keywords": ["baby wear", "infant", "catalogue", "bodysuit", "romper", "baby clothing manufacturer"],
     "content": "Baby wear programs focus on soft-hand construction, secure attachments, and compliance-focused finishing. A Baby Wear catalogue is available on the Baby Wear page."
   },
   {
@@ -28,7 +43,7 @@
     "title": "Governance & Certifications",
     "source": "Governance & Certifications",
     "href": "/our-impact/governance",
-    "keywords": ["GOTS", "OEKO-TEX", "WRAP", "ISO 14001", "certification", "compliance"],
+    "keywords": ["GOTS", "OEKO-TEX", "WRAP", "ISO 14001", "certification", "compliance", "audit"],
     "content": "Published certifications include GOTS, OEKO-TEX Standard 100, WRAP, and ISO 14001 at selected facilities. Certification scope varies by facility and product line."
   },
   {
@@ -36,23 +51,56 @@
     "title": "Environment",
     "source": "Environment Programs",
     "href": "/our-impact/environment",
-    "keywords": ["water", "renewable", "solar", "sustainability", "environment"],
+    "keywords": ["water", "renewable", "solar", "sustainability", "environment", "sustainable apparel"],
     "content": "Environmental programs include water stewardship, renewable energy installations, and waste reduction tracked against published benchmarks."
   },
   {
     "id": "facility-footprint",
-    "title": "Global Facilities",
+    "title": "Manufacturing Facilities",
     "source": "Facility Map",
     "href": "/facility",
-    "keywords": ["facility", "facilities", "footprint", "location", "manufacturing sites"],
-    "content": "Facilities are published across multiple regions including South Asia, Southeast Asia, East Asia, Europe & Middle East, Central America, Africa, and North America. Specific capabilities and certifications vary by site."
+    "keywords": [
+      "facility",
+      "facilities",
+      "faisalabad",
+      "pakistan",
+      "manufacturing sites",
+      "apparel factory",
+      "process capabilities"
+    ],
+    "content": "Published facilities include the Faisalabad Manufacturing City Unit (wovens and knits, cut-and-sew and finishing) and the Faisalabad Dyeing Unit (knits dyeing). The Facility page includes an interactive map, facility cards, and a Process & Capabilities section covering 15 production departments from yarn warehouse through packing and audits."
+  },
+  {
+    "id": "facility-process",
+    "title": "Process & Capabilities",
+    "source": "Facility Process & Capabilities",
+    "href": "/facility",
+    "keywords": [
+      "process",
+      "capabilities",
+      "departments",
+      "stitching",
+      "dyeing",
+      "knitting",
+      "quality control",
+      "packing"
+    ],
+    "content": "Process & Capabilities covers fifteen departments grouped into raw material and testing, fabric production, embellishment, cut/sew/wet processing, and finishing/QA—including yarn warehouse, dyeing lab, knitting, dyeing, screen printing, embroidery, cutting, stitching, garment dyeing, washing, finishing, QC, metal detection, audits, and packing."
+  },
+  {
+    "id": "careers-overview",
+    "title": "Careers",
+    "source": "Careers Page",
+    "href": "/careers",
+    "keywords": ["careers", "jobs", "hiring", "manufacturing jobs", "quality jobs", "sustainability careers"],
+    "content": "Careers at Jaguar span manufacturing operations, quality and compliance, product development, sustainability, and commercial/corporate functions. Open roles link to the external ATS from the Careers page."
   },
   {
     "id": "contact-rfi",
     "title": "Contact & RFQ",
     "source": "Contact Page",
     "href": "/contact",
-    "keywords": ["contact", "rfi", "rfq", "quote", "sourcing", "inquiry"],
+    "keywords": ["contact", "rfi", "rfq", "quote", "sourcing", "inquiry", "manufacturing partner"],
     "content": "Qualified RFIs and RFQs can be submitted through the Contact page. The team responds within 2 business days with clear next steps. The assistant cannot provide pricing or real-time capacity guarantees."
   }
 ]

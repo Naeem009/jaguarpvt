@@ -1,24 +1,25 @@
 import type { MetadataRoute } from "next";
-import { marketingRoutes, siteUrl } from "@/lib/seo/config";
+import { buildAlternateLanguages, marketingRoutes, siteUrl } from "@/lib/seo/config";
 import { routing } from "@/i18n/routing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const route of marketingRoutes) {
-    for (const locale of routing.locales) {
-      const localizedPath =
-        locale === routing.defaultLocale
-          ? route || "/"
-          : `/${locale}${route}`;
+    const path = route || "/";
+    const languages = buildAlternateLanguages(route);
+    const defaultUrl =
+      languages[routing.defaultLocale] ?? `${siteUrl}${path === "/" ? "" : path}`;
 
-      entries.push({
-        url: `${siteUrl}${localizedPath === "/" ? "" : localizedPath}`,
-        lastModified: new Date(),
-        changeFrequency: route === "" ? "weekly" : "monthly",
-        priority: route === "" ? 1 : 0.7,
-      });
-    }
+    entries.push({
+      url: defaultUrl,
+      lastModified: new Date(),
+      changeFrequency: route === "" ? "weekly" : route === "/contact" ? "monthly" : "monthly",
+      priority: route === "" ? 1 : route === "/contact" ? 0.9 : route.startsWith("/products") ? 0.85 : 0.7,
+      alternates: {
+        languages,
+      },
+    });
   }
 
   return entries;

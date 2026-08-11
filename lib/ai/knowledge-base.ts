@@ -16,17 +16,42 @@ function normalize(text: string) {
   return text.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").replace(/\s+/g, " ").trim();
 }
 
+const synonymGroups: string[][] = [
+  ["apparel", "garment", "clothing", "textile"],
+  ["manufacturer", "manufacturing", "factory", "supplier", "partner"],
+  ["baby wear", "babywear", "infant"],
+  ["rfq", "rfi", "quote", "inquiry", "sourcing"],
+  ["certification", "certified", "gots", "oeko-tex", "wrap", "compliance"],
+  ["facility", "facilities", "plant", "site", "location"],
+  ["knits", "knitwear", "jersey", "fleece"],
+  ["wovens", "woven", "shirting", "uniform"],
+];
+
+function expandTokens(tokens: string[]) {
+  const expanded = new Set(tokens);
+  for (const token of tokens) {
+    for (const group of synonymGroups) {
+      if (group.some((word) => token.includes(word) || word.includes(token))) {
+        for (const word of group) expanded.add(word);
+      }
+    }
+  }
+  return [...expanded];
+}
+
 export function retrieveKnowledge(query: string, limit = 3) {
   const normalizedQuery = normalize(query);
-  const tokens = normalizedQuery.split(" ").filter(Boolean);
+  const tokens = expandTokens(normalizedQuery.split(" ").filter(Boolean));
 
   return entries
     .map((entry) => {
       const haystack = normalize([entry.title, entry.content, ...entry.keywords].join(" "));
       let score = 0;
-      if (haystack.includes(normalizedQuery)) score += 8;
+      if (haystack.includes(normalizedQuery)) score += 10;
       for (const token of tokens) {
+        if (token.length < 3) continue;
         if (haystack.includes(token)) score += 2;
+        if (entry.keywords.some((keyword) => normalize(keyword).includes(token))) score += 3;
       }
       return { entry, score };
     })

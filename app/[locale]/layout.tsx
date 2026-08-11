@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
+import { rootSiteMetadata } from "@/lib/seo/metadata";
 import "../globals.css";
 
 const inter = Inter({
@@ -27,8 +28,13 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jaguar (Pvt) Ltd.",
-  description: "Vertically integrated apparel manufacturer.",
+  ...rootSiteMetadata,
+  title: {
+    default: "Jaguar (Pvt) Ltd.",
+    template: "%s",
+  },
+  description:
+    "Vertically integrated apparel manufacturer for wovens, knits, and baby wear with audited compliance and scalable production.",
 };
 
 export function generateStaticParams() {
