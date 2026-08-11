@@ -115,7 +115,7 @@ FALLBACK_URLS: dict[str, str] = {
 
 # Pexels free stock (replace with brand footage later)
 VIDEO_ASSETS: dict[str, str] = {
-    "videos/home/hero-stitching.mp4": "https://videos.pexels.com/video-files/3209828/3209828-sd_640_360_25fps.mp4",
+    "videos/home/hero-stitching.mp4": "https://videos.pexels.com/video-files/18092534/18092534-hd_1920_1080_30fps.mp4",
     "videos/heroes/manufacturing.mp4": "https://videos.pexels.com/video-files/3209828/3209828-sd_640_360_25fps.mp4",
     "videos/heroes/sustainability.mp4": "https://videos.pexels.com/video-files/856973/856973-sd_640_360_25fps.mp4",
     "videos/heroes/products.mp4": "https://videos.pexels.com/video-files/856973/856973-sd_640_360_25fps.mp4",
