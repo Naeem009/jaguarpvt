@@ -47,18 +47,15 @@ export function FacilityCard({
     <Card
       variant={variant === "list" ? "interactive" : "default"}
       className={cn(
-        variant === "popover" ? "max-w-md overflow-hidden p-0 shadow-[var(--shadow-card-hover)]" : "overflow-hidden p-0",
+        "overflow-hidden p-0",
+        variant === "list" && "flex h-full w-full flex-col",
+        variant === "popover" && "w-full max-w-md shadow-[var(--shadow-card-hover)]",
         className,
       )}
       onMouseEnter={onFocusMarker}
       onFocus={onFocusMarker}
     >
-      <div
-        className={cn(
-          "relative w-full overflow-hidden bg-ink/5",
-          variant === "popover" ? "h-44 sm:h-48" : "h-52 sm:h-60",
-        )}
-      >
+      <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-ink/5">
         <Image
           src={imageSrc}
           alt={t("card.facilityAlt", { name: facility.name })}
@@ -69,7 +66,12 @@ export function FacilityCard({
         />
       </div>
 
-      <div className="space-y-4 p-6">
+      <div
+        className={cn(
+          "space-y-4 p-6",
+          variant === "list" && "flex flex-1 flex-col",
+        )}
+      >
         <div className="space-y-2">
           <h3 className="font-display text-xl font-semibold text-ink">{facility.name}</h3>
           <p className="text-sm text-graphite">
@@ -77,7 +79,14 @@ export function FacilityCard({
           </p>
         </div>
 
-        <p className="text-sm leading-relaxed text-graphite">{facility.description}</p>
+        <p
+          className={cn(
+            "text-sm leading-relaxed text-graphite",
+            variant === "list" && "line-clamp-3",
+          )}
+        >
+          {facility.description}
+        </p>
 
         <dl className="grid grid-cols-2 gap-4 text-sm">
           <div>
@@ -90,20 +99,22 @@ export function FacilityCard({
           </div>
         </dl>
 
-        <div className="flex flex-wrap gap-2">
-          {facility.categories.map((category) => (
-            <Badge key={category} tone="neutral">
-              {tCategories(category as "wovens" | "knits" | "baby-wear")}
-            </Badge>
-          ))}
-        </div>
+        <div className={cn("space-y-4", variant === "list" && "mt-auto")}>
+          <div className="flex min-h-8 flex-wrap gap-2">
+            {facility.categories.map((category) => (
+              <Badge key={category} tone="neutral">
+                {tCategories(category as "wovens" | "knits" | "baby-wear")}
+              </Badge>
+            ))}
+          </div>
 
-        <div className="flex flex-wrap gap-2">
-          {facility.certifications.map((certification) => (
-            <Badge key={certification} tone="accent">
-              {certification}
-            </Badge>
-          ))}
+          <div className="flex min-h-8 flex-wrap gap-2">
+            {facility.certifications.map((certification) => (
+              <Badge key={certification} tone="accent">
+                {certification}
+              </Badge>
+            ))}
+          </div>
         </div>
       </div>
     </Card>
