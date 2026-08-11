@@ -52,8 +52,8 @@ Read @docs/03-CONTENT-STRATEGY-COPY.md (Homepage copy outline section) and
 @docs/06-COMPONENT-LIBRARY-SPEC.md.
 
 Build the Home page at /app/[locale]/(marketing)/page.tsx using these sections in order:
-Hero (variant="home"), StatBar, ProductGrid (4-card teaser: Wovens, Knits,
-Denim, Baby Wear), an embedded AIChatWidget teaser section with 2-3 example
+Hero (variant="home"), StatBar, ProductGrid (3-card teaser: Wovens, Knits,
+Baby Wear), an embedded AIChatWidget teaser section with 2-3 example
 prompt chips, an impact-proof StatBar variant with a link to /our-impact, a
 FacilityMap teaser (static/non-interactive preview linking to /facility), a
 trust strip, and a closing CTASection.
@@ -81,7 +81,7 @@ Read @docs/02-SITE-ARCHITECTURE.md and @docs/03-CONTENT-STRATEGY-COPY.md
 
 Build:
 1. /app/[locale]/(marketing)/products/page.tsx — hub page with a Hero (variant="inner")
-   and a full ProductGrid linking to Wovens, Knits, Denim, and Baby Wear
+   and a full ProductGrid linking to Wovens, Knits, and Baby Wear
    (give the Baby Wear card a small "Catalogue" badge). Also embed the
    CapabilityMatcher component on this hub page per @docs/04-AI-FEATURES-SPEC.md
    Feature 2, wired to /api/ai/matcher.
@@ -89,11 +89,12 @@ Build:
    copy outline: Hero, TimelineSection (fiber-to-garment process), a specs
    data table component, a sustainability callout, closing CTASection
    linking to /contact.
-3. Repeat the same page template for /products/knits and /products/denim,
-   reusing all the same section components with category-specific
-   placeholder copy.
+3. Repeat the same page template for /products/knits, reusing all the same
+   section components with category-specific placeholder copy. Do NOT build
+   a Denim page or any Denim references anywhere on the site — this company
+   does not produce denim.
 4. /app/[locale]/(marketing)/products/baby-wear/page.tsx — same template as the other
-   three categories, PLUS the CatalogueEmbed component (per
+   two categories, PLUS the CatalogueEmbed component (per
    @docs/06-COMPONENT-LIBRARY-SPEC.md) in a dedicated section titled
    "Browse the Baby Wear Catalogue", positioned after the sustainability
    callout and before the closing CTASection. Point CatalogueEmbed at
@@ -102,7 +103,7 @@ Build:
    renders cleanly; the moment I upload the real PDF to that path it should
    work with no further code changes.
 
-Use a shared ProductPageTemplate component so the four category pages stay
+Use a shared ProductPageTemplate component so the three category pages stay
 structurally consistent and easy to maintain, with Baby Wear simply adding
 the one extra catalogue section on top of the shared template.
 
@@ -140,25 +141,51 @@ certification logos from /public/certifications/.
 
 ---
 
-## Facility (interactive map)
+## Facility (interactive map + Process & Capabilities)
 
 ```
-Read @docs/04-AI-FEATURES-SPEC.md (Feature 4: Facility Intelligence) and
-@docs/06-COMPONENT-LIBRARY-SPEC.md (FacilityMap component).
+Read @docs/02-SITE-ARCHITECTURE.md (Facility — "Process & Capabilities"
+section), @docs/03-CONTENT-STRATEGY-COPY.md (Facility page copy outline),
+@docs/04-AI-FEATURES-SPEC.md (Feature 4: Facility Intelligence), and
+@docs/06-COMPONENT-LIBRARY-SPEC.md (FacilityMap and
+DepartmentGrid/DepartmentCategoryTabs/DepartmentCard components).
 
-Build /app/[locale]/(marketing)/facility/page.tsx with a Hero (variant="inner"), the
-full interactive FacilityMap component with filterEnabled=true, and a
-list/grid fallback view below the map (for accessibility and mobile) showing
-all facilities as cards. Use a placeholder facilities.json with 8-10 example
-facilities (name, country, city, product categories, certifications,
-employees, established year) that I will replace with real data. Wire the
-natural-language filter box to /api/ai/search scoped to facility data.
+Build /app/[locale]/(marketing)/facility/page.tsx with two major sections:
+
+1. Hero (variant="inner"), the full interactive FacilityMap component with
+   filterEnabled=true, and a list/grid fallback view below the map (for
+   accessibility and mobile) showing all facilities as cards. Use a
+   placeholder facilities.json with 8-10 example facilities (name, country,
+   city, product categories, certifications, employees, established year)
+   that I will replace with real data. Wire the natural-language filter box
+   to /api/ai/search scoped to facility data.
+
+2. Below that, a "Process & Capabilities" section using
+   DepartmentCategoryTabs + DepartmentGrid + DepartmentCard, covering all 15
+   departments grouped into the 5 categories exactly as specified in
+   02-SITE-ARCHITECTURE.md: Raw Material & Testing (Yarn Warehouse, Dyeing
+   Lab), Fabric Production (Knitting, Dyeing), Embellishment (Screen
+   Printing, Embroidery), Cut, Sew & Wet Processing (Cutting, Stitching,
+   Garment Dyeing, Garment Washing), Finishing & Quality Assurance
+   (Finishing, Quality Control/QC, Metal Detection, Audits, Packing). Load
+   department data from a departments.json file matching exactly the
+   structure in 05-TECHNICAL-SPEC-STACK.md (Facility departments data
+   structure) — copy that JSON in as the starting placeholder data, with
+   every capacity value still showing as [X] until I provide real figures.
+   Render the Audits card's capacity area as descriptive text (audit
+   standards + frequency), not a numeric stat, per the component spec.
+   Close the section with a "Discuss a Production Program" CTA to /contact.
 
 Pull the Hero image from /public/images/facility/hero.jpg. If the map is
 hand-built SVG rather than Mapbox, reference a base map asset from the same
 folder; the per-facility card thumbnails can pull from
 /public/images/facility/<facility-slug>.jpg once available, falling back to
-a generic facility placeholder image in the same folder.
+a generic facility placeholder image in the same folder. For the Process &
+Capabilities section, each DepartmentCard should pull its photo from
+/public/images/facility/departments/<slug>/photo.jpg — create a solid
+brand-color placeholder .svg for each of the 15 department folders now,
+named photo.svg, so nothing 404s; I'll drop in real photos named photo.jpg
+later, which should take priority over the placeholder if both exist.
 ```
 
 ---
@@ -215,7 +242,7 @@ process shots, leadership headshots) for About, and /public/images/careers/
 Read @docs/02-SITE-ARCHITECTURE.md and @docs/04-AI-FEATURES-SPEC.md (Feature 6).
 
 Build the Navbar with exactly these items in this order: Home, About,
-Products (mega-menu: Wovens, Knits, Denim, Baby Wear — with a small
+Products (mega-menu: Wovens, Knits, Baby Wear — with a small
 "Catalogue" badge on Baby Wear), Our Impact (mega-menu: Environment, People
 & Communities, Governance & Certifications, plus a "Download ESG Report"
 CTA), Facility, Careers, the LanguageSwitcher component, and a persistent

@@ -34,21 +34,21 @@ All English copy is the canonical source that gets translated into the site's fi
 
 ## Homepage copy outline
 
-1. **Hero**: Headline (≤6 words) stating category + differentiator. e.g. `[TAGLINE — e.g. "Manufacturing, engineered for what's next."]` Subhead: one sentence naming categories (wovens, knits, denim, baby wear) + scale. Primary CTA: "Contact Us." Secondary: "Explore Products."
+1. **Hero**: Headline (≤6 words) stating category + differentiator. e.g. `[TAGLINE — e.g. "Manufacturing, engineered for what's next."]` Subhead: one sentence naming categories (wovens, knits, baby wear) + scale. Primary CTA: "Contact Us." Secondary: "Explore Products."
 2. **Stat bar**: 4 numbers — facilities, countries, employees, years in operation.
-3. **Products preview**: 4 cards (Wovens / Knits / Denim / Baby Wear) linking to category pages.
+3. **Products preview**: 3 cards (Wovens / Knits / Baby Wear) linking to category pages.
 4. **AI assistant teaser**: "Ask our sourcing assistant what we can build for you" — live mini-demo of the chat widget embedded inline (the widget itself is global/persistent site-wide; this section just gives it a moment of visibility on Home).
 5. **Impact proof**: 3 headline metrics (e.g. water saved, renewable energy %, certified facilities) + link to `/our-impact`.
 6. **Facility teaser**: dark map section, "See where we manufacture" → `/facility`.
-7. **Brand partner trust strip**: logos (use only if real client permission exists — otherwise use category language: "Trusted by leading activewear, denim, and lifestyle brands").
+7. **Brand partner trust strip**: logos (use only if real client permission exists — otherwise use category language: "Trusted by leading activewear, apparel, and lifestyle brands").
 8. **Closing CTA band**: dark section, single line + "Contact Us" button.
 
-## Products pages (per category: Wovens / Knits / Denim)
+## Products pages (per category: Wovens / Knits)
 
 1. Hero: category name + one-line positioning.
 2. Process overview: from-fiber-to-finished-garment steps, visual timeline.
 3. Technical specs: machinery, certifications, capacity ranges (present as a clean data table, not marketing prose).
-4. Sustainability angle specific to this category (e.g. denim → water reduction techniques).
+4. Sustainability angle specific to this category (e.g. wovens → water reduction techniques in fabric processing).
 5. Related innovation, if relevant (e.g. a material innovation note).
 6. CTA: "Discuss a [Category] Program" → `/contact`.
 
@@ -65,6 +65,21 @@ Baby Wear follows the same template as the other three categories (hero, process
 3. Downloadable ESG report CTA (gated or ungated — recommend ungated for trust; gate only if lead-gen is a priority).
 4. Certifications grid, presented within the Governance & Certifications section (certifications no longer have a separate top-level page).
 
+## Facility page — Process & Capabilities copy outline
+
+1. Hero: short positioning line for the facility page as a whole (e.g. "Inside the facility — every stage, in-house.") — the vertical integration itself is the message; let the department list prove it rather than over-claiming in the copy.
+2. Interactive map section (existing).
+3. **Process & Capabilities** section, organized by the 5 categories in `02-SITE-ARCHITECTURE.md`:
+   - **Raw Material & Testing** — Yarn Warehouse, Dyeing Lab
+   - **Fabric Production** — Knitting, Dyeing
+   - **Embellishment** — Screen Printing, Embroidery
+   - **Cut, Sew & Wet Processing** — Cutting, Stitching, Garment Dyeing, Garment Washing
+   - **Finishing & Quality Assurance** — Finishing, Quality Control (QC), Metal Detection, Audits, Packing
+
+   For each department, write copy as: **Name** + one factual sentence on what happens there (no adjectives doing the work — "12 circular knitting machines producing single and double jersey fabric" beats "state-of-the-art knitting facility") + the capacity stat, sourced from `departments.json` (see `05-TECHNICAL-SPEC-STACK.md`), never invented in copy.
+   - Audits department copy should name the actual standards/frameworks audited against (e.g. social compliance, WRAP, BSCI — replace with whichever are actually held) and frequency, since this is a trust signal for buyers doing supplier due diligence.
+4. Closing CTA: "Discuss a Production Program" → `/contact`.
+
 ## AI features — no dedicated page
 
 There is no standalone "Innovation & AI" page in this version of the site. The AI features (sourcing assistant, capability matcher, sustainability estimator, smart search) are distributed components embedded directly into the pages they're most useful on — see `04-AI-FEATURES-SPEC.md` for exactly where each one lives now. When writing copy for any page that includes one of these components, keep the same framing used previously: these are *decision tools for buyers*, not novelties, and any AI-generated figures should carry a brief, honest disclaimer about data sources.
@@ -72,7 +87,7 @@ There is no standalone "Innovation & AI" page in this version of the site. The A
 ## Contact (conversion page) copy outline
 
 1. Short hero: "Tell us what you're building."
-2. Form fields: Company name, contact name, email, brand/company website, product category (wovens/knits/denim/baby wear/multiple), estimated annual volume (ranges, not exact numbers), sustainability requirements (checkboxes), message.
+2. Form fields: Company name, contact name, email, brand/company website, product category (wovens/knits/baby wear/multiple), estimated annual volume (ranges, not exact numbers), sustainability requirements (checkboxes), message.
 3. What happens next: 3-step expectation setter ("We respond within 2 business days," etc.) — reduces friction, very Stripe-like in its plainness.
 4. Alternative contact: regional sales contacts / email, for buyers who don't want to use a form.
 

@@ -73,7 +73,7 @@ function ComparisonBar({
           </div>
           <div className="h-3 overflow-hidden rounded-full bg-mist">
             <motion.div
-              className="h-full rounded-full bg-accent"
+              className="h-full rounded-full bg-tech"
               initial={{ width: 0 }}
               animate={{ width: `${(companyValue / max) * 100}%` }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
@@ -139,13 +139,13 @@ export function SustainabilityEstimator({ className }: { className?: string }) {
   const activeResult = result ?? preview;
 
   return (
-    <section className={cn("bg-earth-tint py-16 md:py-24", className)}>
+    <section className={cn("bg-tech-tint py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow={t("heading.eyebrow")}
           title={t("heading.title")}
           subhead={t("heading.subhead")}
-          className="mb-10 md:mb-12 [&_h2]:text-earth"
+          className="mb-10 md:mb-12 [&_h2]:text-tech"
         />
 
         <Card className="mx-auto max-w-4xl">
@@ -202,7 +202,7 @@ export function SustainabilityEstimator({ className }: { className?: string }) {
 
               <p className="text-xs leading-relaxed text-graphite">
                 {t("disclaimerPrefix")}{" "}
-                <Link href={ESG_REPORT_URL} className="font-medium text-accent hover:text-accent-dark">
+                <Link href={ESG_REPORT_URL} className="font-medium text-tech hover:text-tech/80">
                   {t("esgReport")}
                 </Link>{" "}
                 {t("disclaimerSuffix")}
@@ -232,7 +232,7 @@ function FieldSelect({
       <select
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="w-full rounded-[var(--radius-card)] border border-ink/10 bg-white px-4 py-3 text-sm text-ink outline-none focus:border-accent"
+        className="w-full rounded-[var(--radius-card)] border border-ink/10 bg-white px-4 py-3 text-sm text-ink outline-none focus:border-tech"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>

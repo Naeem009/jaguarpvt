@@ -160,7 +160,7 @@ function FloatingAIChatWidget() {
                 key={`${message.role}-${index}`}
                 className={cn(
                   "rounded-[var(--radius-card)] px-3 py-2 text-sm",
-                  message.role === "user" ? "bg-mist text-ink" : "bg-accent-tint text-ink",
+                  message.role === "user" ? "bg-mist text-ink" : "bg-tech-tint text-ink",
                 )}
               >
                 <p>{message.content}</p>
@@ -170,7 +170,7 @@ function FloatingAIChatWidget() {
                       <Link
                         key={citation.href}
                         href={citation.href}
-                        className="rounded-full bg-white px-2 py-1 text-xs text-accent hover:text-accent-dark"
+                        className="rounded-full bg-white px-2 py-1 text-xs text-tech hover:text-tech/80"
                       >
                         {citation.title}
                       </Link>
@@ -193,10 +193,10 @@ function FloatingAIChatWidget() {
               value={input}
               onChange={(event) => setInput(event.target.value)}
               placeholder={t("inputPlaceholder")}
-              className="mb-3 w-full rounded-[var(--radius-card)] border border-ink/10 px-3 py-2 text-sm outline-none focus:border-accent"
+              className="mb-3 w-full rounded-[var(--radius-card)] border border-ink/10 px-3 py-2 text-sm outline-none focus:border-tech"
             />
             <div className="flex items-center justify-between gap-3">
-              <Link href="/contact" className="text-xs font-medium text-accent hover:text-accent-dark">
+              <Link href="/contact" className="text-xs font-medium text-tech hover:text-tech/80">
                 {t("talkToHuman")}
               </Link>
               <Button type="submit" size="sm" disabled={loading || !input.trim()}>
@@ -210,7 +210,7 @@ function FloatingAIChatWidget() {
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
-        className="fixed end-4 bottom-4 z-50 inline-flex min-h-12 items-center gap-2 rounded-full bg-accent px-5 text-sm font-medium text-white shadow-[var(--shadow-card-hover)] hover:bg-accent-dark"
+        className="fixed end-4 bottom-4 z-50 inline-flex min-h-12 items-center gap-2 rounded-full bg-tech px-5 text-sm font-medium text-white shadow-[var(--shadow-card-hover)] hover:bg-tech/90"
         aria-expanded={open}
       >
         {open ? t("launcherClose") : t("launcherOpen")}
@@ -238,7 +238,7 @@ function EmbeddedAIChatTeaser({
   );
 
   return (
-    <section className={cn("bg-accent-tint py-16 md:py-24", className)}>
+    <section className={cn("bg-tech-tint py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow={t("eyebrow")}
@@ -263,8 +263,8 @@ function EmbeddedAIChatTeaser({
                   className={cn(
                     "rounded-full border px-4 py-2 text-left text-sm transition-colors",
                     activePrompt?.question === prompt.question
-                      ? "border-accent bg-accent-tint text-accent-dark"
-                      : "border-ink/10 bg-white text-graphite hover:border-accent hover:text-accent-dark",
+                      ? "border-tech bg-tech-tint text-tech"
+                      : "border-ink/10 bg-white text-graphite hover:border-tech hover:text-tech",
                   )}
                 >
                   {prompt.question}
@@ -295,7 +295,7 @@ function EmbeddedAIChatTeaser({
                 <Button href="/contact" variant="secondary" size="sm">
                   {t("talkToHuman")}
                 </Button>
-                <Link href="/contact" className="text-sm font-medium text-accent hover:text-accent-dark">
+                <Link href="/contact" className="text-sm font-medium text-tech hover:text-tech/80">
                   {t("startConversation")}
                 </Link>
               </div>

@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "yarn-warehouse",
+    "name": "Yarn Warehouse",
+    "category": "Raw Material & Testing",
+    "description": "Climate-controlled storage and inventory management for incoming yarn stock ahead of knitting.",
+    "capacityValue": "[X]",
+    "capacityUnit": "metric tons storage",
+    "image": "/images/facility/departments/yarn-warehouse/photo.jpg"
+  },
+  {
+    "slug": "dyeing-lab",
+    "name": "Dyeing Lab",
+    "category": "Raw Material & Testing",
+    "description": "Color matching, shade approval, and fastness testing ahead of bulk dyeing.",
+    "capacityValue": "[X]",
+    "capacityUnit": "lab dips per day",
+    "image": "/images/facility/departments/dyeing-lab/photo.jpg"
+  },
+  {
+    "slug": "knitting",
+    "name": "Knitting",
+    "category": "Fabric Production",
+    "description": "In-house circular knitting for single jersey, double jersey, and rib fabrics.",
+    "capacityValue": "[X]",
+    "capacityUnit": "machines / [X] kg per day",
+    "image": "/images/facility/departments/knitting/photo.jpg"
+  },
+  {
+    "slug": "dyeing",
+    "name": "Dyeing",
+    "category": "Fabric Production",
+    "description": "Fabric dyeing with batch-controlled color matching.",
+    "capacityValue": "[X]",
+    "capacityUnit": "kg per batch / [X] tons per day",
+    "image": "/images/facility/departments/dyeing/photo.jpg"
+  },
+  {
+    "slug": "screen-printing",
+    "name": "Screen Printing",
+    "category": "Embellishment",
+    "description": "In-house screen printing for graphic and placement prints.",
+    "capacityValue": "[X]",
+    "capacityUnit": "stations / [X] pieces per day",
+    "image": "/images/facility/departments/screen-printing/photo.jpg"
+  },
+  {
+    "slug": "embroidery",
+    "name": "Embroidery",
+    "category": "Embellishment",
+    "description": "Multi-head embroidery for logos and decorative detailing.",
+    "capacityValue": "[X]",
+    "capacityUnit": "heads / [X] pieces per day",
+    "image": "/images/facility/departments/embroidery/photo.jpg"
+  },
+  {
+    "slug": "cutting",
+    "name": "Cutting",
+    "category": "Cut, Sew & Wet Processing",
+    "description": "Automated and manual fabric cutting per marker and size spec.",
+    "capacityValue": "[X]",
+    "capacityUnit": "layers per day",
+    "image": "/images/facility/departments/cutting/photo.jpg"
+  },
+  {
+    "slug": "stitching",
+    "name": "Stitching",
+    "category": "Cut, Sew & Wet Processing",
+    "description": "Sewing lines for garment assembly.",
+    "capacityValue": "[X]",
+    "capacityUnit": "machines / [X] lines / [X] pieces per day",
+    "image": "/images/facility/departments/stitching/photo.jpg"
+  },
+  {
+    "slug": "garment-dyeing",
+    "name": "Garment Dyeing",
+    "category": "Cut, Sew & Wet Processing",
+    "description": "Piece-dyeing of finished garments for solid and washed-color effects.",
+    "capacityValue": "[X]",
+    "capacityUnit": "pieces per batch",
+    "image": "/images/facility/departments/garment-dyeing/photo.jpg"
+  },
+  {
+    "slug": "garment-washing",
+    "name": "Garment Washing",
+    "category": "Cut, Sew & Wet Processing",
+    "description": "Washing and finishing treatments (enzyme, stone, silicone, etc.) for finished garments.",
+    "capacityValue": "[X]",
+    "capacityUnit": "washing machines / [X] pieces per day",
+    "image": "/images/facility/departments/garment-washing/photo.jpg"
+  },
+  {
+    "slug": "finishing",
+    "name": "Finishing",
+    "category": "Finishing & Quality Assurance",
+    "description": "Pressing, folding, and final garment presentation ahead of QC.",
+    "capacityValue": "[X]",
+    "capacityUnit": "pieces per day",
+    "image": "/images/facility/departments/finishing/photo.jpg"
+  },
+  {
+    "slug": "quality-control",
+    "name": "Quality Control (QC)",
+    "category": "Finishing & Quality Assurance",
+    "description": "In-line and final inspection against AQL standards.",
+    "capacityValue": "[X]",
+    "capacityUnit": "inspection stations",
+    "image": "/images/facility/departments/quality-control/photo.jpg"
+  },
+  {
+    "slug": "metal-detection",
+    "name": "Metal Detection",
+    "category": "Finishing & Quality Assurance",
+    "description": "100% metal detection scanning before packing, per buyer compliance requirements.",
+    "capacityValue": "[X]",
+    "capacityUnit": "units per hour",
+    "image": "/images/facility/departments/metal-detection/photo.jpg"
+  },
+  {
+    "slug": "audits",
+    "name": "Audits",
+    "category": "Finishing & Quality Assurance",
+    "description": "Social compliance and quality audits aligned with buyer due-diligence requirements.",
+    "capacityValue": null,
+    "capacityUnit": "WRAP, BSCI, and Sedex/SMETA audits — frequency varies by buyer program and facility scope.",
+    "image": "/images/facility/departments/audits/photo.jpg"
+  },
+  {
+    "slug": "packing",
+    "name": "Packing",
+    "category": "Finishing & Quality Assurance",
+    "description": "Final packing per buyer packing specifications ahead of dispatch.",
+    "capacityValue": "[X]",
+    "capacityUnit": "cartons per day",
+    "image": "/images/facility/departments/packing/photo.jpg"
+  }
+]

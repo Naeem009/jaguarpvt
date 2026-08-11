@@ -45,6 +45,7 @@ Checklist:
 - [ ] All interactive elements reachable and operable by keyboard alone, visible focus states (custom focus ring using `--color-accent`, not browser default removed without replacement).
 - [ ] `AIChatWidget` streaming responses announced via an `aria-live="polite"` region; loading state announced too.
 - [ ] `CommandSearch` overlay traps focus while open, returns focus to trigger on close, closes on `Escape`.
+- [ ] `DepartmentCategoryTabs` on the Facility page use proper ARIA tab/tabpanel roles and are operable with arrow keys, not just click/tap.
 - [ ] `FacilityMap` has a non-map fallback list (already specified in the component spec) so map content isn't only accessible via mouse/hover.
 - [ ] All images have meaningful `alt` text; decorative images use `alt=""`.
 - [ ] Form fields (`ContactForm`, `CapabilityMatcher`) have associated `<label>`s, inline error messages linked via `aria-describedby`.

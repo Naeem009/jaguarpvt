@@ -2,24 +2,25 @@
 
 :root {
   /* Neutrals */
-  --color-ink: #0b0b0c;
-  --color-charcoal: #1c1d1f;
-  --color-graphite: #4a4b4e;
-  --color-mist: #e8e8e6;
-  --color-paper: #fafaf9;
+  --color-ink: #0b0c0b;
+  --color-charcoal: #16181a;
+  --color-graphite: #55585a;
+  --color-mist: #eef0ec;
+  --color-paper: #fafaf8;
   --color-white: #ffffff;
 
-  /* Brand accent — Jaguar green */
-  --color-accent: #7ebb42;
-  --color-accent-dark: #5a9430;
-  --color-accent-tint: #eef6e6;
+  /* Brand green — #7EBB42 */
+  --color-accent-bright: #7ebb42;
+  --color-accent: #3f7a1a;
+  --color-accent-dark: #3a6e18;
+  --color-accent-tint: #eef5e4;
 
-  /* Sustainability / ESG */
-  --color-earth: #1e5b3d;
-  --color-earth-tint: #e6f0ea;
+  /* Technology accent — AI-powered components only */
+  --color-tech: #1f3fad;
+  --color-tech-tint: #eaf0fe;
 
   /* Semantic */
-  --color-success: #1e7d3c;
+  --color-success: #3a6e18;
   --color-warning: #b8860b;
   --color-error: #c0392b;
 
@@ -39,11 +40,12 @@
   --color-mist: var(--color-mist);
   --color-paper: var(--color-paper);
   --color-white: var(--color-white);
+  --color-accent-bright: var(--color-accent-bright);
   --color-accent: var(--color-accent);
   --color-accent-dark: var(--color-accent-dark);
   --color-accent-tint: var(--color-accent-tint);
-  --color-earth: var(--color-earth);
-  --color-earth-tint: var(--color-earth-tint);
+  --color-tech: var(--color-tech);
+  --color-tech-tint: var(--color-tech-tint);
   --color-success: var(--color-success);
   --color-warning: var(--color-warning);
   --color-error: var(--color-error);

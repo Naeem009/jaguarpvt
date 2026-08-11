@@ -2,7 +2,7 @@
 
 ## What this project is
 
-`Jagur Pvt Limited` is a corporate website for a **vertically-integrated apparel manufacturer** — the same category as MAS Holdings, Crystal International, Interloop, and Artistic Milliners. It sells nothing directly to consumers. There is no cart, no checkout, no product listings with prices.
+`Jaguar (Private) Limited` is a corporate website for a **vertically-integrated apparel manufacturer** — the same category as MAS Holdings, Crystal International, Interloop, and Artistic Milliners. It sells nothing directly to consumers. There is no cart, no checkout, no product listings with prices.
 
 Its job is to do three things extremely well:
 
@@ -12,14 +12,20 @@ Its job is to do three things extremely well:
 
 This is a **B2B lead-generation and trust-building site**, not e-commerce.
 
+## Brand identity
+
+The company logo (`jaguar_logo.pdf`) uses a fresh green wordmark with a graphite-gray subtext line. This green — not a generic corporate blue — is now the site's primary accent color; the full palette derived from it is defined in `01-BRAND-DESIGN-SYSTEM.md`. Place the logo (as SVG, in color and reversed/white variants) at `/public/logos/`.
+
+One practical note, not legal advice: "Jaguar" is also a well-known automotive marque in unrelated industries. Before commercial launch it's worth a quick trademark search/clearance check in your target markets, particularly for the logo mark and the apparel-manufacturing trademark class — cheap insurance against a rebrand later.
+
 ## Reference sites and what to borrow from each
 
 | Reference | What to study | What to borrow |
 |---|---|---|
 | **MAS Holdings** | Scale storytelling, design-innovation narrative, sustainability metrics presentation | Confident "design-to-delivery" positioning, sustainability data visualization |
 | **Crystal International** | Global facility footprint, investor-grade credibility, ESG reporting | Facility map treatment, ESG report structure, stat-heavy proof sections |
-| **Interloop** | Vertical integration story, category breadth (hosiery, apparel, denim, packaging) | Division/category architecture, manufacturing process explainers |
-| **Artistic Milliners** | Denim innovation storytelling, craft + technology tone, strong photography | Innovation lab framing, tactile product/material photography direction |
+| **Interloop** | Vertical integration story, category breadth (hosiery, apparel, packaging) | Division/category architecture, manufacturing process explainers |
+| **Artistic Milliners** | Textile innovation storytelling, craft + technology tone, strong photography | Innovation lab framing, tactile product/material photography direction |
 | **Apple** | Restraint, whitespace, scroll-triggered storytelling, product photography as hero, one idea per screen | Editorial pacing, large type, cinematic imagery, minimal chrome |
 | **Stripe** | Technical polish, gradient/mesh backgrounds, precise grid system, docs-quality clarity, subtle motion | Design system rigor, micro-interactions, developer-grade component polish applied to a non-dev product |
 
@@ -28,7 +34,7 @@ The site's visual identity should feel like **Apple's storytelling discipline + 
 ## Explicit non-goals
 
 - No shopping cart, pricing pages, or SKU-level product catalog.
-- No consumer marketing tone ("Shop now," "Add to bag", "Get A Quote").
+- No consumer marketing tone ("Shop now," "Add to bag").
 - No fake urgency/scarcity patterns.
 - AI features are **decision-support and trust-building tools for B2B buyers**, not chatbots for retail customer service.
 
@@ -71,4 +77,4 @@ The site's visual identity should feel like **Apple's storytelling discipline + 
 
 3. Build in the order laid out in `09-IMPLEMENTATION-ROADMAP.md` — design system and shared components first, pages second, AI features last.
 4. For each page, open `07-PAGE-BY-PAGE-CURSOR-PROMPTS.md`, copy the relevant prompt block into Cursor's chat/composer, and let it reference the other docs by path (Cursor can `@`-mention files in `/docs`).
-5. Replace every `Jagur Pvt Limited`, and bracketed placeholder before publishing — these docs are deliberately generic so you can drop in your real brand.
+5. Replace any remaining `[TAGLINE]` and bracketed placeholders (real ESG figures, facility counts, addresses, etc.) before publishing — the company name and brand colors are now set, the rest of the placeholder data is deliberately generic so you can drop in your real numbers.

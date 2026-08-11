@@ -17,9 +17,9 @@
 
 Build in this order (matches priority list in `02-SITE-ARCHITECTURE.md`):
 1. Home (placeholder copy/data is fine at this stage)
-2. Products hub + Wovens/Knits/Denim/**Baby Wear (with catalogue embed section, placeholder state until the PDF is uploaded)**
+2. Products hub + Wovens/Knits/**Baby Wear (with catalogue embed section, placeholder state until the PDF is uploaded)**
 3. Our Impact hub + Environment/People/Governance & Certifications
-4. Facility (static map first, interactivity in Phase 4)
+4. Facility (static map first, interactivity in Phase 4) — **including the "Process & Capabilities" section (15 departments across 5 categories) with placeholder capacities and department photo placeholders; real capacity figures and photos come in Phase 3 below**
 5. Contact (form functional, webhook can be stubbed)
 6. About
 7. Careers
@@ -31,6 +31,7 @@ Build in this order (matches priority list in `02-SITE-ARCHITECTURE.md`):
 - Replace placeholder copy per `03-CONTENT-STRATEGY-COPY.md` outlines with real company facts, figures, and approved photography.
 - Upload the real Baby Wear e-catalogue PDF to `/public/catalogues/baby-wear-catalogue.pdf` — the `CatalogueEmbed` component built in Phase 2 should pick it up with no code changes once it's in place.
 - Populate `facilities.json` (or CMS facility model) with real facility data.
+- Populate `departments.json` with real capacity figures (replacing every `[X]` placeholder) and drop real photos into each `/public/images/facility/departments/<slug>/photo.jpg` — the `DepartmentCard` components built in Phase 2 pick these up automatically.
 - Finalize real color/typography values in `01-BRAND-DESIGN-SYSTEM.md` if not already locked.
 
 ## Phase 4 — AI features (3–5 days)

@@ -150,7 +150,7 @@ export function CommandSearch() {
                 onClick={() => navigateToResult(result)}
                 className={cn(
                   "flex w-full flex-col gap-1 px-4 py-3 text-start transition-colors",
-                  index === activeIndex ? "bg-accent-tint" : "hover:bg-mist",
+                  index === activeIndex ? "bg-tech-tint" : "hover:bg-mist",
                 )}
               >
                 <span className="font-medium text-ink">{result.title}</span>

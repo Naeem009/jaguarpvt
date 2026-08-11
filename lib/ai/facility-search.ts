@@ -1,4 +1,5 @@
 import type { Facility } from "@/lib/facilities";
+import { getDepartments, type Department } from "@/lib/departments";
 
 export type FacilitySearchResult = {
   facilityIds: string[];
@@ -94,6 +95,29 @@ function scoreFacility(query: string, facility: Facility) {
   return score;
 }
 
+function scoreDepartment(query: string, department: Department) {
+  const haystack = normalize(
+    [department.name, department.category, department.description, department.slug.replace(/-/g, " ")]
+      .join(" "),
+  );
+
+  let score = 0;
+  const tokens = query.split(" ").filter(Boolean);
+
+  for (const token of tokens) {
+    if (haystack.includes(token)) score += 2;
+  }
+
+  if (haystack.includes(query)) score += 6;
+
+  return score;
+}
+
+function describeDepartmentMatches(departments: Department[]) {
+  const names = departments.map((department) => department.name).join(", ");
+  return `Our published Process & Capabilities data includes in-house ${names}. Showing all facilities — contact the team for site-specific capacity figures.`;
+}
+
 export function searchFacilities(query: string, facilities: Facility[]): FacilitySearchResult {
   const normalizedQuery = normalize(query);
 
@@ -104,21 +128,38 @@ export function searchFacilities(query: string, facilities: Facility[]): Facilit
     };
   }
 
+  const departmentMatches = getDepartments()
+    .map((department) => ({ department, score: scoreDepartment(normalizedQuery, department) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score);
+
   const scored = facilities
     .map((facility) => ({ facility, score: scoreFacility(normalizedQuery, facility) }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score);
 
   if (scored.length === 0) {
+    if (departmentMatches.length > 0) {
+      return {
+        facilityIds: facilities.map((facility) => facility.id),
+        explanation: describeDepartmentMatches(departmentMatches.map((entry) => entry.department)),
+      };
+    }
+
     return {
       facilityIds: [],
       explanation:
-        "No facilities matched that query against our published facility data. Try broader terms such as a region, category, or certification name.",
+        "No facilities matched that query against our published facility or process data. Try broader terms such as a region, category, certification, or production department (e.g. embroidery, knitting, metal detection).",
     };
   }
 
+  const explanation =
+    departmentMatches.length > 0
+      ? `${describeDepartmentMatches(departmentMatches.slice(0, 2).map((entry) => entry.department))} Location filter: ${scored.length} facilit${scored.length === 1 ? "y" : "ies"} matched "${query}".`
+      : `Showing ${scored.length} facilit${scored.length === 1 ? "y" : "ies"} matching "${query}" against published capability data — not a real-time capacity filter.`;
+
   return {
     facilityIds: scored.map((entry) => entry.facility.id),
-    explanation: `Showing ${scored.length} facilit${scored.length === 1 ? "y" : "ies"} matching "${query}" against published capability data — not a real-time capacity filter.`,
+    explanation,
   };
 }

@@ -202,7 +202,7 @@ export function CapabilityMatcher({ className }: { className?: string }) {
                   key={step.id}
                   className={cn(
                     "h-2 w-10 rounded-full",
-                    index <= stepIndex ? "bg-accent" : "bg-ink/10",
+                    index <= stepIndex ? "bg-tech" : "bg-ink/10",
                   )}
                   aria-hidden
                 />
@@ -308,8 +308,8 @@ function OptionGrid({
           className={cn(
             "rounded-[var(--radius-card)] border px-4 py-4 text-start text-sm transition-colors",
             selected === option.value
-              ? "border-accent bg-accent-tint text-accent-dark"
-              : "border-ink/10 bg-white text-graphite hover:border-accent",
+              ? "border-tech bg-tech-tint text-tech"
+              : "border-ink/10 bg-white text-graphite hover:border-tech",
           )}
         >
           {option.label}
@@ -340,8 +340,8 @@ function MultiOptionGrid({
             className={cn(
               "rounded-[var(--radius-card)] border px-4 py-4 text-start text-sm transition-colors",
               isSelected
-                ? "border-accent bg-accent-tint text-accent-dark"
-                : "border-ink/10 bg-white text-graphite hover:border-accent",
+                ? "border-tech bg-tech-tint text-tech"
+                : "border-ink/10 bg-white text-graphite hover:border-tech",
             )}
           >
             {option.label}

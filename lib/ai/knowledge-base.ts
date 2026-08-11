@@ -1,4 +1,5 @@
 import knowledgeBase from "@/data/knowledge-base.json";
+import { getDepartmentKnowledgeEntries } from "@/lib/departments/knowledge";
 
 export type KnowledgeEntry = {
   id: string;
@@ -9,7 +10,7 @@ export type KnowledgeEntry = {
   content: string;
 };
 
-const entries = knowledgeBase as KnowledgeEntry[];
+const entries = [...(knowledgeBase as KnowledgeEntry[]), ...getDepartmentKnowledgeEntries()];
 
 function normalize(text: string) {
   return text.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").replace(/\s+/g, " ").trim();

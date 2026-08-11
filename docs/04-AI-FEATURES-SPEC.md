@@ -22,7 +22,7 @@ Supported languages (default set — adjust freely, this is just adding/removing
 **Purpose**: Let a sourcing manager ask natural-language questions ("Can you produce organic cotton knit t-shirts at 200,000 units/month with GOTS certification?") and get an accurate, grounded answer plus a next-step CTA.
 
 **Functional spec**:
-- RAG (retrieval-augmented generation) over a curated knowledge base: Products pages, certifications, facility data, FAQ content — all content that already lives on the site plus an internal-only knowledge doc.
+- RAG (retrieval-augmented generation) over a curated knowledge base: Products pages, certifications, facility data, the 15-department process/capacity breakdown (`departments.json`, see `05-TECHNICAL-SPEC-STACK.md`), FAQ content — all content that already lives on the site plus an internal-only knowledge doc.
 - Backend: serverless API route → Claude API with the retrieved context injected into the system prompt. Do not let the model answer from general knowledge about the company; ground every answer in retrieved content, and have it say "I don't have that information — let's connect you with our team" when the knowledge base doesn't cover it.
 - UI: streaming text response, source citations shown as small chips under the answer ("Source: Wovens Product Page"), a persistent "Talk to a human" button, and a suggested-next-question chip row.
 - Guardrails: system prompt should explicitly refuse to quote prices/MOQs it isn't certain of, refuse to make commitments on the company's behalf, and always offer the `/contact` form as the next step for anything requiring a real quote.
@@ -39,11 +39,11 @@ Supported languages (default set — adjust freely, this is just adding/removing
 **Purpose**: A short guided form → AI-generated match summary, replacing "browse and guess" with a structured recommendation.
 
 **Functional spec**:
-- Multi-step form: product category (wovens/knits/denim/baby wear) → estimated monthly volume → key materials → sustainability requirements (organic/recycled/certifications needed) → target region for delivery.
+- Multi-step form: product category (wovens/knits/baby wear) → estimated monthly volume → key materials → sustainability requirements (organic/recycled/certifications needed) → target region for delivery.
 - On submit, call the AI model with these structured inputs plus the Products knowledge base, and generate a short narrative match: which category fits, which certifications are relevant, an honest caveat about lead times varying by season.
 - Output includes a CTA: "Send this match summary to our team" which pre-fills the `/contact` form with the tool's inputs — this is the single highest-value AI feature for lead quality, since it produces a semi-qualified lead automatically.
 - Keep it to 4–5 steps max; each step one question (Apple-style, one idea per screen).
-- **Language**: the entire multi-step form (labels, options, the generated narrative match) renders in the visitor's current site locale. The match summary handed off to `/contact` should be generated in that same language, but the underlying structured data sent to the CRM (category, volume, certifications) stays as language-neutral codes/enums, not translated free text — the sales team's CRM shouldn't end up with six different spellings of "denim" across languages.
+- **Language**: the entire multi-step form (labels, options, the generated narrative match) renders in the visitor's current site locale. The match summary handed off to `/contact` should be generated in that same language, but the underlying structured data sent to the CRM (category, volume, certifications) stays as language-neutral codes/enums, not translated free text — the sales team's CRM shouldn't end up with six different spellings of "wovens" across languages.
 
 ---
 
@@ -72,7 +72,8 @@ Supported languages (default set — adjust freely, this is just adding/removing
 - Interactive dark-mode world map (see `06-COMPONENT-LIBRARY-SPEC.md` for the `FacilityMap` component) with facility markers; clicking a marker shows a card (location, capabilities, certifications, headcount, established year).
 - Optional AI layer: a small natural-language filter box above the map — "Show me GOTS-certified knit facilities in South Asia" — filters the map pins via the same RAG assistant from Feature 1, applied to structured facility data instead of free text.
 - This should be clearly a filter/search convenience, not a promise of real-time capacity data.
-- **Language**: the natural-language filter box accepts queries in any supported language (multilingual embeddings per the section above); facility card content (location, capability names) renders from localized facility data where available, falling back to English fields.
+- **Process & Capabilities grounding**: `departments.json` (the 15-department production process breakdown — see `05-TECHNICAL-SPEC-STACK.md`) is part of this feature's RAG knowledge base, alongside facility location data. This lets both the map filter and the global Sourcing Assistant (Feature 1) answer capacity/process questions accurately — e.g. "Do you have in-house embroidery?" or "What's your metal detection capacity?" — grounded in the real `departments.json` figures rather than guessed. Same rule as everywhere else in this doc: if a capacity field is still a `[X]` placeholder, the assistant should say it doesn't have that figure yet rather than inventing a number.
+- **Language**: the natural-language filter box accepts queries in any supported language (multilingual embeddings per the section above); facility card content (location, capability names) and department names/descriptions render from localized data where available, falling back to English fields.
 
 ---
 

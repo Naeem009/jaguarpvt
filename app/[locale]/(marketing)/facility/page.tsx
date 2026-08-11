@@ -1,7 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
-import { FacilityMapLazy, Hero } from "@/components/sections";
+import { FacilityMapLazy, Hero, ProcessCapabilitiesSection } from "@/components/sections";
 import { FACILITY_HERO_IMAGE, getFacilities } from "@/lib/facilities";
+import { getDepartmentCategories, getDepartments } from "@/lib/departments";
 import { heroVideoMedia } from "@/lib/media/hero-media";
 
 type PageProps = {
@@ -18,6 +19,8 @@ export default async function FacilityPage({ params }: PageProps) {
   const t = await getTranslations("facility");
   const tCommon = await getTranslations("common");
   const facilities = getFacilities();
+  const departments = getDepartments();
+  const departmentCategories = getDepartmentCategories();
 
   return (
     <main className="flex-1">
@@ -30,6 +33,11 @@ export default async function FacilityPage({ params }: PageProps) {
       />
 
       <FacilityMapLazy facilities={facilities} filterEnabled />
+
+      <ProcessCapabilitiesSection
+        departments={departments}
+        categories={departmentCategories}
+      />
     </main>
   );
 }

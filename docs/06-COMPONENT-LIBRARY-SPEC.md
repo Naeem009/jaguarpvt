@@ -27,7 +27,7 @@ All components consume tokens from `01-BRAND-DESIGN-SYSTEM.md`. Build as typed R
 
 ### `ProductGrid`
 - Props: `items: { title, image, href, description, badge? }[]`.
-- Used on Home (4-card teaser: Wovens/Knits/Denim/Baby Wear) and the Products hub (full grid). Pass `badge="Catalogue"` on the Baby Wear item so the card carries the same small badge used in the nav mega-menu.
+- Used on Home (3-card teaser: Wovens/Knits/Baby Wear) and the Products hub (full grid). Pass `badge="Catalogue"` on the Baby Wear item so the card carries the same small badge used in the nav mega-menu.
 
 ### `CatalogueEmbed`
 - Props: `fileUrl: string`, `title?`, `emptyState?: boolean`.
@@ -45,6 +45,16 @@ All components consume tokens from `01-BRAND-DESIGN-SYSTEM.md`. Build as typed R
 - Dark stylized world map (Mapbox custom style or hand-built SVG), accent-colored markers, hover/click opens a `FacilityCard` popover.
 - If `filterEnabled`, renders the natural-language filter input above the map (AI Feature 4, Facility Intelligence).
 - Must lazy-load; heaviest component on the site.
+
+### `DepartmentGrid` (with `DepartmentCategoryTabs` and `DepartmentCard`)
+- Purpose-built for the Facility page's "Process & Capabilities" section — 15 production departments grouped into 5 categories (see `02-SITE-ARCHITECTURE.md` and the `departments.json` structure in `05-TECHNICAL-SPEC-STACK.md`).
+- **`DepartmentCategoryTabs`**: Props: `categories: string[]`, `activeCategory`, `onChange`. Horizontal tab bar (or accordion on mobile) for the 5 categories — Raw Material & Testing, Fabric Production, Embellishment, Cut/Sew & Wet Processing, Finishing & Quality Assurance. Selecting a category filters which `DepartmentCard`s render below, with a Framer Motion crossfade between sets rather than a jarring swap.
+- **`DepartmentGrid`**: Props: `departments: Department[]`, `category?: string` (filters if provided). Responsive grid (3 columns desktop, 1–2 mobile) of `DepartmentCard`s for the active category.
+- **`DepartmentCard`**: Props: `slug`, `name`, `description`, `capacityValue`, `capacityUnit`, `image`.
+  - Structure: photo (from `/images/facility/departments/<slug>/photo.jpg`, `Card`-styled with `next/image`) at the top, `name` as a heading, one-line `description`, and the capacity shown as a `StatNumber`-style badge (e.g. large `capacityValue` + smaller `capacityUnit` label, using `--font-mono` per the design system's stat treatment).
+  - For the **Audits** entry specifically, where `capacityValue` is `null`: render the `capacityUnit` text (the audit standards/frequency) as a descriptive line instead of a numeric badge — don't force a stat-number layout onto non-quantifiable content.
+  - Missing photo: fall back to the same solid-brand-color placeholder pattern used elsewhere on the site, not a broken image icon.
+  - Clicking/tapping a card can optionally expand it (accordion-in-place or a `Modal`) for a longer description if the department needs more than one sentence — keep this optional per department rather than mandatory, since most departments will read fine as a single card.
 
 ### `AIChatWidget`
 - Props: `mode: 'floating' | 'embedded'`, `context?: string` (page-specific hint for the assistant), `locale` (defaults to site locale, overridable via the widget's own language selector — see multilingual notes below).
@@ -85,7 +95,7 @@ All components consume tokens from `01-BRAND-DESIGN-SYSTEM.md`. Build as typed R
 ### `LanguageSwitcher`
 - Props: `currentLocale`, `locales: { code, label, nativeLabel }[]`.
 - A small globe-icon dropdown/button in the navbar (desktop) and as a row inside the mobile slide-out menu. Shows each language in its own native label (e.g. "العربية" not "Arabic") so visitors can recognize their language even if the current UI language isn't one they read.
-- On selection: sets a locale cookie and client-side navigates to the same current page under the new locale prefix (e.g. `/en/products/denim` → `/ar/products/denim`), not back to the homepage — losing the visitor's place when they switch languages is a real friction point worth avoiding.
+- On selection: sets a locale cookie and client-side navigates to the same current page under the new locale prefix (e.g. `/en/products/knits` → `/ar/products/knits`), not back to the homepage — losing the visitor's place when they switch languages is a real friction point worth avoiding.
 - Keyboard-operable dropdown, closes on `Escape`, focus returns to the trigger on close (same pattern as `CommandSearch`).
 
 ## Multilingual notes affecting several components above
@@ -97,4 +107,4 @@ All components consume tokens from `01-BRAND-DESIGN-SYSTEM.md`. Build as typed R
 
 ## Component build order
 
-Build in this order so later components can compose earlier ones: `Button`, `Badge`, `Card`, `SectionHeading`, `StatNumber` → `Navbar`/`Footer`/`LanguageSwitcher` → `Hero`, `StatBar`, `ProductGrid`, `CTASection`, `TimelineSection` → `ContactForm`, `Modal` → `CatalogueEmbed`, `FacilityMap`, `CertificationGrid` → `AIChatWidget`, `CapabilityMatcher`, `SustainabilityEstimator`, `CommandSearch`.
+Build in this order so later components can compose earlier ones: `Button`, `Badge`, `Card`, `SectionHeading`, `StatNumber` → `Navbar`/`Footer`/`LanguageSwitcher` → `Hero`, `StatBar`, `ProductGrid`, `CTASection`, `TimelineSection` → `ContactForm`, `Modal` → `CatalogueEmbed`, `FacilityMap`, `DepartmentCategoryTabs`/`DepartmentCard`/`DepartmentGrid`, `CertificationGrid` → `AIChatWidget`, `CapabilityMatcher`, `SustainabilityEstimator`, `CommandSearch`.

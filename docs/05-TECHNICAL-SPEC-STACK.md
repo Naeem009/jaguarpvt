@@ -29,7 +29,6 @@
         /page.tsx                      → Products hub
         /wovens/page.tsx
         /knits/page.tsx
-        /denim/page.tsx
         /baby-wear/page.tsx            → includes CatalogueEmbed section
       /our-impact/
         /page.tsx                      → hub
@@ -69,13 +68,29 @@
     /products
       /wovens                        → hero, process-step-1..n, texture macro shots
       /knits                         → hero, process-step-1..n, texture macro shots
-      /denim                         → hero, process-step-1..n, texture macro shots
       /baby-wear                     → hero, process-step-1..n, texture macro shots
     /our-impact
       /environment                   → hero, solar/water-treatment photos
       /people                        → hero, community/worker program photos
       /governance                    → hero (certification logos live in /public/certifications, not here)
-    /facility                        → map background asset (if not code-generated), facility thumbnails
+    /facility
+      hero.jpg, map background asset (if not code-generated), facility thumbnails
+      /departments
+        /yarn-warehouse                → representative photo(s)
+        /knitting
+        /dyeing
+        /dyeing-lab
+        /screen-printing
+        /embroidery
+        /cutting
+        /stitching
+        /garment-dyeing
+        /garment-washing
+        /finishing
+        /quality-control
+        /metal-detection
+        /audits
+        /packing
     /careers                         → hero, culture photos
     /contact                         → hero (optional, page is form-first)
   /catalogues
@@ -87,11 +102,159 @@
   robots.txt                         → if not generated at build time
 ```
 
-**Image sourcing convention**: every page-level folder above should contain a `hero.*` file at minimum. Name files descriptively and consistently (`hero.jpg`, `process-01.jpg`, `process-02.jpg`, not `IMG_4821.jpg`) so Cursor-generated code can reference predictable paths like `/images/products/wovens/hero.svg`. Until real photography is available, use clearly-named placeholder files (e.g. a solid brand-color `.svg` placeholder) rather than external stock-photo URLs, so nothing depends on a third-party domain at build or run time.
+**Image sourcing convention**: every page-level folder above should contain a `hero.*` file at minimum. Name files descriptively and consistently (`hero.jpg`, `process-01.jpg`, `process-02.jpg`, not `IMG_4821.jpg`) so Cursor-generated code can reference predictable paths like `/images/products/wovens/hero.jpg`. Until real photography is available, use clearly-named placeholder files (e.g. a solid brand-color `.svg` placeholder) rather than external stock-photo URLs, so nothing depends on a third-party domain at build or run time.
+
+**Facility department images**: each of the 15 `/public/images/facility/departments/<slug>/` folders should contain one file named `photo.jpg` (or `.webp`) — the `DepartmentCard` component (see `06-COMPONENT-LIBRARY-SPEC.md`) references this exact path, so dropping a real photo into the folder with that filename is the entire upload workflow, no code changes needed. Use the placeholder-SVG pattern for any department whose photo hasn't been uploaded yet.
 
 **Baby Wear catalogue file**: reserve `/public/catalogues/baby-wear-catalogue.pdf` now, even before the real file is ready — build the `CatalogueEmbed` component (see `06-COMPONENT-LIBRARY-SPEC.md`) to reference this exact path so the day the real PDF is uploaded, it just works with no code changes. Keep the PDF reasonably sized (under ~15MB) for a smooth in-browser preview; if the real catalogue is much larger, consider a compressed "web preview" version for the embed alongside a full-resolution version behind the Download button.
 
 **Formats**: prefer `.webp`/`.avif` for photos (with a `.jpg` fallback source if the export pipeline needs one), `.svg` for logos/icons/illustrations. Keep hero images under ~400KB after compression; `next/image` will handle responsive resizing but the source shouldn't be multi-MB.
+
+## Facility departments data structure
+
+Store as `departments.json` (swap for a CMS collection later if desired — the shape stays the same). This is the single source of truth for the Facility page's "Process & Capabilities" section, and for what the Facility Intelligence AI feature can answer questions about.
+
+```json
+[
+  {
+    "slug": "yarn-warehouse",
+    "name": "Yarn Warehouse",
+    "category": "Raw Material & Testing",
+    "description": "Climate-controlled storage and inventory management for incoming yarn stock ahead of knitting.",
+    "capacityValue": "[X]",
+    "capacityUnit": "metric tons storage",
+    "image": "/images/facility/departments/yarn-warehouse/photo.jpg"
+  },
+  {
+    "slug": "knitting",
+    "name": "Knitting",
+    "category": "Fabric Production",
+    "description": "In-house circular knitting for single jersey, double jersey, and rib fabrics.",
+    "capacityValue": "[X]",
+    "capacityUnit": "machines / [X] kg per day",
+    "image": "/images/facility/departments/knitting/photo.jpg"
+  },
+  {
+    "slug": "dyeing",
+    "name": "Dyeing",
+    "category": "Fabric Production",
+    "description": "Fabric dyeing with batch-controlled color matching.",
+    "capacityValue": "[X]",
+    "capacityUnit": "kg per batch / [X] tons per day",
+    "image": "/images/facility/departments/dyeing/photo.jpg"
+  },
+  {
+    "slug": "dyeing-lab",
+    "name": "Dyeing Lab",
+    "category": "Raw Material & Testing",
+    "description": "Color matching, shade approval, and fastness testing ahead of bulk dyeing.",
+    "capacityValue": "[X]",
+    "capacityUnit": "lab dips per day",
+    "image": "/images/facility/departments/dyeing-lab/photo.jpg"
+  },
+  {
+    "slug": "screen-printing",
+    "name": "Screen Printing",
+    "category": "Embellishment",
+    "description": "In-house screen printing for graphic and placement prints.",
+    "capacityValue": "[X]",
+    "capacityUnit": "stations / [X] pieces per day",
+    "image": "/images/facility/departments/screen-printing/photo.jpg"
+  },
+  {
+    "slug": "embroidery",
+    "name": "Embroidery",
+    "category": "Embellishment",
+    "description": "Multi-head embroidery for logos and decorative detailing.",
+    "capacityValue": "[X]",
+    "capacityUnit": "heads / [X] pieces per day",
+    "image": "/images/facility/departments/embroidery/photo.jpg"
+  },
+  {
+    "slug": "cutting",
+    "name": "Cutting",
+    "category": "Cut, Sew & Wet Processing",
+    "description": "Automated and manual fabric cutting per marker and size spec.",
+    "capacityValue": "[X]",
+    "capacityUnit": "layers per day",
+    "image": "/images/facility/departments/cutting/photo.jpg"
+  },
+  {
+    "slug": "stitching",
+    "name": "Stitching",
+    "category": "Cut, Sew & Wet Processing",
+    "description": "Sewing lines for garment assembly.",
+    "capacityValue": "[X]",
+    "capacityUnit": "machines / [X] lines / [X] pieces per day",
+    "image": "/images/facility/departments/stitching/photo.jpg"
+  },
+  {
+    "slug": "garment-dyeing",
+    "name": "Garment Dyeing",
+    "category": "Cut, Sew & Wet Processing",
+    "description": "Piece-dyeing of finished garments for solid and washed-color effects.",
+    "capacityValue": "[X]",
+    "capacityUnit": "pieces per batch",
+    "image": "/images/facility/departments/garment-dyeing/photo.jpg"
+  },
+  {
+    "slug": "garment-washing",
+    "name": "Garment Washing",
+    "category": "Cut, Sew & Wet Processing",
+    "description": "Washing and finishing treatments (enzyme, stone, silicone, etc.) for finished garments.",
+    "capacityValue": "[X]",
+    "capacityUnit": "washing machines / [X] pieces per day",
+    "image": "/images/facility/departments/garment-washing/photo.jpg"
+  },
+  {
+    "slug": "finishing",
+    "name": "Finishing",
+    "category": "Finishing & Quality Assurance",
+    "description": "Pressing, folding, and final garment presentation ahead of QC.",
+    "capacityValue": "[X]",
+    "capacityUnit": "pieces per day",
+    "image": "/images/facility/departments/finishing/photo.jpg"
+  },
+  {
+    "slug": "quality-control",
+    "name": "Quality Control (QC)",
+    "category": "Finishing & Quality Assurance",
+    "description": "In-line and final inspection against AQL standards.",
+    "capacityValue": "[X]",
+    "capacityUnit": "inspection stations",
+    "image": "/images/facility/departments/quality-control/photo.jpg"
+  },
+  {
+    "slug": "metal-detection",
+    "name": "Metal Detection",
+    "category": "Finishing & Quality Assurance",
+    "description": "100% metal detection scanning before packing, per buyer compliance requirements.",
+    "capacityValue": "[X]",
+    "capacityUnit": "units per hour",
+    "image": "/images/facility/departments/metal-detection/photo.jpg"
+  },
+  {
+    "slug": "audits",
+    "name": "Audits",
+    "category": "Finishing & Quality Assurance",
+    "description": "Social compliance and quality audits — replace with actual standards held (e.g. WRAP, BSCI, Sedex/SMETA) and audit frequency.",
+    "capacityValue": null,
+    "capacityUnit": "[audit standards + frequency, not a throughput number]",
+    "image": "/images/facility/departments/audits/photo.jpg"
+  },
+  {
+    "slug": "packing",
+    "name": "Packing",
+    "category": "Finishing & Quality Assurance",
+    "description": "Final packing per buyer packing specifications ahead of dispatch.",
+    "capacityValue": "[X]",
+    "capacityUnit": "cartons per day",
+    "image": "/images/facility/departments/packing/photo.jpg"
+  }
+]
+```
+
+Every `[X]` is a placeholder — replace with real figures before launch, and never let the AI Facility Intelligence feature (per `04-AI-FEATURES-SPEC.md`) state a capacity number that isn't sourced from this file. If multiple facilities are added later, add a `facilityId` field to each entry so departments can be filtered/grouped per site.
 
 ## AI backend pattern (all three AI API routes)
 
