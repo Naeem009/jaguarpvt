@@ -4,6 +4,8 @@ export const contactPage = {
     eyebrow: "联系我们",
     headline: "告诉我们您正在打造什么。",
     body: "分享您的项目需求，我们的团队将以清晰的后续步骤回复——无自动报价，无零售结账流程。",
+    alt: "商务人士在合作会议开始时握手",
+    cta: "开始咨询",
   },
   expectations: {
     title: "接下来会发生什么",

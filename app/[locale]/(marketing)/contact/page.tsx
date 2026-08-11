@@ -25,7 +25,7 @@ export default async function ContactPage({ params }: PageProps) {
     <main>
       <ContactPageHero />
 
-      <section className="bg-white py-16 md:py-24">
+      <section id="contact-form" className="bg-white py-16 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-12 md:px-6">
           <Suspense
             fallback={

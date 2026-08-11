@@ -4,6 +4,8 @@ export const contactPage = {
     eyebrow: "Kontakt",
     headline: "Erzählen Sie uns, was Sie entwickeln.",
     body: "Teilen Sie Ihre Programmanforderungen mit und unser Team antwortet mit klaren nächsten Schritten — keine automatisierten Angebote, kein Einzelhandels-Checkout.",
+    alt: "Geschäftsleute reichen sich bei einem Partnerschaftstreffen die Hand",
+    cta: "Anfrage starten",
   },
   expectations: {
     title: "Was als Nächstes passiert",
