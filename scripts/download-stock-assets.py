@@ -25,6 +25,19 @@ VIDEO_HEADERS = {
 }
 
 
+def is_valid_image(data: bytes, suffix: str) -> bool:
+    if len(data) < 5000:
+        return False
+    lower = suffix.lower()
+    if lower in {".jpg", ".jpeg"}:
+        return data[:3] == b"\xff\xd8\xff"
+    if lower == ".png":
+        return data[:8] == b"\x89PNG\r\n\x1a\n"
+    if lower == ".webp":
+        return data[:4] == b"RIFF" and data[8:12] == b"WEBP"
+    return True
+
+
 def download(url: str, dest: Path, headers: dict[str, str], retries: int = 3) -> bool:
     dest.parent.mkdir(parents=True, exist_ok=True)
     for attempt in range(retries):
@@ -32,8 +45,10 @@ def download(url: str, dest: Path, headers: dict[str, str], retries: int = 3) ->
             req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=120) as response:
                 data = response.read()
-            if dest.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"} and len(data) < 5000:
-                raise ValueError(f"Suspiciously small image ({len(data)} bytes)")
+            if dest.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"} and not is_valid_image(
+                data, dest.suffix
+            ):
+                raise ValueError(f"Download is not a valid {dest.suffix} ({len(data)} bytes)")
             if dest.suffix.lower() == ".mp4" and len(data) < 50_000:
                 raise ValueError(f"Suspiciously small video ({len(data)} bytes)")
             dest.write_bytes(data)
@@ -107,8 +122,13 @@ FALLBACK_URLS: dict[str, str] = {
     "images/about/hero.jpg": "https://live.staticflickr.com/5043/5279325617_09c46cd325_b.jpg",
     "images/facility/hero.jpg": "https://live.staticflickr.com/2329/2290601813_eba6b4b502_b.jpg",
     "images/products/wovens/hero.jpg": "https://live.staticflickr.com/2161/2210667638_5e702c5c9e.jpg",
+    "images/products/wovens/process-02.jpg": "https://images.pexels.com/photos/6066886/pexels-photo-6066886.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "images/products/wovens/process-03.jpg": "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1400",
     "images/products/knits/hero.jpg": "https://collections.museumsvictoria.com.au/content/media/49/728449-large.jpg",
+    "images/products/knits/process-03.jpg": "https://images.pexels.com/photos/7679563/pexels-photo-7679563.jpeg?auto=compress&cs=tinysrgb&w=1400",
     "images/products/baby-wear/hero.jpg": "https://live.staticflickr.com/2817/9560424310_c9bd78dc12_b.jpg",
+    "images/products/baby-wear/process-02.jpg": "https://images.pexels.com/photos/5691592/pexels-photo-5691592.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "images/products/baby-wear/process-03.jpg": "https://images.pexels.com/photos/5691623/pexels-photo-5691623.jpeg?auto=compress&cs=tinysrgb&w=1400",
     "images/our-impact/environment/solar.jpg": "https://live.staticflickr.com/2771/4278495827_0b65f72132_b.jpg",
     "images/our-impact/environment/water-treatment.jpg": "https://live.staticflickr.com/228/503411286_b3dced3af8_b.jpg",
 }
@@ -125,13 +145,12 @@ VIDEO_ASSETS: dict[str, str] = {
 
 
 def resolve_url(relative_path: str, query: str) -> str:
+    if relative_path in FALLBACK_URLS:
+        return FALLBACK_URLS[relative_path]
     url = openverse_first(query)
     if url:
         return url
-    return FALLBACK_URLS.get(
-        relative_path,
-        "https://burst.shopifycdn.com/photos/sewing-machine-in-textile-factory.jpg?width=1400",
-    )
+    return "https://images.pexels.com/photos/6066886/pexels-photo-6066886.jpeg?auto=compress&cs=tinysrgb&w=1400"
 
 
 def main() -> None:
