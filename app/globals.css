@@ -110,6 +110,11 @@ body {
   line-height: 1.6;
 }
 
+html[data-locale="en"] {
+  --font-display: var(--font-martel-sans), "Martel Sans", -apple-system, sans-serif;
+  --font-body: var(--font-martel-sans), "Martel Sans", -apple-system, sans-serif;
+}
+
 .font-display {
   font-family: var(--font-display);
 }

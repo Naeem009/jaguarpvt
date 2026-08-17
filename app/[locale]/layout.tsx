@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Inter, Montserrat } from "next/font/google";
+import { IBM_Plex_Mono, Inter, Martel_Sans, Montserrat } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
@@ -17,6 +17,13 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const martelSans = Martel_Sans({
+  variable: "--font-martel-sans",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
   display: "swap",
 });
 
@@ -60,7 +67,8 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     <html
       lang={locale}
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className={`${inter.variable} ${montserrat.variable} ${ibmPlexMono.variable} h-full antialiased`}
+      data-locale={locale}
+      className={`${inter.variable} ${montserrat.variable} ${martelSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-dvh flex-col bg-paper text-ink">
         <NextIntlClientProvider messages={messages}>
