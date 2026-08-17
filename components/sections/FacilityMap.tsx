@@ -79,19 +79,19 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
   }
 
   return (
-    <div className={cn("bg-brand-dark text-white", className)}>
+    <div className={cn("bg-sky text-ink", className)}>
       <section className="py-16 md:py-24" aria-label={t("list.ariaLabel")}>
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionHeading
             eyebrow={t("heading.eyebrow")}
             title={t("heading.title")}
             subhead={t("heading.subhead")}
-            className="mb-8 md:mb-10 [&_h2]:text-white [&_p]:text-white/75"
+            className="mb-8 md:mb-10"
           />
 
           {filterEnabled ? (
             <form onSubmit={handleFilterSubmit} className="mb-8 space-y-3">
-              <label htmlFor="facility-filter" className="block text-sm font-medium text-white/80">
+              <label htmlFor="facility-filter" className="block text-sm font-medium text-graphite">
                 {t("filterLabel")}
               </label>
               <div className="flex flex-col gap-3 md:flex-row">
@@ -100,34 +100,32 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
                   value={filterQuery}
                   onChange={(event) => setFilterQuery(event.target.value)}
                   placeholder={t("filterPlaceholder")}
-                  className="min-h-12 flex-1 rounded-full border border-white/15 bg-white/10 px-5 text-sm text-white placeholder:text-white/50 outline-none focus:border-accent"
+                  className="min-h-12 flex-1 rounded-full border border-ink/10 bg-white px-5 text-sm text-ink placeholder:text-graphite/60 outline-none focus:border-accent"
                 />
                 <div className="flex gap-3">
                   <Button type="submit" disabled={isSearching}>
                     {isSearching ? t("filtering") : t("filterButton")}
                   </Button>
-                  <Button type="button" variant="secondary" className="border-white/20 text-white hover:border-white hover:text-white" onClick={handleClearFilter}>
+                  <Button type="button" variant="secondary" onClick={handleClearFilter}>
                     {t("clear")}
                   </Button>
                 </div>
               </div>
-              {searchExplanation ? (
-                <p className="text-sm text-white/70">{searchExplanation}</p>
-              ) : null}
+              {searchExplanation ? <p className="text-sm text-graphite">{searchExplanation}</p> : null}
               {searchError ? <p className="text-sm text-error">{searchError}</p> : null}
-              <p className="text-xs text-white/50">{t("disclaimer")}</p>
+              <p className="text-xs text-graphite/80">{t("disclaimer")}</p>
             </form>
           ) : null}
 
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <div className="relative overflow-hidden rounded-[var(--radius-card-lg)] border border-white/10 bg-brand-dark">
+            <div className="relative overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-sm">
               <div className="relative aspect-[950/620] w-full">
                 <Image
                   src={FACILITY_MAP_BACKGROUND}
                   alt={t("mapAlt")}
                   fill
                   sizes="(max-width: 1024px) 100vw, 960px"
-                  className="object-contain object-center opacity-90"
+                  className="object-contain object-center opacity-95"
                   priority
                 />
 
@@ -143,7 +141,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
                       aria-pressed={isSelected}
                       onClick={() => setSelectedId(facility.id)}
                       className={cn(
-                        "absolute z-10 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white transition-transform hover:scale-125 focus:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark",
+                        "absolute z-10 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white transition-transform hover:scale-125 focus:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-sky",
                         isSelected
                           ? "bg-accent-bright shadow-[0_0_0_8px_rgba(126,187,66,0.35)]"
                           : "bg-accent-bright/90 shadow-[0_0_0_6px_rgba(126,187,66,0.2)]",
@@ -162,7 +160,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
               {selectedFacility ? (
                 <FacilityCard facility={selectedFacility} variant="popover" />
               ) : (
-                <div className="rounded-[var(--radius-card-lg)] border border-white/10 bg-white/5 p-8 text-sm text-white/70">
+                <div className="rounded-[var(--radius-card-lg)] border border-ink/8 bg-white p-8 text-sm text-graphite shadow-sm">
                   {t("emptySelection")}
                 </div>
               )}

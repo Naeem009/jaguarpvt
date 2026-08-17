@@ -38,23 +38,18 @@ export function FacilityMapTeaser({
   const resolvedCtaLabel = ctaLabel ?? t("cta");
 
   return (
-    <section className={cn("bg-brand-dark py-16 text-white md:py-24", className)}>
+    <section className={cn("bg-sky py-16 text-ink md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
-          <SectionHeading
-            eyebrow={t("eyebrow")}
-            title={resolvedTitle}
-            subhead={resolvedSubhead}
-            className="[&_h2]:text-white [&_p]:text-white/75"
-          />
-          <Button href={href} variant="secondary" className="shrink-0 border-white/20 text-white hover:border-white hover:text-white">
+          <SectionHeading eyebrow={t("eyebrow")} title={resolvedTitle} subhead={resolvedSubhead} />
+          <Button href={href} variant="secondary" className="shrink-0">
             {resolvedCtaLabel}
           </Button>
         </div>
 
         <Link
           href={href}
-          className="group relative block overflow-hidden rounded-[var(--radius-card-lg)] border border-white/10"
+          className="group relative block overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-sm"
           aria-label={`${resolvedTitle} — ${resolvedCtaLabel}`}
         >
           <div className="relative aspect-[16/9] md:aspect-[21/9]">
@@ -63,21 +58,21 @@ export function FacilityMapTeaser({
               alt={t("mapAlt")}
               fill
               sizes="(max-width: 768px) 100vw, 1280px"
-              className="object-cover opacity-80 transition-transform duration-700 group-hover:scale-[1.02]"
+              className="object-cover opacity-90 transition-transform duration-700 group-hover:scale-[1.02]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-accent-dark/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-sky-deep/90 via-sky/30 to-white/10" />
 
             {previewMarkers.map((marker, index) => (
               <span
                 key={index}
-                className="absolute size-3 rounded-full bg-accent shadow-[0_0_0_6px_rgba(126,187,66,0.25)]"
+                className="absolute size-3 rounded-full bg-accent shadow-[0_0_0_6px_rgba(63,122,26,0.2)]"
                 style={{ top: marker.top, insetInlineStart: marker.insetInlineStart }}
                 aria-hidden
               />
             ))}
 
             <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 p-6 md:p-8">
-              <p className="text-sm text-white/70">{t("previewNote")}</p>
+              <p className="text-sm text-graphite">{t("previewNote")}</p>
               <span className="hidden text-sm font-medium text-accent md:inline-flex md:items-center md:gap-2">
                 {resolvedCtaLabel}
                 <span aria-hidden>→</span>

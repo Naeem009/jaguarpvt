@@ -4,7 +4,8 @@
   /* Neutrals */
   --color-ink: #0b0c0b;
   --color-charcoal: #16181a; /* hero overlays, cinematic dark scrims */
-  --color-brand-dark: #1a3328; /* corporate forest green — stat blocks, CTAs, facility map */
+  --color-sky: #e8f4fc; /* light sky blue — stat blocks, CTAs, facility map */
+  --color-sky-deep: #cce7f5; /* sky blue depth for borders and subtle gradients */
   --color-graphite: #55585a;
   --color-mist: #eef0ec;
   --color-paper: #fafaf8;
@@ -37,7 +38,8 @@
 @theme inline {
   --color-ink: var(--color-ink);
   --color-charcoal: var(--color-charcoal);
-  --color-brand-dark: var(--color-brand-dark);
+  --color-sky: var(--color-sky);
+  --color-sky-deep: var(--color-sky-deep);
   --color-graphite: var(--color-graphite);
   --color-mist: var(--color-mist);
   --color-paper: var(--color-paper);

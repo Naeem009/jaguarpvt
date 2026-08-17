@@ -34,7 +34,7 @@ export function StatBar({
     <section
       className={cn(
         "relative overflow-hidden py-16 md:py-24",
-        isImpact ? "bg-brand-dark text-white" : "bg-paper text-ink",
+        isImpact ? "bg-sky text-ink" : "bg-paper text-ink",
         className,
       )}
     >
@@ -48,7 +48,7 @@ export function StatBar({
             className="object-cover opacity-20"
             aria-hidden
           />
-          <div className="absolute inset-0 bg-brand-dark/80" aria-hidden />
+          <div className="absolute inset-0 bg-sky/85" aria-hidden />
         </>
       ) : null}
 
@@ -68,14 +68,14 @@ export function StatBar({
               suffix={stat.suffix}
               placeholder={stat.placeholder}
               label={stat.label}
-              className={isImpact ? "[&_p:first-child]:!text-accent-bright [&_p:last-child]:!text-white/75" : undefined}
+              className={isImpact ? "[&_p:first-child]:!text-accent-dark [&_p:last-child]:!text-graphite" : undefined}
             />
           ))}
         </div>
 
         {footerLink ? (
           <div className="mt-12 flex justify-center md:justify-start">
-            <Button href={footerLink.href} variant="secondary" className="border-white/20 text-white hover:border-white hover:text-white">
+            <Button href={footerLink.href} variant="secondary" className="shrink-0">
               {footerLink.label}
             </Button>
           </div>
