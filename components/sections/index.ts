@@ -31,6 +31,8 @@ export { DepartmentGrid } from "./DepartmentGrid";
 export type { DepartmentGridProps } from "./DepartmentGrid";
 export { ProcessCapabilitiesSection } from "./ProcessCapabilitiesSection";
 export type { ProcessCapabilitiesSectionProps } from "./ProcessCapabilitiesSection";
+export { PageVideoSection } from "./PageVideoSection";
+export { DynamicPageVideoSection } from "./DynamicPageVideoSection";
 export { Hero } from "./Hero";
 export type { HeroCTA, HeroMedia, HeroProps } from "./Hero";
 export { InnovationNote } from "./InnovationNote";

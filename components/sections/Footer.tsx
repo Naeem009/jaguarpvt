@@ -59,12 +59,12 @@ export function Footer({ className }: { className?: string }) {
   ];
 
   return (
-    <footer className={cn("border-t border-ink/8 bg-charcoal text-white", className)}>
+    <footer className={cn("border-t border-ink/8 bg-white text-ink", className)}>
       <div className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-10">
         <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
           {columns.map((column) => (
             <div key={column.title}>
-              <h2 className="text-sm font-medium uppercase tracking-[0.06em] text-white/70">
+              <h2 className="text-sm font-medium uppercase tracking-[0.06em] text-graphite">
                 {column.title}
               </h2>
               <ul className="mt-3 space-y-2">
@@ -75,12 +75,12 @@ export function Footer({ className }: { className?: string }) {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-white/80 transition-colors hover:text-white"
+                        className="text-sm text-graphite transition-colors hover:text-ink"
                       >
                         {link.label}
                       </a>
                     ) : (
-                      <Link href={link.href} className="text-sm text-white/80 transition-colors hover:text-white">
+                      <Link href={link.href} className="text-sm text-graphite transition-colors hover:text-ink">
                         {link.label}
                       </Link>
                     )}
@@ -91,21 +91,21 @@ export function Footer({ className }: { className?: string }) {
           ))}
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-6">
+        <div className="mt-8 border-t border-ink/8 pt-6">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <ul className="flex flex-wrap gap-x-6 gap-y-2">
               {legalLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-xs text-white/60 transition-colors hover:text-white">
+                  <a href={link.href} className="text-xs text-graphite transition-colors hover:text-ink">
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-            <LanguageSwitcher variant="chips" inverted />
+            <LanguageSwitcher variant="chips" />
           </div>
 
-          <div className="mt-4 flex flex-col gap-1.5 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
+          <div className="mt-4 flex flex-col gap-1.5 text-xs text-graphite md:flex-row md:items-center md:justify-between">
             <p>{t("copyright", { year })}</p>
             <p>{t("footprint")}</p>
           </div>

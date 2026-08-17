@@ -38,4 +38,74 @@ export const sections = {
   statBar: {
     learnMore: "Mehr erfahren",
   },
+  pageVideo: {
+    eyebrow: "In Aktion",
+    pages: {
+      home: {
+        title: "Präzises Nähen in großem Maßstab",
+        subhead: "Ein Einblick in die integrierte Bekleidungsproduktion in unserer Fertigung.",
+        videoAlt: "Nähen und Konfektion an der Produktionslinie",
+      },
+      about: {
+        title: "Auf Fertigungsdisziplin aufgebaut",
+        subhead: "Wie integrierte Abläufe langfristige Markenpartnerschaften stützen.",
+        videoAlt: "Überblick über Bekleidungsfertigung",
+      },
+      careers: {
+        title: "Wachsen Sie mit unseren Teams",
+        subhead: "Zusammenarbeit in Produktion, Qualität und kommerziellen Bereichen.",
+        videoAlt: "Teamzusammenarbeit in der Fertigung",
+      },
+      contact: {
+        title: "Gespräch beginnen",
+        subhead: "Partnerschaft startet mit klaren Erwartungen und Kommunikation.",
+        videoAlt: "Geschäftstreffen und Handschlag",
+      },
+      facility: {
+        title: "In unseren Werken",
+        subhead: "Integrierte Abteilungen von der Rohstoffannahme bis zur Verpackung.",
+        videoAlt: "Fertigungsstandort und Produktionsablauf",
+      },
+      ourImpact: {
+        title: "Verantwortungsvolle Produktion",
+        subhead: "Umwelt- und Ethikprogramme an allen Standorten.",
+        videoAlt: "Nachhaltige Fertigung und Betrieb",
+      },
+      environment: {
+        title: "Umweltverantwortung",
+        subhead: "Wasser-, Energie- und Abfallprogramme für verantwortliche Produktion.",
+        videoAlt: "Nachhaltige Textil- und Werksbetriebe",
+      },
+      people: {
+        title: "Menschen im Mittelpunkt",
+        subhead: "Wohlbefinden, Sicherheit und Gemeinschaftsengagement an unseren Standorten.",
+        videoAlt: "Mitarbeitende arbeiten gemeinsam",
+      },
+      governance: {
+        title: "Auditfähige Governance",
+        subhead: "Zertifizierungen und Compliance für jedes Kundenprogramm.",
+        videoAlt: "Qualität und Compliance in der Bekleidungsfertigung",
+      },
+      products: {
+        title: "Produktprogramme in Produktion",
+        subhead: "Woven, Strick und Babywear auf integrierten Linien.",
+        videoAlt: "Fertige Bekleidung und Produktion",
+      },
+      wovens: {
+        title: "Woven-Programme in Aktion",
+        subhead: "Hemden, Hosen und Uniformen — Zuschnitt, Nähen und Finish.",
+        videoAlt: "Webware-Produktionsprozess",
+      },
+      knits: {
+        title: "Strickwarenproduktion",
+        subhead: "Jersey, Fleece und Performance mit skalierbarer Kapazität.",
+        videoAlt: "Strick- und Jersey-Fertigung",
+      },
+      babyWear: {
+        title: "Babywear mit Sorgfalt",
+        subhead: "Weiche Verarbeitung und compliance-orientiertes Finish für Babymode.",
+        videoAlt: "Babywear- und Softwear-Fertigung",
+      },
+    },
+  },
 };

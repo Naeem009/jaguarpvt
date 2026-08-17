@@ -38,7 +38,7 @@ export function FacilityMapTeaser({
   const resolvedCtaLabel = ctaLabel ?? t("cta");
 
   return (
-    <section className={cn("bg-charcoal py-16 text-white md:py-24", className)}>
+    <section className={cn("bg-brand-dark py-16 text-white md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
           <SectionHeading
@@ -65,7 +65,7 @@ export function FacilityMapTeaser({
               sizes="(max-width: 768px) 100vw, 1280px"
               className="object-cover opacity-80 transition-transform duration-700 group-hover:scale-[1.02]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-accent-dark/20" />
 
             {previewMarkers.map((marker, index) => (
               <span

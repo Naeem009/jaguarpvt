@@ -3,7 +3,8 @@
 :root {
   /* Neutrals */
   --color-ink: #0b0c0b;
-  --color-charcoal: #16181a;
+  --color-charcoal: #16181a; /* hero overlays, cinematic dark scrims */
+  --color-brand-dark: #1a3328; /* corporate forest green — stat blocks, CTAs, facility map */
   --color-graphite: #55585a;
   --color-mist: #eef0ec;
   --color-paper: #fafaf8;
@@ -36,6 +37,7 @@
 @theme inline {
   --color-ink: var(--color-ink);
   --color-charcoal: var(--color-charcoal);
+  --color-brand-dark: var(--color-brand-dark);
   --color-graphite: var(--color-graphite);
   --color-mist: var(--color-mist);
   --color-paper: var(--color-paper);

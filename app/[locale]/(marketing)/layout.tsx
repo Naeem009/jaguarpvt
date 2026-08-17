@@ -3,6 +3,7 @@ import { AIChatWidgetLazy } from "@/components/sections/AIChatWidgetLazy";
 import { CommandSearch } from "@/components/sections/CommandSearch";
 import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/sections/Navbar";
+import { DynamicPageVideoSection } from "@/components/sections/DynamicPageVideoSection";
 import { DynamicPageJsonLd } from "@/components/seo/DynamicPageJsonLd";
 import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 
@@ -21,6 +22,7 @@ export default async function MarketingLayout({ children, params }: MarketingLay
       <DynamicPageJsonLd locale={locale} pathname={pathname} />
       <Navbar />
       {children}
+      <DynamicPageVideoSection pathname={pathname} />
       <Footer className="mt-auto shrink-0" />
       <CommandSearch />
       <AIChatWidgetLazy />

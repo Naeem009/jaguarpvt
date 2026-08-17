@@ -14,7 +14,7 @@ export type CTASectionProps = {
 
 export function CTASection({ title, subhead, cta, className }: CTASectionProps) {
   return (
-    <section className={cn("bg-charcoal py-20 text-white md:py-28", className)}>
+    <section className={cn("bg-brand-dark py-20 text-white md:py-28", className)}>
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-8 px-4 md:flex-row md:items-center md:justify-between md:px-6">
         <SectionHeading
           title={title}

@@ -38,4 +38,74 @@ export const sections = {
   statBar: {
     learnMore: "En savoir plus",
   },
+  pageVideo: {
+    eyebrow: "En action",
+    pages: {
+      home: {
+        title: "Couture de précision à grande échelle",
+        subhead: "Un aperçu de la production intégrée sur notre atelier.",
+        videoAlt: "Couture et assemblage sur la ligne de production",
+      },
+      about: {
+        title: "Fondé sur la rigueur industrielle",
+        subhead: "Comment nos opérations intégrées soutiennent les partenariats durables.",
+        videoAlt: "Vue d'ensemble des opérations de manufacture",
+      },
+      careers: {
+        title: "Évoluez avec nos équipes",
+        subhead: "Collaboration entre production, qualité et fonctions commerciales.",
+        videoAlt: "Collaboration d'équipe en environnement industriel",
+      },
+      contact: {
+        title: "Entamez la conversation",
+        subhead: "Le partenariat commence par des attentes alignées et une communication claire.",
+        videoAlt: "Réunion d'affaires et poignée de main",
+      },
+      facility: {
+        title: "Au cœur de nos sites",
+        subhead: "Départements intégrés de la réception des matières au conditionnement.",
+        videoAlt: "Site de production et flux de fabrication",
+      },
+      ourImpact: {
+        title: "Production responsable",
+        subhead: "Programmes environnementaux et éthiques sur l'ensemble de notre empreinte.",
+        videoAlt: "Manufacture durable et opérations de site",
+      },
+      environment: {
+        title: "Gestion environnementale",
+        subhead: "Programmes eau, énergie et déchets pour une production responsable.",
+        videoAlt: "Opérations textiles et sites durables",
+      },
+      people: {
+        title: "Les personnes au centre",
+        subhead: "Bien-être, sécurité et investissement communautaire sur nos sites.",
+        videoAlt: "Collaboration entre collègues sur le lieu de travail",
+      },
+      governance: {
+        title: "Gouvernance prête pour l'audit",
+        subhead: "Certifications et conformité au service de chaque programme client.",
+        videoAlt: "Qualité et conformité en manufacture textile",
+      },
+      products: {
+        title: "Programmes produits en production",
+        subhead: "Capacités tissées, maille et layette sur des lignes intégrées.",
+        videoAlt: "Vêtements finis et production",
+      },
+      wovens: {
+        title: "Programmes tissés en action",
+        subhead: "Chemiserie, pantalons et uniformes — coupe, couture et finition.",
+        videoAlt: "Processus de fabrication tissée",
+      },
+      knits: {
+        title: "Production maille",
+        subhead: "Jersey, polaire et performance avec capacité évolutive.",
+        videoAlt: "Fabrication de maille et jersey",
+      },
+      babyWear: {
+        title: "Layette avec soin",
+        subhead: "Construction douce et finition conforme pour vêtements bébé.",
+        videoAlt: "Fabrication de layette et vêtements doux",
+      },
+    },
+  },
 };

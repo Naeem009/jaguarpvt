@@ -79,7 +79,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
   }
 
   return (
-    <div className={cn("bg-charcoal text-white", className)}>
+    <div className={cn("bg-brand-dark text-white", className)}>
       <section className="py-16 md:py-24" aria-label={t("list.ariaLabel")}>
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionHeading
@@ -120,7 +120,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
           ) : null}
 
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <div className="relative overflow-hidden rounded-[var(--radius-card-lg)] border border-white/10 bg-charcoal">
+            <div className="relative overflow-hidden rounded-[var(--radius-card-lg)] border border-white/10 bg-brand-dark">
               <div className="relative aspect-[950/620] w-full">
                 <Image
                   src={FACILITY_MAP_BACKGROUND}
@@ -143,7 +143,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
                       aria-pressed={isSelected}
                       onClick={() => setSelectedId(facility.id)}
                       className={cn(
-                        "absolute z-10 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white transition-transform hover:scale-125 focus:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal",
+                        "absolute z-10 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white transition-transform hover:scale-125 focus:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark",
                         isSelected
                           ? "bg-accent-bright shadow-[0_0_0_8px_rgba(126,187,66,0.35)]"
                           : "bg-accent-bright/90 shadow-[0_0_0_6px_rgba(126,187,66,0.2)]",
