@@ -79,7 +79,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
   }
 
   return (
-    <div className={cn("bg-sky text-ink", className)}>
+    <div className={cn("bg-paper text-ink", className)}>
       <section className="py-16 md:py-24" aria-label={t("list.ariaLabel")}>
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionHeading
@@ -141,7 +141,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
                       aria-pressed={isSelected}
                       onClick={() => setSelectedId(facility.id)}
                       className={cn(
-                        "absolute z-10 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white transition-transform hover:scale-125 focus:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-sky",
+                        "absolute z-10 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white transition-transform hover:scale-125 focus:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-paper",
                         isSelected
                           ? "bg-accent-bright shadow-[0_0_0_8px_rgba(126,187,66,0.35)]"
                           : "bg-accent-bright/90 shadow-[0_0_0_6px_rgba(126,187,66,0.2)]",

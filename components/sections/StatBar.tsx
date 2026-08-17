@@ -33,8 +33,7 @@ export function StatBar({
   return (
     <section
       className={cn(
-        "relative overflow-hidden py-16 md:py-24",
-        isImpact ? "bg-sky text-ink" : "bg-paper text-ink",
+        "relative overflow-hidden bg-paper py-16 text-ink md:py-24",
         className,
       )}
     >
@@ -48,7 +47,7 @@ export function StatBar({
             className="object-cover opacity-20"
             aria-hidden
           />
-          <div className="absolute inset-0 bg-sky/85" aria-hidden />
+          <div className="absolute inset-0 bg-paper/85" aria-hidden />
         </>
       ) : null}
 
