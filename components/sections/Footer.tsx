@@ -59,7 +59,7 @@ export function Footer({ className }: { className?: string }) {
   ];
 
   return (
-    <footer className={cn("border-t border-ink/8 bg-white text-ink", className)}>
+    <footer className={cn("border-t border-ink/8 bg-paper text-ink", className)}>
       <div className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-10">
         <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
           {columns.map((column) => (
