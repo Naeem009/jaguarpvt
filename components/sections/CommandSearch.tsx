@@ -128,7 +128,7 @@ export function CommandSearch() {
         onClick={() => setOpen(false)}
       />
 
-      <div className="relative z-10 w-full max-w-2xl overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-[var(--shadow-card-hover)]">
+      <div className="relative z-10 w-full max-w-2xl overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper shadow-[var(--shadow-card-hover)]">
         <div className="border-b border-ink/8 px-4 py-4">
           <input
             ref={inputRef}
@@ -150,7 +150,7 @@ export function CommandSearch() {
                 onClick={() => navigateToResult(result)}
                 className={cn(
                   "flex w-full flex-col gap-1 px-4 py-3 text-start transition-colors",
-                  index === activeIndex ? "bg-tech-tint" : "hover:bg-mist",
+                  index === activeIndex ? "bg-paper" : "hover:bg-ink/5",
                 )}
               >
                 <span className="font-medium text-ink">{result.title}</span>

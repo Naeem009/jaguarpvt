@@ -17,7 +17,7 @@ export async function PageVideoSection({
   return (
     <section
       aria-labelledby={`page-video-${pageKey}`}
-      className={cn("bg-white py-16 md:py-24 lg:py-28", className)}
+      className={cn("bg-paper py-16 md:py-24 lg:py-28", className)}
     >
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <header className="mx-auto mb-10 max-w-2xl text-center md:mb-12">
@@ -32,7 +32,7 @@ export async function PageVideoSection({
         </header>
 
         <div className="overflow-hidden rounded-2xl border border-ink/8 bg-paper shadow-sm">
-          <div className="relative aspect-[21/9] w-full max-h-[min(22rem,42vw)] bg-accent-tint/40">
+          <div className="relative aspect-[21/9] w-full max-h-[min(22rem,42vw)] bg-paper">
             <video
               autoPlay
               muted

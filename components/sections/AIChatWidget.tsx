@@ -122,7 +122,7 @@ function FloatingAIChatWidget() {
       {open ? (
         <div
           ref={panelRef}
-          className="fixed end-4 bottom-24 z-50 flex w-[min(100vw-2rem,380px)] flex-col overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-[var(--shadow-card-hover)]"
+          className="fixed end-4 bottom-24 z-50 flex w-[min(100vw-2rem,380px)] flex-col overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper shadow-[var(--shadow-card-hover)]"
           role="dialog"
           aria-label={t("chatAriaLabel")}
         >
@@ -160,7 +160,7 @@ function FloatingAIChatWidget() {
                 key={`${message.role}-${index}`}
                 className={cn(
                   "rounded-[var(--radius-card)] px-3 py-2 text-sm",
-                  message.role === "user" ? "bg-mist text-ink" : "bg-tech-tint text-ink",
+                  message.role === "user" ? "bg-paper text-ink" : "bg-paper text-ink",
                 )}
               >
                 <p>{message.content}</p>
@@ -170,7 +170,7 @@ function FloatingAIChatWidget() {
                       <Link
                         key={citation.href}
                         href={citation.href}
-                        className="rounded-full bg-white px-2 py-1 text-xs text-tech hover:text-tech/80"
+                        className="rounded-full bg-paper px-2 py-1 text-xs text-tech hover:text-tech/80"
                       >
                         {citation.title}
                       </Link>
@@ -238,7 +238,7 @@ function EmbeddedAIChatTeaser({
   );
 
   return (
-    <section className={cn("bg-tech-tint py-16 md:py-24", className)}>
+    <section className={cn("bg-paper py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow={t("eyebrow")}
@@ -248,7 +248,7 @@ function EmbeddedAIChatTeaser({
         />
 
         <Card className="mx-auto max-w-4xl overflow-hidden p-0">
-          <div className="border-b border-ink/8 bg-white px-6 py-4">
+          <div className="border-b border-ink/8 bg-paper px-6 py-4">
             <p className="text-sm font-medium text-ink">{t("panelTitle")}</p>
             {context ? <p className="mt-1 text-sm text-graphite">{context}</p> : null}
           </div>
@@ -263,8 +263,8 @@ function EmbeddedAIChatTeaser({
                   className={cn(
                     "rounded-full border px-4 py-2 text-left text-sm transition-colors",
                     activePrompt?.question === prompt.question
-                      ? "border-tech bg-tech-tint text-tech"
-                      : "border-ink/10 bg-white text-graphite hover:border-tech hover:text-tech",
+                      ? "border-tech bg-paper text-tech"
+                      : "border-ink/10 bg-paper text-graphite hover:border-tech hover:text-tech",
                   )}
                 >
                   {prompt.question}
@@ -273,16 +273,16 @@ function EmbeddedAIChatTeaser({
             </div>
 
             {activePrompt ? (
-              <div className="space-y-4 rounded-[var(--radius-card-lg)] border border-ink/8 bg-white p-6">
+              <div className="space-y-4 rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper p-6">
                 <p className="text-sm font-medium text-graphite">{t("youAsked")}</p>
                 <p className="text-base text-ink">{activePrompt.question}</p>
                 <p className="text-sm font-medium text-graphite">{t("assistant")}</p>
                 <p className="text-base leading-relaxed text-ink">{activePrompt.answer}</p>
                 <div className="flex flex-wrap gap-2 pt-2">
-                  <span className="rounded-full bg-mist px-3 py-1 text-xs font-medium text-graphite">
+                  <span className="rounded-full bg-paper px-3 py-1 text-xs font-medium text-graphite">
                     {t("sourceProducts")}
                   </span>
-                  <span className="rounded-full bg-mist px-3 py-1 text-xs font-medium text-graphite">
+                  <span className="rounded-full bg-paper px-3 py-1 text-xs font-medium text-graphite">
                     {t("sourceGovernance")}
                   </span>
                 </div>

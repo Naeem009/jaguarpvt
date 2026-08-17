@@ -160,7 +160,7 @@ export function Navbar() {
               aria-label={t("closeMenuOverlay")}
               onClick={closeMobileMenu}
             />
-            <div className="absolute inset-y-0 end-0 flex w-full max-w-sm flex-col bg-white shadow-[var(--shadow-card-hover)]">
+            <div className="absolute inset-y-0 end-0 flex w-full max-w-sm flex-col bg-paper shadow-[var(--shadow-card-hover)]">
               <div className="flex items-center justify-between border-b border-ink/8 px-4 py-4">
                 <p className="font-medium text-ink">{t("menu")}</p>
                 <button type="button" onClick={closeMobileMenu} aria-label={t("closeMenu")}>
@@ -285,7 +285,7 @@ export function Navbar() {
           isHome ? "fixed" : "sticky",
           isOverlayNav
             ? "border-b border-transparent bg-transparent"
-            : "border-b border-ink/8 bg-white/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/90",
+            : "border-b border-ink/8 bg-paper/95 backdrop-blur-md supports-[backdrop-filter]:bg-paper/90",
         )}
       >
         <div className="flex w-full items-center justify-between gap-2 py-1.5 pe-4 ps-0 md:py-2 md:pe-6">
@@ -333,7 +333,7 @@ export function Navbar() {
               "inline-flex size-10 shrink-0 touch-manipulation items-center justify-center rounded-full border lg:hidden",
               isOverlayNav
                 ? "border-white/20 bg-white/10 text-white"
-                : "border-ink/10 bg-white text-ink",
+                : "border-ink/10 bg-paper text-ink",
             )}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}

@@ -13,7 +13,7 @@ export async function CertificationGrid({ className }: CertificationGridProps) {
   const logos = getCertificationLogos();
 
   return (
-    <section className={cn("bg-white py-16 md:py-24", className)}>
+    <section className={cn("bg-paper py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow={t("eyebrow")}

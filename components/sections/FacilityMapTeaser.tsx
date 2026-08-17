@@ -49,7 +49,7 @@ export function FacilityMapTeaser({
 
         <Link
           href={href}
-          className="group relative block overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-sm"
+          className="group relative block overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper shadow-sm"
           aria-label={`${resolvedTitle} — ${resolvedCtaLabel}`}
         >
           <div className="relative aspect-[16/9] md:aspect-[21/9]">

@@ -83,7 +83,7 @@ export function DepartmentCategoryTabs({
                 "rounded-full border px-4 py-2 text-sm font-medium transition-colors",
                 isActive
                   ? "border-accent bg-accent text-white"
-                  : "border-ink/10 bg-white text-graphite hover:border-accent hover:text-accent-dark",
+                  : "border-ink/10 bg-paper text-graphite hover:border-accent hover:text-accent-dark",
               )}
             >
               {category}
@@ -114,7 +114,7 @@ export function DepartmentCategoryTabs({
                 "flex w-full items-center justify-between rounded-[var(--radius-card)] border px-4 py-3 text-start text-sm font-medium transition-colors",
                 isActive
                   ? "border-accent bg-accent-tint text-accent-dark"
-                  : "border-ink/10 bg-white text-graphite",
+                  : "border-ink/10 bg-paper text-graphite",
               )}
             >
               <span>{category}</span>

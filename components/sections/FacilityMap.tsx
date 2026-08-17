@@ -100,7 +100,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
                   value={filterQuery}
                   onChange={(event) => setFilterQuery(event.target.value)}
                   placeholder={t("filterPlaceholder")}
-                  className="min-h-12 flex-1 rounded-full border border-ink/10 bg-white px-5 text-sm text-ink placeholder:text-graphite/60 outline-none focus:border-accent"
+                  className="min-h-12 flex-1 rounded-full border border-ink/10 bg-paper px-5 text-sm text-ink placeholder:text-graphite/60 outline-none focus:border-accent"
                 />
                 <div className="flex gap-3">
                   <Button type="submit" disabled={isSearching}>
@@ -118,7 +118,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
           ) : null}
 
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <div className="relative overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-sm">
+            <div className="relative overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper shadow-sm">
               <div className="relative aspect-[950/620] w-full">
                 <Image
                   src={FACILITY_MAP_BACKGROUND}
@@ -160,7 +160,7 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
               {selectedFacility ? (
                 <FacilityCard facility={selectedFacility} variant="popover" />
               ) : (
-                <div className="rounded-[var(--radius-card-lg)] border border-ink/8 bg-white p-8 text-sm text-graphite shadow-sm">
+                <div className="rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper p-8 text-sm text-graphite shadow-sm">
                   {t("emptySelection")}
                 </div>
               )}

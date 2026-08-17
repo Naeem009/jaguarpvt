@@ -151,7 +151,7 @@ export function CapabilityMatcher({ className }: { className?: string }) {
 
   if (result) {
     return (
-      <section className={cn("bg-mist py-16 md:py-24", className)}>
+      <section className={cn("bg-paper py-16 md:py-24", className)}>
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Card className="mx-auto max-w-3xl">
             <SectionHeading
@@ -182,7 +182,7 @@ export function CapabilityMatcher({ className }: { className?: string }) {
   }
 
   return (
-    <section className={cn("bg-mist py-16 md:py-24", className)}>
+    <section className={cn("bg-paper py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow={t("heading.eyebrow")}
@@ -308,8 +308,8 @@ function OptionGrid({
           className={cn(
             "rounded-[var(--radius-card)] border px-4 py-4 text-start text-sm transition-colors",
             selected === option.value
-              ? "border-tech bg-tech-tint text-tech"
-              : "border-ink/10 bg-white text-graphite hover:border-tech",
+              ? "border-tech bg-paper text-tech"
+              : "border-ink/10 bg-paper text-graphite hover:border-tech",
           )}
         >
           {option.label}
@@ -340,8 +340,8 @@ function MultiOptionGrid({
             className={cn(
               "rounded-[var(--radius-card)] border px-4 py-4 text-start text-sm transition-colors",
               isSelected
-                ? "border-tech bg-tech-tint text-tech"
-                : "border-ink/10 bg-white text-graphite hover:border-tech",
+                ? "border-tech bg-paper text-tech"
+                : "border-ink/10 bg-paper text-graphite hover:border-tech",
             )}
           >
             {option.label}

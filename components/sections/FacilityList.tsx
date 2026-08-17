@@ -38,7 +38,7 @@ export function FacilityList({
         />
 
         {filteredFacilities.length === 0 ? (
-          <p className="rounded-[var(--radius-card-lg)] border border-ink/8 bg-white p-8 text-sm text-graphite">
+          <p className="rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper p-8 text-sm text-graphite">
             {t("empty")}
           </p>
         ) : (

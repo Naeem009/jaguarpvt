@@ -47,7 +47,7 @@ export default async function CareersPage({ params }: PageProps) {
         media={heroVideoMedia("/images/careers/hero.jpg", t("hero.alt"), "careers")}
       />
 
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionHeading
             eyebrow={t("culture.eyebrow")}

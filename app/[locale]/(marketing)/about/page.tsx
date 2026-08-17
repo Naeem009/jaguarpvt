@@ -44,7 +44,7 @@ export default async function AboutPage({ params }: PageProps) {
         media={heroVideoMedia("/images/about/hero.jpg", t("hero.alt"), "manufacturing")}
       />
 
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-paper py-16 md:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-6">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 shadow-[var(--shadow-card)]">
             <Image
@@ -79,7 +79,7 @@ export default async function AboutPage({ params }: PageProps) {
         }))}
       />
 
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionHeading
             eyebrow={t("leadership.eyebrow")}
@@ -90,7 +90,7 @@ export default async function AboutPage({ params }: PageProps) {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {leaders.map((leader, index) => (
               <Card key={`${leader.name}-${index}`} className="overflow-hidden p-0">
-                <div className="relative aspect-[4/5] bg-mist">
+                <div className="relative aspect-[4/5] bg-paper">
                   <Image
                     src={leaderImages[index]}
                     alt={leader.alt}

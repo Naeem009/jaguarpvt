@@ -19,7 +19,7 @@ export function DepartmentCard({ department, className }: DepartmentCardProps) {
 
   return (
     <Card className={cn("overflow-hidden p-0", className)}>
-      <div className="relative aspect-[4/3] bg-mist">
+      <div className="relative aspect-[4/3] bg-paper">
         <Image
           src={imageSrc}
           alt={department.name}

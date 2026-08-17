@@ -30,7 +30,7 @@ export async function CatalogueEmbed({
   const hasFile = !emptyState && catalogueExists(fileUrl);
 
   return (
-    <section className={cn("bg-white py-16 md:py-24", className)}>
+    <section className={cn("bg-paper py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Card className="mx-auto max-w-4xl shadow-[var(--shadow-card-hover)]">
           <SectionHeading
@@ -62,7 +62,7 @@ export async function CatalogueEmbed({
             </>
           ) : (
             <div className="rounded-[var(--radius-card-lg)] border border-dashed border-ink/15 bg-paper px-6 py-16 text-center">
-              <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-mist text-2xl text-graphite">
+              <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-paper text-2xl text-graphite">
                 📄
               </div>
               <h3 className="font-display text-xl font-semibold text-ink">{t("comingSoonTitle")}</h3>

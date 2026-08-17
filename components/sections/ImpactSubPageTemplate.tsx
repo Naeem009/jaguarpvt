@@ -64,7 +64,7 @@ export async function ImpactSubPageTemplate({
       {blocks.map((block, index) => (
         <section
           key={block.title}
-          className={index % 2 === 0 ? "bg-white py-16 md:py-24" : "bg-paper py-16 md:py-24"}
+          className="bg-paper py-16 md:py-24"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-6">
             {block.image ? (

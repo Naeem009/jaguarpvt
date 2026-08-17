@@ -9,10 +9,10 @@ export type CardProps = HTMLAttributes<HTMLDivElement> & {
 };
 
 const variantStyles: Record<CardVariant, string> = {
-  default: "border border-ink/8 bg-white shadow-[var(--shadow-card)]",
-  stat: "border border-ink/8 bg-white p-8 shadow-[var(--shadow-card)]",
+  default: "border border-ink/8 bg-paper shadow-[var(--shadow-card)]",
+  stat: "border border-ink/8 bg-paper p-8 shadow-[var(--shadow-card)]",
   interactive:
-    "border border-ink/8 bg-white shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-card-hover)]",
+    "border border-ink/8 bg-paper shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-card-hover)]",
 };
 
 export function Card({

@@ -57,7 +57,7 @@ function ComparisonBar({
             <span>{baselineLabel}</span>
             <span>{formatter(conventionalValue)}</span>
           </div>
-          <div className="h-3 overflow-hidden rounded-full bg-mist">
+          <div className="h-3 overflow-hidden rounded-full bg-paper">
             <motion.div
               className="h-full rounded-full bg-graphite/40"
               initial={{ width: 0 }}
@@ -71,7 +71,7 @@ function ComparisonBar({
             <span>{companyLabel}</span>
             <span>{formatter(companyValue)}</span>
           </div>
-          <div className="h-3 overflow-hidden rounded-full bg-mist">
+          <div className="h-3 overflow-hidden rounded-full bg-paper">
             <motion.div
               className="h-full rounded-full bg-tech"
               initial={{ width: 0 }}
@@ -139,7 +139,7 @@ export function SustainabilityEstimator({ className }: { className?: string }) {
   const activeResult = result ?? preview;
 
   return (
-    <section className={cn("bg-tech-tint py-16 md:py-24", className)}>
+    <section className={cn("bg-paper py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow={t("heading.eyebrow")}
@@ -232,7 +232,7 @@ function FieldSelect({
       <select
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="w-full rounded-[var(--radius-card)] border border-ink/10 bg-white px-4 py-3 text-sm text-ink outline-none focus:border-tech"
+        className="w-full rounded-[var(--radius-card)] border border-ink/10 bg-paper px-4 py-3 text-sm text-ink outline-none focus:border-tech"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>

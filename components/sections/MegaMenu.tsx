@@ -115,21 +115,21 @@ export function MegaMenu({
         )}
         style={{ transform: panelOffset ? `translateX(${panelOffset}px)` : undefined }}
       >
-        <div className="w-[min(calc(100vw-2rem),720px)] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-[var(--shadow-card-hover)]">
+        <div className="w-[min(calc(100vw-2rem),720px)] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper shadow-[var(--shadow-card-hover)]">
           <div className="grid gap-1 p-2 sm:grid-cols-2">
             {items.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="grid grid-cols-[96px_minmax(0,1fr)] gap-4 rounded-[var(--radius-card)] p-3 transition-colors hover:bg-mist"
+                className="grid grid-cols-[96px_minmax(0,1fr)] gap-4 rounded-[var(--radius-card)] p-3 transition-colors hover:bg-ink/5"
               >
                 {item.image ? (
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] bg-mist">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] bg-paper">
                     <Image src={item.image} alt="" fill sizes="96px" className="object-cover" />
                   </div>
                 ) : (
-                  <div className="aspect-[4/3] rounded-[var(--radius-card)] bg-mist" />
+                  <div className="aspect-[4/3] rounded-[var(--radius-card)] bg-paper" />
                 )}
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">

@@ -97,7 +97,7 @@ export function LanguageSwitcher({
       {open ? (
         <ul
           role="listbox"
-          className="absolute end-0 top-full z-50 mt-2 min-w-44 overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white py-2 shadow-[var(--shadow-card-hover)]"
+          className="absolute end-0 top-full z-50 mt-2 min-w-44 overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper py-2 shadow-[var(--shadow-card-hover)]"
         >
           {localeOptions.map((option) => (
             <li key={option.code}>
@@ -107,7 +107,7 @@ export function LanguageSwitcher({
                 aria-selected={option.code === locale}
                 onClick={() => switchLocale(option.code as Locale)}
                 className={cn(
-                  "flex w-full px-4 py-2 text-start text-sm transition-colors hover:bg-mist",
+                  "flex w-full px-4 py-2 text-start text-sm transition-colors hover:bg-ink/5",
                   option.code === locale ? "font-medium text-accent-dark" : "text-graphite",
                 )}
               >

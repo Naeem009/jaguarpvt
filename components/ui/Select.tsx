@@ -30,7 +30,7 @@ export function Select({
       <select
         id={selectId}
         className={cn(
-          "w-full rounded-[var(--radius-card)] border border-ink/10 bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-accent",
+          "w-full rounded-[var(--radius-card)] border border-ink/10 bg-paper px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-accent",
           error && "border-error",
           className,
         )}

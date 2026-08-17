@@ -17,7 +17,7 @@ export async function TrustStrip({ title, className }: TrustStripProps) {
     return null;
   }
   return (
-    <section className={cn("border-y border-ink/8 bg-mist py-16 md:py-20", className)}>
+    <section className={cn("border-y border-ink/8 bg-paper py-16 md:py-20", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow={t("eyebrow")}

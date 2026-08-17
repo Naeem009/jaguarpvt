@@ -18,7 +18,7 @@ export async function SustainabilityCallout({
   const t = await getTranslations("sections.sustainabilityCallout");
 
   return (
-    <section className={cn("bg-mist py-16 md:py-24", className)}>
+    <section className={cn("bg-paper py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="max-w-3xl space-y-4">
           <SectionHeading eyebrow={eyebrow ?? t("eyebrow")} title={title} />

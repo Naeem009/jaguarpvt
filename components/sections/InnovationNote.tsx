@@ -12,7 +12,7 @@ export async function InnovationNote({ title, body, className }: InnovationNoteP
   const t = await getTranslations("sections.innovation");
 
   return (
-    <section className={cn("border-y border-ink/8 bg-white py-16 md:py-24", className)}>
+    <section className={cn("border-y border-ink/8 bg-paper py-16 md:py-24", className)}>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="max-w-3xl space-y-4">
           <SectionHeading eyebrow={t("eyebrow")} title={title} />

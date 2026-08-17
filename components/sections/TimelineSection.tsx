@@ -46,7 +46,7 @@ export async function TimelineSection({
               )}
             >
               {step.image ? (
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-white shadow-[var(--shadow-card)]">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 bg-paper shadow-[var(--shadow-card)]">
                   <Image
                     src={step.image}
                     alt={step.title}
