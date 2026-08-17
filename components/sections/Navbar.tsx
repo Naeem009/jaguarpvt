@@ -2,17 +2,24 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MegaMenu } from "./MegaMenu";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
+import { cn } from "@/lib/utils";
 
-const LOGO_SRC = "/logos/logo-dark.svg";
+const LOGO_DARK_SRC = "/logos/logo-dark.svg";
+const LOGO_LIGHT_SRC = "/logos/logo-light.svg";
 
-const navLinkClass = "text-sm font-medium text-ink transition-colors hover:text-accent";
+function navLinkClass(isOverlayNav: boolean) {
+  return cn(
+    "text-sm font-medium transition-colors",
+    isOverlayNav ? "text-white hover:text-white/80" : "text-ink hover:text-accent",
+  );
+}
 
 export function Navbar() {
   const t = useTranslations("nav");
@@ -21,10 +28,15 @@ export function Navbar() {
   const tNavigation = useTranslations("navigation");
   const pathname = usePathname();
   const previousPathname = useRef(pathname);
+  const headerRef = useRef<HTMLElement>(null);
   const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileImpactOpen, setMobileImpactOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const isHome = pathname === "/" || pathname === "";
+  const isOverlayNav = isHome && !scrolled;
 
   const productsMegaMenuItems = [
     {
@@ -58,6 +70,64 @@ export function Navbar() {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useLayoutEffect(() => {
+    if (!isHome) {
+      setScrolled(false);
+      return;
+    }
+
+    let raf = 0;
+
+    function updateNavState() {
+      const navHeight = headerRef.current?.offsetHeight ?? 72;
+      const hero = document.getElementById("home-hero");
+
+      if (hero) {
+        const heroRect = hero.getBoundingClientRect();
+        const scrollTop =
+          window.scrollY ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop ||
+          0;
+        // Solid once the hero moves up (navbar no longer over hero media) or user has scrolled meaningfully.
+        setScrolled(heroRect.top < -16 || scrollTop > 96 || heroRect.bottom <= navHeight);
+        return;
+      }
+
+      const scrollTop =
+        window.scrollY ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
+      setScrolled(scrollTop > navHeight);
+    }
+
+    function scheduleUpdate() {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(updateNavState);
+    }
+
+    scheduleUpdate();
+
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    document.addEventListener("scroll", scheduleUpdate, { passive: true, capture: true });
+    window.addEventListener("resize", scheduleUpdate, { passive: true });
+
+    const hero = document.getElementById("home-hero");
+    const resizeObserver = hero ? new ResizeObserver(scheduleUpdate) : null;
+    if (hero && resizeObserver) {
+      resizeObserver.observe(hero);
+    }
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", scheduleUpdate);
+      document.removeEventListener("scroll", scheduleUpdate, { capture: true });
+      window.removeEventListener("resize", scheduleUpdate);
+      resizeObserver?.disconnect();
+    };
+  }, [isHome, pathname]);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -105,7 +175,7 @@ export function Navbar() {
                   onClick={closeMobileMenu}
                 >
                   <Image
-                    src={LOGO_SRC}
+                    src={LOGO_DARK_SRC}
                     alt="Jaguar (Pvt) Ltd."
                     fill
                     sizes="(max-width: 1024px) 340px, 340px"
@@ -208,14 +278,23 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-ink/8 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/75">
+      <header
+        ref={headerRef}
+        className={cn(
+          "top-0 z-50 w-full transition-[background-color,border-color,backdrop-filter] duration-300",
+          isHome ? "fixed" : "sticky",
+          isOverlayNav
+            ? "border-b border-transparent bg-transparent"
+            : "border-b border-ink/8 bg-white/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/90",
+        )}
+      >
         <div className="flex w-full items-center justify-between gap-2 py-1.5 pe-4 ps-0 md:py-2 md:pe-6">
           <Link
             href="/"
             className="relative block h-[3.75rem] w-[min(88vw,340px)] shrink-0 sm:h-[4rem] sm:w-[360px] lg:h-[4.25rem] lg:w-[440px]"
           >
             <Image
-              src={LOGO_SRC}
+              src={isOverlayNav ? LOGO_LIGHT_SRC : LOGO_DARK_SRC}
               alt="Jaguar (Pvt) Ltd."
               fill
               sizes="(max-width: 640px) 340px, (max-width: 1024px) 360px, 440px"
@@ -225,31 +304,37 @@ export function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
-            <Link href="/" className={navLinkClass}>
+            <Link href="/" className={navLinkClass(isOverlayNav)}>
               {t("home")}
             </Link>
-            <Link href="/about" className={navLinkClass}>
+            <Link href="/about" className={navLinkClass(isOverlayNav)}>
               {t("about")}
             </Link>
-            <MegaMenu label={t("products")} items={productsMegaMenuItems} />
+            <MegaMenu label={t("products")} items={productsMegaMenuItems} inverted={isOverlayNav} />
             <MegaMenu
               label={t("ourImpact")}
               items={impactMegaMenuItems}
               footerAction={{ label: t("downloadEsg"), href: ESG_REPORT_URL }}
+              inverted={isOverlayNav}
             />
-            <Link href="/facility" className={navLinkClass}>
+            <Link href="/facility" className={navLinkClass(isOverlayNav)}>
               {t("facility")}
             </Link>
-            <Link href="/careers" className={navLinkClass}>
+            <Link href="/careers" className={navLinkClass(isOverlayNav)}>
               {t("careers")}
             </Link>
-            <LanguageSwitcher />
+            <LanguageSwitcher inverted={isOverlayNav} />
             <Button href="/contact">{tCommon("contact")}</Button>
           </nav>
 
           <button
             type="button"
-            className="inline-flex size-10 shrink-0 touch-manipulation items-center justify-center rounded-full border border-ink/10 bg-white text-ink lg:hidden"
+            className={cn(
+              "inline-flex size-10 shrink-0 touch-manipulation items-center justify-center rounded-full border lg:hidden",
+              isOverlayNav
+                ? "border-white/20 bg-white/10 text-white"
+                : "border-ink/10 bg-white text-ink",
+            )}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
             onPointerUp={(event) => {

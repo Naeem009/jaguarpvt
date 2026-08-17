@@ -32,9 +32,10 @@ export function Hero({
 
   return (
     <section
+      id={isHome ? "home-hero" : undefined}
       className={cn(
         "relative isolate flex items-end overflow-hidden bg-charcoal text-white",
-        isHome ? "min-h-screen" : "min-h-[60vh]",
+        isHome ? "min-h-dvh" : "min-h-[60vh]",
       )}
     >
       <div className="absolute inset-0">
@@ -64,8 +65,8 @@ export function Hero({
       </div>
 
       <div className="relative mx-auto w-full max-w-7xl px-4 pb-24 pt-32 md:px-6 md:pb-32 md:pt-40">
-        <div className="max-w-3xl space-y-6">
-          <h1 className="font-display text-4xl font-semibold tracking-[-0.02em] md:text-6xl lg:text-7xl">
+        <div className="max-w-3xl space-y-5">
+          <h1 className="font-display text-3xl font-semibold tracking-[-0.02em] md:text-4xl lg:text-5xl">
             {headline}
           </h1>
           <p className="font-display max-w-2xl text-lg text-white/80 md:text-xl">{subhead}</p>

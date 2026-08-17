@@ -19,6 +19,7 @@ export function MegaMenu({
   label,
   items,
   footerAction,
+  inverted = false,
 }: {
   label: string;
   items: MegaMenuItem[];
@@ -98,7 +99,10 @@ export function MegaMenu({
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex min-h-10 items-center gap-1 text-sm font-medium text-ink transition-colors hover:text-accent"
+        className={cn(
+          "inline-flex min-h-10 items-center gap-1 text-sm font-medium transition-colors",
+          inverted ? "text-white hover:text-white/80" : "text-ink hover:text-accent",
+        )}
       >
         {label}
         <span aria-hidden>▾</span>
