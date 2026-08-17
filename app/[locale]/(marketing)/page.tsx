@@ -44,10 +44,10 @@ export default async function HomePage({ params }: PageProps) {
 
       <StatBar
         stats={[
-          { value: 0, placeholder: "[6]", label: t("stats.facilities") },
-          { value: 0, placeholder: "[5]", label: t("stats.countries") },
-          { value: 0, placeholder: "[900]+", label: t("stats.employees") },
-          { value: 0, placeholder: "[40]", label: t("stats.yearsInOperation") },
+          { value: 0, placeholder: "6", label: t("stats.facilities") },
+          { value: 0, placeholder: "5", label: t("stats.countries") },
+          { value: 0, placeholder: "900+", label: t("stats.employees") },
+          { value: 0, placeholder: "40", label: t("stats.yearsInOperation") },
         ]}
       />
 
@@ -58,9 +58,9 @@ export default async function HomePage({ params }: PageProps) {
       <StatBar
         variant="impact"
         stats={[
-          { value: 0, placeholder: "[X]M", label: t("impactStats.waterSaved") },
-          { value: 0, placeholder: "[X]%", label: t("impactStats.renewableEnergy") },
-          { value: 0, placeholder: "[X]", label: t("impactStats.certifiedFacilities") },
+          { value: 0, placeholder: "500 M", label: t("impactStats.waterSaved") },
+          { value: 0, placeholder: "25 %", label: t("impactStats.renewableEnergy") },
+          { value: 0, placeholder: "04", label: t("impactStats.certifiedFacilities") },
         ]}
         footerLink={{ href: "/our-impact", label: t("impactStats.exploreImpact") }}
       />

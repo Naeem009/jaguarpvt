@@ -32,10 +32,7 @@ export function StatBar({
 
   return (
     <section
-      className={cn(
-        "relative overflow-hidden bg-paper py-16 text-ink md:py-24",
-        className,
-      )}
+      className={cn("relative overflow-hidden bg-paper py-12 text-ink md:py-16", className)}
     >
       {backgroundImage ? (
         <>
@@ -54,7 +51,7 @@ export function StatBar({
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div
           className={cn(
-            "grid gap-10",
+            "grid gap-8",
             stats.length === 4
               ? "sm:grid-cols-2 lg:grid-cols-4"
               : "sm:grid-cols-2 lg:grid-cols-3",
@@ -67,13 +64,17 @@ export function StatBar({
               suffix={stat.suffix}
               placeholder={stat.placeholder}
               label={stat.label}
-              className={isImpact ? "[&_p:first-child]:!text-accent-dark [&_p:last-child]:!text-graphite" : undefined}
+              className={
+                isImpact
+                  ? "[&_p:first-child]:!text-accent-dark [&_p:last-child]:!text-graphite"
+                  : undefined
+              }
             />
           ))}
         </div>
 
         {footerLink ? (
-          <div className="mt-12 flex justify-center md:justify-start">
+          <div className="mt-10 flex justify-center md:justify-start">
             <Button href={footerLink.href} variant="secondary" className="shrink-0">
               {footerLink.label}
             </Button>

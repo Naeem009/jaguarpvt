@@ -63,15 +63,13 @@ export function StatNumber({
   }, [isInView, placeholder, shouldAnimate, value]);
 
   return (
-    <div ref={ref} className={cn("space-y-2", className)}>
-      <p className="font-mono text-4xl font-bold tracking-tight text-ink md:text-6xl">
+    <div ref={ref} className={cn("space-y-1.5", className)}>
+      <p className="font-mono text-2xl font-bold tracking-tight text-ink md:text-3xl">
         {placeholder ?? formatValue(animatedValue)}
         {!placeholder && suffix ? <span>{suffix}</span> : null}
       </p>
       {label ? (
-        <p className="text-sm font-medium uppercase tracking-[0.06em] text-graphite">
-          {label}
-        </p>
+        <p className="text-xs font-medium uppercase tracking-[0.06em] text-graphite">{label}</p>
       ) : null}
     </div>
   );
