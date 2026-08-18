@@ -11,6 +11,26 @@ export const metadata = {
     description:
       "Learn about Jaguar (Pvt) Ltd.—our history, leadership, manufacturing footprint, and long-term partnerships with international apparel brands.",
   },
+  atAGlance: {
+    title: "Jaguar at a Glance",
+    description:
+      "Company overview of Jaguar (Pvt) Ltd.—six facilities across five countries, leadership, history, and integrated apparel manufacturing at scale.",
+  },
+  aboutStrategy: {
+    title: "Our Strategy",
+    description:
+      "Jaguar strategic priorities—category depth, geographic optionality, and compliance-led growth for long-term brand partnerships.",
+  },
+  aboutMission: {
+    title: "Mission",
+    description:
+      "Jaguar mission and values—manufacturing partnerships built on proof, integration, and long-term program delivery for global brands.",
+  },
+  aboutCompanyPolicy: {
+    title: "Company Policy",
+    description:
+      "Jaguar company policies—ethics, labor standards, environmental responsibility, health and safety, and governance commitments.",
+  },
   careers: {
     title: "Careers",
     description:

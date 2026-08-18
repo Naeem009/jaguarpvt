@@ -8,6 +8,22 @@ export const metadata = {
     title: "À propos",
     description: "Présentation de l'entreprise, historique, direction et empreinte de manufacture.",
   },
+  atAGlance: {
+    title: "Jaguar en un coup d'œil",
+    description: "Vue d'ensemble — six sites dans cinq pays, direction, historique et manufacture intégrée.",
+  },
+  aboutStrategy: {
+    title: "Notre stratégie",
+    description: "Priorités stratégiques — profondeur de catégories, option géographique et croissance conforme.",
+  },
+  aboutMission: {
+    title: "Mission",
+    description: "Mission et valeurs — partenariats de manufacture fondés sur la preuve et la durabilité.",
+  },
+  aboutCompanyPolicy: {
+    title: "Politique d'entreprise",
+    description: "Politiques d'éthique, de travail, environnementales, santé-sécurité et gouvernance.",
+  },
   careers: {
     title: "Carrières",
     description: "Explorez les opportunités en manufacture, qualité, durabilité et fonctions commerciales.",

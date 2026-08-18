@@ -51,6 +51,26 @@ export const sections = {
         subhead: "See how integrated operations support long-term brand partnerships.",
         videoAlt: "Apparel manufacturing operations overview",
       },
+      atAGlance: {
+        title: "Scale across categories and regions",
+        subhead: "Integrated manufacturing across wovens, knits, and baby wear.",
+        videoAlt: "Global apparel manufacturing footprint",
+      },
+      aboutStrategy: {
+        title: "Strategy in motion",
+        subhead: "Capacity, compliance, and partnerships aligned to long-term growth.",
+        videoAlt: "Strategic manufacturing operations",
+      },
+      aboutMission: {
+        title: "Partnership in practice",
+        subhead: "Mission-led manufacturing for global brand programs.",
+        videoAlt: "Team collaboration in manufacturing",
+      },
+      aboutCompanyPolicy: {
+        title: "Standards that support every program",
+        subhead: "Ethics, compliance, and governance across our footprint.",
+        videoAlt: "Corporate compliance and policy standards",
+      },
       careers: {
         title: "Grow with our teams",
         subhead: "Collaboration across production, quality, and commercial functions.",

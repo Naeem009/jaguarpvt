@@ -6,6 +6,10 @@ import { pageOgImages } from "@/lib/seo/config";
 export const PAGE_VIDEO_KEYS: Record<PageMetadataKey, HeroVideoKey> = {
   home: "home",
   about: "manufacturing",
+  atAGlance: "manufacturing",
+  aboutStrategy: "manufacturing",
+  aboutMission: "careers",
+  aboutCompanyPolicy: "manufacturing",
   careers: "careers",
   contact: "contact",
   facility: "manufacturing",

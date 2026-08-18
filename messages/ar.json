@@ -11,6 +11,7 @@
   "nav": {
     "home": "الرئيسية",
     "about": "من نحن",
+    "aboutOverview": "نظرة عامة",
     "products": "المنتجات",
     "ourImpact": "أثرنا",
     "facility": "المنشآت",
@@ -26,6 +27,10 @@
   },
   "footer": {
     "company": "الشركة",
+    "atAGlance": "جاغوار في لمحة",
+    "strategy": "استراتيجيتنا",
+    "mission": "المهمة",
+    "companyPolicy": "سياسة الشركة",
     "products": "المنتجات",
     "ourImpact": "أثرنا",
     "connect": "تواصل",

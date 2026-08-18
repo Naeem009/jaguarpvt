@@ -11,6 +11,7 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
+    "aboutOverview": "Vue d'ensemble",
     "products": "Produits",
     "ourImpact": "Notre impact",
     "facility": "Sites",
@@ -26,6 +27,10 @@
   },
   "footer": {
     "company": "Entreprise",
+    "atAGlance": "Jaguar en un coup d'œil",
+    "strategy": "Notre stratégie",
+    "mission": "Mission",
+    "companyPolicy": "Politique d'entreprise",
     "products": "Produits",
     "ourImpact": "Notre impact",
     "connect": "Contact",

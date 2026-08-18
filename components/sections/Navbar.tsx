@@ -32,6 +32,7 @@ export function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileImpactOpen, setMobileImpactOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -59,6 +60,28 @@ export function Navbar() {
       badge: tProducts("catalogueBadge"),
     },
   ];
+
+  const aboutMegaMenuItems = (
+    tNavigation.raw("aboutMenu") as Array<{ title: string; description: string }>
+  ).map((item, index) => ({
+    ...item,
+    href: (
+      [
+        "/about/at-a-glance",
+        "/about/strategy",
+        "/about/mission",
+        "/about/company-policy",
+      ] as const
+    )[index],
+    image: (
+      [
+        "/images/about/at-a-glance/hero.jpg",
+        "/images/about/strategy/hero.jpg",
+        "/images/about/mission/hero.jpg",
+        "/images/about/company-policy/hero.jpg",
+      ] as const
+    )[index],
+  }));
 
   const impactMegaMenuItems = (
     tNavigation.raw("impactMenu") as Array<{ title: string; description: string }>
@@ -187,9 +210,41 @@ export function Navbar() {
                   <Link href="/" className="block text-base font-medium text-ink" onClick={closeMobileMenu}>
                     {t("home")}
                   </Link>
-                  <Link href="/about" className="block text-base font-medium text-ink" onClick={closeMobileMenu}>
-                    {t("about")}
-                  </Link>
+                  <div>
+                    <button
+                      type="button"
+                      className="flex w-full items-center justify-between text-base font-medium text-ink"
+                      aria-expanded={mobileAboutOpen}
+                      onClick={() => setMobileAboutOpen((value) => !value)}
+                    >
+                      {t("about")}
+                      <span aria-hidden>{mobileAboutOpen ? "−" : "+"}</span>
+                    </button>
+                    {mobileAboutOpen ? (
+                      <ul className="mt-3 space-y-2 ps-4">
+                        <li>
+                          <Link
+                            href="/about"
+                            className="block text-sm text-graphite"
+                            onClick={closeMobileMenu}
+                          >
+                            {t("aboutOverview")}
+                          </Link>
+                        </li>
+                        {aboutMegaMenuItems.map((item) => (
+                          <li key={item.href}>
+                            <Link
+                              href={item.href}
+                              className="block text-sm text-graphite"
+                              onClick={closeMobileMenu}
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
 
                   <div>
                     <button
@@ -307,9 +362,7 @@ export function Navbar() {
             <Link href="/" className={navLinkClass(isOverlayNav)}>
               {t("home")}
             </Link>
-            <Link href="/about" className={navLinkClass(isOverlayNav)}>
-              {t("about")}
-            </Link>
+            <MegaMenu label={t("about")} items={aboutMegaMenuItems} inverted={isOverlayNav} />
             <MegaMenu label={t("products")} items={productsMegaMenuItems} inverted={isOverlayNav} />
             <MegaMenu
               label={t("ourImpact")}

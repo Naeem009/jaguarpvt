@@ -8,6 +8,22 @@ export const metadata = {
     title: "Über uns",
     description: "Unternehmensüberblick, Geschichte, Führung und Fertigungsstandorte.",
   },
+  atAGlance: {
+    title: "Jaguar auf einen Blick",
+    description: "Unternehmensüberblick — sechs Standorte in fünf Ländern, Führung, Geschichte und integrierte Fertigung.",
+  },
+  aboutStrategy: {
+    title: "Unsere Strategie",
+    description: "Strategische Prioritäten — Kategorientiefe, geografische Optionen und compliance-gestütztes Wachstum.",
+  },
+  aboutMission: {
+    title: "Mission",
+    description: "Mission und Werte — Fertigungspartnerschaften auf Basis von Nachweis, Integration und Langfristigkeit.",
+  },
+  aboutCompanyPolicy: {
+    title: "Unternehmensrichtlinien",
+    description: "Richtlinien zu Ethik, Arbeitsstandards, Umwelt, Gesundheit und Sicherheit sowie Governance.",
+  },
   careers: {
     title: "Karriere",
     description: "Entdecken Sie Möglichkeiten in Fertigung, Qualität, Nachhaltigkeit und Commercial Functions.",

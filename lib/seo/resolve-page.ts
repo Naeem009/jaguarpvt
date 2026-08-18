@@ -38,6 +38,26 @@ export function getBreadcrumbsForPage(page: PageMetadataKey): Array<{ name: stri
       { name: "Home", path: "/" },
       { name: "About", path: "/about" },
     ],
+    atAGlance: [
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Jaguar at a Glance", path: "/about/at-a-glance" },
+    ],
+    aboutStrategy: [
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Our Strategy", path: "/about/strategy" },
+    ],
+    aboutMission: [
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Mission", path: "/about/mission" },
+    ],
+    aboutCompanyPolicy: [
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Company Policy", path: "/about/company-policy" },
+    ],
     careers: [
       { name: "Home", path: "/" },
       { name: "Careers", path: "/careers" },

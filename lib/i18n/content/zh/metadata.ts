@@ -8,6 +8,22 @@ export const metadata = {
     title: "关于我们",
     description: "公司概览、历史、领导团队及制造布局。",
   },
+  atAGlance: {
+    title: "捷豹概览",
+    description: "公司概览——五个国家六处工厂、领导力、历史与一体化制造能力。",
+  },
+  aboutStrategy: {
+    title: "我们的战略",
+    description: "战略重点——品类深度、地理布局与合规驱动的长期增长。",
+  },
+  aboutMission: {
+    title: "使命",
+    description: "使命与价值观——以实证、一体化和长期项目交付为核心的制造合作。",
+  },
+  aboutCompanyPolicy: {
+    title: "公司政策",
+    description: "道德、劳工、环境、健康与安全及治理政策。",
+  },
   careers: {
     title: "职业发展",
     description: "探索制造、质量、可持续发展及商务领域的机会。",

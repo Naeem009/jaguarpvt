@@ -51,6 +51,26 @@ export const sections = {
         subhead: "Cómo las operaciones integradas respaldan alianzas de largo plazo.",
         videoAlt: "Panorama de operaciones de manufactura textil",
       },
+      atAGlance: {
+        title: "Escala en categorías y regiones",
+        subhead: "Manufactura integrada en tejidos planos, punto y ropa para bebé.",
+        videoAlt: "Huella global de manufactura textil",
+      },
+      aboutStrategy: {
+        title: "Estrategia en acción",
+        subhead: "Capacidad, cumplimiento y alianzas para un crecimiento sostenido.",
+        videoAlt: "Operaciones de manufactura estratégica",
+      },
+      aboutMission: {
+        title: "Alianza en la práctica",
+        subhead: "Manufactura guiada por la misión para programas globales.",
+        videoAlt: "Colaboración en equipo en manufactura",
+      },
+      aboutCompanyPolicy: {
+        title: "Estándares que respaldan cada programa",
+        subhead: "Ética, cumplimiento y gobernanza en toda la red.",
+        videoAlt: "Estándares de cumplimiento y políticas",
+      },
       careers: {
         title: "Crece con nuestros equipos",
         subhead: "Colaboración entre producción, calidad y funciones comerciales.",

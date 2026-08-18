@@ -17,6 +17,10 @@ export function Footer({ className }: { className?: string }) {
       title: t("company"),
       links: [
         { label: tNav("about"), href: "/about" as const },
+        { label: t("atAGlance"), href: "/about/at-a-glance" as const },
+        { label: t("strategy"), href: "/about/strategy" as const },
+        { label: t("mission"), href: "/about/mission" as const },
+        { label: t("companyPolicy"), href: "/about/company-policy" as const },
         { label: tNav("careers"), href: "/careers" as const },
         { label: tNav("facility"), href: "/facility" as const },
       ],

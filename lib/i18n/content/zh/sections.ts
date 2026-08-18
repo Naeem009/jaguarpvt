@@ -51,6 +51,26 @@ export const sections = {
         subhead: "整合运营如何支撑长期品牌合作。",
         videoAlt: "服装制造运营概览",
       },
+      atAGlance: {
+        title: "跨品类与跨区域的规模",
+        subhead: "梭织、针织与婴童服一体化制造。",
+        videoAlt: "全球服装制造布局",
+      },
+      aboutStrategy: {
+        title: "战略在行动",
+        subhead: "产能、合规与合作伙伴关系驱动长期增长。",
+        videoAlt: "战略性制造运营",
+      },
+      aboutMission: {
+        title: "合作实践",
+        subhead: "以使命为导向的全球品牌项目制造。",
+        videoAlt: "制造团队协同",
+      },
+      aboutCompanyPolicy: {
+        title: "支撑每个项目的标准",
+        subhead: "覆盖全网络的道德、合规与治理。",
+        videoAlt: "合规与政策标准",
+      },
       careers: {
         title: "与团队共同成长",
         subhead: "生产、质量与商务团队协同协作。",

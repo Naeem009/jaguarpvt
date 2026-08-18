@@ -1,89 +1,50 @@
-export const aboutContent = {
-  hero: {
-    headline: "About",
-    subhead:
-      "A vertically integrated apparel manufacturer built on scale, compliance, and long-term partnerships with global brands.",
-    image: "/images/about/hero.jpg",
-    alt: "Modern apparel manufacturing facility exterior",
-  },
-  mission: {
-    eyebrow: "Mission",
-    title: "Manufacturing partnerships built on proof, not promises.",
-    body: "We integrate product development, manufacturing, and compliance under one system — so sourcing teams get clear answers on capability, certification scope, and delivery planning. Our role is to work inside your product development process, not just your purchase orders.",
-    image: "/images/about/mission-block.jpg",
-    alt: "Mission and manufacturing capability overview",
-  },
-  stats: [
-    { value: 0, placeholder: "[X]", label: "Facilities" },
-    { value: 0, placeholder: "[Y]", label: "Countries" },
-    { value: 0, placeholder: "[Z]+", label: "Employees" },
-    { value: 0, placeholder: "[N]", label: "Years in operation" },
-  ],
-  history: {
-    title: "Company history",
-    subhead: "From a single manufacturing operation to a multi-category, multi-region footprint — measured in facilities, not slogans.",
-    steps: [
-      {
-        title: "Foundation and first facilities",
-        description:
-          "Operations began with woven apparel production, establishing the integrated cutting, sewing, and finishing model still used across programs today.",
-        image: "/images/about/history-01.jpg",
-      },
-      {
-        title: "Regional expansion",
-        description:
-          "Knits and baby wear capabilities were added as buyer programs scaled — each category supported by dedicated process control and compliance systems.",
-        image: "/images/about/history-02.jpg",
-      },
-      {
-        title: "Global footprint today",
-        description:
-          "The current network spans [Y] countries with [X] facilities, serving global brands across wovens, knits, and baby wear.",
-        image: "/images/about/history-03.jpg",
-      },
+export type AboutContentBlock = {
+  title: string;
+  body: string;
+  image?: string;
+  imageAlt?: string;
+};
+
+export type AboutSubPageSlug = "at-a-glance" | "strategy" | "mission" | "company-policy";
+
+export const aboutSubPageImages: Record<
+  AboutSubPageSlug,
+  { hero: string; blocks: string[] }
+> = {
+  "at-a-glance": {
+    hero: "/images/about/at-a-glance/hero.jpg",
+    blocks: [
+      "/images/about/at-a-glance/global-footprint.jpg",
+      "/images/about/at-a-glance/operations.jpg",
     ],
   },
-  leadership: [
-    {
-      name: "Mr. Asim ul Haq",
-      title: "Chief Executive Officer",
-      image: "/images/about/leadership-01.png",
-      alt: "Mr. Asim ul Haq, Chief Executive Officer",
-    },
-    {
-      name: "Aleem Asim",
-      title: "Executive Director",
-      image: "/images/about/leadership-02.png",
-      alt: "Aleem Asim, Executive Director",
-    },
-    {
-      name: "Usama Asim",
-      title: "Executive Director",
-      image: "/images/about/leadership-03.png",
-      alt: "Usama Asim, Executive Director",
-    },
-  ],
-  awards: [
-    {
-      title: "[Industry recognition — e.g. sustainability excellence]",
-      year: "[Year]",
-      issuer: "[Issuing organization]",
-    },
-    {
-      title: "[Export / manufacturing excellence award]",
-      year: "[Year]",
-      issuer: "[Issuing organization]",
-    },
-    {
-      title: "[Workplace standards or compliance recognition]",
-      year: "[Year]",
-      issuer: "[Issuing organization]",
-    },
-  ],
-  cta: {
-    title: "Partner with a manufacturer built for long-term programs",
-    subhead: "Tell us what you're building. Our team responds to qualified inquiries with clear next steps.",
-    label: "Contact Us",
-    href: "/contact",
+  strategy: {
+    hero: "/images/about/strategy/hero.jpg",
+    blocks: ["/images/about/strategy/growth.jpg", "/images/about/strategy/innovation.jpg"],
+  },
+  mission: {
+    hero: "/images/about/mission/hero.jpg",
+    blocks: ["/images/about/mission/purpose.jpg", "/images/about/mission/partnership.jpg"],
+  },
+  "company-policy": {
+    hero: "/images/about/company-policy/hero.jpg",
+    blocks: [
+      "/images/about/company-policy/ethics.jpg",
+      "/images/about/company-policy/compliance.jpg",
+    ],
   },
 };
+
+export const aboutHubHeroImage = "/images/about/hero.jpg";
+
+export const aboutHistoryImages = [
+  "/images/about/history-01.jpg",
+  "/images/about/history-02.jpg",
+  "/images/about/history-03.jpg",
+];
+
+export const aboutLeadershipImages = [
+  "/images/about/leadership-01.png",
+  "/images/about/leadership-02.png",
+  "/images/about/leadership-03.png",
+];

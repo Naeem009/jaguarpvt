@@ -11,6 +11,7 @@
   "nav": {
     "home": "首页",
     "about": "关于我们",
+    "aboutOverview": "概览",
     "products": "产品",
     "ourImpact": "我们的影响",
     "facility": "工厂",
@@ -26,6 +27,10 @@
   },
   "footer": {
     "company": "公司",
+    "atAGlance": "捷豹概览",
+    "strategy": "我们的战略",
+    "mission": "使命",
+    "companyPolicy": "公司政策",
     "products": "产品",
     "ourImpact": "我们的影响",
     "connect": "联系",

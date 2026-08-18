@@ -1,3 +1,5 @@
+export { AboutSubPageTemplate } from "./AboutSubPageTemplate";
+export type { AboutSubPageTemplateProps } from "./AboutSubPageTemplate";
 export { AIChatWidget } from "./AIChatWidget";
 export type { AIChatWidgetProps, ExamplePrompt } from "./AIChatWidget";
 export { CommandSearch } from "./CommandSearch";

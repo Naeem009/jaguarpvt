@@ -6,6 +6,10 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jaguarpvt.co
 export const marketingRoutes = [
   "",
   "/about",
+  "/about/at-a-glance",
+  "/about/strategy",
+  "/about/mission",
+  "/about/company-policy",
   "/careers",
   "/contact",
   "/facility",
@@ -22,6 +26,10 @@ export const marketingRoutes = [
 export type PageMetadataKey =
   | "home"
   | "about"
+  | "atAGlance"
+  | "aboutStrategy"
+  | "aboutMission"
+  | "aboutCompanyPolicy"
   | "careers"
   | "contact"
   | "facility"
@@ -57,6 +65,34 @@ export const pageMetadata: Record<
     description:
       "Learn about Jaguar (Pvt) Ltd.—our history, leadership, manufacturing footprint, and long-term partnerships with international apparel brands.",
     keywords: ["about jaguar apparel", "garment company history", "textile manufacturer profile"],
+  },
+  atAGlance: {
+    path: "/about/at-a-glance",
+    title: "Jaguar at a Glance",
+    description:
+      "Company overview of Jaguar (Pvt) Ltd.—six facilities across five countries, leadership, history, and integrated apparel manufacturing at scale.",
+    keywords: ["jaguar apparel overview", "garment manufacturer footprint", "textile company profile"],
+  },
+  aboutStrategy: {
+    path: "/about/strategy",
+    title: "Our Strategy",
+    description:
+      "Jaguar strategic priorities—category depth, geographic optionality, and compliance-led growth for long-term brand partnerships.",
+    keywords: ["apparel manufacturing strategy", "textile growth strategy", "garment industry strategy"],
+  },
+  aboutMission: {
+    path: "/about/mission",
+    title: "Mission",
+    description:
+      "Jaguar mission and values—manufacturing partnerships built on proof, integration, and long-term program delivery for global brands.",
+    keywords: ["jaguar mission", "apparel manufacturer values", "ethical manufacturing mission"],
+  },
+  aboutCompanyPolicy: {
+    path: "/about/company-policy",
+    title: "Company Policy",
+    description:
+      "Jaguar company policies—ethics, labor standards, environmental responsibility, health and safety, and governance commitments.",
+    keywords: ["garment factory policies", "apparel compliance policy", "textile ethics policy"],
   },
   careers: {
     path: "/careers",
@@ -150,6 +186,10 @@ export const pageMetadata: Record<
 export const pageOgImages: Record<PageMetadataKey, string> = {
   home: "/images/home/hero.jpg",
   about: "/images/about/hero.jpg",
+  atAGlance: "/images/about/at-a-glance/hero.jpg",
+  aboutStrategy: "/images/about/strategy/hero.jpg",
+  aboutMission: "/images/about/mission/hero.jpg",
+  aboutCompanyPolicy: "/images/about/company-policy/hero.jpg",
   careers: "/images/careers/hero.jpg",
   contact: "/images/contact/hero.jpg",
   facility: "/images/facility/hero.jpg",

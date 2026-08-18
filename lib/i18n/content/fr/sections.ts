@@ -51,6 +51,26 @@ export const sections = {
         subhead: "Comment nos opérations intégrées soutiennent les partenariats durables.",
         videoAlt: "Vue d'ensemble des opérations de manufacture",
       },
+      atAGlance: {
+        title: "Échelle à travers catégories et régions",
+        subhead: "Manufacture intégrée en tissés, maille et layette.",
+        videoAlt: "Empreinte mondiale de manufacture",
+      },
+      aboutStrategy: {
+        title: "La stratégie en action",
+        subhead: "Capacité, conformité et partenariats pour une croissance durable.",
+        videoAlt: "Opérations de manufacture stratégiques",
+      },
+      aboutMission: {
+        title: "Partenariat en pratique",
+        subhead: "Manufacture guidée par la mission pour les programmes mondiaux.",
+        videoAlt: "Collaboration d'équipe en manufacture",
+      },
+      aboutCompanyPolicy: {
+        title: "Des normes pour chaque programme",
+        subhead: "Éthique, conformité et gouvernance sur l'ensemble du réseau.",
+        videoAlt: "Normes de conformité et de politique",
+      },
       careers: {
         title: "Évoluez avec nos équipes",
         subhead: "Collaboration entre production, qualité et fonctions commerciales.",

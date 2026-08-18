@@ -51,6 +51,26 @@ export const sections = {
         subhead: "Wie integrierte Abläufe langfristige Markenpartnerschaften stützen.",
         videoAlt: "Überblick über Bekleidungsfertigung",
       },
+      atAGlance: {
+        title: "Skalierung über Kategorien und Regionen",
+        subhead: "Integrierte Fertigung in Webwaren, Strickwaren und Babybekleidung.",
+        videoAlt: "Globale Bekleidungsfertigung",
+      },
+      aboutStrategy: {
+        title: "Strategie in Aktion",
+        subhead: "Kapazität, Compliance und Partnerschaften für langfristiges Wachstum.",
+        videoAlt: "Strategische Fertigungsabläufe",
+      },
+      aboutMission: {
+        title: "Partnerschaft in der Praxis",
+        subhead: "Mission-geführte Fertigung für globale Markenprogramme.",
+        videoAlt: "Teamzusammenarbeit in der Fertigung",
+      },
+      aboutCompanyPolicy: {
+        title: "Standards für jedes Programm",
+        subhead: "Ethik, Compliance und Governance an allen Standorten.",
+        videoAlt: "Compliance- und Richtlinienstandards",
+      },
       careers: {
         title: "Wachsen Sie mit unseren Teams",
         subhead: "Zusammenarbeit in Produktion, Qualität und kommerziellen Bereichen.",
