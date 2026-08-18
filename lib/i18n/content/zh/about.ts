@@ -1,301 +1,301 @@
 export const about = {
   hub: {
     hero: {
-      headline: "About Jaguar",
+      headline: "关于 Jaguar",
       subhead:
-        "Four decades of vertically integrated apparel manufacturing — built on scale, compliance, and partnerships that outlast seasonal collections.",
-      alt: "Modern apparel manufacturing facility and production environment",
-      exploreSections: "Explore company",
+        "四十年垂直整合服装制造经验——以规模、合规与超越季节系列的长期伙伴关系为基石。",
+      alt: "现代化服装制造设施与生产环境",
+      exploreSections: "了解公司",
     },
     grid: {
-      eyebrow: "Company",
-      title: "Understand how we operate",
+      eyebrow: "公司",
+      title: "了解我们的运营方式",
       subhead:
-        "From group overview and strategic direction to mission, values, and published policies — the information sourcing teams need before a program begins.",
+        "从集团概览与战略方向到使命、价值观及已发布政策——采购团队在项目启动前所需的关键信息。",
     },
     overview: {
-      title: "A manufacturer built for long-term programs",
-      body: "Jaguar (Pvt) Ltd. integrates product development, manufacturing, and compliance across casual wear, streetwear, activewear, denim, kidswear, and boutique. We serve global brands from six facilities across five countries — with audit-ready systems, transparent capability data, and commercial teams who speak the language of sourcing, not sales.",
+      title: "为长期项目而建的制造商",
+      body: "Jaguar (Pvt) Ltd. 整合产品开发、制造与合规，覆盖休闲装、街头服饰、运动服饰、牛仔、童装及精品品类。我们在五个国家的六座工厂为全球品牌提供服务——配备审计就绪体系、透明的产能数据，以及深谙采购语言而非销售话术的商业团队。",
     },
     cta: {
-      title: "Partner with a manufacturer built for long-term programs",
-      subhead: "Tell us what you're building. Our team responds to qualified inquiries with clear next steps.",
+      title: "与为长期项目而建的制造商合作",
+      subhead: "告诉我们您正在开发什么。我们的团队将针对合格询盘提供清晰的后续步骤。",
     },
   },
   menu: {
     atAGlance: {
-      title: "Jaguar at a Glance",
-      description: "Footprint, leadership, history, and the scale behind our manufacturing network.",
+      title: "Jaguar 概览",
+      description: "全球布局、领导团队、发展历程及制造网络背后的规模实力。",
     },
     strategy: {
-      title: "Our Strategy",
-      description: "How we invest in capacity, categories, and partnerships for sustained growth.",
+      title: "我们的战略",
+      description: "如何在产能、品类与合作伙伴关系上持续投入，实现稳健增长。",
     },
     mission: {
-      title: "Mission",
-      description: "Purpose, values, and the principles that guide every customer program.",
+      title: "使命",
+      description: "企业宗旨、核心价值观及指导每个客户项目的原则。",
     },
     companyPolicy: {
-      title: "Company Policy",
-      description: "Ethics, compliance, workplace standards, and governance commitments.",
+      title: "公司政策",
+      description: "道德规范、合规要求、工作场所标准及治理承诺。",
     },
   },
   subPage: {
     heroAlt: "{headline} — Jaguar (Pvt) Ltd.",
-    defaultCtaTitle: "Start a conversation with our team",
-    defaultCtaSubhead: "Qualified RFIs and RFQs receive a structured response within two business days.",
+    defaultCtaTitle: "与我们的团队开始对话",
+    defaultCtaSubhead: "合格的 RFI 与 RFQ 将在两个工作日内收到结构化回复。",
   },
   stats: {
-    facilities: "Facilities",
-    countries: "Countries",
-    employees: "Employees",
-    yearsInOperation: "Years in operation",
+    facilities: "工厂",
+    countries: "国家",
+    employees: "员工",
+    yearsInOperation: "运营年限",
   },
   atAGlance: {
-    headline: "Jaguar at a Glance",
+    headline: "Jaguar 概览",
     subhead:
-      "A third-generation, family-owned manufacturer in Faisalabad — serving global apparel brands with ethical wholesale supply since 1984.",
+      "位于 Faisalabad 的第三代家族企业制造商——自 1984 年起以道德批发供应服务全球服装品牌。",
     intro:
-      "Jaguar is a third-generation family-owned clothing brand manufacturer, rooted in the heart of Pakistan's textile industry, Faisalabad. Since 1984, we have evolved alongside the fashion industry and adapted our expertise to meet the ever-changing needs of brands worldwide. We have designed, engineered, and tailored quality garments, using fabrics like organic cotton, bamboo cotton, and recycled materials.\n\nOur passion for premium apparel is in our DNA. We're your go-to partner, offering expertise in fabric selection, trend forecasting, and sustainable practices. With in-house knitting, dyeing, and a state-of-the-art facility equipped with CAD/CAM technology, we combine artisanal skill with cutting-edge production methods.\n\nWhether you're a budding entrepreneur or an established brand, we're a wholesale supplier of clothes committed to bringing your vision to life with low minimums, transparent communication, and unshakeable commitment to quality.",
+      "Jaguar 是一家第三代家族服装品牌制造商，扎根于巴基斯坦纺织工业核心 Faisalabad。自 1984 年以来，我们随时尚行业共同演进，不断调整专业能力以满足全球品牌不断变化的需求。我们设计、开发并定制优质成衣，采用有机棉、竹纤维棉及再生材料等面料。\n\n对高端服装的热忱深植于我们的基因。我们是您值得信赖的合作伙伴，在面料选型、趋势预判及可持续实践方面提供专业支持。凭借自有针织、染色能力，以及配备 CAD/CAM 技术的先进工厂，我们将精湛工艺与前沿生产方法相结合。\n\n无论您是新兴创业者还是成熟品牌，我们都是致力于将您的愿景落地的服装批发供应商——低起订量、透明沟通，以及对品质坚定不移的承诺。",
     blocks: [
       {
-        title: "Global footprint, regional depth",
-        body: "Six facilities across five countries give sourcing teams geographic optionality without sacrificing process control. Each site operates under shared quality systems, with category-specific lines for casual wear, streetwear, activewear, denim, kidswear, and boutique — and certification scope documented per facility, not assumed group-wide.",
-        imageAlt: "Global manufacturing footprint and facility network",
+        title: "全球布局，区域深耕",
+        body: "五个国家的六座工厂为采购团队提供地理灵活性，同时不牺牲流程管控。各站点在统一质量体系下运营，设有休闲装、街头服饰、运动服饰、牛仔、童装及精品等品类专用产线——认证范围按工厂逐一记录，而非默认全集团适用。",
+        imageAlt: "全球制造布局与工厂网络",
       },
       {
-        title: "Integrated operations at scale",
-        body: "Vertical integration means fewer handoffs between development, production, and compliance. From lab dips and size sets through bulk cutting and final audit, programs move through a single accountable system — reducing lead-time variance and improving traceability for brand partners.",
-        imageAlt: "Integrated apparel manufacturing operations on the production floor",
+        title: "规模化垂直整合运营",
+        body: "垂直整合意味着开发、生产与合规之间的交接更少。从色样确认、尺寸样到批量裁剪与终检，项目均在单一责任体系内流转——缩短交期波动，提升品牌合作伙伴的可追溯性。",
+        imageAlt: "生产车间中的整合式服装制造运营",
       },
     ],
     history: {
-      eyebrow: "History",
-      title: "40 years in Faisalabad, built for global brands",
+      eyebrow: "发展历程",
+      title: "扎根 Faisalabad 四十年，服务全球品牌",
       subhead:
-        "From a third-generation family manufacturer in Pakistan's textile capital to a multi-facility partner for startups and established labels worldwide.",
+        "从巴基斯坦纺织之都的第三代家族制造商，到服务全球初创品牌与成熟标签的多工厂合作伙伴。",
       steps: [
         {
-          title: "1984 — Founded in Faisalabad",
+          title: "1984 — 创立于 Faisalabad",
           description:
-            "Jaguar began as a family-owned clothing manufacturer in the heart of Pakistan's textile industry. From the start, the focus was quality garments, skilled production, and partnerships that could grow with each brand's ambition.",
+            "Jaguar 在巴基斯坦纺织工业核心地带以家族服装制造商起步。自创立之初，便专注于优质成衣、熟练生产，以及与各品牌发展雄心同步成长的伙伴关系。",
         },
         {
-          title: "1990s–2000s — Evolving with fashion",
+          title: "1990 年代–2000 年代 — 随时尚行业演进",
           description:
-            "As global fashion changed, we expanded in-house knitting and dyeing, invested in CAD/CAM technology, and broadened our fabric expertise to organic cotton, bamboo cotton, and recycled materials — adapting expertise to meet brands' ever-changing needs.",
+            "随着全球时尚格局变化，我们扩展自有针织与染色能力，投资 CAD/CAM 技术，并将面料专长拓展至有机棉、竹纤维棉及再生材料——以灵活调整的专业能力满足品牌不断变化的需求。",
         },
         {
-          title: "Today — Six facilities, five countries",
+          title: "今日 — 六座工厂，五个国家",
           description:
-            "More than four decades on, Jaguar serves budding entrepreneurs and established giants across six facilities in five countries — with ethical wholesale supply, streamlined production, transparent communication, and an unwavering commitment to quality.",
+            "四十余载之后，Jaguar 在五个国家的六座工厂服务新兴创业者与行业巨头——以道德批发供应、高效生产、透明沟通及对品质坚定不移的承诺。",
         },
       ],
     },
     leadership: {
-      eyebrow: "Leadership",
-      title: "Experienced operators across manufacturing and commercial functions",
+      eyebrow: "领导团队",
+      title: "制造与商业职能领域的资深运营者",
       members: [
         {
           name: "Mr. Asim ul Haq",
-          role: "Chief Executive Officer",
-          alt: "Mr. Asim ul Haq, Chief Executive Officer",
+          role: "首席执行官",
+          alt: "Mr. Asim ul Haq，首席执行官",
         },
         {
           name: "Aleem Asim",
-          role: "Executive Director",
-          alt: "Aleem Asim, Executive Director",
+          role: "执行董事",
+          alt: "Aleem Asim，执行董事",
         },
         {
           name: "Usama Asim",
-          role: "Executive Director",
-          alt: "Usama Asim, Executive Director",
+          role: "执行董事",
+          alt: "Usama Asim，执行董事",
         },
       ],
     },
     recognition: {
-      eyebrow: "Recognition",
-      title: "Industry standing and export excellence",
-      subhead: "Representative recognition across manufacturing excellence, export performance, and workplace standards.",
+      eyebrow: "荣誉认可",
+      title: "行业地位与出口卓越",
+      subhead: "涵盖制造卓越、出口业绩及工作场所标准的代表性荣誉。",
       awards: [
         {
-          title: "Export excellence — textile and apparel sector",
+          title: "出口卓越 — 纺织与服装行业",
           year: "2023",
-          issuer: "Trade Development Authority",
+          issuer: "贸易发展局",
         },
         {
-          title: "Manufacturing quality and process excellence",
+          title: "制造质量与流程卓越",
           year: "2022",
-          issuer: "Regional industry association",
+          issuer: "区域行业协会",
         },
         {
-          title: "Workplace standards and compliance recognition",
+          title: "工作场所标准与合规认可",
           year: "2021",
-          issuer: "Independent audit body",
+          issuer: "独立审计机构",
         },
       ],
     },
     cta: {
-      title: "Explore our strategic direction",
-      subhead: "Read how we invest in capacity, categories, and partnerships for the years ahead.",
+      title: "了解我们的战略方向",
+      subhead: "阅读我们在产能、品类与合作伙伴关系上的投入规划，展望未来发展。",
     },
   },
   strategy: {
-    headline: "Our Strategy",
+    headline: "我们的战略",
     subhead:
-      "A disciplined approach to category depth, geographic optionality, and compliance-led growth — designed for brands that plan in seasons, not transactions.",
+      "以品类深度、地理灵活性与合规驱动增长为核心的严谨路径——专为以季节而非单次交易规划的品牌而设计。",
     intro:
-      "Our strategy is not a vision statement on a wall. It is a set of investment priorities — in integrated capacity, certified product lines, and long-term buyer relationships — that govern capital allocation, facility development, and how we engage with sourcing teams at the start of every program.",
+      "我们的战略不是挂在墙上的愿景口号。它是一套投资优先级——涵盖整合产能、认证产品线及长期买家关系——指导资本配置、工厂发展，以及我们在每个项目启动时与采购团队的协作方式。",
     pillarsSection: {
-      eyebrow: "Strategy",
-      title: "Strategic priorities",
+      eyebrow: "战略",
+      title: "战略重点",
     },
     pillars: [
       {
-        title: "Category depth over diversification",
+        title: "品类深度优于分散布局",
         description:
-          "We invest where we can control quality end-to-end: casual wear, streetwear, activewear, denim, kidswear, and boutique. Each category has dedicated lines, process engineers, and compliance documentation — rather than generalist capacity that underperforms under audit.",
+          "我们投资能够端到端管控品质的领域：休闲装、街头服饰、运动服饰、牛仔、童装及精品。每个品类配备专用产线、工艺工程师及合规文档——而非在审计中表现不佳的通用产能。",
       },
       {
-        title: "Geographic optionality",
+        title: "地理灵活性",
         description:
-          "A multi-country footprint gives brands sourcing flexibility and risk distribution. Shared systems ensure consistency; local presence ensures responsiveness to regional program requirements.",
+          "多国布局为品牌提供采购灵活性与风险分散。统一体系确保一致性；本地存在确保对区域项目要求的快速响应。",
       },
       {
-        title: "Compliance as a commercial advantage",
+        title: "合规作为商业优势",
         description:
-          "Certifications, audit readiness, and published ESG metrics are treated as product features — not overhead. We invest ahead of buyer requirements so programs launch without compliance delays.",
+          "认证、审计就绪能力及已发布的 ESG 指标被视为产品特性——而非额外负担。我们在买家要求之前先行投入，确保项目启动不受合规延误影响。",
       },
     ],
     blocks: [
       {
-        title: "Capacity investment aligned to demand",
-        body: "Capital expenditure follows confirmed buyer pipelines — not speculative expansion. New lines, machinery upgrades, and facility improvements are tied to multi-season commitments, ensuring capacity serves real programs rather than inventory risk.",
-        imageAlt: "Strategic planning and capacity investment discussion",
+        title: "与需求对齐的产能投资",
+        body: "资本支出跟随已确认买家订单管道——而非投机性扩张。新产线、设备升级及工厂改进均与多季承诺挂钩，确保产能服务真实项目而非库存风险。",
+        imageAlt: "战略规划与产能投资讨论",
       },
       {
-        title: "Innovation within manufacturing discipline",
-        body: "Process innovation — low-liquor dyeing, automated cutting, digital tracking — is adopted where it improves consistency, traceability, or environmental performance. We do not chase technology for its own sake; we deploy it where it strengthens program delivery.",
-        imageAlt: "Innovation and process improvement in apparel manufacturing",
+        title: "制造纪律内的创新",
+        body: "工艺创新——低浴比染色、自动裁剪、数字化追踪——仅在提升一致性、可追溯性或环境表现时采用。我们不追逐技术本身；只在能强化项目交付的地方部署。",
+        imageAlt: "服装制造中的创新与流程改进",
       },
     ],
     cta: {
-      title: "Discuss program fit with our commercial team",
-      subhead: "Share your category, volume profile, and compliance requirements — we respond with an honest capability assessment.",
+      title: "与商业团队讨论项目匹配度",
+      subhead: "分享您的品类、产量规模及合规要求——我们将提供坦诚的产能评估。",
     },
   },
   mission: {
-    headline: "Mission",
+    headline: "使命",
     subhead:
-      "Ethical wholesale apparel supply that lets brands focus on what they do best — design, marketing, and growth.",
+      "道德批发服装供应，让品牌专注所长——设计、营销与增长。",
     intro:
-      "To fuel the fire of apparel brands, from startups to established giants, with ethical wholesale clothing supply, streamlined production, and transparent communication. It's a partnership that frees them to focus on design, marketing, and growth.",
+      "以道德批发服装供应、高效生产及透明沟通，助力从初创企业到行业巨头的服装品牌蓬勃发展。这是一种让品牌团队专注设计、营销与增长的伙伴关系。",
     visionSection: {
-      eyebrow: "Vision",
-      title: "Our vision",
+      eyebrow: "愿景",
+      title: "我们的愿景",
     },
     vision:
-      "To set the gold standard for ethical and sustainable apparel manufacturing, inspiring a global shift towards responsible practices and empowering brands within the fashion industry to create a positive impact.",
+      "树立道德与可持续服装制造的金标准，推动全球向负责任实践转型，赋能时尚行业品牌创造积极影响。",
     valuesSection: {
-      eyebrow: "Mission",
-      title: "How we deliver",
+      eyebrow: "使命",
+      title: "我们的交付方式",
     },
     values: [
       {
-        title: "Ethical wholesale supply",
+        title: "道德批发供应",
         description:
-          "Responsible manufacturing and sourcing practices that startups and established brands can build on with confidence.",
+          "负责任的制造与采购实践，让初创品牌与成熟品牌均可放心依托。",
       },
       {
-        title: "Streamlined production",
+        title: "高效生产",
         description:
-          "In-house knitting, dyeing, and CAD/CAM-equipped facilities that combine artisanal skill with efficient, reliable output.",
+          "自有针织、染色及配备 CAD/CAM 的工厂，将精湛工艺与高效可靠的产出相结合。",
       },
       {
-        title: "Transparent communication",
+        title: "透明沟通",
         description:
-          "Clear timelines, honest capability conversations, and low minimums that keep partnerships straightforward from first sample to bulk delivery.",
+          "清晰的时间节点、坦诚的产能对话及低起订量，让合作从首样到大货交付全程简洁顺畅。",
       },
       {
-        title: "Sustainable impact",
+        title: "可持续影响",
         description:
-          "Organic cotton, bamboo cotton, recycled materials, and continuous improvement toward the gold standard in responsible apparel manufacturing.",
+          "有机棉、竹纤维棉、再生材料，以及向负责任服装制造金标准持续迈进。",
       },
     ],
     blocks: [
       {
-        title: "Partnership over production alone",
-        body: "We don't just manufacture garments — we free brand teams to focus on design, marketing, and growth. That means ethical supply, predictable lead times, and communication you can act on.",
-        imageAlt: "Brand partnership focused on design and growth",
+        title: "超越单纯生产的伙伴关系",
+        body: "我们不仅制造服装——更让品牌团队专注设计、营销与增长。这意味着道德供应、可预测的交期，以及可付诸行动的信息沟通。",
+        imageAlt: "聚焦设计与增长的品牌合作",
       },
       {
-        title: "Raising the bar for responsible manufacturing",
-        body: "Our vision is a global shift toward ethical and sustainable apparel production. Every program is an opportunity to prove that quality, transparency, and positive impact can scale together.",
-        imageAlt: "Sustainable and ethical apparel manufacturing",
+        title: "提升负责任制造的标准",
+        body: "我们的愿景是全球向道德与可持续服装生产转型。每个项目都是证明品质、透明度与积极影响可以同步规模化发展的机会。",
+        imageAlt: "可持续与道德服装制造",
       },
     ],
     cta: {
-      title: "Work with a mission-led manufacturing partner",
-      subhead: "Contact our team to discuss how our operating model supports your next program.",
+      title: "与使命驱动的制造合作伙伴合作",
+      subhead: "联系我们的团队，了解运营模式如何支持您的下一个项目。",
     },
   },
   companyPolicy: {
-    headline: "Company Policy",
+    headline: "公司政策",
     subhead:
-      "Published standards for ethics, compliance, workplace conduct, and governance — the framework that supports every customer program and audit.",
+      "涵盖道德规范、合规要求、工作场所行为及治理的已发布标准——支撑每个客户项目与审计的框架。",
     intro:
-      "Jaguar (Pvt) Ltd. maintains formal policies governing business ethics, labor practices, environmental responsibility, and data integrity. These policies apply across all facilities and functions — and are available for review by brand partners, auditors, and prospective employees.",
+      "Jaguar (Pvt) Ltd. 维护涵盖商业道德、劳工实践、环境责任及数据完整性的正式政策。这些政策适用于所有工厂与职能——品牌合作伙伴、审计方及潜在员工均可查阅。",
     policiesSection: {
-      eyebrow: "Policy",
-      title: "Published standards",
+      eyebrow: "政策",
+      title: "已发布标准",
     },
     policies: [
       {
-        title: "Code of business ethics",
+        title: "商业道德准则",
         description:
-          "Zero tolerance for bribery, corruption, and conflicts of interest. All commercial relationships must be documented, transparent, and aligned with applicable trade and anti-corruption laws.",
+          "对贿赂、腐败及利益冲突零容忍。所有商业关系须有据可查、透明公开，并符合适用的贸易及反腐败法规。",
       },
       {
-        title: "Labor and workplace standards",
+        title: "劳工与工作场所标准",
         description:
-          "Fair wages, safe working conditions, freedom of association, and non-discrimination — aligned with ILO principles and buyer audit requirements including WRAP and social compliance frameworks.",
+          "公平薪酬、安全的工作条件、结社自由及非歧视——符合 ILO 原则及买家审计要求，包括 WRAP 及社会合规框架。",
       },
       {
-        title: "Environmental responsibility",
+        title: "环境责任",
         description:
-          "Documented programs for water stewardship, waste reduction, and chemical management — with facility-level metrics published in our ESG reporting and available on request.",
+          "涵盖水资源管理、废弃物减量及化学品管理的有文档记录项目——工厂级指标发布于我们的 ESG 报告，可按需提供。",
       },
       {
-        title: "Health and safety",
+        title: "健康与安全",
         description:
-          "Occupational health and safety systems at every facility, including training, incident reporting, emergency procedures, and regular third-party assessments.",
+          "各工厂均设有职业健康与安全体系，包括培训、事故报告、应急程序及定期第三方评估。",
       },
       {
-        title: "Data protection and confidentiality",
+        title: "数据保护与保密",
         description:
-          "Customer designs, costing, and commercial information are protected under formal confidentiality agreements and internal access controls.",
+          "客户设计、成本及商业信息受正式保密协议及内部访问管控保护。",
       },
       {
-        title: "Grievance and whistleblower protection",
+        title: "申诉与举报人保护",
         description:
-          "Anonymous reporting channels for employees and stakeholders, with non-retaliation guarantees and documented investigation procedures.",
+          "为员工及利益相关方提供匿名举报渠道，保障不遭报复，并配备有文档记录的调查程序。",
       },
     ],
     blocks: [
       {
-        title: "Governance and accountability",
-        body: "Policy compliance is overseen at executive level, with facility managers responsible for implementation and internal audit functions conducting periodic reviews. Non-conformance triggers corrective action plans with defined timelines — not informal remediation.",
-        imageAlt: "Corporate governance and policy documentation",
+        title: "治理与问责",
+        body: "政策合规由高管层监督，工厂经理负责执行，内部审计职能定期审查。不符合项触发带明确时间表的纠正措施计划——而非非正式整改。",
+        imageAlt: "公司治理与政策文档",
       },
       {
-        title: "Audit-ready documentation",
-        body: "Policies are maintained in current, version-controlled form and made available to brand auditors on request. Certification scope, facility applicability, and policy revision dates are documented to support efficient audit preparation.",
-        imageAlt: "Compliance documentation and audit readiness",
+        title: "审计就绪文档",
+        body: "政策以最新、版本管控的形式维护，应品牌审计方要求提供。认证范围、工厂适用性及政策修订日期均有记录，支持高效审计准备。",
+        imageAlt: "合规文档与审计就绪",
       },
     ],
     cta: {
-      title: "Request policy documentation",
-      subhead: "Contact our team for current policy texts, certification scope, or audit support materials.",
+      title: "索取政策文档",
+      subhead: "联系我们的团队获取最新政策文本、认证范围或审计支持材料。",
     },
   },
 };

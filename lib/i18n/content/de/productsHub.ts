@@ -1,15 +1,15 @@
 export const productsHub = {
   hero: {
-    headline: "Products",
+    headline: "Produkte",
     subhead:
-      "Six core categories — casual wear, streetwear, activewear, denim, kidswear, and boutique — supported by integrated manufacturing, compliance systems, and development capability.",
-    exploreCategories: "Explore categories",
-    alt: "Apparel product categories across casual wear, streetwear, activewear, denim, kidswear, and boutique",
+      "Sechs Kernkategorien — Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung und Boutique — unterstützt durch integrierte Fertigung, Compliance-Systeme und Entwicklungskompetenz.",
+    exploreCategories: "Kategorien entdecken",
+    alt: "Bekleidungsproduktkategorien in Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung und Boutique",
   },
   grid: {
-    eyebrow: "Categories",
-    title: "Select a product category",
+    eyebrow: "Kategorien",
+    title: "Produktkategorie auswählen",
     subhead:
-      "Each category page outlines process steps, technical specs, and sustainability programs.",
+      "Jede Kategorieseite beschreibt Prozessschritte, technische Spezifikationen und Nachhaltigkeitsprogramme.",
   },
 };

@@ -1,104 +1,104 @@
 export const metadata = {
   siteDescription:
-    "Vertically integrated apparel manufacturer for casual wear, streetwear, activewear, denim, kidswear, and boutique programs with audited compliance and scalable production.",
+    "垂直整合服装制造商，服务休闲装、街头服饰、运动服饰、牛仔、童装与精品项目，具备审计合规与可扩展产能。",
   home: {
-    title: "Vertically Integrated Apparel Manufacturer",
+    title: "垂直整合服装制造商",
     description:
-      "Jaguar (Pvt) Ltd. is a vertically integrated apparel manufacturer delivering casual wear, streetwear, activewear, denim, kidswear, and boutique programs for global brands with audited compliance and scalable production.",
+      "Jaguar (Pvt) Ltd. 是一家垂直整合服装制造商，为全球品牌提供休闲装、街头服饰、运动服饰、牛仔、童装与精品项目，具备审计合规与可扩展产能。",
   },
   about: {
-    title: "About",
+    title: "关于我们",
     description:
-      "Learn about Jaguar (Pvt) Ltd.—our history, leadership, manufacturing footprint, and long-term partnerships with international apparel brands.",
+      "了解 Jaguar (Pvt) Ltd. —— 我们的历史、领导力、制造布局及与国际服装品牌的长期合作伙伴关系。",
   },
   atAGlance: {
-    title: "Jaguar at a Glance",
+    title: "捷豹概览",
     description:
-      "Company overview of Jaguar (Pvt) Ltd.—six facilities across five countries, leadership, history, and integrated apparel manufacturing at scale.",
+      "Jaguar (Pvt) Ltd. 公司概览 —— 五国六厂、领导力、历史及规模化整合服装制造。",
   },
   aboutStrategy: {
-    title: "Our Strategy",
+    title: "我们的战略",
     description:
-      "Jaguar strategic priorities—category depth, geographic optionality, and compliance-led growth for long-term brand partnerships.",
+      "捷豹战略重点 —— 品类深度、地理灵活性及以合规驱动的增长，服务长期品牌合作。",
   },
   aboutMission: {
-    title: "Mission",
+    title: "使命",
     description:
-      "Jaguar mission and values—manufacturing partnerships built on proof, integration, and long-term program delivery for global brands.",
+      "捷豹使命与价值观 —— 以实证、整合与长期项目交付为基础，构建面向全球品牌的制造合作伙伴关系。",
   },
   aboutCompanyPolicy: {
-    title: "Company Policy",
+    title: "公司政策",
     description:
-      "Jaguar company policies—ethics, labor standards, environmental responsibility, health and safety, and governance commitments.",
+      "捷豹公司政策 —— 道德、劳工标准、环境责任、健康与安全及治理承诺。",
   },
   careers: {
-    title: "Careers",
+    title: "职业发展",
     description:
-      "Explore careers at Jaguar (Pvt) Ltd. in manufacturing operations, quality, sustainability, product development, and commercial teams.",
+      "探索 Jaguar (Pvt) Ltd. 在制造运营、质量、可持续发展、产品开发及商务团队中的职业机会。",
   },
   contact: {
-    title: "Contact",
+    title: "联系我们",
     description:
-      "Contact Jaguar (Pvt) Ltd. to submit an RFI or RFQ for casual wear, streetwear, activewear, denim, kidswear, or boutique programs. Our sourcing team responds within two business days.",
+      "联系 Jaguar (Pvt) Ltd. 提交休闲装、街头服饰、运动服饰、牛仔、童装或精品项目的 RFI 或 RFQ。我们的采购团队将在两个工作日内回复。",
   },
   facility: {
-    title: "Facility",
+    title: "工厂",
     description:
-      "Explore Jaguar manufacturing facilities, process capabilities, and production departments—from yarn intake through packing and quality assurance.",
+      "探索捷豹制造工厂、工艺能力及生产部门 —— 从纱线进厂到包装与质量保证。",
   },
   ourImpact: {
-    title: "Our Impact",
+    title: "我们的影响",
     description:
-      "Review Jaguar (Pvt) Ltd. ESG impact across environment, people and communities, and governance with certifications and compliance programs.",
+      "查阅 Jaguar (Pvt) Ltd. 在环境、人员与社区及治理方面的 ESG 影响，包括认证与合规项目。",
   },
   environment: {
-    title: "Environment",
+    title: "环境",
     description:
-      "Environmental programs at Jaguar facilities including water stewardship, renewable energy, and waste reduction for responsible apparel manufacturing.",
+      "捷豹工厂的环境项目，涵盖水资源管理、可再生能源及废弃物减量，支持负责任的服装制造。",
   },
   people: {
-    title: "People & Communities",
+    title: "人员与社区",
     description:
-      "Worker welfare, safety training, and community programs across Jaguar apparel manufacturing locations.",
+      "捷豹服装制造基地的员工福利、安全培训及社区项目。",
   },
   governance: {
-    title: "Governance & Certifications",
+    title: "治理与认证",
     description:
-      "Governance, audit readiness, and certifications including GOTS, OEKO-TEX, WRAP, and ISO programs at Jaguar manufacturing sites.",
+      "捷豹制造基地的治理、审计就绪及 GOTS、OEKO-TEX、WRAP、ISO 等认证项目。",
   },
   products: {
-    title: "Products",
+    title: "产品",
     description:
-      "Explore Jaguar product manufacturing across casual wear, streetwear, activewear, denim, kidswear, and boutique programs.",
+      "探索捷豹在休闲装、街头服饰、运动服饰、牛仔、童装与精品项目中的产品制造能力。",
   },
   casualWear: {
-    title: "Casual Wear",
+    title: "休闲装",
     description:
-      "Casual wear manufacturing for tees, polos, loungewear, and everyday separates with integrated cutting, sewing, and finishing.",
+      "休闲装制造 —— T 恤、Polo、家居服及日常单品，整合裁剪、缝制与后整。",
   },
   streetwear: {
-    title: "Streetwear",
+    title: "街头服饰",
     description:
-      "Streetwear manufacturing for urban apparel, premium trims, and brand-led drops with specialized construction and wash programs.",
+      "街头服饰制造 —— 都市服装、高端辅料及品牌主导的发售系列，具备专业结构与水洗工艺。",
   },
   activewear: {
-    title: "Activewear",
+    title: "运动服饰",
     description:
-      "Activewear manufacturing for leggings, training tops, and performance layers with stretch recovery and moisture management.",
+      "运动服饰制造 —— 打底裤、训练上衣及功能层，具备弹性回复与吸湿排汗能力。",
   },
   denim: {
-    title: "Denim",
+    title: "牛仔",
     description:
-      "Denim manufacturing for jeans, jackets, and skirts with wash development, shade control, and brand-ready finishing.",
+      "牛仔制造 —— 牛仔裤、夹克与半裙，具备水洗开发、色牢控制及品牌级后整。",
   },
   kidswear: {
-    title: "Kidswear",
+    title: "童装",
     description:
-      "Kidswear manufacturing with soft-hand construction, secure attachments, and compliance-focused finishing.",
+      "童装制造 —— 柔软手感结构、安全附件及以合规为导向的后整。",
   },
   boutique: {
-    title: "Boutique",
+    title: "精品",
     description:
-      "Boutique and small-batch apparel programs with low minimums, refined construction, and catalogue-ready styles.",
+      "精品与小批量服装项目 —— 低起订量、精细工艺及目录级款式。",
   },
 };

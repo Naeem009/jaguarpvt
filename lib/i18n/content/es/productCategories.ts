@@ -1,246 +1,246 @@
 export const productCategories = {
-  discussProgram: "Discuss a {category} Program",
-  discussProgramLower: "Discuss a {category} program with our team",
+  discussProgram: "Analice un programa de {category}",
+  discussProgramLower: "Analice un programa de {category} con nuestro equipo",
   discussSubhead:
-    "Share your volume, material, and compliance requirements. We respond to qualified RFIs with clear next steps.",
-  heroAlt: "{category} manufacturing and product development",
+    "Comparta su volumen, material y requisitos de cumplimiento. Respondemos a RFI calificadas con pasos claros a seguir.",
+  heroAlt: "Fabricación y desarrollo de producto de {category}",
   "casual-wear": {
-    name: "Casual Wear",
-    headline: "Casual Wear",
+    name: "Ropa casual",
+    headline: "Ropa casual",
     subhead:
-      "Everyday apparel programs — tees, polos, loungewear, and soft-hand separates — built for comfort, consistency, and scalable production.",
+      "Programas de prendas cotidianas — camisetas, polos, ropa de descanso y piezas de tacto suave — diseñados para confort, consistencia y producción escalable.",
     gridDescription:
-      "Everyday apparel — tees, polos, loungewear, and soft-hand separates with integrated cutting, sewing, and finishing.",
+      "Prendas cotidianas — camisetas, polos, ropa de descanso y piezas de tacto suave con corte, confección y acabado integrados.",
     timelineSteps: [
       {
-        title: "Fabric selection and approval",
+        title: "Selección y aprobación de tela",
         description:
-          "Programs begin with hand-feel, shade, and shrinkage approval on cotton, blends, and sustainable inputs — including organic cotton and recycled materials where specified.",
+          "Los programas comienzan con la aprobación de tacto, tono y encogimiento en algodón, mezclas e insumos sostenibles — incluido algodón orgánico y materiales reciclados cuando se especifique.",
       },
       {
-        title: "Cutting, sewing, and assembly",
+        title: "Corte, confección y ensamblaje",
         description:
-          "Marker planning and modular sewing lines handle casual tops, bottoms, and sets with inline measurement and workmanship checks across volume tiers.",
+          "La planificación de patrones y las líneas modulares de confección gestionan tops, pantalones y conjuntos casuales con controles en línea de medidas y mano de obra en distintos niveles de volumen.",
       },
       {
-        title: "Wash, finish, and pack",
+        title: "Lavado, acabado y empaque",
         description:
-          "Garment washing, soft-hand finishing, labeling, and export-ready packing follow buyer specifications — with traceability prepared for compliance reviews.",
+          "El lavado de prendas, acabado de tacto suave, etiquetado y empaque listo para exportación siguen las especificaciones del comprador — con trazabilidad preparada para revisiones de cumplimiento.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Automated spreaders, modular sewing lines, garment wash units" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "T-shirts, polos, hoodies, joggers, lounge sets, basics" },
-      { label: "Material options", value: "Cotton, organic cotton, bamboo cotton, recycled blends" },
+      { label: "Rango de capacidad mensual", value: "[X] – [Y] unidades por mes (según programa)" },
+      { label: "Maquinaria principal", value: "Extendidoras automáticas, líneas modulares de confección, unidades de lavado de prendas" },
+      { label: "Certificaciones", value: "GOTS, OEKO-TEX, WRAP — el alcance varía según instalación y programa" },
+      { label: "Productos típicos", value: "Camisetas, polos, sudaderas, joggers, conjuntos de descanso, básicos" },
+      { label: "Opciones de material", value: "Algodón, algodón orgánico, algodón de bambú, mezclas recicladas" },
     ],
     sustainability: {
-      title: "Responsible materials for everyday programs",
-      body: "Casual programs often run at high volume. We support certified organic cotton, bamboo cotton, and recycled inputs at selected facilities — with documented chemical management aligned to buyer RSL standards.",
+      title: "Materiales responsables para programas cotidianos",
+      body: "Los programas casuales suelen operar a alto volumen. Respaldamos algodón orgánico certificado, algodón de bambú e insumos reciclados en instalaciones seleccionadas — con gestión documentada de químicos alineada con los estándares RSL del comprador.",
     },
     innovation: {
-      title: "Hand-feel and fit development",
-      body: "Collaborative development for drape, softness, and fit consistency — from lab dips through bulk validation for lifestyle and private-label ranges.",
+      title: "Desarrollo de tacto y ajuste",
+      body: "Desarrollo colaborativo de caída, suavidad y consistencia de ajuste — desde muestras de color hasta validación en volumen para líneas de estilo de vida y marcas privadas.",
     },
   },
   streetwear: {
     name: "Streetwear",
     headline: "Streetwear",
     subhead:
-      "Urban-inspired apparel with bold silhouettes, premium trims, and construction built for brand-led drops and repeat seasonal programs.",
+      "Confección de inspiración urbana con siluetas audaces, avíos premium y construcción diseñada para lanzamientos dirigidos por la marca y programas estacionales recurrentes.",
     gridDescription:
-      "Urban apparel with premium construction, statement silhouettes, and production built for brand-led drops.",
+      "Ropa urbana con construcción premium, siluetas distintivas y producción diseñada para lanzamientos dirigidos por la marca.",
     timelineSteps: [
       {
-        title: "Design translation and sampling",
+        title: "Traducción de diseño y muestreo",
         description:
-          "Streetwear programs start with accurate sample execution — matching wash, graphic placement, trim details, and fit intent before bulk approval.",
+          "Los programas de streetwear comienzan con una ejecución precisa de la muestra — igualando lavado, ubicación de gráficos, detalles de avíos e intención de ajuste antes de la aprobación en volumen.",
       },
       {
-        title: "Specialized construction",
+        title: "Construcción especializada",
         description:
-          "Oversized fits, heavy-gauge fleece, custom dye techniques, and complex assembly are managed with enhanced inline QC for drop-driven timelines.",
+          "Ajustes oversize, felpa de calibre pesado, técnicas de teñido personalizado y ensamblaje complejo se gestionan con control de calidad en línea reforzado para plazos impulsados por lanzamientos.",
       },
       {
-        title: "Finishing and brand-ready pack",
+        title: "Acabado y empaque listo para marca",
         description:
-          "Wash processes, labeling, hang-tag application, and retail-ready packing align with brand presentation standards for wholesale and DTC channels.",
+          "Procesos de lavado, etiquetado, aplicación de hang tags y empaque listo para retail se alinean con los estándares de presentación de la marca para canales mayoristas y DTC.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Heavy-gauge sewing, garment dye units, embroidery and print partners" },
-      { label: "Certifications", value: "OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Oversized tees, hoodies, cargo, sets, graphic-heavy tops" },
-      { label: "Program profile", value: "Seasonal drops, limited runs, and repeat core styles" },
+      { label: "Rango de capacidad mensual", value: "[X] – [Y] unidades por mes (según programa)" },
+      { label: "Maquinaria principal", value: "Confección de calibre pesado, unidades de teñido de prendas, socios de bordado e impresión" },
+      { label: "Certificaciones", value: "OEKO-TEX, WRAP — el alcance varía según instalación y programa" },
+      { label: "Productos típicos", value: "Camisetas oversize, sudaderas, cargo, conjuntos, tops con gráficos" },
+      { label: "Perfil del programa", value: "Lanzamientos estacionales, series limitadas y estilos básicos recurrentes" },
     ],
     sustainability: {
-      title: "Lower-impact options for urban programs",
-      body: "Streetwear brands increasingly specify recycled cotton, organic inputs, and controlled wash processes. We document material content and finishing chemistry for buyer compliance and marketing claims.",
+      title: "Opciones de menor impacto para programas urbanos",
+      body: "Las marcas de streetwear especifican cada vez más algodón reciclado, insumos orgánicos y procesos de lavado controlados. Documentamos el contenido de material y la química de acabado para cumplimiento del comprador y declaraciones de marketing.",
     },
     innovation: {
-      title: "Wash, dye, and graphic development",
-      body: "Development support for garment dye, vintage wash effects, and placement accuracy — from strike-off through bulk consistency for brand-critical aesthetics.",
+      title: "Desarrollo de lavado, teñido y gráficos",
+      body: "Apoyo al desarrollo de teñido de prendas, efectos de lavado vintage y precisión de ubicación — desde la prueba inicial hasta la consistencia en volumen para estéticas críticas de la marca.",
     },
   },
   activewear: {
-    name: "Activewear",
-    headline: "Activewear",
+    name: "Ropa deportiva",
+    headline: "Ropa deportiva",
     subhead:
-      "Performance apparel — leggings, tops, sports bras, and training layers — engineered for stretch recovery, moisture management, and durable construction.",
+      "Confección de rendimiento — leggings, tops, sujetadores deportivos y capas de entrenamiento — diseñada para recuperación elástica, gestión de la humedad y construcción duradera.",
     gridDescription:
-      "Performance apparel with stretch recovery, moisture management, and construction built for training and lifestyle active programs.",
+      "Confección de rendimiento con recuperación elástica, gestión de la humedad y construcción diseñada para programas activos de entrenamiento y estilo de vida.",
     timelineSteps: [
       {
-        title: "Performance fabric approval",
+        title: "Aprobación de tela de rendimiento",
         description:
-          "Activewear begins with fabric testing for stretch, recovery, spirality, and moisture-wicking performance — aligned to buyer benchmarks before bulk cutting.",
+          "La ropa deportiva comienza con pruebas de tela para elasticidad, recuperación, espiralidad y rendimiento de absorción de humedad — alineadas con los benchmarks del comprador antes del corte en volumen.",
       },
       {
-        title: "Technical cutting and sewing",
+        title: "Corte y confección técnica",
         description:
-          "Flatlock, bonded seams, and ergonomic patterning are executed on dedicated lines with inline measurement control for fit-critical programs.",
+          "Costura plana, uniones termoadhesivas y patronaje ergonómico se ejecutan en líneas dedicadas con control en línea de medidas para programas críticos de ajuste.",
       },
       {
-        title: "Testing documentation and pack",
+        title: "Documentación de pruebas y empaque",
         description:
-          "Final audit, care labeling, and packing follow buyer specs — with test documentation prepared for performance and restricted-substance requirements.",
+          "La auditoría final, etiquetado de cuidado y empaque siguen las especificaciones del comprador — con documentación de pruebas preparada para requisitos de rendimiento y sustancias restringidas.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Flatlock modules, coverstitch, automated spreading, performance fabric handling" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Leggings, sports bras, training tops, joggers, outer layers" },
-      { label: "Performance focus", value: "Stretch recovery, moisture management, durable flatlock construction" },
+      { label: "Rango de capacidad mensual", value: "[X] – [Y] unidades por mes (según programa)" },
+      { label: "Maquinaria principal", value: "Módulos de costura plana, coverstitch, extendido automático, manejo de telas de rendimiento" },
+      { label: "Certificaciones", value: "GOTS, OEKO-TEX, WRAP — el alcance varía según instalación y programa" },
+      { label: "Productos típicos", value: "Leggings, sujetadores deportivos, tops de entrenamiento, joggers, capas exteriores" },
+      { label: "Enfoque de rendimiento", value: "Recuperación elástica, gestión de la humedad, construcción duradera de costura plana" },
     ],
     sustainability: {
-      title: "Certified performance materials",
-      body: "Activewear programs often require recycled polyester, certified organic cotton, and documented chemical management. We support compliant inputs at selected facilities with traceability for marketing and audit requirements.",
+      title: "Materiales de rendimiento certificados",
+      body: "Los programas de ropa deportiva suelen requerir poliéster reciclado, algodón orgánico certificado y gestión documentada de químicos. Respaldamos insumos conformes en instalaciones seleccionadas con trazabilidad para marketing y auditorías.",
     },
     innovation: {
-      title: "Performance knit development",
-      body: "Development support for compression, recovery, and hand-feel targets — from lab dips through bulk validation for training and lifestyle active ranges.",
+      title: "Desarrollo de punto de rendimiento",
+      body: "Apoyo al desarrollo de compresión, recuperación y objetivos de tacto — desde muestras de color hasta validación en volumen para líneas activas de entrenamiento y estilo de vida.",
     },
   },
   denim: {
     name: "Denim",
     headline: "Denim",
     subhead:
-      "Denim programs — jeans, jackets, and skirts — with controlled wash development, shade consistency, and finishing built for brand identity.",
+      "Programas de denim — jeans, chaquetas y faldas — con desarrollo controlado de lavado, consistencia de tonos y acabado diseñado para la identidad de marca.",
     gridDescription:
-      "Denim jeans, jackets, and skirts with wash development, shade control, and finishing for brand-led programs.",
+      "Jeans, chaquetas y faldas de denim con desarrollo de lavado, control de tonos y acabado para programas dirigidos por la marca.",
     timelineSteps: [
       {
-        title: "Denim sourcing and shade control",
+        title: "Abastecimiento de denim y control de tonos",
         description:
-          "Incoming denim is inspected for weight, shade, and shrinkage. Wash recipes and abrasion targets are approved against buyer standards before bulk production.",
+          "El denim entrante se inspecciona por peso, tono y encogimiento. Las recetas de lavado y objetivos de abrasión se aprueban según los estándares del comprador antes de la producción en volumen.",
       },
       {
-        title: "Cutting, sewing, and wash",
+        title: "Corte, confección y lavado",
         description:
-          "Dedicated denim sewing lines handle five-pocket construction, jackets, and skirts — followed by controlled wash, dry, and finishing for repeatable brand aesthetics.",
+          "Líneas dedicadas de confección de denim gestionan construcción de cinco bolsillos, chaquetas y faldas — seguidas de lavado, secado y acabado controlados para estéticas de marca repetibles.",
       },
       {
-        title: "Final audit and dispatch",
+        title: "Auditoría final y despacho",
         description:
-          "Measurement audit, trim verification, and export-ready packing complete the flow — with wash documentation and traceability for compliance reviews.",
+          "Auditoría de medidas, verificación de avíos y empaque listo para exportación completan el flujo — con documentación de lavado y trazabilidad para revisiones de cumplimiento.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Denim sewing lines, wash units, laser/abrade finishing, ozone options" },
-      { label: "Certifications", value: "OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Five-pocket jeans, denim jackets, skirts, shackets, workwear denim" },
-      { label: "Wash capability", value: "Stone, enzyme, laser, vintage, and sustainable wash programs" },
+      { label: "Rango de capacidad mensual", value: "[X] – [Y] unidades por mes (según programa)" },
+      { label: "Maquinaria principal", value: "Líneas de confección de denim, unidades de lavado, acabado láser/abrasivo, opciones de ozono" },
+      { label: "Certificaciones", value: "OEKO-TEX, WRAP — el alcance varía según instalación y programa" },
+      { label: "Productos típicos", value: "Jeans de cinco bolsillos, chaquetas de denim, faldas, shackets, denim workwear" },
+      { label: "Capacidad de lavado", value: "Programas de lavado con piedra, enzima, láser, vintage y sostenibles" },
     ],
     sustainability: {
-      title: "Water-conscious denim finishing",
-      body: "Denim finishing is water-intensive by nature. Our programs include low-liquor wash options, laser finishing, and recycled cotton denim inputs at selected facilities — confirm current metrics with our sustainability team.",
+      title: "Acabado de denim consciente del agua",
+      body: "El acabado de denim es intensivo en agua por naturaleza. Nuestros programas incluyen opciones de lavado de bajo licor, acabado láser e insumos de denim de algodón reciclado en instalaciones seleccionadas — confirme las métricas actuales con nuestro equipo de sostenibilidad.",
     },
     innovation: {
-      title: "Wash and fit development",
-      body: "Collaborative wash development from prototype through bulk — supporting shade consistency, stretch recovery, and brand-specific finishing signatures.",
+      title: "Desarrollo de lavado y ajuste",
+      body: "Desarrollo colaborativo de lavado desde prototipo hasta volumen — respaldando consistencia de tono, recuperación elástica y firmas de acabado específicas de la marca.",
     },
   },
   kidswear: {
-    name: "Kidswear",
-    headline: "Kidswear",
+    name: "Ropa infantil",
+    headline: "Ropa infantil",
     subhead:
-      "Children's apparel with soft-hand construction, secure attachments, and compliance-focused finishing for infant through youth programs.",
+      "Confección infantil con construcción de tacto suave, fijaciones seguras y acabado orientado al cumplimiento normativo para programas de bebé a juvenil.",
     gridDescription:
-      "Children's apparel with soft-hand construction, secure attachments, and compliance-focused finishing.",
+      "Confección infantil con construcción de tacto suave, fijaciones seguras y acabado orientado al cumplimiento normativo.",
     timelineSteps: [
       {
-        title: "Material selection and compliance review",
+        title: "Selección de material y revisión de cumplimiento",
         description:
-          "Kidswear programs begin with restricted-substance review, soft-hand material selection, and trim approval against buyer and regulatory requirements.",
+          "Los programas de ropa infantil comienzan con revisión de sustancias restringidas, selección de materiales de tacto suave y aprobación de avíos según requisitos del comprador y normativos.",
       },
       {
-        title: "Safety-focused construction",
+        title: "Construcción orientada a la seguridad",
         description:
-          "Flat seams, secure attachments, and size-graded construction are managed with enhanced inline checks for infant, toddler, and youth programs.",
+          "Costuras planas, fijaciones seguras y construcción graduada por talla se gestionan con controles en línea reforzados para programas de bebé, niño pequeño y juvenil.",
       },
       {
-        title: "Finishing, testing documentation, and pack",
+        title: "Acabado, documentación de pruebas y empaque",
         description:
-          "Soft-hand finishing, labeling, and packing follow buyer specs — with test documentation and traceability prepared for compliance reviews.",
+          "Acabado de tacto suave, etiquetado y empaque siguen las especificaciones del comprador — con documentación de pruebas y trazabilidad preparadas para revisiones de cumplimiento.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Fine-gauge sewing, soft-hand finishing, secure-trim processes" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Bodysuits, sets, dresses, joggers, schoolwear, gift sets" },
-      { label: "Compliance focus", value: "Restricted substances, secure attachments, soft-hand construction" },
+      { label: "Rango de capacidad mensual", value: "[X] – [Y] unidades por mes (según programa)" },
+      { label: "Maquinaria principal", value: "Confección de calibre fino, acabado de tacto suave, procesos de avíos seguros" },
+      { label: "Certificaciones", value: "GOTS, OEKO-TEX, WRAP — el alcance varía según instalación y programa" },
+      { label: "Productos típicos", value: "Bodies, conjuntos, vestidos, joggers, uniformes escolares, sets de regalo" },
+      { label: "Enfoque de cumplimiento", value: "Sustancias restringidas, fijaciones seguras, construcción de tacto suave" },
     ],
     sustainability: {
-      title: "Certified materials for sensitive categories",
-      body: "Kidswear programs require stricter chemical management and material traceability. We support certified organic and OEKO-TEX-aligned inputs at selected facilities — confirm scope for your program.",
+      title: "Materiales certificados para categorías sensibles",
+      body: "Los programas de ropa infantil requieren una gestión química más estricta y trazabilidad de materiales. Respaldamos insumos orgánicos certificados y alineados con OEKO-TEX en instalaciones seleccionadas — confirme el alcance para su programa.",
     },
     innovation: {
-      title: "Sizing, fit, and soft-hand development",
-      body: "Development support for size grading, fit consistency, and hand-feel targets across infant through youth ranges — from sample through bulk validation.",
+      title: "Desarrollo de tallas, ajuste y tacto suave",
+      body: "Apoyo al desarrollo de gradación de tallas, consistencia de ajuste y objetivos de tacto en rangos de bebé a juvenil — desde muestra hasta validación en volumen.",
     },
   },
   boutique: {
     name: "Boutique",
     headline: "Boutique",
     subhead:
-      "Small-batch and boutique programs with low minimums, refined construction, and wholesale-ready styles for emerging and premium labels.",
+      "Programas boutique y de lotes pequeños con mínimos bajos, construcción refinada y estilos listos para mayoristas para marcas emergentes y premium.",
     gridDescription:
-      "Small-batch boutique programs with low minimums and refined construction for emerging and premium labels.",
+      "Programas boutique de lotes pequeños con mínimos bajos y construcción refinada para marcas emergentes y premium.",
     timelineSteps: [
       {
-        title: "Style development and sampling",
+        title: "Desarrollo de estilo y muestreo",
         description:
-          "Boutique programs prioritize accurate sampling, trim selection, and fit refinement — with transparent communication from first strike-off through approval.",
+          "Los programas boutique priorizan muestreo preciso, selección de avíos y refinamiento de ajuste — con comunicación transparente desde la primera prueba hasta la aprobación.",
       },
       {
-        title: "Low-MOQ production",
+        title: "Producción con MOQ bajo",
         description:
-          "Flexible lines accommodate smaller runs without sacrificing construction quality — ideal for emerging brands, capsule collections, and premium wholesale programs.",
+          "Líneas flexibles acomodan series más pequeñas sin sacrificar la calidad de construcción — ideales para marcas emergentes, colecciones cápsula y programas mayoristas premium.",
       },
       {
-        title: "Brand-ready finishing and pack",
+        title: "Acabado y empaque listo para marca",
         description:
-          "Careful finishing, labeling, and presentation-focused packing align with boutique and wholesale channel expectations.",
+          "Acabado cuidadoso, etiquetado y empaque orientado a la presentación se alinean con las expectativas de canales boutique y mayoristas.",
       },
     ],
     specs: [
-      { label: "Minimum order profile", value: "Low minimums — program-dependent; ideal for startups and capsule runs" },
-      { label: "Primary machinery", value: "Flexible modular lines, sample room, CAD/CAM pattern support" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX — scope varies by facility and program" },
-      { label: "Typical products", value: "Capsule collections, premium basics, gift sets, curated seasonal drops" },
+      { label: "Perfil de pedido mínimo", value: "Mínimos bajos — según programa; ideal para startups y series cápsula" },
+      { label: "Maquinaria principal", value: "Líneas modulares flexibles, sala de muestras, soporte de patronaje CAD/CAM" },
+      { label: "Certificaciones", value: "GOTS, OEKO-TEX — el alcance varía según instalación y programa" },
+      { label: "Productos típicos", value: "Colecciones cápsula, básicos premium, sets de regalo, lanzamientos estacionales curados" },
     ],
     sustainability: {
-      title: "Mindful production for smaller runs",
-      body: "Boutique programs benefit from right-sized production, certified material options, and transparent communication — reducing waste from over-ordering while supporting responsible inputs.",
+      title: "Producción consciente para series pequeñas",
+      body: "Los programas boutique se benefician de producción dimensionada correctamente, opciones de materiales certificados y comunicación transparente — reduciendo el desperdicio por sobreproducción y respaldando insumos responsables.",
     },
     innovation: {
-      title: "Trend-led development support",
-      body: "Fabric selection, trend forecasting, and construction advice for brands building their first or next collection — from concept through wholesale-ready production.",
+      title: "Apoyo al desarrollo orientado a tendencias",
+      body: "Selección de telas, pronóstico de tendencias y asesoría de construcción para marcas que desarrollan su primera o próxima colección — desde el concepto hasta la producción lista para mayoristas.",
     },
   },
 };

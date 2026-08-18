@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { prepareLocale } from "@/lib/i18n/prepare-locale";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { FacilityMapLazy, Hero, ProcessCapabilitiesSection } from "@/components/sections";
 import { FACILITY_HERO_IMAGE, getFacilities } from "@/lib/facilities";
@@ -9,7 +10,8 @@ type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: PageProps) {
+  await prepareLocale(params);
   return createPageMetadata("facility");
 }
 
@@ -18,7 +20,7 @@ export default async function FacilityPage({ params }: PageProps) {
   setRequestLocale(locale);
   const t = await getTranslations("facility");
   const tCommon = await getTranslations("common");
-  const facilities = getFacilities();
+  const facilities = await getFacilities();
   const departments = getDepartments();
   const departmentCategories = getDepartmentCategories();
 

@@ -1,246 +1,246 @@
 export const productCategories = {
-  discussProgram: "Discuss a {category} Program",
-  discussProgramLower: "Discuss a {category} program with our team",
+  discussProgram: "ناقش برنامج {category}",
+  discussProgramLower: "ناقش برنامج {category} مع فريقنا",
   discussSubhead:
-    "Share your volume, material, and compliance requirements. We respond to qualified RFIs with clear next steps.",
-  heroAlt: "{category} manufacturing and product development",
+    "شاركنا متطلبات الحجم والمواد والامتثال. نرد على طلبات المعلومات المؤهلة بخطوات تالية واضحة.",
+  heroAlt: "تصنيع {category} وتطوير المنتجات",
   "casual-wear": {
-    name: "Casual Wear",
-    headline: "Casual Wear",
+    name: "ملابس يومية",
+    headline: "ملابس يومية",
     subhead:
-      "Everyday apparel programs — tees, polos, loungewear, and soft-hand separates — built for comfort, consistency, and scalable production.",
+      "برامج ملابس يومية — تيشيرتات، وبولو، وملابس منزلية، وقطع منفصلة ناعمة الملمس — مصممة للراحة والاتساق وإنتاج قابل للتوسع.",
     gridDescription:
-      "Everyday apparel — tees, polos, loungewear, and soft-hand separates with integrated cutting, sewing, and finishing.",
+      "ملابس يومية — تيشيرتات، وبولو، وملابس منزلية، وقطع منفصلة ناعمة الملمس مع قص وخياطة وتشطيب متكاملين.",
     timelineSteps: [
       {
-        title: "Fabric selection and approval",
+        title: "اختيار الأقمشة والاعتماد",
         description:
-          "Programs begin with hand-feel, shade, and shrinkage approval on cotton, blends, and sustainable inputs — including organic cotton and recycled materials where specified.",
+          "تبدأ البرامج باعتماد الملمس والدرجة والانكماش على القطن والخلطات والمدخلات المستدامة — بما في ذلك القطن العضوي والمواد المعاد تدويرها عند التحديد.",
       },
       {
-        title: "Cutting, sewing, and assembly",
+        title: "القص والخياطة والتجميع",
         description:
-          "Marker planning and modular sewing lines handle casual tops, bottoms, and sets with inline measurement and workmanship checks across volume tiers.",
+          "تخطيط العلامات وخطوط الخياطة المعيارية تتولى القمصان والسراويل والمجموعات اليومية مع فحوصات قياس وجودة تصنيع مدمجة عبر مستويات الحجم.",
       },
       {
-        title: "Wash, finish, and pack",
+        title: "الغسيل والتشطيب والتعبئة",
         description:
-          "Garment washing, soft-hand finishing, labeling, and export-ready packing follow buyer specifications — with traceability prepared for compliance reviews.",
+          "غسيل الملابس، والتشطيب الناعم، والوسم، والتعبئة الجاهزة للتصدير وفق مواصفات المشتري — مع إعداد تتبع للمراجعات الامتثالية.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Automated spreaders, modular sewing lines, garment wash units" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "T-shirts, polos, hoodies, joggers, lounge sets, basics" },
-      { label: "Material options", value: "Cotton, organic cotton, bamboo cotton, recycled blends" },
+      { label: "نطاق الطاقة الشهرية", value: "[X] – [Y] وحدة شهرياً (حسب البرنامج)" },
+      { label: "الآلات الرئيسية", value: "آلات فرش آلية، خطوط خياطة معيارية، وحدات غسيل ملابس" },
+      { label: "الشهادات", value: "GOTS، OEKO-TEX، WRAP — يختلف النطاق حسب المنشأة والبرنامج" },
+      { label: "المنتجات النموذجية", value: "تيشيرتات، بولو، هوديز، جوجر، مجموعات منزلية، أساسيات" },
+      { label: "خيارات المواد", value: "قطن، قطن عضوي، قطن خيزران، خلطات معاد تدويرها" },
     ],
     sustainability: {
-      title: "Responsible materials for everyday programs",
-      body: "Casual programs often run at high volume. We support certified organic cotton, bamboo cotton, and recycled inputs at selected facilities — with documented chemical management aligned to buyer RSL standards.",
+      title: "مواد مسؤولة للبرامج اليومية",
+      body: "غالباً ما تُنفَّذ البرامج اليومية بأحجام كبيرة. ندعم القطن العضوي المعتمد، وقطن الخيزران، والمدخلات المعاد تدويرها في منشآت مختارة — مع إدارة كيميائية موثّقة متوافقة مع معايير RSL للمشتري.",
     },
     innovation: {
-      title: "Hand-feel and fit development",
-      body: "Collaborative development for drape, softness, and fit consistency — from lab dips through bulk validation for lifestyle and private-label ranges.",
+      title: "تطوير الملمس والقصة",
+      body: "تطوير تعاوني للانسيابية والنعومة واتساق القصة — من عينات الألوان حتى التحقق من الإنتاج بالجملة لمجموعات نمط الحياة والعلامات الخاصة.",
     },
   },
   streetwear: {
-    name: "Streetwear",
-    headline: "Streetwear",
+    name: "ملابس شارعية",
+    headline: "ملابس شارعية",
     subhead:
-      "Urban-inspired apparel with bold silhouettes, premium trims, and construction built for brand-led drops and repeat seasonal programs.",
+      "ملابس مستوحاة من الحياة الحضرية بقصات جريئة وتشطيبات فاخرة وبناء مصمم لإطلاقات العلامة التجارية وبرامج موسمية متكررة.",
     gridDescription:
-      "Urban apparel with premium construction, statement silhouettes, and production built for brand-led drops.",
+      "ملابس حضرية ببناء فاخر وقصات مميزة وإنتاج مصمم لإطلاقات العلامة التجارية.",
     timelineSteps: [
       {
-        title: "Design translation and sampling",
+        title: "ترجمة التصميم والعينات",
         description:
-          "Streetwear programs start with accurate sample execution — matching wash, graphic placement, trim details, and fit intent before bulk approval.",
+          "تبدأ برامج الملابس الشارعية بتنفيذ عينات دقيق — مطابقة الغسيل وموضع الرسومات وتفاصيل التشطيب ونية القصة قبل اعتماد الإنتاج بالجملة.",
       },
       {
-        title: "Specialized construction",
+        title: "بناء متخصص",
         description:
-          "Oversized fits, heavy-gauge fleece, custom dye techniques, and complex assembly are managed with enhanced inline QC for drop-driven timelines.",
+          "القصات الواسعة، وفيليس ثقيل، وتقنيات الصباغة المخصصة، والتجميع المعقد تُدار بمراقبة جودة مدمجة معزّزة لجداول الإطلاق.",
       },
       {
-        title: "Finishing and brand-ready pack",
+        title: "التشطيب والتعبئة الجاهزة للعلامة",
         description:
-          "Wash processes, labeling, hang-tag application, and retail-ready packing align with brand presentation standards for wholesale and DTC channels.",
+          "عمليات الغسيل، والوسم، وتثبيت بطاقات التعليق، والتعبئة الجاهزة للبيع بالتجزئة تتماشى مع معايير عرض العلامة لقنوات الجملة والبيع المباشر.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Heavy-gauge sewing, garment dye units, embroidery and print partners" },
-      { label: "Certifications", value: "OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Oversized tees, hoodies, cargo, sets, graphic-heavy tops" },
-      { label: "Program profile", value: "Seasonal drops, limited runs, and repeat core styles" },
+      { label: "نطاق الطاقة الشهرية", value: "[X] – [Y] وحدة شهرياً (حسب البرنامج)" },
+      { label: "الآلات الرئيسية", value: "خياطة سميكة، وحدات صباغة ملابس، شركاء تطريز وطباعة" },
+      { label: "الشهادات", value: "OEKO-TEX، WRAP — يختلف النطاق حسب المنشأة والبرنامج" },
+      { label: "المنتجات النموذجية", value: "تيشيرتات واسعة، هوديز، كارجو، مجموعات، قمصان برسومات بارزة" },
+      { label: "ملف البرنامج", value: "إطلاقات موسمية، دفعات محدودة، وأساسيات متكررة" },
     ],
     sustainability: {
-      title: "Lower-impact options for urban programs",
-      body: "Streetwear brands increasingly specify recycled cotton, organic inputs, and controlled wash processes. We document material content and finishing chemistry for buyer compliance and marketing claims.",
+      title: "خيارات أقل تأثيراً للبرامج الحضرية",
+      body: "تحدّد علامات الملابس الشارعية بشكل متزايد القطن المعاد تدويره، والمدخلات العضوية، وعمليات الغسيل المضبوطة. نوثّق محتوى المواد وكيمياء التشطيب لامتثال المشتري ومطالبات التسويق.",
     },
     innovation: {
-      title: "Wash, dye, and graphic development",
-      body: "Development support for garment dye, vintage wash effects, and placement accuracy — from strike-off through bulk consistency for brand-critical aesthetics.",
+      title: "تطوير الغسيل والصباغة والرسومات",
+      body: "دعم تطوير صباغة الملابس، وتأثيرات الغسيل القديم، ودقة الموضع — من العينة الأولى حتى اتساق الإنتاج بالجملة للجماليات الحاسمة للعلامة.",
     },
   },
   activewear: {
-    name: "Activewear",
-    headline: "Activewear",
+    name: "ملابس رياضية",
+    headline: "ملابس رياضية",
     subhead:
-      "Performance apparel — leggings, tops, sports bras, and training layers — engineered for stretch recovery, moisture management, and durable construction.",
+      "ملابس أداء — ليغينغ، وقمصان، وصدريات رياضية، وطبقات تدريب — مصممة لاستعادة التمدد وإدارة الرطوبة وبناء متين.",
     gridDescription:
-      "Performance apparel with stretch recovery, moisture management, and construction built for training and lifestyle active programs.",
+      "ملابس أداء باستعادة التمدد وإدارة الرطوبة وبناء مصمم لبرامج التدريب والحياة النشطة.",
     timelineSteps: [
       {
-        title: "Performance fabric approval",
+        title: "اعتماد أقمشة الأداء",
         description:
-          "Activewear begins with fabric testing for stretch, recovery, spirality, and moisture-wicking performance — aligned to buyer benchmarks before bulk cutting.",
+          "تبدأ الملابس الرياضية باختبار الأقمشة للتمدد والاستعادة والالتفاف وأداء طرد الرطوبة — بما يتماشى مع معايير المشتري قبل القص بالجملة.",
       },
       {
-        title: "Technical cutting and sewing",
+        title: "قص وخياطة تقنية",
         description:
-          "Flatlock, bonded seams, and ergonomic patterning are executed on dedicated lines with inline measurement control for fit-critical programs.",
+          "الخياطة المسطحة، والحواف الملحومة، والقصات المريحة تُنفَّذ على خطوط مخصصة مع مراقبة قياس مدمجة للبرامج الحساسة للقصة.",
       },
       {
-        title: "Testing documentation and pack",
+        title: "توثيق الاختبارات والتعبئة",
         description:
-          "Final audit, care labeling, and packing follow buyer specs — with test documentation prepared for performance and restricted-substance requirements.",
+          "التدقيق النهائي، ووسم العناية، والتعبئة وفق مواصفات المشتري — مع إعداد توثيق الاختبارات لمتطلبات الأداء والمواد المقيدة.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Flatlock modules, coverstitch, automated spreading, performance fabric handling" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Leggings, sports bras, training tops, joggers, outer layers" },
-      { label: "Performance focus", value: "Stretch recovery, moisture management, durable flatlock construction" },
+      { label: "نطاق الطاقة الشهرية", value: "[X] – [Y] وحدة شهرياً (حسب البرنامج)" },
+      { label: "الآلات الرئيسية", value: "وحدات خياطة مسطحة، خياطة كوفرستيتش، فرش آلية، معالجة أقمشة الأداء" },
+      { label: "الشهادات", value: "GOTS، OEKO-TEX، WRAP — يختلف النطاق حسب المنشأة والبرنامج" },
+      { label: "المنتجات النموذجية", value: "ليغينغ، صدريات رياضية، قمصان تدريب، جوجر، طبقات خارجية" },
+      { label: "تركيز الأداء", value: "استعادة التمدد، إدارة الرطوبة، بناء فلات لوك متين" },
     ],
     sustainability: {
-      title: "Certified performance materials",
-      body: "Activewear programs often require recycled polyester, certified organic cotton, and documented chemical management. We support compliant inputs at selected facilities with traceability for marketing and audit requirements.",
+      title: "مواد أداء معتمدة",
+      body: "غالباً ما تتطلب برامج الملابس الرياضية بوليester معاد تدويره، وقطناً عضوياً معتمداً، وإدارة كيميائية موثّقة. ندعم مدخلات متوافقة في منشآت مختارة مع تتبع لمتطلبات التسويق والتدقيق.",
     },
     innovation: {
-      title: "Performance knit development",
-      body: "Development support for compression, recovery, and hand-feel targets — from lab dips through bulk validation for training and lifestyle active ranges.",
+      title: "تطوير تريكوت الأداء",
+      body: "دعم تطوير الضغط والاستعادة وأهداف الملمس — من عينات الألوان حتى التحقق من الإنتاج بالجملة لمجموعات التدريب والحياة النشطة.",
     },
   },
   denim: {
-    name: "Denim",
-    headline: "Denim",
+    name: "دنيم",
+    headline: "دنيم",
     subhead:
-      "Denim programs — jeans, jackets, and skirts — with controlled wash development, shade consistency, and finishing built for brand identity.",
+      "برامج دنيم — جينز، وسترات، وتنانير — مع تطوير غسيل مضبوط واتساق درجات اللون وتشطيب يعكس هوية العلامة.",
     gridDescription:
-      "Denim jeans, jackets, and skirts with wash development, shade control, and finishing for brand-led programs.",
+      "جينز دنيم وسترات وتنانير مع تطوير الغسيل وضبط الدرجة والتشطيب لبرامج العلامة التجارية.",
     timelineSteps: [
       {
-        title: "Denim sourcing and shade control",
+        title: "توريد الدنيم وضبط الدرجة",
         description:
-          "Incoming denim is inspected for weight, shade, and shrinkage. Wash recipes and abrasion targets are approved against buyer standards before bulk production.",
+          "يُفحص الدنيم الوارد من حيث الوزن والدرجة والانكماش. تُعتمد وصفات الغسيل وأهداف الكشط وفق معايير المشتري قبل الإنتاج بالجملة.",
       },
       {
-        title: "Cutting, sewing, and wash",
+        title: "القص والخياطة والغسيل",
         description:
-          "Dedicated denim sewing lines handle five-pocket construction, jackets, and skirts — followed by controlled wash, dry, and finishing for repeatable brand aesthetics.",
+          "خطوط خياطة دنيم مخصصة تتولى بناء الجيب الخمسي والسترات والتنانير — يليها غسيل وتجفيف وتشطيب مضبوط لجماليات علامة متكررة.",
       },
       {
-        title: "Final audit and dispatch",
+        title: "التدقيق النهائي والإرسال",
         description:
-          "Measurement audit, trim verification, and export-ready packing complete the flow — with wash documentation and traceability for compliance reviews.",
+          "تدقيق القياسات، والتحقق من التشطيبات، والتعبئة الجاهزة للتصدير تُكمل سير العمل — مع توثيق الغسيل والتتبع للمراجعات الامتثالية.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Denim sewing lines, wash units, laser/abrade finishing, ozone options" },
-      { label: "Certifications", value: "OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Five-pocket jeans, denim jackets, skirts, shackets, workwear denim" },
-      { label: "Wash capability", value: "Stone, enzyme, laser, vintage, and sustainable wash programs" },
+      { label: "نطاق الطاقة الشهرية", value: "[X] – [Y] وحدة شهرياً (حسب البرنامج)" },
+      { label: "الآلات الرئيسية", value: "خطوط خياطة دنيم، وحدات غسيل، تشطيب بالليزر/الكشط، خيارات الأوزون" },
+      { label: "الشهادات", value: "OEKO-TEX، WRAP — يختلف النطاق حسب المنشأة والبرنامج" },
+      { label: "المنتجات النموذجية", value: "جينز بخمسة جيوب، سترات دنيم، تنانير، شاكيت، دنيم ملابس عمل" },
+      { label: "قدرة الغسيل", value: "برامج غسيل بالحجر، والإنزيم، والليزر، والقديم، والمستدام" },
     ],
     sustainability: {
-      title: "Water-conscious denim finishing",
-      body: "Denim finishing is water-intensive by nature. Our programs include low-liquor wash options, laser finishing, and recycled cotton denim inputs at selected facilities — confirm current metrics with our sustainability team.",
+      title: "تشطيب دنيم موفّر للمياه",
+      body: "تشطيب الدنيم مكثّف استهلاك المياه بطبيعته. تشمل برامجنا خيارات غسيل منخفضة السوائل، وتشطيباً بالليزر، ومدخلات دنيم قطن معاد تدويره في منشآت مختارة — تأكدوا من المؤشرات الحالية مع فريق الاستدامة لدينا.",
     },
     innovation: {
-      title: "Wash and fit development",
-      body: "Collaborative wash development from prototype through bulk — supporting shade consistency, stretch recovery, and brand-specific finishing signatures.",
+      title: "تطوير الغسيل والقصة",
+      body: "تطوير غسيل تعاوني من النموذج الأولي حتى الإنتاج بالجملة — يدعم اتساق الدرجة واستعادة التمدد وتوقيعات التشطيب الخاصة بالعلامة.",
     },
   },
   kidswear: {
-    name: "Kidswear",
-    headline: "Kidswear",
+    name: "ملابس أطفال",
+    headline: "ملابس أطفال",
     subhead:
-      "Children's apparel with soft-hand construction, secure attachments, and compliance-focused finishing for infant through youth programs.",
+      "ملابس أطفال ببناء ناعم الملمس وتثبيتات آمنة وتشطيب يركز على الامتثال لبرامج الرضع حتى الشباب.",
     gridDescription:
-      "Children's apparel with soft-hand construction, secure attachments, and compliance-focused finishing.",
+      "ملابس أطفال ببناء ناعم الملمس وتثبيتات آمنة وتشطيب يركز على الامتثال.",
     timelineSteps: [
       {
-        title: "Material selection and compliance review",
+        title: "اختيار المواد ومراجعة الامتثال",
         description:
-          "Kidswear programs begin with restricted-substance review, soft-hand material selection, and trim approval against buyer and regulatory requirements.",
+          "تبدأ برامج ملابس الأطفال بمراجعة المواد المقيدة، واختيار مواد ناعمة الملمس، واعتماد التشطيبات وفق متطلبات المشتري والتنظيمية.",
       },
       {
-        title: "Safety-focused construction",
+        title: "بناء يركز على السلامة",
         description:
-          "Flat seams, secure attachments, and size-graded construction are managed with enhanced inline checks for infant, toddler, and youth programs.",
+          "الحواف المسطحة، والتثبيتات الآمنة، والبناء المتدرج حسب المقاس تُدار بفحوصات مدمجة معزّزة لبرامج الرضع والأطفال الصغار والشباب.",
       },
       {
-        title: "Finishing, testing documentation, and pack",
+        title: "التشطيب وتوثيق الاختبارات والتعبئة",
         description:
-          "Soft-hand finishing, labeling, and packing follow buyer specs — with test documentation and traceability prepared for compliance reviews.",
+          "التشطيب الناعم، والوسم، والتعبئة وفق مواصفات المشتري — مع إعداد توثيق الاختبارات والتتبع للمراجعات الامتثالية.",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Fine-gauge sewing, soft-hand finishing, secure-trim processes" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Bodysuits, sets, dresses, joggers, schoolwear, gift sets" },
-      { label: "Compliance focus", value: "Restricted substances, secure attachments, soft-hand construction" },
+      { label: "نطاق الطاقة الشهرية", value: "[X] – [Y] وحدة شهرياً (حسب البرنامج)" },
+      { label: "الآلات الرئيسية", value: "خياطة دقيقة، تشطيب ناعم، عمليات تثبيت آمن" },
+      { label: "الشهادات", value: "GOTS، OEKO-TEX، WRAP — يختلف النطاق حسب المنشأة والبرنامج" },
+      { label: "المنتجات النموذجية", value: "بodiesuits، مجموعات، فساتين، جوجر، ملابس مدرسية، مجموعات هدايا" },
+      { label: "تركيز الامتثال", value: "مواد مقيدة، تثبيتات آمنة، بناء ناعم الملمس" },
     ],
     sustainability: {
-      title: "Certified materials for sensitive categories",
-      body: "Kidswear programs require stricter chemical management and material traceability. We support certified organic and OEKO-TEX-aligned inputs at selected facilities — confirm scope for your program.",
+      title: "مواد معتمدة للفئات الحساسة",
+      body: "تتطلب برامج ملابس الأطفال إدارة كيميائية أكثر صرامة وتتبعاً للمواد. ندعم مدخلات عضوية معتمدة ومتوافقة مع OEKO-TEX في منشآت مختارة — تأكدوا من النطاق لبرنامجكم.",
     },
     innovation: {
-      title: "Sizing, fit, and soft-hand development",
-      body: "Development support for size grading, fit consistency, and hand-feel targets across infant through youth ranges — from sample through bulk validation.",
+      title: "تطوير المقاسات والقصة والملمس",
+      body: "دعم تطوير تدرج المقاسات واتساق القصة وأهداف الملمس عبر نطاق الرضع حتى الشباب — من العينة حتى التحقق من الإنتاج بالجملة.",
     },
   },
   boutique: {
-    name: "Boutique",
-    headline: "Boutique",
+    name: "بوتيك",
+    headline: "بوتيك",
     subhead:
-      "Small-batch and boutique programs with low minimums, refined construction, and wholesale-ready styles for emerging and premium labels.",
+      "برامج بوتيك ودفعات صغيرة بحد أدنى منخفض وبناء متقن وأساليب جاهزة للجملة للعلامات الناشئة والفاخرة.",
     gridDescription:
-      "Small-batch boutique programs with low minimums and refined construction for emerging and premium labels.",
+      "برامج بوتيك بدفعات صغيرة وحد أدنى منخفض وبناء متقن للعلامات الناشئة والفاخرة.",
     timelineSteps: [
       {
-        title: "Style development and sampling",
+        title: "تطوير الأساليب والعينات",
         description:
-          "Boutique programs prioritize accurate sampling, trim selection, and fit refinement — with transparent communication from first strike-off through approval.",
+          "تُولي برامج البوتيك الأولوية للعينات الدقيقة واختيار التشطيبات وتحسين القصة — مع تواصل شفاف من أول عينة حتى الاعتماد.",
       },
       {
-        title: "Low-MOQ production",
+        title: "إنتاج بحد أدنى منخفض",
         description:
-          "Flexible lines accommodate smaller runs without sacrificing construction quality — ideal for emerging brands, capsule collections, and premium wholesale programs.",
+          "خطوط مرنة تستوعب دفعات أصغر دون المساس بجودة البناء — مثالية للعلامات الناشئة والمجموعات الكبسولة وبرامج الجملة الفاخرة.",
       },
       {
-        title: "Brand-ready finishing and pack",
+        title: "تشطيب وتعبئة جاهزة للعلامة",
         description:
-          "Careful finishing, labeling, and presentation-focused packing align with boutique and wholesale channel expectations.",
+          "تشطيب دقيق، ووسم، وتعبئة تركز على العرض تتماشى مع توقعات قنوات البوتيك والجملة.",
       },
     ],
     specs: [
-      { label: "Minimum order profile", value: "Low minimums — program-dependent; ideal for startups and capsule runs" },
-      { label: "Primary machinery", value: "Flexible modular lines, sample room, CAD/CAM pattern support" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX — scope varies by facility and program" },
-      { label: "Typical products", value: "Capsule collections, premium basics, gift sets, curated seasonal drops" },
+      { label: "ملف الحد الأدنى للطلب", value: "حد أدنى منخفض — حسب البرنامج؛ مثالي للشركات الناشئة والدفعات الكبسولية" },
+      { label: "الآلات الرئيسية", value: "خطوط معيارية مرنة، غرفة عينات، دعم CAD/CAM للقصات" },
+      { label: "الشهادات", value: "GOTS، OEKO-TEX — يختلف النطاق حسب المنشأة والبرنامج" },
+      { label: "المنتجات النموذجية", value: "مجموعات كبسولة، أساسيات فاخرة، مجموعات هدايا، إطلاقات موسمية منتقاة" },
     ],
     sustainability: {
-      title: "Mindful production for smaller runs",
-      body: "Boutique programs benefit from right-sized production, certified material options, and transparent communication — reducing waste from over-ordering while supporting responsible inputs.",
+      title: "إنتاج مدروس للدفعات الأصغر",
+      body: "تستفيد برامج البوتيك من إنتاج بالحجم المناسب، وخيارات مواد معتمدة، وتواصل شفاف — ما يقلّل الهدر من الطلب الزائد مع دعم مدخلات مسؤولة.",
     },
     innovation: {
-      title: "Trend-led development support",
-      body: "Fabric selection, trend forecasting, and construction advice for brands building their first or next collection — from concept through wholesale-ready production.",
+      title: "دعم تطوير مواكب للاتجاهات",
+      body: "اختيار الأقمشة، وتوقعات الاتجاهات، واستشارات البناء للعلامات التي تبني مجموعتها الأولى أو التالية — من المفهوم حتى إنتاج جاهز للجملة.",
     },
   },
 };

@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { prepareLocale } from "@/lib/i18n/prepare-locale";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import {
   AlternativeContact,

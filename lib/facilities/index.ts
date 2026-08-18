@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { getTranslations } from "next-intl/server";
 import facilitiesData from "@/data/facilities.json";
 import {
   FACILITY_HERO_IMAGE,
@@ -30,15 +31,30 @@ function resolveFacilityThumbnail(slug: string): string {
   return FACILITY_PLACEHOLDER_IMAGE;
 }
 
-export function getFacilities(): Facility[] {
-  return (facilitiesData as Omit<Facility, "thumbnail">[]).map((facility) => ({
+function mapFacilityRecord(
+  facility: Omit<Facility, "thumbnail">,
+  name: string,
+  description: string,
+): Facility {
+  return {
     ...facility,
+    name,
+    description,
     thumbnail: resolveFacilityThumbnail(facility.slug),
-  }));
+  };
 }
 
-export function getFacilityById(id: string): Facility | undefined {
-  return getFacilities().find((facility) => facility.id === id);
+export async function getFacilities(): Promise<Facility[]> {
+  const t = await getTranslations("facilities");
+
+  return (facilitiesData as Omit<Facility, "thumbnail">[]).map((facility) =>
+    mapFacilityRecord(facility, t(`${facility.slug}.name`), t(`${facility.slug}.description`)),
+  );
+}
+
+export async function getFacilityById(id: string): Promise<Facility | undefined> {
+  const facilities = await getFacilities();
+  return facilities.find((facility) => facility.id === id);
 }
 
 /** @deprecated Use `facility.thumbnail` from `getFacilities()` instead. */

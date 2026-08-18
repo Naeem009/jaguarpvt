@@ -1,26 +1,26 @@
 export const home = {
   hero: {
-    headline: "Manufacturing, engineered for what's next.",
+    headline: "Manufactura diseñada para lo que viene.",
     subhead:
-      "Vertically integrated production across casual wear, streetwear, activewear, denim, kidswear, and boutique — serving global brands at 04 facilities in 03 countries.",
-    heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
+      "Producción verticalmente integrada en ropa casual, streetwear, ropa deportiva, denim, ropa infantil y boutique — al servicio de marcas globales en 04 instalaciones en 03 países.",
+    heroAlt: "Primer plano de tela siendo cosida en una máquina de coser industrial",
   },
   stats: {
-    facilities: "Facilities",
-    countries: "Countries",
-    employees: "Employees",
-    yearsInOperation: "Years in operation",
+    facilities: "Instalaciones",
+    countries: "Países",
+    employees: "Empleados",
+    yearsInOperation: "Años de operación",
   },
   impactStats: {
-    waterSaved: "Liters of water saved annually",
-    renewableEnergy: "Renewable energy share",
-    certifiedFacilities: "Certified facilities",
-    exploreImpact: "Explore our impact",
+    waterSaved: "Litros de agua ahorrados anualmente",
+    renewableEnergy: "Participación de energía renovable",
+    certifiedFacilities: "Instalaciones certificadas",
+    exploreImpact: "Explore nuestro impacto",
   },
   aiContext:
-    "Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected.",
+    "Vista previa de la página de inicio — seleccione una pregunta de ejemplo para ver cómo aparecerán las respuestas fundamentadas una vez conectado el asistente.",
   cta: {
-    title: "Ready to start a sourcing conversation?",
-    subhead: "Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps.",
+    title: "¿Listo para iniciar una conversación de abastecimiento?",
+    subhead: "Cuéntenos qué está desarrollando. Nuestro equipo responde a RFI y RFQ calificados con pasos claros a seguir.",
   },
 };

@@ -1,26 +1,26 @@
 export const home = {
   hero: {
-    headline: "Manufacturing, engineered for what's next.",
+    headline: "Fertigung, entwickelt für das, was als Nächstes kommt.",
     subhead:
-      "Vertically integrated production across casual wear, streetwear, activewear, denim, kidswear, and boutique — serving global brands at 04 facilities in 03 countries.",
-    heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
+      "Vertikal integrierte Produktion in Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung und Boutique — für globale Marken an 04 Standorten in 03 Ländern.",
+    heroAlt: "Nahaufnahme von Stoff, der auf einer industriellen Nähmaschine verarbeitet wird",
   },
   stats: {
-    facilities: "Facilities",
-    countries: "Countries",
-    employees: "Employees",
-    yearsInOperation: "Years in operation",
+    facilities: "Standorte",
+    countries: "Länder",
+    employees: "Mitarbeitende",
+    yearsInOperation: "Jahre im Betrieb",
   },
   impactStats: {
-    waterSaved: "Liters of water saved annually",
-    renewableEnergy: "Renewable energy share",
-    certifiedFacilities: "Certified facilities",
-    exploreImpact: "Explore our impact",
+    waterSaved: "Liter Wasser jährlich eingespart",
+    renewableEnergy: "Anteil erneuerbarer Energie",
+    certifiedFacilities: "Zertifizierte Standorte",
+    exploreImpact: "Unsere Wirkung entdecken",
   },
   aiContext:
-    "Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected.",
+    "Startseiten-Vorschau — wählen Sie eine Beispielfrage, um zu sehen, wie fundierte Antworten erscheinen, sobald der Assistent verbunden ist.",
   cta: {
-    title: "Ready to start a sourcing conversation?",
-    subhead: "Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps.",
+    title: "Bereit für ein Sourcing-Gespräch?",
+    subhead: "Erzählen Sie uns, was Sie entwickeln. Unser Team antwortet auf qualifizierte RFIs und RFQs mit klaren nächsten Schritten.",
   },
 };

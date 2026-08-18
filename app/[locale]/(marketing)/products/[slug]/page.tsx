@@ -18,7 +18,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
   if (!isProductCategorySlug(slug)) {
     return {};
   }

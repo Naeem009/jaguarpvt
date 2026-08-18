@@ -1,26 +1,26 @@
 export const home = {
   hero: {
-    headline: "Manufacturing, engineered for what's next.",
+    headline: "La manufacture, pensée pour demain.",
     subhead:
-      "Vertically integrated production across casual wear, streetwear, activewear, denim, kidswear, and boutique — serving global brands at 04 facilities in 03 countries.",
-    heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
+      "Production intégrée verticalement dans les vêtements casual, le streetwear, l'activewear, le denim, la mode enfant et la boutique — au service des marques internationales dans 04 sites répartis dans 03 pays.",
+    heroAlt: "Gros plan sur un tissu cousu sur une machine à coudre industrielle",
   },
   stats: {
-    facilities: "Facilities",
-    countries: "Countries",
-    employees: "Employees",
-    yearsInOperation: "Years in operation",
+    facilities: "Sites",
+    countries: "Pays",
+    employees: "Employés",
+    yearsInOperation: "Années d'activité",
   },
   impactStats: {
-    waterSaved: "Liters of water saved annually",
-    renewableEnergy: "Renewable energy share",
-    certifiedFacilities: "Certified facilities",
-    exploreImpact: "Explore our impact",
+    waterSaved: "Litres d'eau économisés par an",
+    renewableEnergy: "Part d'énergie renouvelable",
+    certifiedFacilities: "Sites certifiés",
+    exploreImpact: "Découvrir notre impact",
   },
   aiContext:
-    "Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected.",
+    "Aperçu de la page d'accueil — sélectionnez une question exemple pour voir comment les réponses fondées sur nos données apparaîtront une fois l'assistant connecté.",
   cta: {
-    title: "Ready to start a sourcing conversation?",
-    subhead: "Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps.",
+    title: "Prêt à entamer une conversation sourcing ?",
+    subhead: "Parlez-nous de votre projet. Notre équipe répond aux RFI et RFQ qualifiés avec des prochaines étapes claires.",
   },
 };

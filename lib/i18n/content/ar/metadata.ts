@@ -1,104 +1,104 @@
 export const metadata = {
   siteDescription:
-    "Vertically integrated apparel manufacturer for casual wear, streetwear, activewear, denim, kidswear, and boutique programs with audited compliance and scalable production.",
+    "مصنّع ملابس متكامل عمودياً لبرامج الملابس اليومية، والملابس الشارعية، والملابس الرياضية، والدنيم، وملابس الأطفال، والبوتيك — مع امتثال مدقّق وإنتاج قابل للتوسع.",
   home: {
-    title: "Vertically Integrated Apparel Manufacturer",
+    title: "مصنّع ملابس متكامل عمودياً",
     description:
-      "Jaguar (Pvt) Ltd. is a vertically integrated apparel manufacturer delivering casual wear, streetwear, activewear, denim, kidswear, and boutique programs for global brands with audited compliance and scalable production.",
+      "Jaguar (Pvt) Ltd. مصنّع ملابس متكامل عمودياً يقدّم برامج الملابس اليومية، والملابس الشارعية، والملابس الرياضية، والدنيم، وملابس الأطفال، والبوتيك للعلامات التجارية العالمية — مع امتثال مدقّق وإنتاج قابل للتوسع.",
   },
   about: {
-    title: "About",
+    title: "من نحن",
     description:
-      "Learn about Jaguar (Pvt) Ltd.—our history, leadership, manufacturing footprint, and long-term partnerships with international apparel brands.",
+      "تعرّف على Jaguar (Pvt) Ltd. — تاريخنا وقيادتنا وبصمتنا التصنيعية وشراكاتنا طويلة الأمد مع العلامات التجارية الدولية للملابس.",
   },
   atAGlance: {
-    title: "Jaguar at a Glance",
+    title: "جاغوار في لمحة",
     description:
-      "Company overview of Jaguar (Pvt) Ltd.—six facilities across five countries, leadership, history, and integrated apparel manufacturing at scale.",
+      "نظرة عامة على Jaguar (Pvt) Ltd. — ست منشآت في خمس دول، والقيادة، والتاريخ، والتصنيع المتكامل للملابس على نطاق واسع.",
   },
   aboutStrategy: {
-    title: "Our Strategy",
+    title: "استراتيجيتنا",
     description:
-      "Jaguar strategic priorities—category depth, geographic optionality, and compliance-led growth for long-term brand partnerships.",
+      "أولويات جاغوار الاستراتيجية — عمق الفئات، والمرونة الجغرافية، والنمو القائم على الامتثال لشراكات العلامات التجارية طويلة الأمد.",
   },
   aboutMission: {
-    title: "Mission",
+    title: "المهمة",
     description:
-      "Jaguar mission and values—manufacturing partnerships built on proof, integration, and long-term program delivery for global brands.",
+      "مهمة وقيم جاغوار — شراكات تصنيعية مبنية على الإثبات والتكامل وتسليم البرامج طويلة الأمد للعلامات التجارية العالمية.",
   },
   aboutCompanyPolicy: {
-    title: "Company Policy",
+    title: "سياسة الشركة",
     description:
-      "Jaguar company policies—ethics, labor standards, environmental responsibility, health and safety, and governance commitments.",
+      "سياسات جاغوار — الأخلاقيات، ومعايير العمل، والمسؤولية البيئية، والصحة والسلامة، والتزامات الحوكمة.",
   },
   careers: {
-    title: "Careers",
+    title: "الوظائف",
     description:
-      "Explore careers at Jaguar (Pvt) Ltd. in manufacturing operations, quality, sustainability, product development, and commercial teams.",
+      "استكشف فرص العمل في Jaguar (Pvt) Ltd. في عمليات التصنيع، والجودة، والاستدامة، وتطوير المنتجات، والفرق التجارية.",
   },
   contact: {
-    title: "Contact",
+    title: "تواصل معنا",
     description:
-      "Contact Jaguar (Pvt) Ltd. to submit an RFI or RFQ for casual wear, streetwear, activewear, denim, kidswear, or boutique programs. Our sourcing team responds within two business days.",
+      "تواصل مع Jaguar (Pvt) Ltd. لتقديم طلب معلومات أو عرض سعر لبرامج الملابس اليومية، والملابس الشارعية، والملابس الرياضية، والدنيم، وملابس الأطفال، أو البوتيك. يرد فريق التوريد خلال يومي عمل.",
   },
   facility: {
-    title: "Facility",
+    title: "المنشآت",
     description:
-      "Explore Jaguar manufacturing facilities, process capabilities, and production departments—from yarn intake through packing and quality assurance.",
+      "استكشف منشآت تصنيع جاغوار وقدرات العمليات وأقسام الإنتاج — من استلام الخيوط حتى التعبئة وضمان الجودة.",
   },
   ourImpact: {
-    title: "Our Impact",
+    title: "أثرنا",
     description:
-      "Review Jaguar (Pvt) Ltd. ESG impact across environment, people and communities, and governance with certifications and compliance programs.",
+      "راجع أثر ESG لـ Jaguar (Pvt) Ltd. في البيئة والناس والمجتمعات والحوكمة — مع الاعتمادات وبرامج الامتثال.",
   },
   environment: {
-    title: "Environment",
+    title: "البيئة",
     description:
-      "Environmental programs at Jaguar facilities including water stewardship, renewable energy, and waste reduction for responsible apparel manufacturing.",
+      "برامج بيئية في منشآت جاغوار تشمل إدارة المياه والطاقة المتجددة وتقليل النفايات للتصنيع المسؤول للملابس.",
   },
   people: {
-    title: "People & Communities",
+    title: "الناس والمجتمعات",
     description:
-      "Worker welfare, safety training, and community programs across Jaguar apparel manufacturing locations.",
+      "رفاهية العمال، والتدريب على السلامة، وبرامج المجتمع في مواقع تصنيع ملابس جاغوار.",
   },
   governance: {
-    title: "Governance & Certifications",
+    title: "الحوكمة والاعتمادات",
     description:
-      "Governance, audit readiness, and certifications including GOTS, OEKO-TEX, WRAP, and ISO programs at Jaguar manufacturing sites.",
+      "الحوكمة، والجاهزية للتدقيق، والاعتمادات بما في ذلك GOTS وOEKO-TEX وWRAP وISO في مواقع تصنيع جاغوار.",
   },
   products: {
-    title: "Products",
+    title: "المنتجات",
     description:
-      "Explore Jaguar product manufacturing across casual wear, streetwear, activewear, denim, kidswear, and boutique programs.",
+      "استكشف تصنيع منتجات جاغوار في الملابس اليومية، والملابس الشارعية، والملابس الرياضية، والدنيم، وملابس الأطفال، وبرامج البوتيك.",
   },
   casualWear: {
-    title: "Casual Wear",
+    title: "ملابس يومية",
     description:
-      "Casual wear manufacturing for tees, polos, loungewear, and everyday separates with integrated cutting, sewing, and finishing.",
+      "تصنيع ملابس يومية للتيشيرتات والبولو والملابس المنزلية والقطع اليومية — مع قص وخياطة وتشطيب متكامل.",
   },
   streetwear: {
-    title: "Streetwear",
+    title: "ملابس شارعية",
     description:
-      "Streetwear manufacturing for urban apparel, premium trims, and brand-led drops with specialized construction and wash programs.",
+      "تصنيع ملابس شارعية للملابس الحضرية، والإكسسوارات المميزة، والإصدارات المرتبطة بالعلامة — مع بناء متخصص وبرامج غسيل.",
   },
   activewear: {
-    title: "Activewear",
+    title: "ملابس رياضية",
     description:
-      "Activewear manufacturing for leggings, training tops, and performance layers with stretch recovery and moisture management.",
+      "تصنيع ملابس رياضية للليجgings وقمصان التدريب وطبقات الأداء — مع استعادة التمدد وإدارة الرطوبة.",
   },
   denim: {
-    title: "Denim",
+    title: "دنيم",
     description:
-      "Denim manufacturing for jeans, jackets, and skirts with wash development, shade control, and brand-ready finishing.",
+      "تصنيع دنيم للجينز والسترات والتنانير — مع تطوير الغسيل، والتحكم في الدرجة، والتشطيب الجاهز للعلامة.",
   },
   kidswear: {
-    title: "Kidswear",
+    title: "ملابس أطفال",
     description:
-      "Kidswear manufacturing with soft-hand construction, secure attachments, and compliance-focused finishing.",
+      "تصنيع ملابس أطفال ببناء ناعم الملمس، ومرفقات آمنة، وتشطيب يركز على الامتثال.",
   },
   boutique: {
-    title: "Boutique",
+    title: "بوتيك",
     description:
-      "Boutique and small-batch apparel programs with low minimums, refined construction, and catalogue-ready styles.",
+      "برامج ملابس بوتيك ودفعات صغيرة بحد أدنى منخفض، وبناء متقن، وأنماط جاهزة للكتalog.",
   },
 };

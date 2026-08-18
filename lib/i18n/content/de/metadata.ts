@@ -1,104 +1,104 @@
 export const metadata = {
   siteDescription:
-    "Vertically integrated apparel manufacturer for casual wear, streetwear, activewear, denim, kidswear, and boutique programs with audited compliance and scalable production.",
+    "Vertikal integrierter Bekleidungshersteller für Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung und Boutique-Programme mit geprüfter Compliance und skalierbarer Produktion.",
   home: {
-    title: "Vertically Integrated Apparel Manufacturer",
+    title: "Vertikal integrierter Bekleidungshersteller",
     description:
-      "Jaguar (Pvt) Ltd. is a vertically integrated apparel manufacturer delivering casual wear, streetwear, activewear, denim, kidswear, and boutique programs for global brands with audited compliance and scalable production.",
+      "Jaguar (Pvt) Ltd. ist ein vertikal integrierter Bekleidungshersteller, der Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung und Boutique-Programme für globale Marken mit geprüfter Compliance und skalierbarer Produktion liefert.",
   },
   about: {
-    title: "About",
+    title: "Über uns",
     description:
-      "Learn about Jaguar (Pvt) Ltd.—our history, leadership, manufacturing footprint, and long-term partnerships with international apparel brands.",
+      "Erfahren Sie mehr über Jaguar (Pvt) Ltd. — unsere Geschichte, Führung, Fertigungsstandorte und langfristige Partnerschaften mit internationalen Bekleidungsmarken.",
   },
   atAGlance: {
-    title: "Jaguar at a Glance",
+    title: "Jaguar auf einen Blick",
     description:
-      "Company overview of Jaguar (Pvt) Ltd.—six facilities across five countries, leadership, history, and integrated apparel manufacturing at scale.",
+      "Unternehmensüberblick über Jaguar (Pvt) Ltd. — sechs Standorte in fünf Ländern, Führung, Geschichte und integrierte Bekleidungsfertigung im großen Maßstab.",
   },
   aboutStrategy: {
-    title: "Our Strategy",
+    title: "Unsere Strategie",
     description:
-      "Jaguar strategic priorities—category depth, geographic optionality, and compliance-led growth for long-term brand partnerships.",
+      "Strategische Prioritäten von Jaguar — Kategorientiefe, geografische Flexibilität und compliance-gestütztes Wachstum für langfristige Markenpartnerschaften.",
   },
   aboutMission: {
     title: "Mission",
     description:
-      "Jaguar mission and values—manufacturing partnerships built on proof, integration, and long-term program delivery for global brands.",
+      "Mission und Werte von Jaguar — Fertigungspartnerschaften auf Basis von Nachweisen, Integration und langfristiger Programmlieferung für globale Marken.",
   },
   aboutCompanyPolicy: {
-    title: "Company Policy",
+    title: "Unternehmensrichtlinien",
     description:
-      "Jaguar company policies—ethics, labor standards, environmental responsibility, health and safety, and governance commitments.",
+      "Unternehmensrichtlinien von Jaguar — Ethik, Arbeitsstandards, Umweltverantwortung, Gesundheit und Sicherheit sowie Governance-Verpflichtungen.",
   },
   careers: {
-    title: "Careers",
+    title: "Karriere",
     description:
-      "Explore careers at Jaguar (Pvt) Ltd. in manufacturing operations, quality, sustainability, product development, and commercial teams.",
+      "Entdecken Sie Karrieremöglichkeiten bei Jaguar (Pvt) Ltd. in Fertigungsbetrieb, Qualität, Nachhaltigkeit, Produktentwicklung und Commercial Teams.",
   },
   contact: {
-    title: "Contact",
+    title: "Kontakt",
     description:
-      "Contact Jaguar (Pvt) Ltd. to submit an RFI or RFQ for casual wear, streetwear, activewear, denim, kidswear, or boutique programs. Our sourcing team responds within two business days.",
+      "Kontaktieren Sie Jaguar (Pvt) Ltd., um eine RFI oder RFQ für Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung oder Boutique-Programme einzureichen. Unser Sourcing-Team antwortet innerhalb von zwei Werktagen.",
   },
   facility: {
-    title: "Facility",
+    title: "Standorte",
     description:
-      "Explore Jaguar manufacturing facilities, process capabilities, and production departments—from yarn intake through packing and quality assurance.",
+      "Entdecken Sie Jaguar-Fertigungsstandorte, Prozesskapazitäten und Produktionsabteilungen — von der Garnannahme bis Verpackung und Qualitätssicherung.",
   },
   ourImpact: {
-    title: "Our Impact",
+    title: "Unsere Wirkung",
     description:
-      "Review Jaguar (Pvt) Ltd. ESG impact across environment, people and communities, and governance with certifications and compliance programs.",
+      "ESG-Wirkung von Jaguar (Pvt) Ltd. in Umwelt, Menschen und Gemeinschaften sowie Governance — mit Zertifizierungen und Compliance-Programmen.",
   },
   environment: {
-    title: "Environment",
+    title: "Umwelt",
     description:
-      "Environmental programs at Jaguar facilities including water stewardship, renewable energy, and waste reduction for responsible apparel manufacturing.",
+      "Umweltprogramme an Jaguar-Standorten einschließlich Wasserbewirtschaftung, erneuerbarer Energie und Abfallreduktion für verantwortungsvolle Bekleidungsfertigung.",
   },
   people: {
-    title: "People & Communities",
+    title: "Menschen & Gemeinschaften",
     description:
-      "Worker welfare, safety training, and community programs across Jaguar apparel manufacturing locations.",
+      "Arbeitswohlfahrt, Sicherheitsschulung und Gemeinschaftsprogramme an Jaguar-Bekleidungsstandorten.",
   },
   governance: {
-    title: "Governance & Certifications",
+    title: "Governance & Zertifizierungen",
     description:
-      "Governance, audit readiness, and certifications including GOTS, OEKO-TEX, WRAP, and ISO programs at Jaguar manufacturing sites.",
+      "Governance, Audit-Bereitschaft und Zertifizierungen einschließlich GOTS, OEKO-TEX, WRAP und ISO-Programme an Jaguar-Fertigungsstandorten.",
   },
   products: {
-    title: "Products",
+    title: "Produkte",
     description:
-      "Explore Jaguar product manufacturing across casual wear, streetwear, activewear, denim, kidswear, and boutique programs.",
+      "Entdecken Sie Jaguar-Produktfertigung in Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung und Boutique-Programmen.",
   },
   casualWear: {
-    title: "Casual Wear",
+    title: "Freizeitbekleidung",
     description:
-      "Casual wear manufacturing for tees, polos, loungewear, and everyday separates with integrated cutting, sewing, and finishing.",
+      "Fertigung von Freizeitbekleidung für T-Shirts, Polos, Loungewear und Alltags-Separates mit integriertem Zuschnitt, Konfektion und Veredelung.",
   },
   streetwear: {
     title: "Streetwear",
     description:
-      "Streetwear manufacturing for urban apparel, premium trims, and brand-led drops with specialized construction and wash programs.",
+      "Streetwear-Fertigung für urbane Bekleidung, Premium-Trims und markengeführte Drops mit spezialisierter Konstruktion und Waschprogrammen.",
   },
   activewear: {
     title: "Activewear",
     description:
-      "Activewear manufacturing for leggings, training tops, and performance layers with stretch recovery and moisture management.",
+      "Activewear-Fertigung für Leggings, Trainingstops und Performance-Lagen mit Dehnungsrückstellung und Feuchtigkeitsmanagement.",
   },
   denim: {
     title: "Denim",
     description:
-      "Denim manufacturing for jeans, jackets, and skirts with wash development, shade control, and brand-ready finishing.",
+      "Denim-Fertigung für Jeans, Jacken und Röcke mit Wasch-Entwicklung, Farbtontreue und markenfertiger Veredelung.",
   },
   kidswear: {
-    title: "Kidswear",
+    title: "Kinderbekleidung",
     description:
-      "Kidswear manufacturing with soft-hand construction, secure attachments, and compliance-focused finishing.",
+      "Kinderbekleidungsfertigung mit weicher Hand, sicheren Befestigungen und compliance-orientierter Veredelung.",
   },
   boutique: {
     title: "Boutique",
     description:
-      "Boutique and small-batch apparel programs with low minimums, refined construction, and catalogue-ready styles.",
+      "Boutique- und Kleinserien-Bekleidungsprogramme mit niedrigen Mindestmengen, verfeinerter Konstruktion und katalogfertigen Styles.",
   },
 };

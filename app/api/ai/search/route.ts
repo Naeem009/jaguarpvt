@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const scope = typeof body.scope === "string" ? body.scope : "global";
 
     if (scope === "facilities") {
-      const result = searchFacilities(query, getFacilities());
+      const result = searchFacilities(query, await getFacilities());
       return Response.json(result);
     }
 

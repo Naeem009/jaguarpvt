@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { prepareLocale } from "@/lib/i18n/prepare-locale";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { CapabilityMatcher, Hero, ProductGrid } from "@/components/sections";
 import { getProductHubGridItems } from "@/lib/products/get-content";
@@ -8,7 +9,8 @@ type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: PageProps) {
+  await prepareLocale(params);
   return createPageMetadata("products");
 }
 

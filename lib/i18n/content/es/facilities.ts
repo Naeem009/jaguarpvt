@@ -1,14 +1,14 @@
 export const facilities = {
   "knitting-unit": {
-    name: "Knitting",
-    description: "High-volume circular and flat knitting for jersey, fleece, and performance knit programs.",
+    name: "Tejeduría",
+    description: "Tejeduría circular y plana de alto volumen para programas de punto, felpa y tejidos de rendimiento.",
   },
   "dyeing-unit": {
-    name: "Dyeing",
-    description: "State-of-the-art dyeing for knit and woven programs with documented chemical management and shade matching.",
+    name: "Teñido",
+    description: "Teñido de última generación para programas de punto y tejido plano con gestión documentada de químicos y igualación de tonos.",
   },
   "sewing-facility": {
-    name: "Sewing Facility",
-    description: "Integrated cut-and-sew, finishing, and packing for multi-category apparel programs.",
+    name: "Instalación de confección",
+    description: "Corte y confección integrados, acabado y empaque para programas de confección multirubro.",
   },
 };

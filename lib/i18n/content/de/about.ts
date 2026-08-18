@@ -1,100 +1,100 @@
 export const about = {
   hub: {
     hero: {
-      headline: "About Jaguar",
+      headline: "Über Jaguar",
       subhead:
-        "Four decades of vertically integrated apparel manufacturing — built on scale, compliance, and partnerships that outlast seasonal collections.",
-      alt: "Modern apparel manufacturing facility and production environment",
-      exploreSections: "Explore company",
+        "Vier Jahrzehnte vertikal integrierter Bekleidungsfertigung — aufgebaut auf Größe, Compliance und Partnerschaften, die saisonale Kollektionen überdauern.",
+      alt: "Moderner Bekleidungsfertigungsstandort und Produktionsumgebung",
+      exploreSections: "Unternehmen entdecken",
     },
     grid: {
-      eyebrow: "Company",
-      title: "Understand how we operate",
+      eyebrow: "Unternehmen",
+      title: "Verstehen Sie, wie wir arbeiten",
       subhead:
-        "From group overview and strategic direction to mission, values, and published policies — the information sourcing teams need before a program begins.",
+        "Vom Konzernüberblick und der strategischen Ausrichtung bis zu Mission, Werten und veröffentlichten Richtlinien — die Informationen, die Sourcing-Teams vor Programmstart benötigen.",
     },
     overview: {
-      title: "A manufacturer built for long-term programs",
-      body: "Jaguar (Pvt) Ltd. integrates product development, manufacturing, and compliance across casual wear, streetwear, activewear, denim, kidswear, and boutique. We serve global brands from six facilities across five countries — with audit-ready systems, transparent capability data, and commercial teams who speak the language of sourcing, not sales.",
+      title: "Ein Hersteller für langfristige Programme",
+      body: "Jaguar (Pvt) Ltd. integriert Produktentwicklung, Fertigung und Compliance in Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung und Boutique. Wir bedienen globale Marken von sechs Standorten in fünf Ländern — mit auditfähigen Systemen, transparenten Kapazitätsdaten und Commercial Teams, die die Sprache des Sourcings sprechen, nicht des Vertriebs.",
     },
     cta: {
-      title: "Partner with a manufacturer built for long-term programs",
-      subhead: "Tell us what you're building. Our team responds to qualified inquiries with clear next steps.",
+      title: "Partnerschaft mit einem Hersteller für langfristige Programme",
+      subhead: "Erzählen Sie uns, was Sie entwickeln. Unser Team antwortet auf qualifizierte Anfragen mit klaren nächsten Schritten.",
     },
   },
   menu: {
     atAGlance: {
-      title: "Jaguar at a Glance",
-      description: "Footprint, leadership, history, and the scale behind our manufacturing network.",
+      title: "Jaguar auf einen Blick",
+      description: "Standorte, Führung, Geschichte und die Größe unseres Produktionsnetzwerks.",
     },
     strategy: {
-      title: "Our Strategy",
-      description: "How we invest in capacity, categories, and partnerships for sustained growth.",
+      title: "Unsere Strategie",
+      description: "Wie wir in Kapazität, Kategorien und Partnerschaften für nachhaltiges Wachstum investieren.",
     },
     mission: {
       title: "Mission",
-      description: "Purpose, values, and the principles that guide every customer program.",
+      description: "Zweck, Werte und Grundsätze, die jedes Kundenprogramm leiten.",
     },
     companyPolicy: {
-      title: "Company Policy",
-      description: "Ethics, compliance, workplace standards, and governance commitments.",
+      title: "Unternehmensrichtlinien",
+      description: "Ethik, Compliance, Arbeitsplatzstandards und Governance-Verpflichtungen.",
     },
   },
   subPage: {
     heroAlt: "{headline} — Jaguar (Pvt) Ltd.",
-    defaultCtaTitle: "Start a conversation with our team",
-    defaultCtaSubhead: "Qualified RFIs and RFQs receive a structured response within two business days.",
+    defaultCtaTitle: "Gespräch mit unserem Team starten",
+    defaultCtaSubhead: "Qualifizierte RFIs und RFQs erhalten innerhalb von zwei Werktagen eine strukturierte Antwort.",
   },
   stats: {
-    facilities: "Facilities",
-    countries: "Countries",
-    employees: "Employees",
-    yearsInOperation: "Years in operation",
+    facilities: "Standorte",
+    countries: "Länder",
+    employees: "Mitarbeitende",
+    yearsInOperation: "Jahre im Betrieb",
   },
   atAGlance: {
-    headline: "Jaguar at a Glance",
+    headline: "Jaguar auf einen Blick",
     subhead:
-      "A third-generation, family-owned manufacturer in Faisalabad — serving global apparel brands with ethical wholesale supply since 1984.",
+      "Ein familiengeführtes Unternehmen in der dritten Generation in Faisalabad — ethische Großhandelsbelieferung für globale Bekleidungsmarken seit 1984.",
     intro:
-      "Jaguar is a third-generation family-owned clothing brand manufacturer, rooted in the heart of Pakistan's textile industry, Faisalabad. Since 1984, we have evolved alongside the fashion industry and adapted our expertise to meet the ever-changing needs of brands worldwide. We have designed, engineered, and tailored quality garments, using fabrics like organic cotton, bamboo cotton, and recycled materials.\n\nOur passion for premium apparel is in our DNA. We're your go-to partner, offering expertise in fabric selection, trend forecasting, and sustainable practices. With in-house knitting, dyeing, and a state-of-the-art facility equipped with CAD/CAM technology, we combine artisanal skill with cutting-edge production methods.\n\nWhether you're a budding entrepreneur or an established brand, we're a wholesale supplier of clothes committed to bringing your vision to life with low minimums, transparent communication, and unshakeable commitment to quality.",
+      "Jaguar ist ein familiengeführtes Bekleidungsunternehmen in der dritten Generation, verwurzelt im Herzen der pakistanischen Textilindustrie, Faisalabad. Seit 1984 haben wir uns parallel zur Modebranche weiterentwickelt und unsere Expertise angepasst, um den sich ständig wandelnden Anforderungen von Marken weltweit gerecht zu werden. Wir haben hochwertige Kleidungsstücke entworfen, konstruiert und gefertigt — mit Stoffen wie Bio-Baumwolle, Bambus-Baumwolle und recycelten Materialien.\n\nUnsere Leidenschaft für Premium-Bekleidung liegt in unserer DNA. Wir sind Ihr Partner mit Expertise in Stoffauswahl, Trendprognose und nachhaltigen Praktiken. Mit hauseigener Strickerei, Färberei und einem hochmodernen Standort mit CAD/CAM-Technologie verbinden wir handwerkliches Können mit modernsten Produktionsmethoden.\n\nOb aufstrebender Unternehmer oder etablierte Marke — wir sind ein Großhandelslieferant für Bekleidung, der sich verpflichtet, Ihre Vision mit niedrigen Mindestmengen, transparenter Kommunikation und unerschütterlichem Qualitätsanspruch Wirklichkeit werden zu lassen.",
     blocks: [
       {
-        title: "Global footprint, regional depth",
-        body: "Six facilities across five countries give sourcing teams geographic optionality without sacrificing process control. Each site operates under shared quality systems, with category-specific lines for casual wear, streetwear, activewear, denim, kidswear, and boutique — and certification scope documented per facility, not assumed group-wide.",
-        imageAlt: "Global manufacturing footprint and facility network",
+        title: "Globale Präsenz, regionale Tiefe",
+        body: "Sechs Standorte in fünf Ländern geben Sourcing-Teams geografische Flexibilität ohne Verlust der Prozesskontrolle. Jeder Standort arbeitet unter gemeinsamen Qualitätssystemen mit kategoriespezifischen Linien für Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung und Boutique — und dokumentiertem Zertifizierungsumfang pro Standort, nicht pauschal unternehmensweit.",
+        imageAlt: "Globale Fertigungspräsenz und Standortnetzwerk",
       },
       {
-        title: "Integrated operations at scale",
-        body: "Vertical integration means fewer handoffs between development, production, and compliance. From lab dips and size sets through bulk cutting and final audit, programs move through a single accountable system — reducing lead-time variance and improving traceability for brand partners.",
-        imageAlt: "Integrated apparel manufacturing operations on the production floor",
+        title: "Integrierte Abläufe im großen Maßstab",
+        body: "Vertikale Integration bedeutet weniger Übergaben zwischen Entwicklung, Produktion und Compliance. Von Lab Dips und Size Sets bis Zuschnitt in Serie und finalem Audit bewegen sich Programme durch ein einziges verantwortliches System — das Lieferzeitvarianz reduziert und Rückverfolgbarkeit für Markenpartner verbessert.",
+        imageAlt: "Integrierte Bekleidungsfertigungsabläufe auf der Produktionsetage",
       },
     ],
     history: {
-      eyebrow: "History",
-      title: "40 years in Faisalabad, built for global brands",
+      eyebrow: "Geschichte",
+      title: "40 Jahre in Faisalabad, gebaut für globale Marken",
       subhead:
-        "From a third-generation family manufacturer in Pakistan's textile capital to a multi-facility partner for startups and established labels worldwide.",
+        "Vom familiengeführten Hersteller in der dritten Generation in Pakistans Textilhauptstadt zum Multi-Standort-Partner für Start-ups und etablierte Labels weltweit.",
       steps: [
         {
-          title: "1984 — Founded in Faisalabad",
+          title: "1984 — Gegründet in Faisalabad",
           description:
-            "Jaguar began as a family-owned clothing manufacturer in the heart of Pakistan's textile industry. From the start, the focus was quality garments, skilled production, and partnerships that could grow with each brand's ambition.",
+            "Jaguar begann als familiengeführtes Bekleidungsunternehmen im Herzen der pakistanischen Textilindustrie. Von Anfang an standen Qualitätskleidung, qualifizierte Produktion und Partnerschaften im Fokus, die mit dem Ehrgeiz jeder Marke wachsen konnten.",
         },
         {
-          title: "1990s–2000s — Evolving with fashion",
+          title: "1990er–2000er — Mit der Mode mitwachsen",
           description:
-            "As global fashion changed, we expanded in-house knitting and dyeing, invested in CAD/CAM technology, and broadened our fabric expertise to organic cotton, bamboo cotton, and recycled materials — adapting expertise to meet brands' ever-changing needs.",
+            "Als sich die globale Mode veränderte, bauten wir hauseigene Strickerei und Färberei aus, investierten in CAD/CAM-Technologie und erweiterten unsere Stoffexpertise um Bio-Baumwolle, Bambus-Baumwolle und recycelte Materialien — und passten unsere Expertise an die sich wandelnden Anforderungen der Marken an.",
         },
         {
-          title: "Today — Six facilities, five countries",
+          title: "Heute — Sechs Standorte, fünf Länder",
           description:
-            "More than four decades on, Jaguar serves budding entrepreneurs and established giants across six facilities in five countries — with ethical wholesale supply, streamlined production, transparent communication, and an unwavering commitment to quality.",
+            "Mehr als vier Jahrzehnte später bedient Jaguar aufstrebende Unternehmer und etablierte Marken an sechs Standorten in fünf Ländern — mit ethischer Großhandelsbelieferung, optimierten Produktionsabläufen, transparenter Kommunikation und unerschütterlichem Qualitätsanspruch.",
         },
       ],
     },
     leadership: {
-      eyebrow: "Leadership",
-      title: "Experienced operators across manufacturing and commercial functions",
+      eyebrow: "Führung",
+      title: "Erfahrene Führungskräfte in Fertigung und Commercial Functions",
       members: [
         {
           name: "Mr. Asim ul Haq",
@@ -114,188 +114,188 @@ export const about = {
       ],
     },
     recognition: {
-      eyebrow: "Recognition",
-      title: "Industry standing and export excellence",
-      subhead: "Representative recognition across manufacturing excellence, export performance, and workplace standards.",
+      eyebrow: "Anerkennung",
+      title: "Branchenstellung und Exportexzellenz",
+      subhead: "Repräsentative Anerkennung in Fertigungsexzellenz, Exportleistung und Arbeitsplatzstandards.",
       awards: [
         {
-          title: "Export excellence — textile and apparel sector",
+          title: "Exportexzellenz — Textil- und Bekleidungssektor",
           year: "2023",
           issuer: "Trade Development Authority",
         },
         {
-          title: "Manufacturing quality and process excellence",
+          title: "Fertigungsqualität und Prozessexzellenz",
           year: "2022",
-          issuer: "Regional industry association",
+          issuer: "Regionale Branchenvereinigung",
         },
         {
-          title: "Workplace standards and compliance recognition",
+          title: "Arbeitsplatzstandards und Compliance-Anerkennung",
           year: "2021",
-          issuer: "Independent audit body",
+          issuer: "Unabhängige Audit-Organisation",
         },
       ],
     },
     cta: {
-      title: "Explore our strategic direction",
-      subhead: "Read how we invest in capacity, categories, and partnerships for the years ahead.",
+      title: "Unsere strategische Ausrichtung entdecken",
+      subhead: "Lesen Sie, wie wir in Kapazität, Kategorien und Partnerschaften für die kommenden Jahre investieren.",
     },
   },
   strategy: {
-    headline: "Our Strategy",
+    headline: "Unsere Strategie",
     subhead:
-      "A disciplined approach to category depth, geographic optionality, and compliance-led growth — designed for brands that plan in seasons, not transactions.",
+      "Ein disziplinierter Ansatz zu Kategorientiefe, geografischer Flexibilität und compliance-gestütztem Wachstum — für Marken, die in Saisons planen, nicht in Einzeltransaktionen.",
     intro:
-      "Our strategy is not a vision statement on a wall. It is a set of investment priorities — in integrated capacity, certified product lines, and long-term buyer relationships — that govern capital allocation, facility development, and how we engage with sourcing teams at the start of every program.",
+      "Unsere Strategie ist kein Visionssatz an der Wand. Sie ist ein Set von Investitionsprioritäten — in integrierte Kapazität, zertifizierte Produktlinien und langfristige Käuferbeziehungen — das Kapitalallokation, Standortentwicklung und unsere Zusammenarbeit mit Sourcing-Teams zu Programmbeginn steuert.",
     pillarsSection: {
-      eyebrow: "Strategy",
-      title: "Strategic priorities",
+      eyebrow: "Strategie",
+      title: "Strategische Prioritäten",
     },
     pillars: [
       {
-        title: "Category depth over diversification",
+        title: "Kategorientiefe statt Diversifikation",
         description:
-          "We invest where we can control quality end-to-end: casual wear, streetwear, activewear, denim, kidswear, and boutique. Each category has dedicated lines, process engineers, and compliance documentation — rather than generalist capacity that underperforms under audit.",
+          "Wir investieren dort, wo wir Qualität End-to-End kontrollieren können: Freizeitbekleidung, Streetwear, Activewear, Denim, Kinderbekleidung und Boutique. Jede Kategorie hat dedizierte Linien, Prozessingenieure und Compliance-Dokumentation — statt generalistischer Kapazität, die unter Audit unterperformt.",
       },
       {
-        title: "Geographic optionality",
+        title: "Geografische Flexibilität",
         description:
-          "A multi-country footprint gives brands sourcing flexibility and risk distribution. Shared systems ensure consistency; local presence ensures responsiveness to regional program requirements.",
+          "Ein Multi-Länder-Netzwerk gibt Marken Sourcing-Flexibilität und Risikostreuung. Gemeinsame Systeme sichern Konsistenz; lokale Präsenz sichert Reaktionsfähigkeit auf regionale Programmanforderungen.",
       },
       {
-        title: "Compliance as a commercial advantage",
+        title: "Compliance als kommerzieller Vorteil",
         description:
-          "Certifications, audit readiness, and published ESG metrics are treated as product features — not overhead. We invest ahead of buyer requirements so programs launch without compliance delays.",
+          "Zertifizierungen, Audit-Bereitschaft und veröffentlichte ESG-Kennzahlen werden als Produktmerkmale behandelt — nicht als Overhead. Wir investieren vor Käuferanforderungen, damit Programme ohne Compliance-Verzögerungen starten.",
       },
     ],
     blocks: [
       {
-        title: "Capacity investment aligned to demand",
-        body: "Capital expenditure follows confirmed buyer pipelines — not speculative expansion. New lines, machinery upgrades, and facility improvements are tied to multi-season commitments, ensuring capacity serves real programs rather than inventory risk.",
-        imageAlt: "Strategic planning and capacity investment discussion",
+        title: "Kapazitätsinvestitionen an die Nachfrage gekoppelt",
+        body: "Investitionen folgen bestätigten Käufer-Pipelines — nicht spekulativer Expansion. Neue Linien, Maschinen-Upgrades und Standortverbesserungen sind an Multi-Saison-Verpflichtungen geknüpft und stellen sicher, dass Kapazität echte Programme bedient, nicht Lagerbestandsrisiko.",
+        imageAlt: "Strategische Planung und Kapazitätsinvestitionsgespräch",
       },
       {
-        title: "Innovation within manufacturing discipline",
-        body: "Process innovation — low-liquor dyeing, automated cutting, digital tracking — is adopted where it improves consistency, traceability, or environmental performance. We do not chase technology for its own sake; we deploy it where it strengthens program delivery.",
-        imageAlt: "Innovation and process improvement in apparel manufacturing",
+        title: "Innovation innerhalb Fertigungsdisziplin",
+        body: "Prozessinnovation — Niedrigbad-Färbung, automatisierter Zuschnitt, digitales Tracking — wird dort eingesetzt, wo sie Konsistenz, Rückverfolgbarkeit oder Umweltleistung verbessert. Wir jagen Technologie nicht um ihrer selbst willen; wir setzen sie ein, wo sie Programmlieferung stärkt.",
+        imageAlt: "Innovation und Prozessverbesserung in der Bekleidungsfertigung",
       },
     ],
     cta: {
-      title: "Discuss program fit with our commercial team",
-      subhead: "Share your category, volume profile, and compliance requirements — we respond with an honest capability assessment.",
+      title: "Programmpassung mit unserem Commercial Team besprechen",
+      subhead: "Teilen Sie Ihre Kategorie, Ihr Volumenprofil und Ihre Compliance-Anforderungen — wir antworten mit einer ehrlichen Kapazitätsbewertung.",
     },
   },
   mission: {
     headline: "Mission",
     subhead:
-      "Ethical wholesale apparel supply that lets brands focus on what they do best — design, marketing, and growth.",
+      "Ethische Großhandels-Bekleidungsbelieferung, die Marken das ermöglicht, worin sie am besten sind — Design, Marketing und Wachstum.",
     intro:
-      "To fuel the fire of apparel brands, from startups to established giants, with ethical wholesale clothing supply, streamlined production, and transparent communication. It's a partnership that frees them to focus on design, marketing, and growth.",
+      "Die Leidenschaft von Bekleidungsmarken zu befeuern — von Start-ups bis etablierten Marken — mit ethischer Großhandels-Bekleidungsbelieferung, optimierten Produktionsabläufen und transparenter Kommunikation. Eine Partnerschaft, die sie befähigt, sich auf Design, Marketing und Wachstum zu konzentrieren.",
     visionSection: {
       eyebrow: "Vision",
-      title: "Our vision",
+      title: "Unsere Vision",
     },
     vision:
-      "To set the gold standard for ethical and sustainable apparel manufacturing, inspiring a global shift towards responsible practices and empowering brands within the fashion industry to create a positive impact.",
+      "Den Goldstandard für ethische und nachhaltige Bekleidungsfertigung zu setzen, einen globalen Wandel zu verantwortungsvollen Praktiken anzuregen und Marken in der Modebranche zu befähigen, positive Wirkung zu erzielen.",
     valuesSection: {
       eyebrow: "Mission",
-      title: "How we deliver",
+      title: "Wie wir liefern",
     },
     values: [
       {
-        title: "Ethical wholesale supply",
+        title: "Ethische Großhandelsbelieferung",
         description:
-          "Responsible manufacturing and sourcing practices that startups and established brands can build on with confidence.",
+          "Verantwortungsvolle Fertigungs- und Beschaffungspraktiken, auf die Start-ups und etablierte Marken mit Vertrauen aufbauen können.",
       },
       {
-        title: "Streamlined production",
+        title: "Optimierte Produktion",
         description:
-          "In-house knitting, dyeing, and CAD/CAM-equipped facilities that combine artisanal skill with efficient, reliable output.",
+          "Hauseigene Strickerei, Färberei und CAD/CAM-ausgestattete Standorte, die handwerkliches Können mit effizienter, zuverlässiger Leistung verbinden.",
       },
       {
-        title: "Transparent communication",
+        title: "Transparente Kommunikation",
         description:
-          "Clear timelines, honest capability conversations, and low minimums that keep partnerships straightforward from first sample to bulk delivery.",
+          "Klare Zeitpläne, ehrliche Kapazitätsgespräche und niedrige Mindestmengen, die Partnerschaften vom ersten Muster bis zur Serienlieferung unkompliziert halten.",
       },
       {
-        title: "Sustainable impact",
+        title: "Nachhaltige Wirkung",
         description:
-          "Organic cotton, bamboo cotton, recycled materials, and continuous improvement toward the gold standard in responsible apparel manufacturing.",
+          "Bio-Baumwolle, Bambus-Baumwolle, recycelte Materialien und kontinuierliche Verbesserung hin zum Goldstandard verantwortungsvoller Bekleidungsfertigung.",
       },
     ],
     blocks: [
       {
-        title: "Partnership over production alone",
-        body: "We don't just manufacture garments — we free brand teams to focus on design, marketing, and growth. That means ethical supply, predictable lead times, and communication you can act on.",
-        imageAlt: "Brand partnership focused on design and growth",
+        title: "Partnerschaft statt reiner Produktion",
+        body: "Wir fertigen nicht nur Kleidungsstücke — wir geben Markenteams Freiraum für Design, Marketing und Wachstum. Das bedeutet ethische Belieferung, planbare Lieferzeiten und Kommunikation, auf die Sie handeln können.",
+        imageAlt: "Markenpartnerschaft mit Fokus auf Design und Wachstum",
       },
       {
-        title: "Raising the bar for responsible manufacturing",
-        body: "Our vision is a global shift toward ethical and sustainable apparel production. Every program is an opportunity to prove that quality, transparency, and positive impact can scale together.",
-        imageAlt: "Sustainable and ethical apparel manufacturing",
+        title: "Den Maßstab für verantwortungsvolle Fertigung erhöhen",
+        body: "Unsere Vision ist ein globaler Wandel hin zu ethischer und nachhaltiger Bekleidungsproduktion. Jedes Programm ist eine Gelegenheit zu beweisen, dass Qualität, Transparenz und positive Wirkung gemeinsam skalieren können.",
+        imageAlt: "Nachhaltige und ethische Bekleidungsfertigung",
       },
     ],
     cta: {
-      title: "Work with a mission-led manufacturing partner",
-      subhead: "Contact our team to discuss how our operating model supports your next program.",
+      title: "Mit einem mission-geführten Fertigungspartner arbeiten",
+      subhead: "Kontaktieren Sie unser Team, um zu besprechen, wie unser Betriebsmodell Ihr nächstes Programm unterstützt.",
     },
   },
   companyPolicy: {
-    headline: "Company Policy",
+    headline: "Unternehmensrichtlinien",
     subhead:
-      "Published standards for ethics, compliance, workplace conduct, and governance — the framework that supports every customer program and audit.",
+      "Veröffentlichte Standards für Ethik, Compliance, Arbeitsplatzverhalten und Governance — der Rahmen, der jedes Kundenprogramm und jedes Audit trägt.",
     intro:
-      "Jaguar (Pvt) Ltd. maintains formal policies governing business ethics, labor practices, environmental responsibility, and data integrity. These policies apply across all facilities and functions — and are available for review by brand partners, auditors, and prospective employees.",
+      "Jaguar (Pvt) Ltd. unterhält formelle Richtlinien für Wirtschaftsethik, Arbeitspraktiken, Umweltverantwortung und Datenintegrität. Diese Richtlinien gelten an allen Standorten und in allen Funktionen — und stehen Markenpartnern, Auditoren und Bewerbern zur Einsicht bereit.",
     policiesSection: {
-      eyebrow: "Policy",
-      title: "Published standards",
+      eyebrow: "Richtlinien",
+      title: "Veröffentlichte Standards",
     },
     policies: [
       {
-        title: "Code of business ethics",
+        title: "Verhaltenskodex für Wirtschaftsethik",
         description:
-          "Zero tolerance for bribery, corruption, and conflicts of interest. All commercial relationships must be documented, transparent, and aligned with applicable trade and anti-corruption laws.",
+          "Null Toleranz für Bestechung, Korruption und Interessenkonflikte. Alle kommerziellen Beziehungen müssen dokumentiert, transparent und im Einklang mit geltenden Handels- und Antikorruptionsgesetzen stehen.",
       },
       {
-        title: "Labor and workplace standards",
+        title: "Arbeits- und Arbeitsplatzstandards",
         description:
-          "Fair wages, safe working conditions, freedom of association, and non-discrimination — aligned with ILO principles and buyer audit requirements including WRAP and social compliance frameworks.",
+          "Faire Löhne, sichere Arbeitsbedingungen, Vereinigungsfreiheit und Nichtdiskriminierung — im Einklang mit ILO-Grundsätzen und Käufer-Audit-Anforderungen einschließlich WRAP und sozialer Compliance-Rahmenwerke.",
       },
       {
-        title: "Environmental responsibility",
+        title: "Umweltverantwortung",
         description:
-          "Documented programs for water stewardship, waste reduction, and chemical management — with facility-level metrics published in our ESG reporting and available on request.",
+          "Dokumentierte Programme für Wasserbewirtschaftung, Abfallreduktion und Chemikaliemanagement — mit standortspezifischen Kennzahlen in unserer ESG-Berichterstattung und auf Anfrage verfügbar.",
       },
       {
-        title: "Health and safety",
+        title: "Gesundheit und Sicherheit",
         description:
-          "Occupational health and safety systems at every facility, including training, incident reporting, emergency procedures, and regular third-party assessments.",
+          "Arbeitsschutz- und Sicherheitssysteme an jedem Standort, einschließlich Schulung, Vorfallmeldung, Notfallverfahren und regelmäßiger Drittpartei-Bewertungen.",
       },
       {
-        title: "Data protection and confidentiality",
+        title: "Datenschutz und Vertraulichkeit",
         description:
-          "Customer designs, costing, and commercial information are protected under formal confidentiality agreements and internal access controls.",
+          "Kundendesigns, Kalkulationen und kommerzielle Informationen werden durch formelle Vertraulichkeitsvereinbarungen und interne Zugriffskontrollen geschützt.",
       },
       {
-        title: "Grievance and whistleblower protection",
+        title: "Beschwerde- und Hinweisgeberschutz",
         description:
-          "Anonymous reporting channels for employees and stakeholders, with non-retaliation guarantees and documented investigation procedures.",
+          "Anonyme Meldekanäle für Mitarbeitende und Stakeholder mit Garantie gegen Vergeltung und dokumentierten Untersuchungsverfahren.",
       },
     ],
     blocks: [
       {
-        title: "Governance and accountability",
-        body: "Policy compliance is overseen at executive level, with facility managers responsible for implementation and internal audit functions conducting periodic reviews. Non-conformance triggers corrective action plans with defined timelines — not informal remediation.",
-        imageAlt: "Corporate governance and policy documentation",
+        title: "Governance und Verantwortlichkeit",
+        body: "Richtlinien-Compliance wird auf Führungsebene überwacht; Standortleiter sind für die Umsetzung verantwortlich und interne Audit-Funktionen führen regelmäßige Prüfungen durch. Nichtkonformität löst Korrekturmaßnahmenpläne mit definierten Fristen aus — keine informelle Behebung.",
+        imageAlt: "Unternehmens-Governance und Richtliniendokumentation",
       },
       {
-        title: "Audit-ready documentation",
-        body: "Policies are maintained in current, version-controlled form and made available to brand auditors on request. Certification scope, facility applicability, and policy revision dates are documented to support efficient audit preparation.",
-        imageAlt: "Compliance documentation and audit readiness",
+        title: "Auditfähige Dokumentation",
+        body: "Richtlinien werden aktuell und versioniert geführt und stehen Marken-Auditoren auf Anfrage zur Verfügung. Zertifizierungsumfang, Standortanwendbarkeit und Revisionsdaten der Richtlinien sind dokumentiert, um effiziente Audit-Vorbereitung zu unterstützen.",
+        imageAlt: "Compliance-Dokumentation und Audit-Bereitschaft",
       },
     ],
     cta: {
-      title: "Request policy documentation",
-      subhead: "Contact our team for current policy texts, certification scope, or audit support materials.",
+      title: "Richtliniendokumentation anfragen",
+      subhead: "Kontaktieren Sie unser Team für aktuelle Richtlinientexte, Zertifizierungsumfang oder Audit-Unterstützungsmaterialien.",
     },
   },
 };

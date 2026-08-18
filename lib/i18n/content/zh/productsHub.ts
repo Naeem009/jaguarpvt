@@ -1,15 +1,15 @@
 export const productsHub = {
   hero: {
-    headline: "Products",
+    headline: "产品",
     subhead:
-      "Six core categories — casual wear, streetwear, activewear, denim, kidswear, and boutique — supported by integrated manufacturing, compliance systems, and development capability.",
-    exploreCategories: "Explore categories",
-    alt: "Apparel product categories across casual wear, streetwear, activewear, denim, kidswear, and boutique",
+      "休闲装、街头服饰、运动服饰、牛仔、童装与精品六大核心品类 —— 依托整合制造、合规体系与开发能力。",
+    exploreCategories: "浏览品类",
+    alt: "休闲装、街头服饰、运动服饰、牛仔、童装与精品等服装产品品类",
   },
   grid: {
-    eyebrow: "Categories",
-    title: "Select a product category",
+    eyebrow: "品类",
+    title: "选择产品品类",
     subhead:
-      "Each category page outlines process steps, technical specs, and sustainability programs.",
+      "各品类页面概述工艺流程、技术规格及可持续发展项目。",
   },
 };

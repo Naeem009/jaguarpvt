@@ -1,246 +1,246 @@
 export const productCategories = {
-  discussProgram: "Discuss a {category} Program",
-  discussProgramLower: "Discuss a {category} program with our team",
+  discussProgram: "洽谈{category}项目",
+  discussProgramLower: "与我们的团队洽谈{category}项目",
   discussSubhead:
-    "Share your volume, material, and compliance requirements. We respond to qualified RFIs with clear next steps.",
-  heroAlt: "{category} manufacturing and product development",
+    "请分享您的订单量、面料及合规要求。针对符合条件的询盘（RFI），我们将提供明确的后续步骤。",
+  heroAlt: "{category}制造与产品开发",
   "casual-wear": {
-    name: "Casual Wear",
-    headline: "Casual Wear",
+    name: "休闲装",
+    headline: "休闲装",
     subhead:
-      "Everyday apparel programs — tees, polos, loungewear, and soft-hand separates — built for comfort, consistency, and scalable production.",
+      "日常服饰项目 —— T 恤、Polo 衫、家居服及手感柔软的上下装 —— 兼顾舒适、品质稳定与规模化生产。",
     gridDescription:
-      "Everyday apparel — tees, polos, loungewear, and soft-hand separates with integrated cutting, sewing, and finishing.",
+      "日常服饰 —— T 恤、Polo 衫、家居服及手感柔软的上下装，整合裁剪、缝制与后整流程。",
     timelineSteps: [
       {
-        title: "Fabric selection and approval",
+        title: "面料选型与确认",
         description:
-          "Programs begin with hand-feel, shade, and shrinkage approval on cotton, blends, and sustainable inputs — including organic cotton and recycled materials where specified.",
+          "项目从手感、色牢度及缩水率确认开始，涵盖棉、混纺及可持续原料 —— 包括按需求指定的有机棉与再生材料。",
       },
       {
-        title: "Cutting, sewing, and assembly",
+        title: "裁剪、缝制与组装",
         description:
-          "Marker planning and modular sewing lines handle casual tops, bottoms, and sets with inline measurement and workmanship checks across volume tiers.",
+          "排料规划与模块化缝制产线承接休闲上装、下装及套装，各产量层级均配备在线尺寸与工艺检验。",
       },
       {
-        title: "Wash, finish, and pack",
+        title: "水洗、后整与包装",
         description:
-          "Garment washing, soft-hand finishing, labeling, and export-ready packing follow buyer specifications — with traceability prepared for compliance reviews.",
+          "成衣水洗、软手感后整、贴标及出口级包装均按买方规格执行 —— 同步准备合规审查所需的追溯资料。",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Automated spreaders, modular sewing lines, garment wash units" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "T-shirts, polos, hoodies, joggers, lounge sets, basics" },
-      { label: "Material options", value: "Cotton, organic cotton, bamboo cotton, recycled blends" },
+      { label: "月产能区间", value: "每月 [X] – [Y] 件（视项目而定）" },
+      { label: "主要设备", value: "自动铺布机、模块化缝制产线、成衣水洗设备" },
+      { label: "认证资质", value: "GOTS、OEKO-TEX、WRAP —— 覆盖范围因工厂及项目而异" },
+      { label: "典型产品", value: "T 恤、Polo 衫、连帽衫、慢跑裤、家居套装、基础款" },
+      { label: "面料选项", value: "棉、有机棉、竹棉、再生混纺" },
     ],
     sustainability: {
-      title: "Responsible materials for everyday programs",
-      body: "Casual programs often run at high volume. We support certified organic cotton, bamboo cotton, and recycled inputs at selected facilities — with documented chemical management aligned to buyer RSL standards.",
+      title: "日常项目的负责任材料",
+      body: "休闲装项目通常产量较高。我们在选定工厂支持认证有机棉、竹棉及再生原料 —— 并提供符合买方 RSL 标准的化学品管理文档。",
     },
     innovation: {
-      title: "Hand-feel and fit development",
-      body: "Collaborative development for drape, softness, and fit consistency — from lab dips through bulk validation for lifestyle and private-label ranges.",
+      title: "手感与版型开发",
+      body: "协同开发垂感、柔软度与版型一致性 —— 从实验室色样至大货验证，服务生活方式及自有品牌系列。",
     },
   },
   streetwear: {
-    name: "Streetwear",
-    headline: "Streetwear",
+    name: "街头服饰",
+    headline: "街头服饰",
     subhead:
-      "Urban-inspired apparel with bold silhouettes, premium trims, and construction built for brand-led drops and repeat seasonal programs.",
+      "都市风格服饰，以鲜明廓形、优质辅料及精湛工艺，支撑品牌主导的限量发售与重复性季节项目。",
     gridDescription:
-      "Urban apparel with premium construction, statement silhouettes, and production built for brand-led drops.",
+      "都市风格服饰，精湛工艺、标志性廓形，生产体系适配品牌主导的限量发售。",
     timelineSteps: [
       {
-        title: "Design translation and sampling",
+        title: "设计转化与打样",
         description:
-          "Streetwear programs start with accurate sample execution — matching wash, graphic placement, trim details, and fit intent before bulk approval.",
+          "街头服饰项目以精准打样为起点 —— 在大货确认前，匹配水洗效果、图案位置、辅料细节及版型意图。",
       },
       {
-        title: "Specialized construction",
+        title: "专项工艺制作",
         description:
-          "Oversized fits, heavy-gauge fleece, custom dye techniques, and complex assembly are managed with enhanced inline QC for drop-driven timelines.",
+          "宽松版型、重磅抓绒、定制染色及复杂组装，在发售驱动的交期下配备加强型在线质检。",
       },
       {
-        title: "Finishing and brand-ready pack",
+        title: "后整与品牌级包装",
         description:
-          "Wash processes, labeling, hang-tag application, and retail-ready packing align with brand presentation standards for wholesale and DTC channels.",
+          "水洗、贴标、吊牌及零售级包装，符合品牌呈现标准，适配批发与 DTC 渠道。",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Heavy-gauge sewing, garment dye units, embroidery and print partners" },
-      { label: "Certifications", value: "OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Oversized tees, hoodies, cargo, sets, graphic-heavy tops" },
-      { label: "Program profile", value: "Seasonal drops, limited runs, and repeat core styles" },
+      { label: "月产能区间", value: "每月 [X] – [Y] 件（视项目而定）" },
+      { label: "主要设备", value: "重磅缝制设备、成衣染色单元、刺绣与印花合作方" },
+      { label: "认证资质", value: "OEKO-TEX、WRAP —— 覆盖范围因工厂及项目而异" },
+      { label: "典型产品", value: "宽松 T 恤、连帽衫、工装裤、套装、图案重点上装" },
+      { label: "项目特征", value: "季节限量发售、小批量及重复核心款式" },
     ],
     sustainability: {
-      title: "Lower-impact options for urban programs",
-      body: "Streetwear brands increasingly specify recycled cotton, organic inputs, and controlled wash processes. We document material content and finishing chemistry for buyer compliance and marketing claims.",
+      title: "都市项目的低环境影响方案",
+      body: "街头服饰品牌日益指定再生棉、有机原料及可控水洗工艺。我们记录材料成分与后整化学品信息，支持买方合规及营销声明。",
     },
     innovation: {
-      title: "Wash, dye, and graphic development",
-      body: "Development support for garment dye, vintage wash effects, and placement accuracy — from strike-off through bulk consistency for brand-critical aesthetics.",
+      title: "水洗、染色与图案开发",
+      body: "提供成衣染色、复古水洗效果及图案定位精度开发支持 —— 从确认样至大货一致性，保障品牌核心美学。",
     },
   },
   activewear: {
-    name: "Activewear",
-    headline: "Activewear",
+    name: "运动服饰",
+    headline: "运动服饰",
     subhead:
-      "Performance apparel — leggings, tops, sports bras, and training layers — engineered for stretch recovery, moisture management, and durable construction.",
+      "功能性服饰 —— 紧身裤、上装、运动内衣及训练层 —— 针对弹性回复、吸湿排汗及耐用结构而设计。",
     gridDescription:
-      "Performance apparel with stretch recovery, moisture management, and construction built for training and lifestyle active programs.",
+      "功能性服饰，具备弹性回复、吸湿排汗性能，结构工艺适配训练及生活方式运动项目。",
     timelineSteps: [
       {
-        title: "Performance fabric approval",
+        title: "功能性面料确认",
         description:
-          "Activewear begins with fabric testing for stretch, recovery, spirality, and moisture-wicking performance — aligned to buyer benchmarks before bulk cutting.",
+          "运动服饰项目从面料测试开始，涵盖弹性、回复率、螺旋度及吸湿排汗性能 —— 在大货裁剪前对齐买方基准。",
       },
       {
-        title: "Technical cutting and sewing",
+        title: "技术裁剪与缝制",
         description:
-          "Flatlock, bonded seams, and ergonomic patterning are executed on dedicated lines with inline measurement control for fit-critical programs.",
+          "平缝、粘合接缝及人体工学版型，在专用产线上执行，配备在线尺寸管控，适配版型关键项目。",
       },
       {
-        title: "Testing documentation and pack",
+        title: "检测文档与包装",
         description:
-          "Final audit, care labeling, and packing follow buyer specs — with test documentation prepared for performance and restricted-substance requirements.",
+          "终检、洗护标签及包装按买方规格执行 —— 同步准备性能及限用物质要求的检测文档。",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Flatlock modules, coverstitch, automated spreading, performance fabric handling" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Leggings, sports bras, training tops, joggers, outer layers" },
-      { label: "Performance focus", value: "Stretch recovery, moisture management, durable flatlock construction" },
+      { label: "月产能区间", value: "每月 [X] – [Y] 件（视项目而定）" },
+      { label: "主要设备", value: "平缝模块、绷缝机、自动铺布、功能性面料处理设备" },
+      { label: "认证资质", value: "GOTS、OEKO-TEX、WRAP —— 覆盖范围因工厂及项目而异" },
+      { label: "典型产品", value: "紧身裤、运动内衣、训练上装、慢跑裤、外层" },
+      { label: "性能重点", value: "弹性回复、吸湿排汗、耐用平缝结构" },
     ],
     sustainability: {
-      title: "Certified performance materials",
-      body: "Activewear programs often require recycled polyester, certified organic cotton, and documented chemical management. We support compliant inputs at selected facilities with traceability for marketing and audit requirements.",
+      title: "认证功能性材料",
+      body: "运动服饰项目通常要求再生聚酯、认证有机棉及文件化化学品管理。我们在选定工厂支持合规原料，并提供营销及审计所需的追溯资料。",
     },
     innovation: {
-      title: "Performance knit development",
-      body: "Development support for compression, recovery, and hand-feel targets — from lab dips through bulk validation for training and lifestyle active ranges.",
+      title: "功能性针织开发",
+      body: "提供压缩、回复率及手感目标开发支持 —— 从实验室色样至大货验证，服务训练及生活方式运动系列。",
     },
   },
   denim: {
-    name: "Denim",
-    headline: "Denim",
+    name: "牛仔",
+    headline: "牛仔",
     subhead:
-      "Denim programs — jeans, jackets, and skirts — with controlled wash development, shade consistency, and finishing built for brand identity.",
+      "牛仔项目 —— 牛仔裤、夹克及半裙 —— 具备可控水洗开发、色牢一致性与后整工艺，支撑品牌识别度。",
     gridDescription:
-      "Denim jeans, jackets, and skirts with wash development, shade control, and finishing for brand-led programs.",
+      "牛仔牛仔裤、夹克及半裙，具备水洗开发、色牢控制及后整工艺，服务品牌主导项目。",
     timelineSteps: [
       {
-        title: "Denim sourcing and shade control",
+        title: "牛仔采购与色牢控制",
         description:
-          "Incoming denim is inspected for weight, shade, and shrinkage. Wash recipes and abrasion targets are approved against buyer standards before bulk production.",
+          "入库牛仔布检验克重、色牢及缩水率。大货生产前，水洗配方及磨蚀目标按买方标准确认。",
       },
       {
-        title: "Cutting, sewing, and wash",
+        title: "裁剪、缝制与水洗",
         description:
-          "Dedicated denim sewing lines handle five-pocket construction, jackets, and skirts — followed by controlled wash, dry, and finishing for repeatable brand aesthetics.",
+          "专用牛仔缝制产线承接五袋款、夹克及半裙 —— 随后进行可控水洗、烘干及后整，确保品牌美学可重复。",
       },
       {
-        title: "Final audit and dispatch",
+        title: "终检与发运",
         description:
-          "Measurement audit, trim verification, and export-ready packing complete the flow — with wash documentation and traceability for compliance reviews.",
+          "尺寸终检、辅料核验及出口级包装完成全流程 —— 同步提供水洗文档及追溯资料，供合规审查使用。",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Denim sewing lines, wash units, laser/abrade finishing, ozone options" },
-      { label: "Certifications", value: "OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Five-pocket jeans, denim jackets, skirts, shackets, workwear denim" },
-      { label: "Wash capability", value: "Stone, enzyme, laser, vintage, and sustainable wash programs" },
+      { label: "月产能区间", value: "每月 [X] – [Y] 件（视项目而定）" },
+      { label: "主要设备", value: "牛仔缝制产线、水洗设备、激光/磨蚀后整、臭氧工艺选项" },
+      { label: "认证资质", value: "OEKO-TEX、WRAP —— 覆盖范围因工厂及项目而异" },
+      { label: "典型产品", value: "五袋款牛仔裤、牛仔夹克、半裙、牛仔衬衫夹克、工装牛仔" },
+      { label: "水洗能力", value: "石磨、酵素、激光、复古及可持续水洗方案" },
     ],
     sustainability: {
-      title: "Water-conscious denim finishing",
-      body: "Denim finishing is water-intensive by nature. Our programs include low-liquor wash options, laser finishing, and recycled cotton denim inputs at selected facilities — confirm current metrics with our sustainability team.",
+      title: "节水型牛仔后整",
+      body: "牛仔后整天然耗水较高。我们的项目涵盖低浴比水洗、激光后整及再生棉牛仔原料（选定工厂） —— 具体指标请与可持续发展团队确认。",
     },
     innovation: {
-      title: "Wash and fit development",
-      body: "Collaborative wash development from prototype through bulk — supporting shade consistency, stretch recovery, and brand-specific finishing signatures.",
+      title: "水洗与版型开发",
+      body: "从样衣至大货的协同水洗开发 —— 支持色牢一致性、弹性回复及品牌专属后整风格。",
     },
   },
   kidswear: {
-    name: "Kidswear",
-    headline: "Kidswear",
+    name: "童装",
+    headline: "童装",
     subhead:
-      "Children's apparel with soft-hand construction, secure attachments, and compliance-focused finishing for infant through youth programs.",
+      "儿童服饰，采用软手感工艺、安全附件及合规导向后整，覆盖婴幼儿至青少年项目。",
     gridDescription:
-      "Children's apparel with soft-hand construction, secure attachments, and compliance-focused finishing.",
+      "儿童服饰，软手感工艺、安全附件及合规导向后整。",
     timelineSteps: [
       {
-        title: "Material selection and compliance review",
+        title: "材料选型与合规审查",
         description:
-          "Kidswear programs begin with restricted-substance review, soft-hand material selection, and trim approval against buyer and regulatory requirements.",
+          "童装项目从限用物质审查、软手感材料选型及辅料确认开始，对齐买方及法规要求。",
       },
       {
-        title: "Safety-focused construction",
+        title: "安全导向工艺制作",
         description:
-          "Flat seams, secure attachments, and size-graded construction are managed with enhanced inline checks for infant, toddler, and youth programs.",
+          "平缝、安全附件及分级尺码结构，配备加强型在线检验，服务婴幼儿、幼童及青少年项目。",
       },
       {
-        title: "Finishing, testing documentation, and pack",
+        title: "后整、检测文档与包装",
         description:
-          "Soft-hand finishing, labeling, and packing follow buyer specs — with test documentation and traceability prepared for compliance reviews.",
+          "软手感后整、贴标及包装按买方规格执行 —— 同步准备检测文档及追溯资料，供合规审查使用。",
       },
     ],
     specs: [
-      { label: "Monthly capacity range", value: "[X] – [Y] units per month (program-dependent)" },
-      { label: "Primary machinery", value: "Fine-gauge sewing, soft-hand finishing, secure-trim processes" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX, WRAP — scope varies by facility and program" },
-      { label: "Typical products", value: "Bodysuits, sets, dresses, joggers, schoolwear, gift sets" },
-      { label: "Compliance focus", value: "Restricted substances, secure attachments, soft-hand construction" },
+      { label: "月产能区间", value: "每月 [X] – [Y] 件（视项目而定）" },
+      { label: "主要设备", value: "细针缝制、软手感后整、安全附件工艺" },
+      { label: "认证资质", value: "GOTS、OEKO-TEX、WRAP —— 覆盖范围因工厂及项目而异" },
+      { label: "典型产品", value: "连体衣、套装、连衣裙、慢跑裤、校服、礼盒套装" },
+      { label: "合规重点", value: "限用物质、安全附件、软手感结构" },
     ],
     sustainability: {
-      title: "Certified materials for sensitive categories",
-      body: "Kidswear programs require stricter chemical management and material traceability. We support certified organic and OEKO-TEX-aligned inputs at selected facilities — confirm scope for your program.",
+      title: "敏感品类的认证材料",
+      body: "童装项目对化学品管理及材料追溯要求更严。我们在选定工厂支持认证有机及 OEKO-TEX 对齐原料 —— 请就您的项目确认覆盖范围。",
     },
     innovation: {
-      title: "Sizing, fit, and soft-hand development",
-      body: "Development support for size grading, fit consistency, and hand-feel targets across infant through youth ranges — from sample through bulk validation.",
+      title: "尺码、版型与手感开发",
+      body: "提供分级尺码、版型一致性及手感目标开发支持，覆盖婴幼儿至青少年系列 —— 从样衣至大货验证。",
     },
   },
   boutique: {
-    name: "Boutique",
-    headline: "Boutique",
+    name: "精品",
+    headline: "精品",
     subhead:
-      "Small-batch and boutique programs with low minimums, refined construction, and wholesale-ready styles for emerging and premium labels.",
+      "小批量精品项目，低起订量、精细工艺及批发就绪款式，服务新兴及高端品牌。",
     gridDescription:
-      "Small-batch boutique programs with low minimums and refined construction for emerging and premium labels.",
+      "小批量精品项目，低起订量与精细工艺，服务新兴及高端品牌。",
     timelineSteps: [
       {
-        title: "Style development and sampling",
+        title: "款式开发与打样",
         description:
-          "Boutique programs prioritize accurate sampling, trim selection, and fit refinement — with transparent communication from first strike-off through approval.",
+          "精品项目优先精准打样、辅料选型及版型优化 —— 从首次确认样至批准全程透明沟通。",
       },
       {
-        title: "Low-MOQ production",
+        title: "低起订量生产",
         description:
-          "Flexible lines accommodate smaller runs without sacrificing construction quality — ideal for emerging brands, capsule collections, and premium wholesale programs.",
+          "柔性产线承接较小批量，不牺牲工艺品质 —— 适合新兴品牌、胶囊系列及高端批发项目。",
       },
       {
-        title: "Brand-ready finishing and pack",
+        title: "品牌级后整与包装",
         description:
-          "Careful finishing, labeling, and presentation-focused packing align with boutique and wholesale channel expectations.",
+          "精细后整、贴标及注重呈现的包装，符合精品及批发渠道预期。",
       },
     ],
     specs: [
-      { label: "Minimum order profile", value: "Low minimums — program-dependent; ideal for startups and capsule runs" },
-      { label: "Primary machinery", value: "Flexible modular lines, sample room, CAD/CAM pattern support" },
-      { label: "Certifications", value: "GOTS, OEKO-TEX — scope varies by facility and program" },
-      { label: "Typical products", value: "Capsule collections, premium basics, gift sets, curated seasonal drops" },
+      { label: "起订量概况", value: "低起订量 —— 视项目而定；适合初创品牌及胶囊系列" },
+      { label: "主要设备", value: "柔性模块化产线、样衣室、CAD/CAM 版型支持" },
+      { label: "认证资质", value: "GOTS、OEKO-TEX —— 覆盖范围因工厂及项目而异" },
+      { label: "典型产品", value: "胶囊系列、高端基础款、礼盒套装、精选季节限量款" },
     ],
     sustainability: {
-      title: "Mindful production for smaller runs",
-      body: "Boutique programs benefit from right-sized production, certified material options, and transparent communication — reducing waste from over-ordering while supporting responsible inputs.",
+      title: "小批量的审慎生产",
+      body: "精品项目受益于适度规模生产、认证材料选项及透明沟通 —— 减少过量订购造成的浪费，同时支持负责任原料采购。",
     },
     innovation: {
-      title: "Trend-led development support",
-      body: "Fabric selection, trend forecasting, and construction advice for brands building their first or next collection — from concept through wholesale-ready production.",
+      title: "趋势导向开发支持",
+      body: "为品牌打造首季或下一季系列提供面料选型、趋势研判及工艺建议 —— 从概念至批发就绪生产。",
     },
   },
 };

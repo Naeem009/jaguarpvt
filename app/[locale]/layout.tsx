@@ -71,7 +71,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       className={`${inter.variable} ${montserrat.variable} ${martelSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-dvh flex-col bg-paper text-ink">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex flex-1 flex-col">{children}</div>
         </NextIntlClientProvider>
       </body>

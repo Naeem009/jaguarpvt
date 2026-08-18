@@ -1,14 +1,14 @@
 export const facilities = {
   "knitting-unit": {
-    name: "Knitting",
-    description: "High-volume circular and flat knitting for jersey, fleece, and performance knit programs.",
+    name: "التريكوت",
+    description: "تريكوت دائري ومستوٍ بأحجام كبيرة لبرامج الجيرsey والفleece والتريكوت الأدائي.",
   },
   "dyeing-unit": {
-    name: "Dyeing",
-    description: "State-of-the-art dyeing for knit and woven programs with documented chemical management and shade matching.",
+    name: "الصباغة",
+    description: "صباغة متطورة لبرامج التريكوت والنسيج مع إدارة كيميائية موثّقة ومطابقة درجات الألوان.",
   },
   "sewing-facility": {
-    name: "Sewing Facility",
-    description: "Integrated cut-and-sew, finishing, and packing for multi-category apparel programs.",
+    name: "منشأة الخياطة",
+    description: "قص وخياطة وتشطيب وتعبئة متكاملة لبرامج الملابس متعددة الفئات.",
   },
 };

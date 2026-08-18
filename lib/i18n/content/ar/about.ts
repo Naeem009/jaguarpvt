@@ -1,301 +1,301 @@
 export const about = {
   hub: {
     hero: {
-      headline: "About Jaguar",
+      headline: "عن جاغوار",
       subhead:
-        "Four decades of vertically integrated apparel manufacturing — built on scale, compliance, and partnerships that outlast seasonal collections.",
-      alt: "Modern apparel manufacturing facility and production environment",
-      exploreSections: "Explore company",
+        "أربعة عقود من تصنيع الملابس المتكامل عمودياً — مبني على النطاق والامتثال وشراكات تتجاوز المجموعات الموسمية.",
+      alt: "منشأة تصنيع ملابس حديثة وبيئة إنتاج",
+      exploreSections: "استكشف الشركة",
     },
     grid: {
-      eyebrow: "Company",
-      title: "Understand how we operate",
+      eyebrow: "الشركة",
+      title: "افهم كيف نعمل",
       subhead:
-        "From group overview and strategic direction to mission, values, and published policies — the information sourcing teams need before a program begins.",
+        "من نظرة عامة على المجموعة والتوجه الاستراتيجي إلى المهمة والقيم والسياسات المنشورة — المعلومات التي تحتاجها فرق التوريد قبل بدء أي برنامج.",
     },
     overview: {
-      title: "A manufacturer built for long-term programs",
-      body: "Jaguar (Pvt) Ltd. integrates product development, manufacturing, and compliance across casual wear, streetwear, activewear, denim, kidswear, and boutique. We serve global brands from six facilities across five countries — with audit-ready systems, transparent capability data, and commercial teams who speak the language of sourcing, not sales.",
+      title: "مصنّع مُصمَّم لبرامج طويلة الأمد",
+      body: "تدمج Jaguar (Pvt) Ltd. تطوير المنتجات والتصنيع والامتثال عبر الملابس اليومية، والشارعية، والرياضية، والدنيم، وملابس الأطفال، والبوتيك. نخدم العلامات التجارية العالمية من ست منشآت في خمس دول — مع أنظمة جاهزة للتدقيق، وبيانات قدرات شفافة، وفرق تجارية تتحدث لغة التوريد لا المبيعات.",
     },
     cta: {
-      title: "Partner with a manufacturer built for long-term programs",
-      subhead: "Tell us what you're building. Our team responds to qualified inquiries with clear next steps.",
+      title: "شارك مصنّعاً مُصمَّماً لبرامج طويلة الأمد",
+      subhead: "أخبرنا بما تطورونه. يرد فريقنا على الاستفسارات المؤهلة بخطوات تالية واضحة.",
     },
   },
   menu: {
     atAGlance: {
-      title: "Jaguar at a Glance",
-      description: "Footprint, leadership, history, and the scale behind our manufacturing network.",
+      title: "جاغوار في لمحة",
+      description: "البصمة والقيادة والتاريخ ونطاق شبكة التصنيع لدينا.",
     },
     strategy: {
-      title: "Our Strategy",
-      description: "How we invest in capacity, categories, and partnerships for sustained growth.",
+      title: "استراتيجيتنا",
+      description: "كيف نستثمر في الطاقة الإنتاجية والفئات والشراكات للنمو المستدام.",
     },
     mission: {
-      title: "Mission",
-      description: "Purpose, values, and the principles that guide every customer program.",
+      title: "المهمة",
+      description: "الغرض والقيم والمبادئ التي توجه كل برنامج للعملاء.",
     },
     companyPolicy: {
-      title: "Company Policy",
-      description: "Ethics, compliance, workplace standards, and governance commitments.",
+      title: "سياسة الشركة",
+      description: "الأخلاقيات والامتثال ومعايير مكان العمل والتزامات الحوكمة.",
     },
   },
   subPage: {
     heroAlt: "{headline} — Jaguar (Pvt) Ltd.",
-    defaultCtaTitle: "Start a conversation with our team",
-    defaultCtaSubhead: "Qualified RFIs and RFQs receive a structured response within two business days.",
+    defaultCtaTitle: "ابدأ محادثة مع فريقنا",
+    defaultCtaSubhead: "تتلقى طلبات المعلومات والعروض المؤهلة رداً منظماً خلال يومي عمل.",
   },
   stats: {
-    facilities: "Facilities",
-    countries: "Countries",
-    employees: "Employees",
-    yearsInOperation: "Years in operation",
+    facilities: "المنشآت",
+    countries: "الدول",
+    employees: "الموظفون",
+    yearsInOperation: "سنوات التشغيل",
   },
   atAGlance: {
-    headline: "Jaguar at a Glance",
+    headline: "جاغوار في لمحة",
     subhead:
-      "A third-generation, family-owned manufacturer in Faisalabad — serving global apparel brands with ethical wholesale supply since 1984.",
+      "مصنّع عائلي من الجيل الثالث في فيصل آباد — يخدم العلامات التجارية العالمية للملابس بتوريد جملة أخلاقي منذ 1984.",
     intro:
-      "Jaguar is a third-generation family-owned clothing brand manufacturer, rooted in the heart of Pakistan's textile industry, Faisalabad. Since 1984, we have evolved alongside the fashion industry and adapted our expertise to meet the ever-changing needs of brands worldwide. We have designed, engineered, and tailored quality garments, using fabrics like organic cotton, bamboo cotton, and recycled materials.\n\nOur passion for premium apparel is in our DNA. We're your go-to partner, offering expertise in fabric selection, trend forecasting, and sustainable practices. With in-house knitting, dyeing, and a state-of-the-art facility equipped with CAD/CAM technology, we combine artisanal skill with cutting-edge production methods.\n\nWhether you're a budding entrepreneur or an established brand, we're a wholesale supplier of clothes committed to bringing your vision to life with low minimums, transparent communication, and unshakeable commitment to quality.",
+      "جاغوار مصنّع ملابس عائلي من الجيل الثالث، متجذر في قلب صناعة النسيج الباكستانية في فيصل آباد. منذ 1984، تطورنا مع صناعة الأزياء وكيّفنا خبرتنا لتلبية احتياجات العلامات التجارية المتغيرة حول العالم. صمّمنا وهندسنا وخاطنا ملابس عالية الجودة، باستخدام أقمشة مثل القطن العضوي، وقطن الخيزران، والمواد المعاد تدويرها.\n\nشغفنا بالملابس الراقية في حمضنا النووي. نحن شريككم المفضّل، نقدّم خبرة في اختيار الأقمشة، وتوقعات الاتجاهات، والممارسات المستدامة. مع تريكوت وصباغة داخلية، ومنشأة مجهّزة بتقنية CAD/CAM، نجمع بين المهارة الحرفية وأساليب الإنتاج المتطورة.\n\nسواء كنتم رائد أعمال ناشئاً أو علامة تجارية راسخة، نحن مورد جملة للملابس ملتزمون بتحقيق رؤيتكم بحد أدنى منخفض، وتواصل شفاف، والتزام راسخ بالجودة.",
     blocks: [
       {
-        title: "Global footprint, regional depth",
-        body: "Six facilities across five countries give sourcing teams geographic optionality without sacrificing process control. Each site operates under shared quality systems, with category-specific lines for casual wear, streetwear, activewear, denim, kidswear, and boutique — and certification scope documented per facility, not assumed group-wide.",
-        imageAlt: "Global manufacturing footprint and facility network",
+        title: "بصمة عالمية وعمق إقليمي",
+        body: "ست منشآت في خمس دول تمنح فرق التوريد مرونة جغرافية دون التضحية بالتحكم في العمليات. يعمل كل موقع ضمن أنظمة جودة مشتركة، مع خطوط مخصصة للملابس اليومية، والشارعية، والرياضية، والدنيم، وملابس الأطفال، والبوتيك — ونطاق الاعتماد موثّق لكل منشأة، لا يُفترض على مستوى المجموعة.",
+        imageAlt: "البصمة العالمية للتصنيع وشبكة المنشآت",
       },
       {
-        title: "Integrated operations at scale",
-        body: "Vertical integration means fewer handoffs between development, production, and compliance. From lab dips and size sets through bulk cutting and final audit, programs move through a single accountable system — reducing lead-time variance and improving traceability for brand partners.",
-        imageAlt: "Integrated apparel manufacturing operations on the production floor",
+        title: "عمليات متكاملة على نطاق واسع",
+        body: "التكامل العمودي يعني تسليمات أقل بين التطوير والإنتاج والامتثال. من عينات الألوان ومجموعات المقاسات حتى القص بالجملة والتدقيق النهائي، تمر البرامج عبر نظام واحد مسؤول — يقلّل تباين أوقات التسليم ويحسّن التتبع لشركاء العلامات التجارية.",
+        imageAlt: "عمليات تصنيع الملابس المتكاملة في أرضية الإنتاج",
       },
     ],
     history: {
-      eyebrow: "History",
-      title: "40 years in Faisalabad, built for global brands",
+      eyebrow: "التاريخ",
+      title: "40 عاماً في فيصل آباد، مُصمَّم للعلامات التجارية العالمية",
       subhead:
-        "From a third-generation family manufacturer in Pakistan's textile capital to a multi-facility partner for startups and established labels worldwide.",
+        "من مصنّع عائلي من الجيل الثالث في عاصمة النسيج الباكستانية إلى شريك متعدد المنشآت للشركات الناشئة والعلامات الراسخة حول العالم.",
       steps: [
         {
-          title: "1984 — Founded in Faisalabad",
+          title: "1984 — التأسيس في فيصل آباد",
           description:
-            "Jaguar began as a family-owned clothing manufacturer in the heart of Pakistan's textile industry. From the start, the focus was quality garments, skilled production, and partnerships that could grow with each brand's ambition.",
+            "بدأت جاغوار كمصنّع ملابس عائلي في قلب صناعة النسيج الباكستانية. منذ البداية، كان التركيز على ملابس عالية الجودة، وإنتاج ماهر، وشراكات تنمو مع طموح كل علامة تجارية.",
         },
         {
-          title: "1990s–2000s — Evolving with fashion",
+          title: "1990–2000 — التطور مع الأزياء",
           description:
-            "As global fashion changed, we expanded in-house knitting and dyeing, invested in CAD/CAM technology, and broadened our fabric expertise to organic cotton, bamboo cotton, and recycled materials — adapting expertise to meet brands' ever-changing needs.",
+            "مع تغيّر الأزياء العالمية، وسّعنا التريكوت والصباغة الداخلية، واستثمرنا في تقنية CAD/CAM، ووسّعنا خبرتنا في الأقمشة لتشمل القطن العضوي، وقطن الخيزران، والمواد المعاد تدويرها — كيّفنا خبرتنا لتلبية احتياجات العلامات المتغيرة.",
         },
         {
-          title: "Today — Six facilities, five countries",
+          title: "اليوم — ست منشآت، خمس دول",
           description:
-            "More than four decades on, Jaguar serves budding entrepreneurs and established giants across six facilities in five countries — with ethical wholesale supply, streamlined production, transparent communication, and an unwavering commitment to quality.",
+            "بعد أكثر من أربعة عقود، تخدم جاغوار رواد الأعمال الناشئين والعلامات الراسخة عبر ست منشآت في خمس دول — بتوريد جملة أخلاقي، وإنتاج مُبسَّط، وتواصل شفاف، والتزام ثابت بالجودة.",
         },
       ],
     },
     leadership: {
-      eyebrow: "Leadership",
-      title: "Experienced operators across manufacturing and commercial functions",
+      eyebrow: "القيادة",
+      title: "مشغّلون ذوو خبرة في التصنيع والوظائف التجارية",
       members: [
         {
           name: "Mr. Asim ul Haq",
-          role: "Chief Executive Officer",
-          alt: "Mr. Asim ul Haq, Chief Executive Officer",
+          role: "الرئيس التنفيذي",
+          alt: "Mr. Asim ul Haq، الرئيس التنفيذي",
         },
         {
           name: "Aleem Asim",
-          role: "Executive Director",
-          alt: "Aleem Asim, Executive Director",
+          role: "مدير تنفيذي",
+          alt: "Aleem Asim، مدير تنفيذي",
         },
         {
           name: "Usama Asim",
-          role: "Executive Director",
-          alt: "Usama Asim, Executive Director",
+          role: "مدير تنفيذي",
+          alt: "Usama Asim، مدير تنفيذي",
         },
       ],
     },
     recognition: {
-      eyebrow: "Recognition",
-      title: "Industry standing and export excellence",
-      subhead: "Representative recognition across manufacturing excellence, export performance, and workplace standards.",
+      eyebrow: "التقدير",
+      title: "مكانة صناعية وتميز في التصدير",
+      subhead: "تقدير تمثيلي في التميز التصنيعي، وأداء التصدير، ومعايير مكان العمل.",
       awards: [
         {
-          title: "Export excellence — textile and apparel sector",
+          title: "تميز التصدير — قطاع النسيج والملابس",
           year: "2023",
-          issuer: "Trade Development Authority",
+          issuer: "هيئة تنمية التجارة",
         },
         {
-          title: "Manufacturing quality and process excellence",
+          title: "جودة التصنيع وتميز العمليات",
           year: "2022",
-          issuer: "Regional industry association",
+          issuer: "جمعية صناعية إقليمية",
         },
         {
-          title: "Workplace standards and compliance recognition",
+          title: "تقدير معايير مكان العمل والامتثال",
           year: "2021",
-          issuer: "Independent audit body",
+          issuer: "جهة تدقيق مستقلة",
         },
       ],
     },
     cta: {
-      title: "Explore our strategic direction",
-      subhead: "Read how we invest in capacity, categories, and partnerships for the years ahead.",
+      title: "استكشف توجهنا الاستراتيجي",
+      subhead: "اطلع على كيف نستثمر في الطاقة والفئات والشراكات للسنوات القادمة.",
     },
   },
   strategy: {
-    headline: "Our Strategy",
+    headline: "استراتيجيتنا",
     subhead:
-      "A disciplined approach to category depth, geographic optionality, and compliance-led growth — designed for brands that plan in seasons, not transactions.",
+      "نهج منضبط لعمق الفئات، والمرونة الجغرافية، والنمو القائم على الامتثال — مصمم للعلامات التي تخطط بالمواسم لا بالمعاملات.",
     intro:
-      "Our strategy is not a vision statement on a wall. It is a set of investment priorities — in integrated capacity, certified product lines, and long-term buyer relationships — that govern capital allocation, facility development, and how we engage with sourcing teams at the start of every program.",
+      "استراتيجيتنا ليست بيان رؤية على حائط. إنها مجموعة أولويات استثمار — في الطاقة المتكاملة، وخطوط المنتجات المعتمدة، وعلاقات المشترين طويلة الأمد — تحكم تخصيص رأس المال، وتطوير المنشآت، وكيفية تعاملنا مع فرق التوريد عند بدء كل برنامج.",
     pillarsSection: {
-      eyebrow: "Strategy",
-      title: "Strategic priorities",
+      eyebrow: "الاستراتيجية",
+      title: "الأولويات الاستراتيجية",
     },
     pillars: [
       {
-        title: "Category depth over diversification",
+        title: "عمق الفئات بدلاً من التنويع",
         description:
-          "We invest where we can control quality end-to-end: casual wear, streetwear, activewear, denim, kidswear, and boutique. Each category has dedicated lines, process engineers, and compliance documentation — rather than generalist capacity that underperforms under audit.",
+          "نستثمر حيث نستطيع التحكم في الجودة من البداية للنهاية: الملابس اليومية، والشارعية، والرياضية، والدنيم، وملابس الأطفال، والبوتيك. لكل فئة خطوط مخصصة، ومهندسو عمليات، وتوثيق امتثال — بدلاً من طاقة عامة تقصّر في الأداء تحت التدقيق.",
       },
       {
-        title: "Geographic optionality",
+        title: "المرونة الجغرافية",
         description:
-          "A multi-country footprint gives brands sourcing flexibility and risk distribution. Shared systems ensure consistency; local presence ensures responsiveness to regional program requirements.",
+          "البصمة متعددة الدول تمنح العلامات مرونة في التوريد وتوزيع المخاطر. الأنظمة المشتركة تضمن الاتساق؛ والحضور المحلي يضمن الاستجابة لمتطلبات البرامج الإقليمية.",
       },
       {
-        title: "Compliance as a commercial advantage",
+        title: "الامتثال كميزة تجارية",
         description:
-          "Certifications, audit readiness, and published ESG metrics are treated as product features — not overhead. We invest ahead of buyer requirements so programs launch without compliance delays.",
+          "الاعتمادات، والجاهزية للتدقيق، ومقاييس ESG المنشورة تُعامل كخصائص منتج — لا كعبء. نستثمر قبل متطلبات المشترين حتى تُطلق البرامج دون تأخير امتثال.",
       },
     ],
     blocks: [
       {
-        title: "Capacity investment aligned to demand",
-        body: "Capital expenditure follows confirmed buyer pipelines — not speculative expansion. New lines, machinery upgrades, and facility improvements are tied to multi-season commitments, ensuring capacity serves real programs rather than inventory risk.",
-        imageAlt: "Strategic planning and capacity investment discussion",
+        title: "استثمار الطاقة متوافق مع الطلب",
+        body: "يتبع الإنفاق الرأسمالي خطوط أنابيب المشترين المؤكدة — لا التوسع التخميني. خطوط جديدة، وترقيات آلات، وتحسينات منشآت مرتبطة بالتزامات متعددة المواسم، لضمان أن الطاقة تخدم برامج حقيقية لا مخاطر مخزون.",
+        imageAlt: "مناقشة التخطيط الاستراتيجي واستثمار الطاقة",
       },
       {
-        title: "Innovation within manufacturing discipline",
-        body: "Process innovation — low-liquor dyeing, automated cutting, digital tracking — is adopted where it improves consistency, traceability, or environmental performance. We do not chase technology for its own sake; we deploy it where it strengthens program delivery.",
-        imageAlt: "Innovation and process improvement in apparel manufacturing",
+        title: "الابتكار ضمن انضباط التصنيع",
+        body: "يُعتمد الابتكار في العمليات — صباغة منخفضة السوائل، وقص آلي، وتتبع رقمي — حيث يحسّن الاتساق أو التتبع أو الأداء البيئي. لا نطارد التكنولوجيا لذاتها؛ ننشرها حيث تعزّز تسليم البرامج.",
+        imageAlt: "الابتكار وتحسين العمليات في تصنيع الملابس",
       },
     ],
     cta: {
-      title: "Discuss program fit with our commercial team",
-      subhead: "Share your category, volume profile, and compliance requirements — we respond with an honest capability assessment.",
+      title: "ناقش ملاءمة البرنامج مع فريقنا التجاري",
+      subhead: "شارك فئتك، وملف الحجم، ومتطلبات الامتثال — نرد بتقييم صادق للقدرات.",
     },
   },
   mission: {
-    headline: "Mission",
+    headline: "المهمة",
     subhead:
-      "Ethical wholesale apparel supply that lets brands focus on what they do best — design, marketing, and growth.",
+      "توريد جملة أخلاقي للملابس يتيح للعلامات التركيز على ما يجيدونه — التصميم، والتسويق، والنمو.",
     intro:
-      "To fuel the fire of apparel brands, from startups to established giants, with ethical wholesale clothing supply, streamlined production, and transparent communication. It's a partnership that frees them to focus on design, marketing, and growth.",
+      "إشعال حماس العلامات التجارية للملابس، من الشركات الناشئة إلى العلامات الراسخة الكبرى، بتوريد جملة أخلاقي، وإنتاج مُبسَّط، وتواصل شفاف. شراكة تحرّرهم للتركيز على التصميم، والتسويق، والنمو.",
     visionSection: {
-      eyebrow: "Vision",
-      title: "Our vision",
+      eyebrow: "الرؤية",
+      title: "رؤيتنا",
     },
     vision:
-      "To set the gold standard for ethical and sustainable apparel manufacturing, inspiring a global shift towards responsible practices and empowering brands within the fashion industry to create a positive impact.",
+      "أن نضع المعيار الذهبي للتصنيع الأخلاقي والمستدام للملابس، ونُلهم تحولاً عالمياً نحو ممارسات مسؤولة، ونُمكّن العلامات في صناعة الأزياء لخلق أثر إيجابي.",
     valuesSection: {
-      eyebrow: "Mission",
-      title: "How we deliver",
+      eyebrow: "المهمة",
+      title: "كيف نُسلّم",
     },
     values: [
       {
-        title: "Ethical wholesale supply",
+        title: "توريد جملة أخلاقي",
         description:
-          "Responsible manufacturing and sourcing practices that startups and established brands can build on with confidence.",
+          "ممارسات تصنيع وتوريد مسؤولة يمكن للشركات النashئة والعلامات الراسخة البناء عليها بثقة.",
       },
       {
-        title: "Streamlined production",
+        title: "إنتاج مُبسَّط",
         description:
-          "In-house knitting, dyeing, and CAD/CAM-equipped facilities that combine artisanal skill with efficient, reliable output.",
+          "تريكوت وصباغة داخلية، ومنشآت مجهّزة CAD/CAM تجمع بين المهارة الحرفية والإنتاج الفعّال الموثوق.",
       },
       {
-        title: "Transparent communication",
+        title: "تواصل شفاف",
         description:
-          "Clear timelines, honest capability conversations, and low minimums that keep partnerships straightforward from first sample to bulk delivery.",
+          "جداول زمنية واضحة، وحوارات صادقة حول القدرات، وحد أدنى منخفض يُبقي الشراكات واضحة من أول عينة حتى التسليم بالجملة.",
       },
       {
-        title: "Sustainable impact",
+        title: "أثر مستدام",
         description:
-          "Organic cotton, bamboo cotton, recycled materials, and continuous improvement toward the gold standard in responsible apparel manufacturing.",
+          "قطن عضوي، وقطن خيزران، ومواد معاد تدويرها، وتحسين مستمر نحو المعيار الذهبي في تصنيع الملابس المسؤول.",
       },
     ],
     blocks: [
       {
-        title: "Partnership over production alone",
-        body: "We don't just manufacture garments — we free brand teams to focus on design, marketing, and growth. That means ethical supply, predictable lead times, and communication you can act on.",
-        imageAlt: "Brand partnership focused on design and growth",
+        title: "الشراكة لا الإنتاج وحده",
+        body: "لا نصنع الملابس فقط — نحرّر فرق العلامات للتركيز على التصميم، والتسويق، والنمو. ذلك يعني توريداً أخلاقياً، وأوقات تسليم متوقعة، وتواصلاً يمكنكم العمل بناءً عليه.",
+        imageAlt: "شراكة علامة تجارية تركز على التصميم والنمو",
       },
       {
-        title: "Raising the bar for responsible manufacturing",
-        body: "Our vision is a global shift toward ethical and sustainable apparel production. Every program is an opportunity to prove that quality, transparency, and positive impact can scale together.",
-        imageAlt: "Sustainable and ethical apparel manufacturing",
+        title: "رفع معايير التصنيع المسؤول",
+        body: "رؤيتنا تحول عالمي نحو إنتاج ملابس أخلاقي ومستدام. كل برنامج فرصة لإثبات أن الجودة، والشفافية، والأثر الإيجابي يمكن أن تتوسع معاً.",
+        imageAlt: "تصنيع ملابس مستدام وأخلاقي",
       },
     ],
     cta: {
-      title: "Work with a mission-led manufacturing partner",
-      subhead: "Contact our team to discuss how our operating model supports your next program.",
+      title: "اعمل مع شريك تصنيع قائم على المهمة",
+      subhead: "تواصل مع فريقنا لمناقشة كيف يدعم نموذجنا التشغيلي برنامجك القادم.",
     },
   },
   companyPolicy: {
-    headline: "Company Policy",
+    headline: "سياسة الشركة",
     subhead:
-      "Published standards for ethics, compliance, workplace conduct, and governance — the framework that supports every customer program and audit.",
+      "معايير منشورة للأخلاقيات، والامتثال، وسلوك مكان العمل، والحوكمة — الإطار الذي يدعم كل برنامج للعملاء وكل تدقيق.",
     intro:
-      "Jaguar (Pvt) Ltd. maintains formal policies governing business ethics, labor practices, environmental responsibility, and data integrity. These policies apply across all facilities and functions — and are available for review by brand partners, auditors, and prospective employees.",
+      "تحافظ Jaguar (Pvt) Ltd. على سياسات رسمية تحكم أخلاقيات الأعمال، وممارسات العمل، والمسؤولية البيئية، وسلامة البيانات. تنطبق هذه السياسات على جميع المنشآت والوظائف — وهي متاحة للمراجعة من شركاء العلامات، والمدققين، والموظفين المحتملين.",
     policiesSection: {
-      eyebrow: "Policy",
-      title: "Published standards",
+      eyebrow: "السياسة",
+      title: "المعايير المنشورة",
     },
     policies: [
       {
-        title: "Code of business ethics",
+        title: "مدونة أخلاقيات الأعمال",
         description:
-          "Zero tolerance for bribery, corruption, and conflicts of interest. All commercial relationships must be documented, transparent, and aligned with applicable trade and anti-corruption laws.",
+          "عدم التسامح مع الرشوة، والفساد، وتضارب المصالh. يجب أن تكون جميع العلاقات التجارية موثّقة وشفافة ومتوافقة مع قوانين التجارة ومكافحة الفساد المعمول بها.",
       },
       {
-        title: "Labor and workplace standards",
+        title: "معايير العمل ومكان العمل",
         description:
-          "Fair wages, safe working conditions, freedom of association, and non-discrimination — aligned with ILO principles and buyer audit requirements including WRAP and social compliance frameworks.",
+          "أجور عادلة، وظروف عمل آمنة، وحريّة تكوين الجمعيات، وعدم التمييز — متوافقة مع مبادئ ILO ومتطلبات تدقيق المشترين بما في ذلك WRAP وأطر الامتثال الاجتماعي.",
       },
       {
-        title: "Environmental responsibility",
+        title: "المسؤولية البيئية",
         description:
-          "Documented programs for water stewardship, waste reduction, and chemical management — with facility-level metrics published in our ESG reporting and available on request.",
+          "برامج موثّقة لإدارة المياه، وتقليل النفايات، وإدارة المواد الكيميائية — مع مقاييس على مستوى المنشأة منشورة في تقارير ESG ومتاحة عند الطلب.",
       },
       {
-        title: "Health and safety",
+        title: "الصحة والسلامة",
         description:
-          "Occupational health and safety systems at every facility, including training, incident reporting, emergency procedures, and regular third-party assessments.",
+          "أنظمة الصحة والسلامة المهنية في كل منشأة، بما في ذلك التدريب، والإبلاغ عن الحوادث، وإجراءات الطوارئ، والتقييمات الدورية من طرف ثالث.",
       },
       {
-        title: "Data protection and confidentiality",
+        title: "حماية البيانات والسرية",
         description:
-          "Customer designs, costing, and commercial information are protected under formal confidentiality agreements and internal access controls.",
+          "تصاميم العملاء، والتكاليف، والمعلومات التجارية محمية بموجب اتفاقيات سرية رسمية وضوابط وصول داخلية.",
       },
       {
-        title: "Grievance and whistleblower protection",
+        title: "الشكاوى وحماية المبلّغين",
         description:
-          "Anonymous reporting channels for employees and stakeholders, with non-retaliation guarantees and documented investigation procedures.",
+          "قنوات إبلاغ مجهولة للموظفين وأصحاب المصلحة، مع ضمانات عدم انتقام وإجراءات تحقيق موثّقة.",
       },
     ],
     blocks: [
       {
-        title: "Governance and accountability",
-        body: "Policy compliance is overseen at executive level, with facility managers responsible for implementation and internal audit functions conducting periodic reviews. Non-conformance triggers corrective action plans with defined timelines — not informal remediation.",
-        imageAlt: "Corporate governance and policy documentation",
+        title: "الحوكمة والمساءلة",
+        body: "يُشرف على الامتثال للسياسات على المستوى التنفيذي، مع مديرو المنشآt مسؤولين عن التنفيذ ووظائf التدقيق الداخلي تجري مراجعات دورية. عدم المطابقة يُطلق خطط تصحيحية بجداول زمنية محددة — لا معالجة غير رسمية.",
+        imageAlt: "حوkمة مؤسسية وتوثيق السياسات",
       },
       {
-        title: "Audit-ready documentation",
-        body: "Policies are maintained in current, version-controlled form and made available to brand auditors on request. Certification scope, facility applicability, and policy revision dates are documented to support efficient audit preparation.",
-        imageAlt: "Compliance documentation and audit readiness",
+        title: "توثيق جاهز للتدقيق",
+        body: "تُحافظ السياسات بصيغة حالية ومراقبة بالإصدارات، وتُتاح لمدققي العلامات عند الطلب. نطاق الاعتماد، وقابلية تطبيق المنشأة، وتواريخ مراجعة السياسات موثّقة لدعم إعداد التدقيق بكفاءة.",
+        imageAlt: "توثيق الامتثال والجاهزية للتدقيق",
       },
     ],
     cta: {
-      title: "Request policy documentation",
-      subhead: "Contact our team for current policy texts, certification scope, or audit support materials.",
+      title: "اطلب توثيق السياسات",
+      subhead: "تواصل مع فريقنا للحصول على نصوص السياسات الحالية، أو نطاق الاعتماد، أو مواد دعم التدقيق.",
     },
   },
 };
