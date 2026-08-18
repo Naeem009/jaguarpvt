@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { StatNumber } from "@/components/ui/StatNumber";
 import { Button } from "@/components/ui/Button";
+import { SectionContainer } from "@/components/ui/SectionContainer";
+import { evenGridColumnsClass, sectionPaddingCompactClass } from "@/lib/layout/section";
 import { cn } from "@/lib/utils";
 
 export type StatBarItem = {
@@ -32,7 +34,7 @@ export function StatBar({
 
   return (
     <section
-      className={cn("relative overflow-hidden bg-paper py-12 text-ink md:py-16", className)}
+      className={cn("relative overflow-hidden bg-paper text-ink", sectionPaddingCompactClass, className)}
     >
       {backgroundImage ? (
         <>
@@ -48,15 +50,8 @@ export function StatBar({
         </>
       ) : null}
 
-      <div className="relative mx-auto max-w-7xl px-4 md:px-6">
-        <div
-          className={cn(
-            "grid gap-8",
-            stats.length === 4
-              ? "sm:grid-cols-2 lg:grid-cols-4"
-              : "sm:grid-cols-2 lg:grid-cols-3",
-          )}
-        >
+      <SectionContainer className="relative">
+        <div className={cn("grid justify-items-center gap-8 text-center", evenGridColumnsClass(stats.length))}>
           {stats.map((stat) => (
             <StatNumber
               key={stat.label}
@@ -64,6 +59,7 @@ export function StatBar({
               suffix={stat.suffix}
               placeholder={stat.placeholder}
               label={stat.label}
+              align="center"
               className={
                 isImpact
                   ? "[&_p:first-child]:!text-accent-dark [&_p:last-child]:!text-graphite"
@@ -74,13 +70,13 @@ export function StatBar({
         </div>
 
         {footerLink ? (
-          <div className="mt-10 flex justify-center md:justify-start">
+          <div className="mt-10 flex justify-center">
             <Button href={footerLink.href} variant="secondary" className="shrink-0">
               {footerLink.label}
             </Button>
           </div>
         ) : null}
-      </div>
+      </SectionContainer>
     </section>
   );
 }

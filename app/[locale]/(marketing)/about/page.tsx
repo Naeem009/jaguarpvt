@@ -11,6 +11,10 @@ import {
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { SectionContainer } from "@/components/ui/SectionContainer";
+import { evenCardGridClass, sectionPaddingClass } from "@/lib/layout/section";
+import { buildCompanyStats } from "@/lib/stats/company-stats";
+import { cn } from "@/lib/utils";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -28,6 +32,12 @@ export default async function AboutPage({ params }: PageProps) {
   const historySteps = t.raw("history.steps") as Array<{ title: string; description: string }>;
   const awards = t.raw("recognition.awards") as Array<{ title: string; year: string; issuer: string }>;
   const leaders = t.raw("leadership.members") as Array<{ name: string; role: string; alt: string }>;
+  const companyStats = buildCompanyStats({
+    facilities: t("stats.facilities"),
+    countries: t("stats.countries"),
+    employees: t("stats.employees"),
+    yearsInOperation: t("stats.yearsInOperation"),
+  });
   const leaderImages = [
     "/images/about/leadership-01.png",
     "/images/about/leadership-02.png",
@@ -44,8 +54,8 @@ export default async function AboutPage({ params }: PageProps) {
         media={heroVideoMedia("/images/about/hero.jpg", t("hero.alt"), "manufacturing")}
       />
 
-      <section className="bg-paper py-16 md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-6">
+      <section className={cn("bg-paper", sectionPaddingClass)}>
+        <SectionContainer className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card-lg)] border border-ink/8 shadow-[var(--shadow-card)]">
             <Image
               src="/images/about/mission-block.jpg"
@@ -56,18 +66,10 @@ export default async function AboutPage({ params }: PageProps) {
             />
           </div>
           <SectionHeading eyebrow={t("mission.eyebrow")} title={t("mission.title")} subhead={t("mission.body")} />
-        </div>
+        </SectionContainer>
       </section>
 
-      <StatBar
-        stats={[
-          { value: 0, placeholder: "[X]", label: t("stats.facilities") },
-          { value: 0, placeholder: "[Y]", label: t("stats.countries") },
-          { value: 0, placeholder: "[Z]+", label: t("stats.employees") },
-          { value: 0, placeholder: "[N]", label: t("stats.yearsInOperation") },
-        ]}
-        variant="impact"
-      />
+      <StatBar stats={companyStats} />
 
       <TimelineSection
         eyebrow={t("history.eyebrow")}
@@ -79,15 +81,15 @@ export default async function AboutPage({ params }: PageProps) {
         }))}
       />
 
-      <section className="bg-paper py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
+      <section className={cn("bg-paper", sectionPaddingClass)}>
+        <SectionContainer>
           <SectionHeading
             eyebrow={t("leadership.eyebrow")}
             title={t("leadership.title")}
             className="mb-12 md:mb-16"
           />
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className={cn("grid gap-6", evenCardGridClass(leaders.length))}>
             {leaders.map((leader, index) => (
               <Card key={`${leader.name}-${index}`} className="overflow-hidden p-0">
                 <div className="relative aspect-[4/5] bg-paper">
@@ -106,11 +108,11 @@ export default async function AboutPage({ params }: PageProps) {
               </Card>
             ))}
           </div>
-        </div>
+        </SectionContainer>
       </section>
 
-      <section className="bg-paper py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
+      <section className={cn("bg-paper", sectionPaddingClass)}>
+        <SectionContainer>
           <SectionHeading
             eyebrow={t("recognition.eyebrow")}
             title={t("recognition.title")}
@@ -118,7 +120,7 @@ export default async function AboutPage({ params }: PageProps) {
             className="mb-12 md:mb-16"
           />
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className={cn("grid gap-6", evenCardGridClass(awards.length))}>
             {awards.map((award) => (
               <Card key={award.title}>
                 <Badge tone="accent" className="mb-4">
@@ -129,7 +131,7 @@ export default async function AboutPage({ params }: PageProps) {
               </Card>
             ))}
           </div>
-        </div>
+        </SectionContainer>
       </section>
 
       <CTASection

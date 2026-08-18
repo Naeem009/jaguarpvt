@@ -9,6 +9,7 @@ export type StatNumberProps = {
   suffix?: string;
   placeholder?: string;
   animateOnView?: boolean;
+  align?: "start" | "center";
   className?: string;
   label?: string;
 };
@@ -24,6 +25,7 @@ export function StatNumber({
   suffix,
   placeholder,
   animateOnView = true,
+  align = "start",
   className,
   label,
 }: StatNumberProps) {
@@ -63,7 +65,10 @@ export function StatNumber({
   }, [isInView, placeholder, shouldAnimate, value]);
 
   return (
-    <div ref={ref} className={cn("space-y-1.5", className)}>
+    <div
+      ref={ref}
+      className={cn("space-y-1.5", align === "center" && "mx-auto max-w-xs text-center", className)}
+    >
       <p className="font-mono text-2xl font-bold tracking-tight text-ink md:text-3xl">
         {placeholder ?? formatValue(animatedValue)}
         {!placeholder && suffix ? <span>{suffix}</span> : null}

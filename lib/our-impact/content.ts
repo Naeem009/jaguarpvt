@@ -1,3 +1,5 @@
+import { IMPACT_HUB_STAT_PLACEHOLDERS } from "@/lib/stats/impact-hub-stats";
+
 export type ImpactPillar = {
   title: string;
   href: string;
@@ -23,10 +25,10 @@ export type ImpactContentBlock = {
 export const ESG_REPORT_URL = "/reports/esg-report.pdf";
 
 export const ourImpactHubStats = [
-  { value: 0, placeholder: "[X]M", label: "Liters of water saved annually" },
-  { value: 0, placeholder: "[X]%", label: "Renewable energy share" },
-  { value: 0, placeholder: "[X]", label: "Certified facilities" },
-  { value: 0, placeholder: "[X]", label: "Worker welfare programs" },
+  { value: 0, placeholder: IMPACT_HUB_STAT_PLACEHOLDERS.waterSaved, label: "Liters of water saved annually" },
+  { value: 0, placeholder: IMPACT_HUB_STAT_PLACEHOLDERS.renewableEnergy, label: "Renewable energy share" },
+  { value: 0, placeholder: IMPACT_HUB_STAT_PLACEHOLDERS.certifiedFacilities, label: "Certified facilities" },
+  { value: 0, placeholder: IMPACT_HUB_STAT_PLACEHOLDERS.workerPrograms, label: "Worker welfare programs" },
 ];
 
 export const impactPillars: ImpactPillar[] = [

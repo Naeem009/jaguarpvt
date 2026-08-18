@@ -4,6 +4,8 @@ import { getTranslations } from "next-intl/server";
 import { CTASection } from "./CTASection";
 import { Hero } from "./Hero";
 import { StatBar } from "./StatBar";
+import { SectionContainer } from "@/components/ui/SectionContainer";
+import { sectionPaddingClass } from "@/lib/layout/section";
 import { cn } from "@/lib/utils";
 import type { ImpactContentBlock } from "@/lib/our-impact/content";
 import type { StatBarItem } from "./StatBar";
@@ -54,19 +56,16 @@ export async function ImpactSubPageTemplate({
       <StatBar stats={stats} variant="impact" />
 
       {intro ? (
-        <section className="bg-paper py-16 md:py-20">
-          <div className="mx-auto max-w-3xl px-2 md:px-4">
+        <section className={cn("bg-paper", sectionPaddingClass)}>
+          <SectionContainer width="narrow">
             <p className="text-xl leading-relaxed text-graphite">{intro}</p>
-          </div>
+          </SectionContainer>
         </section>
       ) : null}
 
       {blocks.map((block, index) => (
-        <section
-          key={block.title}
-          className="bg-paper py-16 md:py-24"
-        >
-          <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-6">
+        <section key={block.title} className={cn("bg-paper", sectionPaddingClass)}>
+          <SectionContainer className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
             {block.image ? (
               <div
                 className={cn(
@@ -87,7 +86,7 @@ export async function ImpactSubPageTemplate({
               <h2 className="font-display text-3xl font-semibold text-ink">{block.title}</h2>
               <p className="text-base leading-relaxed text-graphite">{block.body}</p>
             </div>
-          </div>
+          </SectionContainer>
         </section>
       ))}
 

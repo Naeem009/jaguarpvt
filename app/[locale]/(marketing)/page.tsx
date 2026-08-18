@@ -10,6 +10,8 @@ import {
   TrustStrip,
 } from "@/components/sections";
 import { getProductHubGridItems } from "@/lib/products/get-content";
+import { buildCompanyStats } from "@/lib/stats/company-stats";
+import { buildImpactHubStats } from "@/lib/stats/impact-hub-stats";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -24,7 +26,20 @@ export default async function HomePage({ params }: PageProps) {
   setRequestLocale(locale);
   const t = await getTranslations("home");
   const tCommon = await getTranslations("common");
+  const tImpactStats = await getTranslations("impact.hub.stats");
   const productItems = await getProductHubGridItems();
+  const companyStats = buildCompanyStats({
+    facilities: t("stats.facilities"),
+    countries: t("stats.countries"),
+    employees: t("stats.employees"),
+    yearsInOperation: t("stats.yearsInOperation"),
+  });
+  const impactStats = buildImpactHubStats({
+    waterSaved: tImpactStats("waterSaved"),
+    renewableEnergy: tImpactStats("renewableEnergy"),
+    certifiedFacilities: tImpactStats("certifiedFacilities"),
+    workerPrograms: tImpactStats("workerPrograms"),
+  });
 
   return (
     <main>
@@ -42,14 +57,7 @@ export default async function HomePage({ params }: PageProps) {
         }}
       />
 
-      <StatBar
-        stats={[
-          { value: 0, placeholder: "6", label: t("stats.facilities") },
-          { value: 0, placeholder: "5", label: t("stats.countries") },
-          { value: 0, placeholder: "900+", label: t("stats.employees") },
-          { value: 0, placeholder: "40", label: t("stats.yearsInOperation") },
-        ]}
-      />
+      <StatBar stats={companyStats} />
 
       <ProductGrid items={productItems} />
 
@@ -57,11 +65,7 @@ export default async function HomePage({ params }: PageProps) {
 
       <StatBar
         variant="impact"
-        stats={[
-          { value: 0, placeholder: "500 M", label: t("impactStats.waterSaved") },
-          { value: 0, placeholder: "25 %", label: t("impactStats.renewableEnergy") },
-          { value: 0, placeholder: "04", label: t("impactStats.certifiedFacilities") },
-        ]}
+        stats={impactStats}
         footerLink={{ href: "/our-impact", label: t("impactStats.exploreImpact") }}
       />
 

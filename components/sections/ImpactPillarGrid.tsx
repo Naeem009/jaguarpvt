@@ -3,6 +3,8 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { SectionContainer } from "@/components/ui/SectionContainer";
+import { sectionPaddingClass } from "@/lib/layout/section";
 import { cn } from "@/lib/utils";
 
 const pillarConfig = [
@@ -49,8 +51,8 @@ export async function ImpactPillarGrid({ className }: ImpactPillarGridProps) {
   });
 
   return (
-    <section className={cn("bg-paper py-16 md:py-24", className)}>
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
+    <section className={cn("bg-paper", sectionPaddingClass, className)}>
+      <SectionContainer>
         <SectionHeading
           eyebrow={t("eyebrow")}
           title={t("title")}
@@ -76,9 +78,9 @@ export async function ImpactPillarGrid({ className }: ImpactPillarGridProps) {
                     <h3 className="font-display text-2xl font-semibold text-ink">{pillar.title}</h3>
                     <p className="text-sm leading-relaxed text-graphite">{pillar.description}</p>
                   </div>
-                  <dl className="mt-auto grid grid-cols-2 gap-4 border-t border-ink/8 pt-5">
+                  <dl className="mt-auto grid grid-cols-2 gap-4 border-t border-ink/8 pt-5 text-center">
                     {pillar.metrics.map((metric) => (
-                      <div key={metric.label}>
+                      <div key={metric.label} className="flex flex-col items-center">
                         <dt className="font-mono text-2xl font-bold text-accent">{metric.placeholder}</dt>
                         <dd className="mt-1 text-xs font-medium uppercase tracking-[0.06em] text-graphite">
                           {metric.label}
@@ -91,7 +93,7 @@ export async function ImpactPillarGrid({ className }: ImpactPillarGridProps) {
             </Link>
           ))}
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }

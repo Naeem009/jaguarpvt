@@ -9,6 +9,7 @@ import {
   SustainabilityEstimator,
 } from "@/components/sections";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
+import { buildImpactHubStats } from "@/lib/stats/impact-hub-stats";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -24,6 +25,12 @@ export default async function OurImpactHubPage({ params }: PageProps) {
   const t = await getTranslations("impact.hub");
   const tCommon = await getTranslations("common");
   const tNav = await getTranslations("nav");
+  const impactStats = buildImpactHubStats({
+    waterSaved: t("stats.waterSaved"),
+    renewableEnergy: t("stats.renewableEnergy"),
+    certifiedFacilities: t("stats.certifiedFacilities"),
+    workerPrograms: t("stats.workerPrograms"),
+  });
 
   return (
     <main>
@@ -36,15 +43,7 @@ export default async function OurImpactHubPage({ params }: PageProps) {
         media={heroVideoMedia("/images/our-impact/environment/hero.jpg", t("hero.alt"), "sustainability")}
       />
 
-      <StatBar
-        stats={[
-          { value: 0, placeholder: "[X]M", label: t("stats.waterSaved") },
-          { value: 0, placeholder: "[X]%", label: t("stats.renewableEnergy") },
-          { value: 0, placeholder: "[X]", label: t("stats.certifiedFacilities") },
-          { value: 0, placeholder: "[X]", label: t("stats.workerPrograms") },
-        ]}
-        variant="impact"
-      />
+      <StatBar stats={impactStats} variant="impact" />
 
       <ImpactPillarGrid />
 

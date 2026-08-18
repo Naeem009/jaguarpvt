@@ -1,6 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import { getPageVideoMedia } from "@/lib/media/page-videos";
 import type { PageMetadataKey } from "@/lib/seo/config";
+import { SectionContainer } from "@/components/ui/SectionContainer";
+import { sectionPaddingClass } from "@/lib/layout/section";
 import { cn } from "@/lib/utils";
 
 export async function PageVideoSection({
@@ -17,9 +19,9 @@ export async function PageVideoSection({
   return (
     <section
       aria-labelledby={`page-video-${pageKey}`}
-      className={cn("bg-paper py-16 md:py-24 lg:py-28", className)}
+      className={cn("bg-paper", sectionPaddingClass, className)}
     >
-      <div className="mx-auto max-w-5xl px-4 md:px-6">
+      <SectionContainer>
         <header className="mx-auto mb-10 max-w-2xl text-center md:mb-12">
           <p className="text-sm font-medium uppercase tracking-[0.06em] text-graphite">{t("eyebrow")}</p>
           <h2
@@ -31,7 +33,7 @@ export async function PageVideoSection({
           <p className="mt-4 text-base leading-relaxed text-graphite md:text-lg">{tPage("subhead")}</p>
         </header>
 
-        <div className="overflow-hidden rounded-2xl border border-ink/8 bg-paper shadow-sm">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-ink/8 bg-paper shadow-sm">
           <div className="relative aspect-[21/9] w-full max-h-[min(22rem,42vw)] bg-paper">
             <video
               autoPlay
@@ -46,7 +48,7 @@ export async function PageVideoSection({
             </video>
           </div>
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }

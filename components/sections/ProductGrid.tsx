@@ -4,6 +4,8 @@ import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { SectionContainer } from "@/components/ui/SectionContainer";
+import { evenCardGridClass, sectionPaddingClass } from "@/lib/layout/section";
 import { cn } from "@/lib/utils";
 
 export type ProductGridItem = {
@@ -32,8 +34,8 @@ export async function ProductGrid({
   const t = await getTranslations("sections.productGrid");
 
   return (
-    <section className={cn("bg-paper py-16 md:py-24", className)}>
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
+    <section className={cn("bg-paper", sectionPaddingClass, className)}>
+      <SectionContainer>
         <SectionHeading
           eyebrow={eyebrow ?? t("eyebrow")}
           title={title ?? t("defaultTitle")}
@@ -41,7 +43,7 @@ export async function ProductGrid({
           className="mb-12 md:mb-16"
         />
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className={cn("grid gap-6", evenCardGridClass(items.length))}>
           {items.map((item) => (
             <Link key={item.href} href={item.href} className="group block h-full">
               <Card variant="interactive" className="flex h-full flex-col overflow-hidden p-0">
@@ -65,7 +67,7 @@ export async function ProductGrid({
             </Link>
           ))}
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }
