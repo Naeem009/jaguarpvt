@@ -102,8 +102,8 @@ const siteSearchIndex: SiteSearchEntry[] = [
     id: "boutique",
     title: "Boutique",
     href: "/products/boutique",
-    snippet: "Small-batch programs with low minimums and a browsable catalogue.",
-    keywords: ["boutique", "low moq", "catalogue", "small batch"],
+    snippet: "Small-batch programs with low minimums and refined construction.",
+    keywords: ["boutique", "low moq", "small batch"],
   },
   {
     id: "our-impact",

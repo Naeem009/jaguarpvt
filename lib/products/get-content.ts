@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { CATALOGUE_CATEGORY_SLUG, PRODUCT_CATEGORY_SLUGS } from "./categories";
+import { PRODUCT_CATEGORY_SLUGS } from "./categories";
 import type { ProductCategoryContent, ProductCategorySlug } from "./content";
 
 const processImages = (category: ProductCategorySlug) => ({
@@ -48,7 +48,6 @@ export async function getProductCategories(): Promise<Record<ProductCategorySlug
 }
 
 export async function getProductHubGridItems() {
-  const t = await getTranslations("productCategories");
   const categories = await getProductCategories();
 
   return PRODUCT_CATEGORY_SLUGS.map((slug) => ({
@@ -56,6 +55,5 @@ export async function getProductHubGridItems() {
     href: `/products/${slug}` as const,
     image: categories[slug].heroImage,
     description: categories[slug].gridDescription,
-    badge: slug === CATALOGUE_CATEGORY_SLUG ? t("catalogueBadge") : undefined,
   }));
 }

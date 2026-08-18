@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
 import { CTASection } from "./CTASection";
 import { Hero } from "./Hero";
@@ -11,10 +10,9 @@ import { heroVideoMedia } from "@/lib/media/hero-media";
 
 export type ProductPageTemplateProps = {
   content: ProductCategoryContent;
-  catalogueSection?: ReactNode;
 };
 
-export async function ProductPageTemplate({ content, catalogueSection }: ProductPageTemplateProps) {
+export async function ProductPageTemplate({ content }: ProductPageTemplateProps) {
   const t = await getTranslations("productCategories");
   const contactHref = `/contact?category=${content.slug}`;
   const discussLabel = t("discussProgram", { category: content.name });
@@ -42,8 +40,6 @@ export async function ProductPageTemplate({ content, catalogueSection }: Product
       {content.innovation ? (
         <InnovationNote title={content.innovation.title} body={content.innovation.body} />
       ) : null}
-
-      {catalogueSection}
 
       <CTASection
         title={discussTitle}

@@ -10,6 +10,6 @@ export const productsHub = {
     eyebrow: "Categories",
     title: "Select a product category",
     subhead:
-      "Each category page outlines process steps, technical specs, and sustainability programs — with boutique including a browsable catalogue.",
+      "Each category page outlines process steps, technical specs, and sustainability programs.",
   },
 };

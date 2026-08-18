@@ -1,5 +1,4 @@
 export const productCategories = {
-  catalogueBadge: "Catalogue",
   discussProgram: "Discuss a {category} Program",
   discussProgramLower: "Discuss a {category} program with our team",
   discussSubhead:
@@ -209,9 +208,9 @@ export const productCategories = {
     name: "Boutique",
     headline: "Boutique",
     subhead:
-      "Small-batch and boutique programs with low minimums, refined construction, and catalogue-ready styles for emerging and premium labels.",
+      "Small-batch and boutique programs with low minimums, refined construction, and wholesale-ready styles for emerging and premium labels.",
     gridDescription:
-      "Small-batch boutique programs with low minimums, refined construction, and a browsable catalogue.",
+      "Small-batch boutique programs with low minimums and refined construction for emerging and premium labels.",
     timelineSteps: [
       {
         title: "Style development and sampling",
@@ -234,7 +233,6 @@ export const productCategories = {
       { label: "Primary machinery", value: "Flexible modular lines, sample room, CAD/CAM pattern support" },
       { label: "Certifications", value: "GOTS, OEKO-TEX — scope varies by facility and program" },
       { label: "Typical products", value: "Capsule collections, premium basics, gift sets, curated seasonal drops" },
-      { label: "Catalogue", value: "Browsable catalogue available for selected boutique styles" },
     ],
     sustainability: {
       title: "Mindful production for smaller runs",

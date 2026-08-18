@@ -2,8 +2,6 @@ import type { ProductCategorySlug } from "./categories";
 
 export type { ProductCategorySlug } from "./categories";
 export {
-  BOUTIQUE_CATALOGUE_URL,
-  CATALOGUE_CATEGORY_SLUG,
   PRODUCT_CATEGORY_SLUGS,
   PRODUCT_METADATA_KEY,
   isProductCategorySlug,

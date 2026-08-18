@@ -9,8 +9,6 @@ export { MegaMenu } from "./MegaMenu";
 export { Navbar } from "./Navbar";
 export { AlternativeContact } from "./AlternativeContact";
 export { CapabilityMatcher } from "./CapabilityMatcher";
-export { CatalogueEmbed } from "./CatalogueEmbed";
-export type { CatalogueEmbedProps } from "./CatalogueEmbed";
 export { ContactExpectations } from "./ContactExpectations";
 export { ContactForm } from "./ContactForm";
 export { ContactPageHero } from "./ContactPageHero";

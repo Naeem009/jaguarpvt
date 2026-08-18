@@ -26,10 +26,6 @@ export const PRODUCT_METADATA_KEY: Record<ProductCategorySlug, ProductMetadataKe
   boutique: "boutique",
 };
 
-export const CATALOGUE_CATEGORY_SLUG: ProductCategorySlug = "boutique";
-
-export const BOUTIQUE_CATALOGUE_URL = "/catalogues/baby-wear-catalogue.pdf";
-
 export function isProductCategorySlug(value: string): value is ProductCategorySlug {
   return (PRODUCT_CATEGORY_SLUGS as readonly string[]).includes(value);
 }

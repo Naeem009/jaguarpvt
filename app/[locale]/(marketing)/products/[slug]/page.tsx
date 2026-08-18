@@ -1,10 +1,8 @@
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo/metadata";
-import { CatalogueEmbed, ProductPageTemplate } from "@/components/sections";
+import { ProductPageTemplate } from "@/components/sections";
 import {
-  BOUTIQUE_CATALOGUE_URL,
-  CATALOGUE_CATEGORY_SLUG,
   PRODUCT_CATEGORY_SLUGS,
   PRODUCT_METADATA_KEY,
   isProductCategorySlug,
@@ -40,14 +38,7 @@ export default async function ProductCategoryPage({ params }: PageProps) {
 
   return (
     <main>
-      <ProductPageTemplate
-        content={content}
-        catalogueSection={
-          slug === CATALOGUE_CATEGORY_SLUG ? (
-            <CatalogueEmbed fileUrl={BOUTIQUE_CATALOGUE_URL} />
-          ) : undefined
-        }
-      />
+      <ProductPageTemplate content={content} />
     </main>
   );
 }

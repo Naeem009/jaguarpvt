@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MegaMenu } from "./MegaMenu";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
-import { CATALOGUE_CATEGORY_SLUG, PRODUCT_CATEGORY_SLUGS } from "@/lib/products/content";
+import { PRODUCT_CATEGORY_SLUGS } from "@/lib/products/content";
 import type { ProductCategorySlug } from "@/lib/products/content";
 import { cn } from "@/lib/utils";
 
@@ -46,7 +46,6 @@ export function Navbar() {
     href: `/products/${slug}` as `/products/${ProductCategorySlug}`,
     description: tProducts(`${slug}.gridDescription`),
     image: `/images/products/${slug}/hero.jpg`,
-    badge: slug === CATALOGUE_CATEGORY_SLUG ? tProducts("catalogueBadge") : undefined,
   }));
 
   const aboutMegaMenuItems = (
@@ -254,7 +253,6 @@ export function Navbar() {
                               onClick={closeMobileMenu}
                             >
                               {item.title}
-                              {item.badge ? ` · ${t("catalogueBadge")}` : ""}
                             </Link>
                           </li>
                         ))}
