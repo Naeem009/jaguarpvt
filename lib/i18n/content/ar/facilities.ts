@@ -1,42 +1,14 @@
 export const facilities = {
-  "city-unit": {
-    name: "حرم تصنيع لاهور",
-    description: "قص وخياطة وتشطيب متكامل لبرامج القمصان المنسوجة والمحبوكة.",
+  "knitting-unit": {
+    name: "Knitting",
+    description: "High-volume circular and flat knitting for jersey, fleece, and performance knit programs.",
   },
-  "dhaka-knit-center": {
-    name: "مركز دكا للأقمشة المحبوكة",
-    description: "برامج عالية الحجم لأقمشة الجيرزي والفليس وملابس الأطفال مع خيارات قطن عضوي معتمد.",
+  "dyeing-unit": {
+    name: "Dyeing",
+    description: "State-of-the-art dyeing for knit and woven programs with documented chemical management and shade matching.",
   },
-  "chennai-denim-hub": {
-    name: "مركز تشيناي للأقمشة المنسوجة والتشطيب",
-    description: "إنتاج سراويل من الأقمشة المنسوجة الثقيلة وتشطيب الملابس.",
-  },
-  "ho-chi-minh-apparel": {
-    name: "مجمع هو تشي مينه للملابس",
-    description: "أقمشة محبوكة للأداء وبرامج زي موحد منسوج للأسواق التصديرية.",
-  },
-  "istanbul-denim": {
-    name: "مركز إسطنبول للأقمشة المنسوجة",
-    description: "قمصان منسوجة مع قرب من الأسواق الأوروبية.",
-  },
-  "cairo-wovens": {
-    name: "منشأة القاهرة للأقمشة المنسوجة",
-    description: "برامج قمصان منسوجة وزي موحد للمشترين الإقليميين والتصديريين.",
-  },
-  "guatemala-knits": {
-    name: "حرم Guatemala للأقمشة المحبوكة",
-    description: "برامج محبوكة قريبة من الساحل مع دعم عينات سريعة.",
-  },
-  "shenzhen-tech-apparel": {
-    name: "مركز Shenzhen للملابس التقنية",
-    description: "حرم متعدد الفئات يغطي الأقمشة المنسوجة والمحبوكة وتطوير ملابس الأطفال.",
-  },
-  "johannesburg-wovens": {
-    name: "وحدة Johannesburg للأقمشة المنسوجة",
-    description: "إنتاج منسوج إقليمي ودعم تطوير للأسواق الأفريقية.",
-  },
-  "los-angeles-denim-lab": {
-    name: "مختبر Los Angeles للتطوير",
-    description: "عينات ودعم فني موجّه للمشترين لبرامج الأقمشة المنسوجة.",
+  "sewing-facility": {
+    name: "Sewing Facility",
+    description: "Integrated cut-and-sew, finishing, and packing for multi-category apparel programs.",
   },
 };

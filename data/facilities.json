@@ -1,25 +1,25 @@
 [
   {
-    "id": "city-unit",
-    "slug": "city-unit",
-    "name": "Faisalabad Manufacturing City Unit",
+    "id": "knitting-unit",
+    "slug": "knitting-unit",
+    "name": "Knitting",
     "country": "Pakistan",
     "city": "Faisalabad",
     "region": "South Asia",
     "latitude": 31.4504,
-    "longitude": 73.135,
-    "mapX": 68.5,
-    "mapY": 37.4,
-    "categories": ["casual-wear", "streetwear", "activewear", "denim", "kidswear"],
-    "certifications": ["GOTS", "OEKO-TEX", "WRAP"],
-    "employees": 1200,
-    "establishedYear": 1998,
-    "description": "Integrated cut-and-sew and finishing for woven shirting and knit programs."
+    "longitude": 73.118,
+    "mapX": 67.8,
+    "mapY": 37.1,
+    "categories": ["activewear", "kidswear", "casual-wear"],
+    "certifications": ["GOTS", "OEKO-TEX"],
+    "employees": 650,
+    "establishedYear": 2005,
+    "description": "High-volume circular and flat knitting for jersey, fleece, and performance knit programs."
   },
   {
     "id": "dyeing-unit",
     "slug": "dyeing-unit",
-    "name": "Faisalabad Dyeing Unit",
+    "name": "Dyeing",
     "country": "Pakistan",
     "city": "Faisalabad",
     "region": "South Asia",
@@ -31,6 +31,23 @@
     "certifications": ["OEKO-TEX", "WRAP", "BSCI", "ISO 9001"],
     "employees": 800,
     "establishedYear": 2018,
-    "description": "State of the art dyeing facility for knit programs."
+    "description": "State-of-the-art dyeing for knit and woven programs with documented chemical management and shade matching."
+  },
+  {
+    "id": "sewing-facility",
+    "slug": "sewing-facility",
+    "name": "Sewing Facility",
+    "country": "Pakistan",
+    "city": "Faisalabad",
+    "region": "South Asia",
+    "latitude": 31.4504,
+    "longitude": 73.152,
+    "mapX": 68.9,
+    "mapY": 37.5,
+    "categories": ["casual-wear", "streetwear", "denim", "kidswear", "boutique"],
+    "certifications": ["GOTS", "OEKO-TEX", "WRAP"],
+    "employees": 1200,
+    "establishedYear": 1998,
+    "description": "Integrated cut-and-sew, finishing, and packing for multi-category apparel programs."
   }
 ]

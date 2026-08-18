@@ -1,6 +1,14 @@
 export const facilities = {
-  "city-unit": {
-    name: "Faisalabad Manufacturing City Unit",
-    description: "Integrierter Zuschnitt, Konfektion und Veredelung für Webwaren-Hemden und Strickprogramme.",
-  }
+  "knitting-unit": {
+    name: "Stricken",
+    description: "Großserien-Rund- und Flachstrick für Jersey-, Fleece- und Performance-Strickprogramme.",
+  },
+  "dyeing-unit": {
+    name: "Färberei",
+    description: "Moderne Färberei für Strick- und Webprogramme mit dokumentiertem Chemikaliemanagement und Farbabstimmung.",
+  },
+  "sewing-facility": {
+    name: "Näherei",
+    description: "Integriertes Zuschnitt, Konfektion, Veredelung und Verpackung für Multi-Kategorie-Bekleidungsprogramme.",
+  },
 };

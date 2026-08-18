@@ -143,8 +143,8 @@ export function FacilityMap({ facilities, filterEnabled = false, className }: Fa
                       className={cn(
                         "absolute z-10 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white transition-transform hover:scale-125 focus:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-paper",
                         isSelected
-                          ? "bg-accent-bright shadow-[0_0_0_8px_rgba(126,187,66,0.35)]"
-                          : "bg-accent-bright/90 shadow-[0_0_0_6px_rgba(126,187,66,0.2)]",
+                          ? "bg-ink shadow-[0_0_0_8px_rgba(0,0,0,0.28)]"
+                          : "bg-ink/90 shadow-[0_0_0_6px_rgba(0,0,0,0.18)]",
                       )}
                       style={{
                         top: `${position.y}%`,

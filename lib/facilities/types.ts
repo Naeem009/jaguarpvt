@@ -25,8 +25,9 @@ export const FACILITY_HERO_IMAGE = "/images/facility/hero.jpg";
 
 /** Legacy numbered thumbs — kept for backwards compatibility with uploaded assets. */
 export const LEGACY_FACILITY_THUMBS: Record<string, string> = {
-  "city-unit": "facility-thumb-01",
+  "knitting-unit": "facility-thumb-01",
   "dyeing-unit": "facility-thumb-02",
+  "sewing-facility": "facility-thumb-03",
 };
 
 /** Client-safe candidate order when resolving or falling back to the next asset. */

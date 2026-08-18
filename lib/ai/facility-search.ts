@@ -41,6 +41,12 @@ const categoryAliases: Record<string, string[]> = {
   kids: ["kidswear"],
   children: ["kidswear"],
   boutique: ["boutique"],
+  knitting: ["activewear", "kidswear", "casual-wear"],
+  knit: ["activewear", "kidswear", "casual-wear"],
+  dyeing: ["activewear", "streetwear", "denim"],
+  dye: ["activewear", "streetwear", "denim"],
+  sewing: ["casual-wear", "streetwear", "denim", "kidswear", "boutique"],
+  "cut and sew": ["casual-wear", "streetwear", "denim", "kidswear", "boutique"],
 };
 
 const certificationAliases = ["gots", "oeko-tex", "oeko", "wrap", "iso"];
