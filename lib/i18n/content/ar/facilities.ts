@@ -1,7 +1,7 @@
 export const facilities = {
   "knitting-unit": {
     name: "التريكوت",
-    description: "تريكوت دائري ومستوٍ بأحجام كبيرة لبرامج الجيرsey والفleece والتريكوت الأدائي.",
+    description: "تريكوت دائري ومستوٍ بأحجام كبيرة لبرامج الجيرزي والفليس والتريكوت الأدائي.",
   },
   "dyeing-unit": {
     name: "الصباغة",
