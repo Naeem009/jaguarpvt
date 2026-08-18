@@ -1,26 +1,26 @@
 export const home = {
   hero: {
-    headline: "Produktion, entwickelt für das, was als Nächstes kommt.",
+    headline: "Manufacturing, engineered for what's next.",
     subhead:
-      "Vertikal integrierte Fertigung in den Bereichen Webwaren, Strickwaren und Babybekleidung — für globale Marken an [X] Standorten in [Y] Ländern.",
-    heroAlt: "Nahaufnahme von Stoff, der an einer Industrienähmaschine genäht wird",
+      "Vertically integrated production across casual wear, streetwear, activewear, denim, kidswear, and boutique — serving global brands at 04 facilities in 03 countries.",
+    heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
   },
   stats: {
-    facilities: "Standorte",
-    countries: "Länder",
-    employees: "Mitarbeitende",
-    yearsInOperation: "Jahre im Betrieb",
+    facilities: "Facilities",
+    countries: "Countries",
+    employees: "Employees",
+    yearsInOperation: "Years in operation",
   },
   impactStats: {
-    waterSaved: "Liter Wasser jährlich eingespart",
-    renewableEnergy: "Anteil erneuerbarer Energie",
-    certifiedFacilities: "Zertifizierte Standorte",
-    exploreImpact: "Unsere Wirkung entdecken",
+    waterSaved: "Liters of water saved annually",
+    renewableEnergy: "Renewable energy share",
+    certifiedFacilities: "Certified facilities",
+    exploreImpact: "Explore our impact",
   },
   aiContext:
-    "Startseiten-Vorschau — wählen Sie eine Beispielfrage, um zu sehen, wie fundierte Antworten erscheinen, sobald der Assistent angebunden ist.",
+    "Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected.",
   cta: {
-    title: "Bereit für ein Sourcing-Gespräch?",
-    subhead: "Erzählen Sie uns, was Sie entwickeln. Unser Team antwortet auf qualifizierte RFI- und RFQ-Anfragen mit klaren nächsten Schritten.",
+    title: "Ready to start a sourcing conversation?",
+    subhead: "Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps.",
   },
 };

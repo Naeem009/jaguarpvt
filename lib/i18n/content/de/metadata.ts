@@ -1,71 +1,104 @@
 export const metadata = {
-  siteDescription: "Vertikal integrierter Bekleidungshersteller.",
+  siteDescription:
+    "Vertically integrated apparel manufacturer for casual wear, streetwear, activewear, denim, kidswear, and boutique programs with audited compliance and scalable production.",
   home: {
-    title: "Vertikal integrierter Bekleidungshersteller",
-    description: "Fertigungspartnerschaften in den Bereichen Webwaren, Strickwaren und Babybekleidung für globale Marken.",
+    title: "Vertically Integrated Apparel Manufacturer",
+    description:
+      "Jaguar (Pvt) Ltd. is a vertically integrated apparel manufacturer delivering casual wear, streetwear, activewear, denim, kidswear, and boutique programs for global brands with audited compliance and scalable production.",
   },
   about: {
-    title: "Über uns",
-    description: "Unternehmensüberblick, Geschichte, Führung und Fertigungsstandorte.",
+    title: "About",
+    description:
+      "Learn about Jaguar (Pvt) Ltd.—our history, leadership, manufacturing footprint, and long-term partnerships with international apparel brands.",
   },
   atAGlance: {
-    title: "Jaguar auf einen Blick",
-    description: "Unternehmensüberblick — sechs Standorte in fünf Ländern, Führung, Geschichte und integrierte Fertigung.",
+    title: "Jaguar at a Glance",
+    description:
+      "Company overview of Jaguar (Pvt) Ltd.—six facilities across five countries, leadership, history, and integrated apparel manufacturing at scale.",
   },
   aboutStrategy: {
-    title: "Unsere Strategie",
-    description: "Strategische Prioritäten — Kategorientiefe, geografische Optionen und compliance-gestütztes Wachstum.",
+    title: "Our Strategy",
+    description:
+      "Jaguar strategic priorities—category depth, geographic optionality, and compliance-led growth for long-term brand partnerships.",
   },
   aboutMission: {
     title: "Mission",
-    description: "Mission und Werte — Fertigungspartnerschaften auf Basis von Nachweis, Integration und Langfristigkeit.",
+    description:
+      "Jaguar mission and values—manufacturing partnerships built on proof, integration, and long-term program delivery for global brands.",
   },
   aboutCompanyPolicy: {
-    title: "Unternehmensrichtlinien",
-    description: "Richtlinien zu Ethik, Arbeitsstandards, Umwelt, Gesundheit und Sicherheit sowie Governance.",
+    title: "Company Policy",
+    description:
+      "Jaguar company policies—ethics, labor standards, environmental responsibility, health and safety, and governance commitments.",
   },
   careers: {
-    title: "Karriere",
-    description: "Entdecken Sie Möglichkeiten in Fertigung, Qualität, Nachhaltigkeit und Commercial Functions.",
+    title: "Careers",
+    description:
+      "Explore careers at Jaguar (Pvt) Ltd. in manufacturing operations, quality, sustainability, product development, and commercial teams.",
   },
   contact: {
-    title: "Kontakt",
-    description: "Senden Sie eine RFI oder RFQ und starten Sie ein Sourcing-Gespräch mit unserem Team.",
+    title: "Contact",
+    description:
+      "Contact Jaguar (Pvt) Ltd. to submit an RFI or RFQ for casual wear, streetwear, activewear, denim, kidswear, or boutique programs. Our sourcing team responds within two business days.",
   },
   facility: {
-    title: "Standorte",
-    description: "Entdecken Sie unser globales Fertigungsnetzwerk und die Standortkapazitäten.",
+    title: "Facility",
+    description:
+      "Explore Jaguar manufacturing facilities, process capabilities, and production departments—from yarn intake through packing and quality assurance.",
   },
   ourImpact: {
-    title: "Unsere Wirkung",
-    description: "ESG-Programme in den Bereichen Umwelt, Menschen und Governance.",
+    title: "Our Impact",
+    description:
+      "Review Jaguar (Pvt) Ltd. ESG impact across environment, people and communities, and governance with certifications and compliance programs.",
   },
   environment: {
-    title: "Umwelt",
-    description: "Wasserbewirtschaftung, erneuerbare Energie und Umweltprogramme.",
+    title: "Environment",
+    description:
+      "Environmental programs at Jaguar facilities including water stewardship, renewable energy, and waste reduction for responsible apparel manufacturing.",
   },
   people: {
-    title: "Menschen & Gemeinschaften",
-    description: "Arbeitswohlfahrt und Gemeinschaftsprogramme an Fertigungsstandorten.",
+    title: "People & Communities",
+    description:
+      "Worker welfare, safety training, and community programs across Jaguar apparel manufacturing locations.",
   },
   governance: {
-    title: "Governance & Zertifizierungen",
-    description: "Zertifizierungen, Compliance-Systeme und Governance-Strukturen.",
+    title: "Governance & Certifications",
+    description:
+      "Governance, audit readiness, and certifications including GOTS, OEKO-TEX, WRAP, and ISO programs at Jaguar manufacturing sites.",
   },
   products: {
-    title: "Produkte",
-    description: "Entdecken Sie Fertigungskompetenzen in Webwaren, Strickwaren und Babybekleidung.",
+    title: "Products",
+    description:
+      "Explore Jaguar product manufacturing across casual wear, streetwear, activewear, denim, kidswear, and boutique programs.",
   },
-  wovens: {
-    title: "Webwaren",
-    description: "Programme für strukturierte Hemden, Hosen und Uniformen.",
+  casualWear: {
+    title: "Casual Wear",
+    description:
+      "Casual wear manufacturing for tees, polos, loungewear, and everyday separates with integrated cutting, sewing, and finishing.",
   },
-  knits: {
-    title: "Strickwaren",
-    description: "Programme für Jersey, Fleece und Performance-Strickwaren.",
+  streetwear: {
+    title: "Streetwear",
+    description:
+      "Streetwear manufacturing for urban apparel, premium trims, and brand-led drops with specialized construction and wash programs.",
   },
-  babyWear: {
-    title: "Babybekleidung",
-    description: "Babybekleidungsprogramme und Produktkatalog.",
+  activewear: {
+    title: "Activewear",
+    description:
+      "Activewear manufacturing for leggings, training tops, and performance layers with stretch recovery and moisture management.",
+  },
+  denim: {
+    title: "Denim",
+    description:
+      "Denim manufacturing for jeans, jackets, and skirts with wash development, shade control, and brand-ready finishing.",
+  },
+  kidswear: {
+    title: "Kidswear",
+    description:
+      "Kidswear manufacturing with soft-hand construction, secure attachments, and compliance-focused finishing.",
+  },
+  boutique: {
+    title: "Boutique",
+    description:
+      "Boutique and small-batch apparel programs with low minimums, refined construction, and catalogue-ready styles.",
   },
 };

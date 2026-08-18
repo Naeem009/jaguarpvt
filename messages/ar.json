@@ -34,9 +34,12 @@
     "products": "المنتجات",
     "ourImpact": "أثرنا",
     "connect": "تواصل",
-    "wovens": "المنسوجات",
-    "knits": "الملابس المريكلة",
-    "babyWear": "ملابس الأطفال",
+    "casualWear": "Casual Wear",
+    "streetwear": "Streetwear",
+    "activewear": "Activewear",
+    "denim": "Denim",
+    "kidswear": "Kidswear",
+    "boutique": "Boutique",
     "environment": "البيئة",
     "people": "الناس والمجتمعات",
     "governance": "الحوكمة والشهادات",
@@ -115,9 +118,12 @@
     "successTitle": "شكراً — استلمنا استفسارك.",
     "successBody": "سيراجع أحد أعضاء فريقنا طلبك ويرد خلال يومي عمل مع خطوات واضحة.",
     "categories": {
-      "wovens": "الأقمشة المنسوجة",
-      "knits": "الملابس المريكلة",
-      "baby-wear": "ملابس الأطفال",
+      "casual-wear": "Casual Wear",
+      "streetwear": "Streetwear",
+      "activewear": "Activewear",
+      "denim": "Denim",
+      "kidswear": "Kidswear",
+      "boutique": "Boutique",
       "multiple": "فئات متعددة"
     },
     "volumes": {
@@ -145,11 +151,12 @@
   },
   "catalogue": {
     "eyebrow": "كتalog",
-    "defaultTitle": "تصفح كتalog ملابس الأطفال",
-    "subhead": "استكشف مجموعة ملابس الأطفال الكاملة — الأقمشة والمقاسات وخيارات التشطيب.",
+    "defaultTitle": "تصفح كتalog Boutique",
+    "subhead": "استكشف مجموعة Boutique الكاملة — الأقمشة والمقاسات وخيارات التشطيب.",
     "downloadPdf": "تنزيل PDF",
     "requestCatalogue": "اطلب هذا الكتalog",
     "comingSoonTitle": "الكتalog قريباً",
-    "comingSoonBody": "سيتوفر كتalog ملابس الأطفال الإلكتروني هنا بعد رفعه. اطلب نسخة من فريقنا في هذه الأثناء."
+    "comingSoonBody": "سيتوفر كتalog Boutique الإلكتروني هنا بعد رفعه. اطلب نسخة من فريقنا في هذه الأثناء.",
+    "iframeTitle": "كتalog منتجات Boutique، PDF"
   }
 }

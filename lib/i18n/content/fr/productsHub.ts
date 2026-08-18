@@ -1,15 +1,15 @@
 export const productsHub = {
   hero: {
-    headline: "Produits",
+    headline: "Products",
     subhead:
-      "Trois catégories principales — tissés, mailles et layette — soutenues par une manufacture intégrée, des systèmes de conformité et des capacités de développement.",
-    exploreCategories: "Explorer les catégories",
-    alt: "Catégories de produits : tissés, mailles et layette",
+      "Six core categories — casual wear, streetwear, activewear, denim, kidswear, and boutique — supported by integrated manufacturing, compliance systems, and development capability.",
+    exploreCategories: "Explore categories",
+    alt: "Apparel product categories across casual wear, streetwear, activewear, denim, kidswear, and boutique",
   },
   grid: {
-    eyebrow: "Catégories",
-    title: "Sélectionnez une catégorie de produits",
+    eyebrow: "Categories",
+    title: "Select a product category",
     subhead:
-      "Chaque page de catégorie présente les étapes de processus, les spécifications techniques et les programmes de durabilité — la layette incluant un catalogue consultable.",
+      "Each category page outlines process steps, technical specs, and sustainability programs — with boutique including a browsable catalogue.",
   },
 };

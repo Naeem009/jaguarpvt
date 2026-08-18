@@ -4,12 +4,15 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
+import { PRODUCT_CATEGORY_SLUGS } from "@/lib/products/content";
+import type { ProductCategorySlug } from "@/lib/products/content";
 import { cn } from "@/lib/utils";
 
 export function Footer({ className }: { className?: string }) {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
   const tCommon = useTranslations("common");
+  const tProducts = useTranslations("productCategories");
   const year = new Date().getFullYear();
 
   const columns = [
@@ -27,11 +30,10 @@ export function Footer({ className }: { className?: string }) {
     },
     {
       title: t("products"),
-      links: [
-        { label: t("wovens"), href: "/products/wovens" as const },
-        { label: t("knits"), href: "/products/knits" as const },
-        { label: t("babyWear"), href: "/products/baby-wear" as const },
-      ],
+      links: PRODUCT_CATEGORY_SLUGS.map((slug) => ({
+        label: tProducts(`${slug}.name`),
+        href: `/products/${slug}` as const,
+      })),
     },
     {
       title: t("ourImpact"),

@@ -1,11 +1,7 @@
 import { z } from "zod";
+import { PRODUCT_CATEGORY_SLUGS } from "@/lib/products/categories";
 
-export const productCategoryValues = [
-  "wovens",
-  "knits",
-  "baby-wear",
-  "multiple",
-] as const;
+export const productCategoryValues = [...PRODUCT_CATEGORY_SLUGS, "multiple"] as const;
 
 export const annualVolumeValues = [
   "under-50k",
@@ -51,9 +47,12 @@ export const contactFormSchema = z.object({
 export type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export const productCategoryLabels: Record<(typeof productCategoryValues)[number], string> = {
-  wovens: "Wovens",
-  knits: "Knits",
-  "baby-wear": "Baby Wear",
+  "casual-wear": "Casual Wear",
+  streetwear: "Streetwear",
+  activewear: "Activewear",
+  denim: "Denim",
+  kidswear: "Kidswear",
+  boutique: "Boutique",
   multiple: "Multiple categories",
 };
 
@@ -89,7 +88,6 @@ export function mapMatcherVolumeToAnnual(volume?: string | null) {
 
 export function parseCategoryParam(value?: string | null) {
   if (!value) return undefined;
-  if (value === "baby wear") return "baby-wear" as const;
   return productCategoryValues.find((category) => category === value);
 }
 

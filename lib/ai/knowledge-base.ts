@@ -19,12 +19,15 @@ function normalize(text: string) {
 const synonymGroups: string[][] = [
   ["apparel", "garment", "clothing", "textile"],
   ["manufacturer", "manufacturing", "factory", "supplier", "partner"],
-  ["baby wear", "babywear", "infant"],
+  ["casual wear", "casual-wear", "everyday apparel", "basics"],
+  ["streetwear", "urban apparel", "hoodie"],
+  ["activewear", "sportswear", "performance apparel", "leggings"],
+  ["denim", "jeans", "denim wash"],
+  ["kidswear", "kids wear", "children's apparel"],
+  ["boutique", "low moq", "small batch", "catalogue"],
   ["rfq", "rfi", "quote", "inquiry", "sourcing"],
   ["certification", "certified", "gots", "oeko-tex", "wrap", "compliance"],
   ["facility", "facilities", "plant", "site", "location"],
-  ["knits", "knitwear", "jersey", "fleece"],
-  ["wovens", "woven", "shirting", "uniform"],
 ];
 
 function expandTokens(tokens: string[]) {

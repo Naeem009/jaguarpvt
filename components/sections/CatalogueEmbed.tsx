@@ -45,7 +45,7 @@ export async function CatalogueEmbed({
               <div className="overflow-hidden rounded-[var(--radius-card)] border border-ink/8">
                 <iframe
                   src={fileUrl}
-                  title="Baby Wear product catalogue, PDF"
+                  title={t("iframeTitle")}
                   className="aspect-[4/3] w-full bg-paper md:aspect-[16/10]"
                 />
               </div>
@@ -57,7 +57,7 @@ export async function CatalogueEmbed({
                 >
                   {t("downloadPdf")}
                 </a>
-                <Button href="/contact?category=baby-wear">{t("requestCatalogue")}</Button>
+                <Button href="/contact?category=boutique">{t("requestCatalogue")}</Button>
               </div>
             </>
           ) : (
@@ -70,7 +70,7 @@ export async function CatalogueEmbed({
                 {t("comingSoonBody")}
               </p>
               <div className="mt-8 flex justify-center">
-                <Button href="/contact?category=baby-wear">{t("requestCatalogue")}</Button>
+                <Button href="/contact?category=boutique">{t("requestCatalogue")}</Button>
               </div>
             </div>
           )}

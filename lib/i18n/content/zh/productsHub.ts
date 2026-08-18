@@ -1,15 +1,15 @@
 export const productsHub = {
   hero: {
-    headline: "产品",
+    headline: "Products",
     subhead:
-      "三大核心品类——梭织、针织与婴童服饰——由集成制造、合规体系及开发能力支持。",
-    exploreCategories: "探索品类",
-    alt: "梭织、针织与婴童服饰服装产品品类",
+      "Six core categories — casual wear, streetwear, activewear, denim, kidswear, and boutique — supported by integrated manufacturing, compliance systems, and development capability.",
+    exploreCategories: "Explore categories",
+    alt: "Apparel product categories across casual wear, streetwear, activewear, denim, kidswear, and boutique",
   },
   grid: {
-    eyebrow: "品类",
-    title: "选择产品品类",
+    eyebrow: "Categories",
+    title: "Select a product category",
     subhead:
-      "每个品类页面概述工艺步骤、技术规格及可持续发展项目——婴童服饰页面包含可浏览的产品目录。",
+      "Each category page outlines process steps, technical specs, and sustainability programs — with boutique including a browsable catalogue.",
   },
 };

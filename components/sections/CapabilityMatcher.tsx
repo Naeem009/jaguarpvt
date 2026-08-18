@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PRODUCT_CATEGORY_SLUGS } from "@/lib/products/categories";
 import { cn } from "@/lib/utils";
 
 type MatcherFormState = {
@@ -25,7 +26,7 @@ type MatcherResponse = {
 
 const stepIds = ["category", "volume", "materials", "sustainability", "region"] as const;
 
-const categoryValues = ["wovens", "knits", "baby-wear"] as const;
+const categoryValues = PRODUCT_CATEGORY_SLUGS;
 const volumeValues = ["under-10k", "10k-50k", "50k-200k", "200k-plus"] as const;
 const materialValues = ["cotton", "organic-cotton", "polyester", "recycled-fiber"] as const;
 const sustainabilityValues = ["gots", "oeko-tex", "wrap", "recycled-content", "low-impact-finishing"] as const;

@@ -27,7 +27,7 @@ export default async function ProductsHubPage({ params }: PageProps) {
         subhead={t("hero.subhead")}
         primaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
         secondaryCTA={{ label: t("hero.exploreCategories"), href: "#categories" }}
-        media={heroVideoMedia("/images/products/wovens/hero.jpg", t("hero.alt"), "products")}
+        media={heroVideoMedia("/images/products/casual-wear/hero.jpg", t("hero.alt"), "products")}
       />
 
       <div id="categories">

@@ -5,8 +5,8 @@ export const sections = {
   },
   productGrid: {
     eyebrow: "Products",
-    defaultTitle: "Built across three core categories",
-    defaultSubhead: "From woven shirting to certified baby wear — integrated manufacturing across every category.",
+    defaultTitle: "Built across six product categories",
+    defaultSubhead: "From casual wear and streetwear to activewear, denim, kidswear, and boutique — integrated manufacturing across every category.",
   },
   facilityMapTeaser: {
     eyebrow: "Global footprint",
@@ -53,7 +53,7 @@ export const sections = {
       },
       atAGlance: {
         title: "Scale across categories and regions",
-        subhead: "Integrated manufacturing across wovens, knits, and baby wear.",
+        subhead: "Integrated manufacturing across casual wear, streetwear, activewear, denim, kidswear, and boutique.",
         videoAlt: "Global apparel manufacturing footprint",
       },
       aboutStrategy: {
@@ -108,23 +108,38 @@ export const sections = {
       },
       products: {
         title: "Product programs in production",
-        subhead: "Wovens, knits, and baby wear capabilities on integrated lines.",
+        subhead: "Casual wear, streetwear, activewear, denim, kidswear, and boutique capabilities on integrated lines.",
         videoAlt: "Finished apparel and product manufacturing",
       },
-      wovens: {
-        title: "Woven programs in motion",
-        subhead: "Shirting, bottoms, and uniform production across cutting, sewing, and finishing.",
-        videoAlt: "Woven apparel manufacturing process",
+      casualWear: {
+        title: "Casual wear in production",
+        subhead: "Everyday apparel across tees, polos, loungewear, and soft-hand separates.",
+        videoAlt: "Casual wear manufacturing process",
       },
-      knits: {
-        title: "Knitwear production",
-        subhead: "Jersey, fleece, and performance programs with scalable capacity.",
-        videoAlt: "Knitwear and jersey manufacturing",
+      streetwear: {
+        title: "Streetwear programs",
+        subhead: "Urban apparel with premium construction and brand-led drop capability.",
+        videoAlt: "Streetwear apparel manufacturing",
       },
-      babyWear: {
-        title: "Baby wear with care",
-        subhead: "Soft-hand construction and compliance-focused finishing for infant apparel.",
-        videoAlt: "Baby wear and soft apparel manufacturing",
+      activewear: {
+        title: "Activewear production",
+        subhead: "Performance layers with stretch recovery and moisture management.",
+        videoAlt: "Activewear and sportswear manufacturing",
+      },
+      denim: {
+        title: "Denim programs in motion",
+        subhead: "Jeans, jackets, and skirts with controlled wash and shade consistency.",
+        videoAlt: "Denim manufacturing and wash process",
+      },
+      kidswear: {
+        title: "Kidswear with care",
+        subhead: "Children's apparel with soft-hand construction and compliance-focused finishing.",
+        videoAlt: "Kidswear manufacturing",
+      },
+      boutique: {
+        title: "Boutique collections",
+        subhead: "Small-batch programs with low minimums and catalogue-ready styles.",
+        videoAlt: "Boutique apparel manufacturing",
       },
     },
   },

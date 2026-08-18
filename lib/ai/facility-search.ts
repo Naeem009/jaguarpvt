@@ -27,12 +27,20 @@ const regionAliases: Record<string, string[]> = {
 };
 
 const categoryAliases: Record<string, string[]> = {
-  knit: ["knits"],
-  knits: ["knits"],
-  woven: ["wovens"],
-  wovens: ["wovens"],
-  "baby wear": ["baby-wear"],
-  "baby-wear": ["baby-wear"],
+  casual: ["casual-wear"],
+  "casual wear": ["casual-wear"],
+  "casual-wear": ["casual-wear"],
+  streetwear: ["streetwear"],
+  street: ["streetwear"],
+  activewear: ["activewear"],
+  active: ["activewear"],
+  sportswear: ["activewear"],
+  denim: ["denim"],
+  jeans: ["denim"],
+  kidswear: ["kidswear"],
+  kids: ["kidswear"],
+  children: ["kidswear"],
+  boutique: ["boutique"],
 };
 
 const certificationAliases = ["gots", "oeko-tex", "oeko", "wrap", "iso"];

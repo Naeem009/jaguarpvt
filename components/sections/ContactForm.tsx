@@ -26,7 +26,7 @@ const defaultValues: ContactFormValues = {
   contactName: "",
   email: "",
   website: "",
-  category: "wovens",
+  category: "casual-wear",
   annualVolume: "50k-250k",
   sustainability: [],
   message: "",

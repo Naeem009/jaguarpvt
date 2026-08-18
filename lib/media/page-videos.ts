@@ -18,9 +18,12 @@ export const PAGE_VIDEO_KEYS: Record<PageMetadataKey, HeroVideoKey> = {
   people: "careers",
   governance: "sustainability",
   products: "products",
-  wovens: "products",
-  knits: "products",
-  babyWear: "products",
+  casualWear: "products",
+  streetwear: "products",
+  activewear: "products",
+  denim: "products",
+  kidswear: "products",
+  boutique: "products",
 };
 
 export function getPageVideoMedia(page: PageMetadataKey) {

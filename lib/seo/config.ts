@@ -18,9 +18,12 @@ export const marketingRoutes = [
   "/our-impact/people",
   "/our-impact/governance",
   "/products",
-  "/products/wovens",
-  "/products/knits",
-  "/products/baby-wear",
+  "/products/casual-wear",
+  "/products/streetwear",
+  "/products/activewear",
+  "/products/denim",
+  "/products/kidswear",
+  "/products/boutique",
 ] as const;
 
 export type PageMetadataKey =
@@ -38,9 +41,12 @@ export type PageMetadataKey =
   | "people"
   | "governance"
   | "products"
-  | "wovens"
-  | "knits"
-  | "babyWear";
+  | "casualWear"
+  | "streetwear"
+  | "activewear"
+  | "denim"
+  | "kidswear"
+  | "boutique";
 
 export const pageMetadata: Record<
   PageMetadataKey,
@@ -50,7 +56,7 @@ export const pageMetadata: Record<
     path: "",
     title: "Vertically Integrated Apparel Manufacturer",
     description:
-      "Jaguar (Pvt) Ltd. is a vertically integrated apparel manufacturer delivering wovens, knits, and baby wear programs for global brands with audited compliance and scalable production.",
+      "Jaguar (Pvt) Ltd. is a vertically integrated apparel manufacturer delivering casual wear, streetwear, activewear, denim, kidswear, and boutique programs for global brands with audited compliance and scalable production.",
     keywords: [
       "apparel manufacturer",
       "garment manufacturer",
@@ -105,7 +111,7 @@ export const pageMetadata: Record<
     path: "/contact",
     title: "Contact",
     description:
-      "Contact Jaguar (Pvt) Ltd. to submit an RFI or RFQ for wovens, knits, or baby wear programs. Our sourcing team responds within two business days.",
+      "Contact Jaguar (Pvt) Ltd. to submit an RFI or RFQ for casual wear, streetwear, activewear, denim, kidswear, or boutique programs. Our sourcing team responds within two business days.",
     keywords: [
       "apparel manufacturer contact",
       "garment sourcing inquiry",
@@ -157,29 +163,50 @@ export const pageMetadata: Record<
     path: "/products",
     title: "Products",
     description:
-      "Explore Jaguar product manufacturing capabilities across wovens, knits, and baby wear for brand and private-label programs.",
+      "Explore Jaguar product manufacturing across casual wear, streetwear, activewear, denim, kidswear, and boutique programs.",
     keywords: ["apparel product categories", "garment manufacturing capabilities", "clothing production programs"],
   },
-  wovens: {
-    path: "/products/wovens",
-    title: "Wovens",
+  casualWear: {
+    path: "/products/casual-wear",
+    title: "Casual Wear",
     description:
-      "Woven apparel manufacturing for shirting, bottoms, and uniform programs with integrated cutting, sewing, and finishing.",
-    keywords: ["woven apparel manufacturer", "shirting manufacturer", "uniform manufacturing partner"],
+      "Casual wear manufacturing for tees, polos, loungewear, and everyday separates with integrated cutting, sewing, and finishing.",
+    keywords: ["casual wear manufacturer", "everyday apparel supplier", "lounge wear factory"],
   },
-  knits: {
-    path: "/products/knits",
-    title: "Knits",
+  streetwear: {
+    path: "/products/streetwear",
+    title: "Streetwear",
     description:
-      "Knitwear manufacturing for jersey, fleece, and performance programs with certified organic options and scalable capacity.",
-    keywords: ["knitwear manufacturer", "jersey manufacturer", "fleece apparel supplier"],
+      "Streetwear manufacturing for urban apparel, premium trims, and brand-led drops with specialized construction and wash programs.",
+    keywords: ["streetwear manufacturer", "urban apparel factory", "streetwear supplier"],
   },
-  babyWear: {
-    path: "/products/baby-wear",
-    title: "Baby Wear",
+  activewear: {
+    path: "/products/activewear",
+    title: "Activewear",
     description:
-      "Baby wear manufacturing with soft-hand construction, secure attachments, compliance-focused finishing, and catalogue support.",
-    keywords: ["baby wear manufacturer", "infant apparel supplier", "baby clothing factory"],
+      "Activewear manufacturing for leggings, training tops, and performance layers with stretch recovery and moisture management.",
+    keywords: ["activewear manufacturer", "performance apparel factory", "sportswear supplier"],
+  },
+  denim: {
+    path: "/products/denim",
+    title: "Denim",
+    description:
+      "Denim manufacturing for jeans, jackets, and skirts with wash development, shade control, and brand-ready finishing.",
+    keywords: ["denim manufacturer", "jeans factory", "denim wash supplier"],
+  },
+  kidswear: {
+    path: "/products/kidswear",
+    title: "Kidswear",
+    description:
+      "Kidswear manufacturing with soft-hand construction, secure attachments, and compliance-focused finishing.",
+    keywords: ["kidswear manufacturer", "children's apparel factory", "kids clothing supplier"],
+  },
+  boutique: {
+    path: "/products/boutique",
+    title: "Boutique",
+    description:
+      "Boutique and small-batch apparel programs with low minimums, refined construction, and catalogue-ready styles.",
+    keywords: ["boutique clothing manufacturer", "low moq apparel factory", "small batch garment supplier"],
   },
 };
 
@@ -197,10 +224,13 @@ export const pageOgImages: Record<PageMetadataKey, string> = {
   environment: "/images/our-impact/environment/hero.jpg",
   people: "/images/our-impact/people/hero.jpg",
   governance: "/images/our-impact/governance/hero.jpg",
-  products: "/images/products/wovens/hero.jpg",
-  wovens: "/images/products/wovens/hero.jpg",
-  knits: "/images/products/knits/hero.jpg",
-  babyWear: "/images/products/baby-wear/hero.jpg",
+  products: "/images/products/casual-wear/hero.jpg",
+  casualWear: "/images/products/casual-wear/hero.jpg",
+  streetwear: "/images/products/streetwear/hero.jpg",
+  activewear: "/images/products/activewear/hero.jpg",
+  denim: "/images/products/denim/hero.jpg",
+  kidswear: "/images/products/kidswear/hero.jpg",
+  boutique: "/images/products/boutique/hero.jpg",
 };
 
 export function buildAlternateLanguages(path: string) {

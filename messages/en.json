@@ -34,9 +34,12 @@
     "products": "Products",
     "ourImpact": "Our Impact",
     "connect": "Connect",
-    "wovens": "Wovens",
-    "knits": "Knits",
-    "babyWear": "Baby Wear",
+    "casualWear": "Casual Wear",
+    "streetwear": "Streetwear",
+    "activewear": "Activewear",
+    "denim": "Denim",
+    "kidswear": "Kidswear",
+    "boutique": "Boutique",
     "environment": "Environment",
     "people": "People & Communities",
     "governance": "Governance & Certifications",
@@ -87,12 +90,12 @@
     "fallbackError": "I couldn't reach the assistant right now. Please use the Contact page and our team will respond directly.",
     "prompts": [
       {
-        "question": "Can you produce GOTS-certified organic cotton knits at [X] units per month?",
-        "answer": "Based on our published capability data, we support certified organic cotton knits across selected facilities. Capacity varies by season and program — connect with our team for a current availability review."
+        "question": "Can you produce GOTS-certified organic cotton activewear at [X] units per month?",
+        "answer": "Based on our published capability data, we support certified organic cotton activewear across selected facilities. Capacity varies by season and program — connect with our team for a current availability review."
       },
       {
         "question": "Which of your facilities support GOTS-certified organic cotton programs?",
-        "answer": "GOTS-certified organic cotton programs are listed among our knit and baby wear capabilities at selected facilities. Specific facility assignments depend on order profile and compliance requirements."
+        "answer": "GOTS-certified organic cotton programs are listed among our activewear and kidswear capabilities at selected facilities. Specific facility assignments depend on order profile and compliance requirements."
       },
       {
         "question": "What sustainability certifications do you currently hold?",
@@ -115,9 +118,12 @@
     "successTitle": "Thank you — we received your inquiry.",
     "successBody": "A member of our team will review your request and respond within 2 business days with clear next steps.",
     "categories": {
-      "wovens": "Wovens",
-      "knits": "Knits",
-      "baby-wear": "Baby Wear",
+      "casual-wear": "Casual Wear",
+      "streetwear": "Streetwear",
+      "activewear": "Activewear",
+      "denim": "Denim",
+      "kidswear": "Kidswear",
+      "boutique": "Boutique",
       "multiple": "Multiple categories"
     },
     "volumes": {
@@ -145,11 +151,12 @@
   },
   "catalogue": {
     "eyebrow": "Catalogue",
-    "defaultTitle": "Browse the Baby Wear Catalogue",
-    "subhead": "Explore our full Baby Wear range — fabrics, sizing, and finishing options.",
+    "defaultTitle": "Browse the Boutique Catalogue",
+    "subhead": "Explore our full Boutique range — fabrics, sizing, and finishing options.",
     "downloadPdf": "Download PDF",
     "requestCatalogue": "Request This Catalogue",
     "comingSoonTitle": "Catalogue coming soon",
-    "comingSoonBody": "The Baby Wear e-catalogue will be available here once uploaded. Request a copy from our team in the meantime."
+    "comingSoonBody": "The Boutique e-catalogue will be available here once uploaded. Request a copy from our team in the meantime.",
+    "iframeTitle": "Boutique product catalogue, PDF"
   }
 }

@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import type { ProductCategorySlug, ProductCategoryContent } from "./content";
-
-const SLUGS: ProductCategorySlug[] = ["wovens", "knits", "baby-wear"];
+import { CATALOGUE_CATEGORY_SLUG, PRODUCT_CATEGORY_SLUGS } from "./categories";
+import type { ProductCategoryContent, ProductCategorySlug } from "./content";
 
 const processImages = (category: ProductCategorySlug) => ({
   step1: `/images/products/${category}/process-01.jpg`,
@@ -43,21 +42,20 @@ function buildCategory(
 export async function getProductCategories(): Promise<Record<ProductCategorySlug, ProductCategoryContent>> {
   const t = await getTranslations("productCategories");
 
-  return Object.fromEntries(SLUGS.map((slug) => [slug, buildCategory(slug, t)])) as Record<
-    ProductCategorySlug,
-    ProductCategoryContent
-  >;
+  return Object.fromEntries(
+    PRODUCT_CATEGORY_SLUGS.map((slug) => [slug, buildCategory(slug, t)]),
+  ) as Record<ProductCategorySlug, ProductCategoryContent>;
 }
 
 export async function getProductHubGridItems() {
   const t = await getTranslations("productCategories");
   const categories = await getProductCategories();
 
-  return SLUGS.map((slug) => ({
+  return PRODUCT_CATEGORY_SLUGS.map((slug) => ({
     title: categories[slug].name,
     href: `/products/${slug}` as const,
     image: categories[slug].heroImage,
     description: categories[slug].gridDescription,
-    badge: slug === "baby-wear" ? t("catalogueBadge") : undefined,
+    badge: slug === CATALOGUE_CATEGORY_SLUG ? t("catalogueBadge") : undefined,
   }));
 }

@@ -10,6 +10,7 @@ import {
   getFacilityThumbnailCandidates,
   type Facility,
 } from "@/lib/facilities/types";
+import type { ProductCategorySlug } from "@/lib/products/content";
 import { cn } from "@/lib/utils";
 
 export type FacilityCardProps = {
@@ -103,7 +104,7 @@ export function FacilityCard({
           <div className="flex min-h-8 flex-wrap gap-2">
             {facility.categories.map((category) => (
               <Badge key={category} tone="neutral">
-                {tCategories(category as "wovens" | "knits" | "baby-wear")}
+                {tCategories(category as ProductCategorySlug)}
               </Badge>
             ))}
           </div>

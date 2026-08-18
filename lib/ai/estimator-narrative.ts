@@ -1,9 +1,12 @@
 import type { EstimatorInput, EstimatorOutput } from "@/lib/our-impact/estimator";
 
 const categoryLabels: Record<string, string> = {
-  wovens: "wovens",
-  knits: "knits",
-  "baby-wear": "baby wear",
+  "casual-wear": "casual wear",
+  streetwear: "streetwear",
+  activewear: "activewear",
+  denim: "denim",
+  kidswear: "kidswear",
+  boutique: "boutique",
 };
 
 const materialLabels: Record<string, string> = {

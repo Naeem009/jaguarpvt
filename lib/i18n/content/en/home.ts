@@ -2,7 +2,7 @@ export const home = {
   hero: {
     headline: "Manufacturing, engineered for what's next.",
     subhead:
-      "Vertically integrated production across wovens, knits, and baby wear — serving global brands at 04 facilities in 03 countries.",
+      "Vertically integrated production across casual wear, streetwear, activewear, denim, kidswear, and boutique — serving global brands at 04 facilities in 03 countries.",
     heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
   },
   stats: {

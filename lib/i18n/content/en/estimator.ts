@@ -5,9 +5,12 @@ export const estimator = {
     subhead: "Compare modeled water use and CO2e against a conventional industry baseline for your program profile.",
   },
   categories: {
-    wovens: "Wovens",
-    knits: "Knits",
-    "baby-wear": "Baby Wear",
+    "casual-wear": "Casual Wear",
+    streetwear: "Streetwear",
+    activewear: "Activewear",
+    denim: "Denim",
+    kidswear: "Kidswear",
+    boutique: "Boutique",
   },
   volumes: {
     "under-10k": "Under 10,000 units",

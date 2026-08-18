@@ -31,7 +31,7 @@ export const careersContent = {
   departments: [
     {
       name: "Manufacturing Operations",
-      description: "Cut-and-sew, finishing, and production leadership across woven, knit, and baby wear lines.",
+      description: "Cut-and-sew, finishing, and production leadership across casual wear, activewear, denim, kidswear, and boutique lines.",
       href: `${CAREERS_ATS_URL}?department=manufacturing-operations`,
     },
     {

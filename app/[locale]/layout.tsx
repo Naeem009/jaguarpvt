@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Vertically integrated apparel manufacturer for wovens, knits, and baby wear with audited compliance and scalable production.",
+    "Vertically integrated apparel manufacturer for casual wear, streetwear, activewear, denim, kidswear, and boutique with audited compliance and scalable production.",
 };
 
 export function generateStaticParams() {

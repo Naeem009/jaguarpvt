@@ -17,15 +17,21 @@ export type MatcherResult = {
 };
 
 const categoryLabels: Record<string, string> = {
-  wovens: "Wovens",
-  knits: "Knits",
-  "baby-wear": "Baby Wear",
+  "casual-wear": "Casual Wear",
+  streetwear: "Streetwear",
+  activewear: "Activewear",
+  denim: "Denim",
+  kidswear: "Kidswear",
+  boutique: "Boutique",
 };
 
 const certificationMap: Record<string, string[]> = {
-  wovens: ["OEKO-TEX", "WRAP"],
-  knits: ["GOTS", "OEKO-TEX"],
-  "baby-wear": ["GOTS", "OEKO-TEX", "WRAP"],
+  "casual-wear": ["OEKO-TEX", "WRAP"],
+  streetwear: ["OEKO-TEX", "WRAP"],
+  activewear: ["GOTS", "OEKO-TEX"],
+  denim: ["OEKO-TEX", "WRAP"],
+  kidswear: ["GOTS", "OEKO-TEX", "WRAP"],
+  boutique: ["GOTS", "OEKO-TEX"],
 };
 
 export function buildMatcherResult(input: MatcherInput): MatcherResult {

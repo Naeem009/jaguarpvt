@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MegaMenu } from "./MegaMenu";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
+import { CATALOGUE_CATEGORY_SLUG, PRODUCT_CATEGORY_SLUGS } from "@/lib/products/content";
+import type { ProductCategorySlug } from "@/lib/products/content";
 import { cn } from "@/lib/utils";
 
 const LOGO_DARK_SRC = "/logos/logo-dark.svg";
@@ -39,27 +41,13 @@ export function Navbar() {
   const isHome = pathname === "/" || pathname === "";
   const isOverlayNav = isHome && !scrolled;
 
-  const productsMegaMenuItems = [
-    {
-      title: tProducts("wovens.name"),
-      href: "/products/wovens" as const,
-      description: tProducts("wovens.gridDescription"),
-      image: "/images/products/wovens/hero.jpg",
-    },
-    {
-      title: tProducts("knits.name"),
-      href: "/products/knits" as const,
-      description: tProducts("knits.gridDescription"),
-      image: "/images/products/knits/hero.jpg",
-    },
-    {
-      title: tProducts("baby-wear.name"),
-      href: "/products/baby-wear" as const,
-      description: tProducts("baby-wear.gridDescription"),
-      image: "/images/products/baby-wear/hero.jpg",
-      badge: tProducts("catalogueBadge"),
-    },
-  ];
+  const productsMegaMenuItems = PRODUCT_CATEGORY_SLUGS.map((slug) => ({
+    title: tProducts(`${slug}.name`),
+    href: `/products/${slug}` as `/products/${ProductCategorySlug}`,
+    description: tProducts(`${slug}.gridDescription`),
+    image: `/images/products/${slug}/hero.jpg`,
+    badge: slug === CATALOGUE_CATEGORY_SLUG ? tProducts("catalogueBadge") : undefined,
+  }));
 
   const aboutMegaMenuItems = (
     tNavigation.raw("aboutMenu") as Array<{ title: string; description: string }>

@@ -1,26 +1,26 @@
 export const home = {
   hero: {
-    headline: "面向未来的工程化制造。",
+    headline: "Manufacturing, engineered for what's next.",
     subhead:
-      "梭织、针织与婴童服饰的垂直整合生产——在 [Y] 个国家的 [X] 座工厂为全球品牌服务。",
-    heroAlt: "工业缝纫机缝制布料的特写镜头",
+      "Vertically integrated production across casual wear, streetwear, activewear, denim, kidswear, and boutique — serving global brands at 04 facilities in 03 countries.",
+    heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
   },
   stats: {
-    facilities: "工厂",
-    countries: "国家",
-    employees: "员工",
-    yearsInOperation: "运营年限",
+    facilities: "Facilities",
+    countries: "Countries",
+    employees: "Employees",
+    yearsInOperation: "Years in operation",
   },
   impactStats: {
-    waterSaved: "年节水量（升）",
-    renewableEnergy: "可再生能源占比",
-    certifiedFacilities: "认证工厂",
-    exploreImpact: "探索我们的影响",
+    waterSaved: "Liters of water saved annually",
+    renewableEnergy: "Renewable energy share",
+    certifiedFacilities: "Certified facilities",
+    exploreImpact: "Explore our impact",
   },
   aiContext:
-    "首页预览——选择示例问题，查看助手连接后基于事实的回复将如何呈现。",
+    "Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected.",
   cta: {
-    title: "准备开始采购对话？",
-    subhead: "告诉我们您正在打造什么。我们的团队将针对符合条件的 RFI 与 RFQ 提供清晰的后续步骤。",
+    title: "Ready to start a sourcing conversation?",
+    subhead: "Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps.",
   },
 };

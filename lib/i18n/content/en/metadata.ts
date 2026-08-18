@@ -1,10 +1,10 @@
 export const metadata = {
   siteDescription:
-    "Vertically integrated apparel manufacturer for wovens, knits, and baby wear programs with audited compliance and scalable production.",
+    "Vertically integrated apparel manufacturer for casual wear, streetwear, activewear, denim, kidswear, and boutique programs with audited compliance and scalable production.",
   home: {
     title: "Vertically Integrated Apparel Manufacturer",
     description:
-      "Jaguar (Pvt) Ltd. is a vertically integrated apparel manufacturer delivering wovens, knits, and baby wear programs for global brands with audited compliance and scalable production.",
+      "Jaguar (Pvt) Ltd. is a vertically integrated apparel manufacturer delivering casual wear, streetwear, activewear, denim, kidswear, and boutique programs for global brands with audited compliance and scalable production.",
   },
   about: {
     title: "About",
@@ -39,7 +39,7 @@ export const metadata = {
   contact: {
     title: "Contact",
     description:
-      "Contact Jaguar (Pvt) Ltd. to submit an RFI or RFQ for wovens, knits, or baby wear programs. Our sourcing team responds within two business days.",
+      "Contact Jaguar (Pvt) Ltd. to submit an RFI or RFQ for casual wear, streetwear, activewear, denim, kidswear, or boutique programs. Our sourcing team responds within two business days.",
   },
   facility: {
     title: "Facility",
@@ -69,21 +69,36 @@ export const metadata = {
   products: {
     title: "Products",
     description:
-      "Explore Jaguar product manufacturing capabilities across wovens, knits, and baby wear for brand and private-label programs.",
+      "Explore Jaguar product manufacturing across casual wear, streetwear, activewear, denim, kidswear, and boutique programs.",
   },
-  wovens: {
-    title: "Wovens",
+  casualWear: {
+    title: "Casual Wear",
     description:
-      "Woven apparel manufacturing for shirting, bottoms, and uniform programs with integrated cutting, sewing, and finishing.",
+      "Casual wear manufacturing for tees, polos, loungewear, and everyday separates with integrated cutting, sewing, and finishing.",
   },
-  knits: {
-    title: "Knits",
+  streetwear: {
+    title: "Streetwear",
     description:
-      "Knitwear manufacturing for jersey, fleece, and performance programs with certified organic options and scalable capacity.",
+      "Streetwear manufacturing for urban apparel, premium trims, and brand-led drops with specialized construction and wash programs.",
   },
-  babyWear: {
-    title: "Baby Wear",
+  activewear: {
+    title: "Activewear",
     description:
-      "Baby wear manufacturing with soft-hand construction, secure attachments, compliance-focused finishing, and catalogue support.",
+      "Activewear manufacturing for leggings, training tops, and performance layers with stretch recovery and moisture management.",
+  },
+  denim: {
+    title: "Denim",
+    description:
+      "Denim manufacturing for jeans, jackets, and skirts with wash development, shade control, and brand-ready finishing.",
+  },
+  kidswear: {
+    title: "Kidswear",
+    description:
+      "Kidswear manufacturing with soft-hand construction, secure attachments, and compliance-focused finishing.",
+  },
+  boutique: {
+    title: "Boutique",
+    description:
+      "Boutique and small-batch apparel programs with low minimums, refined construction, and catalogue-ready styles.",
   },
 };

@@ -12,7 +12,7 @@ export function buildOrganizationJsonLd() {
     logo: `${siteUrl}/icon.png`,
     image: `${siteUrl}/images/home/hero.jpg`,
     description:
-      "Vertically integrated apparel manufacturer specializing in wovens, knits, and baby wear for global brands.",
+      "Vertically integrated apparel manufacturer specializing in casual wear, streetwear, activewear, denim, kidswear, and boutique for global brands.",
     sameAs: [LINKEDIN_URL],
     knowsAbout: [
       "Apparel manufacturing",

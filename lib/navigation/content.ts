@@ -37,9 +37,12 @@ export const footerColumns = [
   {
     title: "Products",
     links: [
-      { label: "Wovens", href: "/products/wovens" },
-      { label: "Knits", href: "/products/knits" },
-      { label: "Baby Wear", href: "/products/baby-wear" },
+      { label: "Casual Wear", href: "/products/casual-wear" },
+      { label: "Streetwear", href: "/products/streetwear" },
+      { label: "Activewear", href: "/products/activewear" },
+      { label: "Denim", href: "/products/denim" },
+      { label: "Kidswear", href: "/products/kidswear" },
+      { label: "Boutique", href: "/products/boutique" },
     ],
   },
   {

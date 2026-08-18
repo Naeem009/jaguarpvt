@@ -1,26 +1,26 @@
 export const home = {
   hero: {
-    headline: "La manufacture, conçue pour l'avenir.",
+    headline: "Manufacturing, engineered for what's next.",
     subhead:
-      "Production intégrée verticalement pour les tissés, les mailles et la layette — au service de marques internationales dans [X] sites de production répartis dans [Y] pays.",
-    heroAlt: "Gros plan de tissu cousu sur une machine à coudre industrielle",
+      "Vertically integrated production across casual wear, streetwear, activewear, denim, kidswear, and boutique — serving global brands at 04 facilities in 03 countries.",
+    heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
   },
   stats: {
-    facilities: "Sites de production",
-    countries: "Pays",
-    employees: "Employés",
-    yearsInOperation: "Années d'activité",
+    facilities: "Facilities",
+    countries: "Countries",
+    employees: "Employees",
+    yearsInOperation: "Years in operation",
   },
   impactStats: {
-    waterSaved: "Litres d'eau économisés par an",
-    renewableEnergy: "Part d'énergie renouvelable",
-    certifiedFacilities: "Sites certifiés",
-    exploreImpact: "Découvrez notre impact",
+    waterSaved: "Liters of water saved annually",
+    renewableEnergy: "Renewable energy share",
+    certifiedFacilities: "Certified facilities",
+    exploreImpact: "Explore our impact",
   },
   aiContext:
-    "Aperçu de la page d'accueil — sélectionnez une question exemple pour voir comment les réponses fondées sur nos données apparaîtront une fois l'assistant connecté.",
+    "Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected.",
   cta: {
-    title: "Prêt à entamer une conversation sourcing ?",
-    subhead: "Parlez-nous de votre projet. Notre équipe répond aux RFI et RFQ qualifiés avec des prochaines étapes claires.",
+    title: "Ready to start a sourcing conversation?",
+    subhead: "Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps.",
   },
 };

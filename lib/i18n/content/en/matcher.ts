@@ -7,9 +7,12 @@ export const matcher = {
     region: "Target delivery region",
   },
   categories: {
-    wovens: "Wovens",
-    knits: "Knits",
-    "baby-wear": "Baby Wear",
+    "casual-wear": "Casual Wear",
+    streetwear: "Streetwear",
+    activewear: "Activewear",
+    denim: "Denim",
+    kidswear: "Kidswear",
+    boutique: "Boutique",
   },
   volumes: {
     "under-10k": "Under 10,000 units / month",

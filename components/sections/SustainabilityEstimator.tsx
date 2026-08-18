@@ -15,9 +15,10 @@ import {
   type EstimatorOutput,
   type EstimatorVolume,
 } from "@/lib/our-impact/estimator";
+import { PRODUCT_CATEGORY_SLUGS } from "@/lib/products/categories";
 import { ESG_REPORT_URL } from "@/lib/our-impact/content";
 
-const categoryValues: EstimatorCategory[] = ["wovens", "knits", "baby-wear"];
+const categoryValues: EstimatorCategory[] = [...PRODUCT_CATEGORY_SLUGS];
 const volumeValues: EstimatorVolume[] = ["under-10k", "10k-50k", "50k-200k", "200k-plus"];
 const materialValues: EstimatorMaterial[] = ["conventional", "organic-cotton", "recycled"];
 
@@ -87,7 +88,7 @@ function ComparisonBar({
 
 export function SustainabilityEstimator({ className }: { className?: string }) {
   const t = useTranslations("estimator");
-  const [category, setCategory] = useState<EstimatorCategory>("knits");
+  const [category, setCategory] = useState<EstimatorCategory>("casual-wear");
   const [volume, setVolume] = useState<EstimatorVolume>("50k-200k");
   const [material, setMaterial] = useState<EstimatorMaterial>("organic-cotton");
   const [result, setResult] = useState<EstimatorOutput | null>(null);

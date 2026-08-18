@@ -26,8 +26,11 @@ export const facilityMap = {
     facilityAlt: "{name} facility",
   },
   categories: {
-    wovens: "Wovens",
-    knits: "Knits",
-    "baby-wear": "Baby Wear",
+    "casual-wear": "Casual Wear",
+    streetwear: "Streetwear",
+    activewear: "Activewear",
+    denim: "Denim",
+    kidswear: "Kidswear",
+    boutique: "Boutique",
   },
 };

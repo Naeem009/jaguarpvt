@@ -93,20 +93,35 @@ export function getBreadcrumbsForPage(page: PageMetadataKey): Array<{ name: stri
       { name: "Home", path: "/" },
       { name: "Products", path: "/products" },
     ],
-    wovens: [
+    casualWear: [
       { name: "Home", path: "/" },
       { name: "Products", path: "/products" },
-      { name: "Wovens", path: "/products/wovens" },
+      { name: "Casual Wear", path: "/products/casual-wear" },
     ],
-    knits: [
+    streetwear: [
       { name: "Home", path: "/" },
       { name: "Products", path: "/products" },
-      { name: "Knits", path: "/products/knits" },
+      { name: "Streetwear", path: "/products/streetwear" },
     ],
-    babyWear: [
+    activewear: [
       { name: "Home", path: "/" },
       { name: "Products", path: "/products" },
-      { name: "Baby Wear", path: "/products/baby-wear" },
+      { name: "Activewear", path: "/products/activewear" },
+    ],
+    denim: [
+      { name: "Home", path: "/" },
+      { name: "Products", path: "/products" },
+      { name: "Denim", path: "/products/denim" },
+    ],
+    kidswear: [
+      { name: "Home", path: "/" },
+      { name: "Products", path: "/products" },
+      { name: "Kidswear", path: "/products/kidswear" },
+    ],
+    boutique: [
+      { name: "Home", path: "/" },
+      { name: "Products", path: "/products" },
+      { name: "Boutique", path: "/products/boutique" },
     ],
   };
 

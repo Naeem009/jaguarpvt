@@ -1,26 +1,26 @@
 export const home = {
   hero: {
-    headline: "تصنيعٌ مُهندَس لما هو قادم.",
+    headline: "Manufacturing, engineered for what's next.",
     subhead:
-      "إنتاج متكامل رأسياً عبر الأقمشة المنسوجة والمحبوكة وملابس الأطفال — نخدم العلامات التجارية العالمية في [X] منشأة عبر [Y] دولة.",
-    heroAlt: "منظر مقرب لقماش يُخاط على ماكينة خياطة صناعية",
+      "Vertically integrated production across casual wear, streetwear, activewear, denim, kidswear, and boutique — serving global brands at 04 facilities in 03 countries.",
+    heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
   },
   stats: {
-    facilities: "المنشآت",
-    countries: "الدول",
-    employees: "الموظفون",
-    yearsInOperation: "سنوات التشغيل",
+    facilities: "Facilities",
+    countries: "Countries",
+    employees: "Employees",
+    yearsInOperation: "Years in operation",
   },
   impactStats: {
-    waterSaved: "لترات المياه الموفَّرة سنوياً",
-    renewableEnergy: "حصة الطاقة المتجددة",
-    certifiedFacilities: "المنشآت المعتمدة",
-    exploreImpact: "استكشف أثرنا",
+    waterSaved: "Liters of water saved annually",
+    renewableEnergy: "Renewable energy share",
+    certifiedFacilities: "Certified facilities",
+    exploreImpact: "Explore our impact",
   },
   aiContext:
-    "معاينة الصفحة الرئيسية — اختر سؤالاً نموذجياً لترى كيف ستظهر الردود المستندة إلى مصادر موثوقة عند ربط المساعد.",
+    "Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected.",
   cta: {
-    title: "هل أنت مستعد لبدء محادثة توريد؟",
-    subhead: "أخبرنا بما تبنيه. يرد فريقنا على طلبات المعلومات والعروض المؤهلة بخطوات تالية واضحة.",
+    title: "Ready to start a sourcing conversation?",
+    subhead: "Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps.",
   },
 };

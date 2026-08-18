@@ -34,9 +34,12 @@
     "products": "Produits",
     "ourImpact": "Notre impact",
     "connect": "Contact",
-    "wovens": "Tissés",
-    "knits": "Maille",
-    "babyWear": "Vêtements bébé",
+    "casualWear": "Casual Wear",
+    "streetwear": "Streetwear",
+    "activewear": "Activewear",
+    "denim": "Denim",
+    "kidswear": "Kidswear",
+    "boutique": "Boutique",
     "environment": "Environnement",
     "people": "Personnes et communautés",
     "governance": "Gouvernance et certifications",
@@ -115,9 +118,12 @@
     "successTitle": "Merci — nous avons reçu votre demande.",
     "successBody": "Un membre de notre équipe examinera votre demande et répondra sous 2 jours ouvrés avec les prochaines étapes.",
     "categories": {
-      "wovens": "Tissés",
-      "knits": "Maille",
-      "baby-wear": "Layette",
+      "casual-wear": "Casual Wear",
+      "streetwear": "Streetwear",
+      "activewear": "Activewear",
+      "denim": "Denim",
+      "kidswear": "Kidswear",
+      "boutique": "Boutique",
       "multiple": "Plusieurs catégories"
     },
     "volumes": {
@@ -145,11 +151,12 @@
   },
   "catalogue": {
     "eyebrow": "Catalogue",
-    "defaultTitle": "Parcourir le catalogue vêtements bébé",
-    "subhead": "Explorez notre gamme complète — tissus, tailles et finitions.",
+    "defaultTitle": "Parcourir le catalogue Boutique",
+    "subhead": "Explorez notre gamme Boutique complète — tissus, tailles et finitions.",
     "downloadPdf": "Télécharger le PDF",
     "requestCatalogue": "Demander ce catalogue",
     "comingSoonTitle": "Catalogue bientôt disponible",
-    "comingSoonBody": "Le catalogue électronique sera disponible ici après téléversement. Demandez une copie à notre équipe en attendant."
+    "comingSoonBody": "Le catalogue électronique Boutique sera disponible ici après téléversement. Demandez une copie à notre équipe en attendant.",
+    "iframeTitle": "Catalogue produits Boutique, PDF"
   }
 }

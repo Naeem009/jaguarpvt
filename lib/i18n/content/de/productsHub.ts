@@ -1,15 +1,15 @@
 export const productsHub = {
   hero: {
-    headline: "Produkte",
+    headline: "Products",
     subhead:
-      "Drei Kernkategorien — Webwaren, Strickwaren und Babybekleidung — unterstützt durch integrierte Fertigung, Compliance-Systeme und Entwicklungskompetenz.",
-    exploreCategories: "Kategorien entdecken",
-    alt: "Bekleidungsproduktkategorien in Webwaren, Strickwaren und Babybekleidung",
+      "Six core categories — casual wear, streetwear, activewear, denim, kidswear, and boutique — supported by integrated manufacturing, compliance systems, and development capability.",
+    exploreCategories: "Explore categories",
+    alt: "Apparel product categories across casual wear, streetwear, activewear, denim, kidswear, and boutique",
   },
   grid: {
-    eyebrow: "Kategorien",
-    title: "Produktkategorie auswählen",
+    eyebrow: "Categories",
+    title: "Select a product category",
     subhead:
-      "Jede Kategorieseite beschreibt Prozessschritte, technische Spezifikationen und Nachhaltigkeitsprogramme — Babybekleidung inklusive durchsuchbarem Katalog.",
+      "Each category page outlines process steps, technical specs, and sustainability programs — with boutique including a browsable catalogue.",
   },
 };

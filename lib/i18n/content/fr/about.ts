@@ -15,7 +15,7 @@ export const about = {
     },
     overview: {
       title: "A manufacturer built for long-term programs",
-      body: "Jaguar (Pvt) Ltd. integrates product development, manufacturing, and compliance across wovens, knits, and baby wear. We serve global brands from six facilities across five countries — with audit-ready systems, transparent capability data, and commercial teams who speak the language of sourcing, not sales.",
+      body: "Jaguar (Pvt) Ltd. integrates product development, manufacturing, and compliance across casual wear, streetwear, activewear, denim, kidswear, and boutique. We serve global brands from six facilities across five countries — with audit-ready systems, transparent capability data, and commercial teams who speak the language of sourcing, not sales.",
     },
     cta: {
       title: "Partner with a manufacturer built for long-term programs",
@@ -60,7 +60,7 @@ export const about = {
     blocks: [
       {
         title: "Global footprint, regional depth",
-        body: "Six facilities across five countries give sourcing teams geographic optionality without sacrificing process control. Each site operates under shared quality systems, with category-specific lines for wovens, knits, and baby wear — and certification scope documented per facility, not assumed group-wide.",
+        body: "Six facilities across five countries give sourcing teams geographic optionality without sacrificing process control. Each site operates under shared quality systems, with category-specific lines for casual wear, streetwear, activewear, denim, kidswear, and boutique — and certification scope documented per facility, not assumed group-wide.",
         imageAlt: "Global manufacturing footprint and facility network",
       },
       {
@@ -154,7 +154,7 @@ export const about = {
       {
         title: "Category depth over diversification",
         description:
-          "We invest where we can control quality end-to-end: wovens, knits, and baby wear. Each category has dedicated lines, process engineers, and compliance documentation — rather than generalist capacity that underperforms under audit.",
+          "We invest where we can control quality end-to-end: casual wear, streetwear, activewear, denim, kidswear, and boutique. Each category has dedicated lines, process engineers, and compliance documentation — rather than generalist capacity that underperforms under audit.",
       },
       {
         title: "Geographic optionality",

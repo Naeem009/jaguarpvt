@@ -1,26 +1,26 @@
 export const home = {
   hero: {
-    headline: "Manufactura diseñada para lo que viene.",
+    headline: "Manufacturing, engineered for what's next.",
     subhead:
-      "Producción con integración vertical en tejidos planos, punto y ropa para bebé — atendiendo a marcas globales en [X] instalaciones en [Y] países.",
-    heroAlt: "Primer plano de tela siendo cosida en una máquina de coser industrial",
+      "Vertically integrated production across casual wear, streetwear, activewear, denim, kidswear, and boutique — serving global brands at 04 facilities in 03 countries.",
+    heroAlt: "Close-up of fabric being stitched on an industrial sewing machine",
   },
   stats: {
-    facilities: "Instalaciones",
-    countries: "Países",
-    employees: "Empleados",
-    yearsInOperation: "Años de operación",
+    facilities: "Facilities",
+    countries: "Countries",
+    employees: "Employees",
+    yearsInOperation: "Years in operation",
   },
   impactStats: {
-    waterSaved: "Litros de agua ahorrados anualmente",
-    renewableEnergy: "Participación de energía renovable",
-    certifiedFacilities: "Instalaciones certificadas",
-    exploreImpact: "Conozca nuestro impacto",
+    waterSaved: "Liters of water saved annually",
+    renewableEnergy: "Renewable energy share",
+    certifiedFacilities: "Certified facilities",
+    exploreImpact: "Explore our impact",
   },
   aiContext:
-    "Vista previa de la página de inicio — seleccione una pregunta de ejemplo para ver cómo aparecerán las respuestas fundamentadas una vez conectado el asistente.",
+    "Homepage preview — select a sample question to see how grounded responses will appear once the assistant is connected.",
   cta: {
-    title: "¿Listo para iniciar una conversación de abastecimiento?",
-    subhead: "Cuéntenos qué está desarrollando. Nuestro equipo responde a RFI y RFQ calificadas con pasos claros a seguir.",
+    title: "Ready to start a sourcing conversation?",
+    subhead: "Tell us what you're building. Our team responds to qualified RFIs and RFQs with clear next steps.",
   },
 };

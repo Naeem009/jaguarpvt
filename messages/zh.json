@@ -34,9 +34,12 @@
     "products": "产品",
     "ourImpact": "我们的影响",
     "connect": "联系",
-    "wovens": "梭织",
-    "knits": "针织",
-    "babyWear": "婴童服装",
+    "casualWear": "Casual Wear",
+    "streetwear": "Streetwear",
+    "activewear": "Activewear",
+    "denim": "Denim",
+    "kidswear": "Kidswear",
+    "boutique": "Boutique",
     "environment": "环境",
     "people": "人员与社区",
     "governance": "治理与认证",
@@ -115,9 +118,12 @@
     "successTitle": "谢谢 — 我们已收到您的咨询。",
     "successBody": "我们的团队成员将在 2 个工作日内审核并回复明确的后续步骤。",
     "categories": {
-      "wovens": "梭织",
-      "knits": "针织",
-      "baby-wear": "婴童服装",
+      "casual-wear": "Casual Wear",
+      "streetwear": "Streetwear",
+      "activewear": "Activewear",
+      "denim": "Denim",
+      "kidswear": "Kidswear",
+      "boutique": "Boutique",
       "multiple": "多个品类"
     },
     "volumes": {
@@ -145,11 +151,12 @@
   },
   "catalogue": {
     "eyebrow": "目录",
-    "defaultTitle": "浏览婴童服装目录",
-    "subhead": "探索完整的婴童服装系列 — 面料、尺码和整理选项。",
+    "defaultTitle": "浏览精品目录",
+    "subhead": "探索完整的精品系列 — 面料、尺码和整理选项。",
     "downloadPdf": "下载 PDF",
     "requestCatalogue": "索取此目录",
     "comingSoonTitle": "目录即将上线",
-    "comingSoonBody": "婴童服装电子目录上传后将在此提供。您可暂时向我们的团队索取副本。"
+    "comingSoonBody": "精品电子目录上传后将在此提供。您可暂时向我们的团队索取副本。",
+    "iframeTitle": "精品产品目录 PDF"
   }
 }

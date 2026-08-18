@@ -1,4 +1,10 @@
-export type EstimatorCategory = "wovens" | "knits" | "baby-wear";
+export type EstimatorCategory =
+  | "casual-wear"
+  | "streetwear"
+  | "activewear"
+  | "denim"
+  | "kidswear"
+  | "boutique";
 
 export type EstimatorMaterial = "conventional" | "organic-cotton" | "recycled";
 
@@ -32,23 +38,41 @@ const categoryBenchmarks: Record<
   EstimatorCategory,
   { waterPerUnit: number; co2PerUnit: number; industryWaterPerUnit: number; industryCo2PerUnit: number }
 > = {
-  wovens: {
+  "casual-wear": {
     waterPerUnit: 2.4,
     co2PerUnit: 3.1,
     industryWaterPerUnit: 3.2,
     industryCo2PerUnit: 4.0,
   },
-  knits: {
+  streetwear: {
+    waterPerUnit: 2.7,
+    co2PerUnit: 3.0,
+    industryWaterPerUnit: 3.5,
+    industryCo2PerUnit: 3.9,
+  },
+  activewear: {
     waterPerUnit: 2.8,
     co2PerUnit: 2.9,
     industryWaterPerUnit: 3.6,
     industryCo2PerUnit: 3.8,
   },
-  "baby-wear": {
+  denim: {
+    waterPerUnit: 3.2,
+    co2PerUnit: 3.4,
+    industryWaterPerUnit: 4.1,
+    industryCo2PerUnit: 4.5,
+  },
+  kidswear: {
     waterPerUnit: 2.2,
     co2PerUnit: 2.6,
     industryWaterPerUnit: 2.9,
     industryCo2PerUnit: 3.4,
+  },
+  boutique: {
+    waterPerUnit: 2.3,
+    co2PerUnit: 2.8,
+    industryWaterPerUnit: 3.0,
+    industryCo2PerUnit: 3.6,
   },
 };
 
