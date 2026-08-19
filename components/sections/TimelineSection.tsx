@@ -58,9 +58,6 @@ export async function TimelineSection({
               ) : null}
 
               <div className="space-y-4">
-                <p className="text-sm font-medium uppercase tracking-[0.06em] text-accent">
-                  {t("stepLabel", { number: String(index + 1).padStart(2, "0") })}
-                </p>
                 <h3 className="font-display text-2xl font-semibold text-ink md:text-3xl">
                   {step.title}
                 </h3>
