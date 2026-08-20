@@ -144,8 +144,8 @@ const siteSearchIndex: SiteSearchEntry[] = [
     id: "careers",
     title: "Careers",
     href: "/careers",
-    snippet: "Open roles by department and workplace culture.",
-    keywords: ["careers", "jobs", "hiring", "culture"],
+    snippet: "Current openings, internships, and workplace culture.",
+    keywords: ["careers", "jobs", "hiring", "culture", "openings", "internship"],
   },
   {
     id: "contact",

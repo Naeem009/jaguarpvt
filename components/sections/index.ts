@@ -1,3 +1,5 @@
+export { CurrentOpenings } from "./CurrentOpenings";
+export { JobApplyForm } from "./JobApplyForm";
 export { AboutSubPageTemplate } from "./AboutSubPageTemplate";
 export type { AboutSubPageTemplateProps } from "./AboutSubPageTemplate";
 export { AIChatWidget } from "./AIChatWidget";

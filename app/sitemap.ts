@@ -1,11 +1,14 @@
 import type { MetadataRoute } from "next";
+import { getActiveOpenings } from "@/lib/careers/query";
 import { buildAlternateLanguages, marketingRoutes, siteUrl } from "@/lib/seo/config";
 import { routing } from "@/i18n/routing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
+  const careerOpeningRoutes = getActiveOpenings().map((opening) => `/careers/${opening.slug}`);
+  const routes = [...marketingRoutes, ...careerOpeningRoutes];
 
-  for (const route of marketingRoutes) {
+  for (const route of routes) {
     const path = route || "/";
     const languages = buildAlternateLanguages(route);
     const defaultUrl =
