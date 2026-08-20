@@ -1,14 +1,3 @@
-export const DEPARTMENT_IDS = [
-  "manufacturing",
-  "quality",
-  "productDevelopment",
-  "sustainability",
-  "commercial",
-  "hr",
-] as const;
-
-export type DepartmentId = (typeof DEPARTMENT_IDS)[number];
-
 export const EMPLOYMENT_TYPES = ["full-time", "contract", "internship"] as const;
 
 export type EmploymentType = (typeof EMPLOYMENT_TYPES)[number];
@@ -16,7 +5,7 @@ export type EmploymentType = (typeof EMPLOYMENT_TYPES)[number];
 export type JobOpening = {
   slug: string;
   title: string;
-  department: DepartmentId;
+  department: string;
   location: string;
   employmentType: EmploymentType;
   experience?: string;
@@ -32,7 +21,7 @@ export type JobOpening = {
 export type PublicOpening = {
   slug: string;
   title: string;
-  department: DepartmentId;
+  department: string;
   location: string;
   employmentType: EmploymentType;
   applicationDeadline: string;

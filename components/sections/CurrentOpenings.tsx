@@ -6,12 +6,13 @@ import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/Badge";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { formatApplyByDate } from "@/lib/careers/deadline";
-import type { DepartmentId, PublicOpening } from "@/lib/careers/types";
+import type { PublicOpening } from "@/lib/careers/types";
+import { displayDepartment } from "@/lib/hr/labels";
 import { cn } from "@/lib/utils";
 
 const FILTER_THRESHOLD = 5;
 
-type FilterValue = "all" | "internship" | DepartmentId;
+type FilterValue = "all" | "internship" | string;
 
 type CurrentOpeningsProps = {
   openings: PublicOpening[];
@@ -43,7 +44,7 @@ export function CurrentOpenings({ openings }: CurrentOpeningsProps) {
     { value: "all", label: t("openRoles.filterAll") },
     ...departmentIds.map((id) => ({
       value: id,
-      label: t(`departments.${id}`),
+      label: displayDepartment(id),
     })),
     ...(hasInternships
       ? [{ value: "internship" as const, label: t("employmentTypes.internship") }]
@@ -125,7 +126,7 @@ export function CurrentOpenings({ openings }: CurrentOpeningsProps) {
                           ) : null}
                         </div>
                         <p className="text-sm text-graphite">
-                          {t(`departments.${opening.department}`)}
+                          {displayDepartment(opening.department)}
                           <span aria-hidden> · </span>
                           {opening.location}
                           <span aria-hidden> · </span>

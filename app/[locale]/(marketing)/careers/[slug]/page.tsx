@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { formatApplyByDate } from "@/lib/careers/deadline";
 import { getAllOpeningSlugs, getOpeningBySlug, isOpeningActive } from "@/lib/careers/query";
+import { displayDepartment } from "@/lib/hr/labels";
 import { buildAlternateLanguages, siteName, siteUrl } from "@/lib/seo/config";
 import { routing } from "@/i18n/routing";
 
@@ -100,7 +101,7 @@ export default async function CareerOpeningPage({ params }: PageProps) {
                   {opening.title}
                 </h1>
                 <p className="text-base text-graphite">
-                  {t(`departments.${opening.department}`)}
+                  {displayDepartment(opening.department)}
                   <span aria-hidden> · </span>
                   {opening.location}
                   <span aria-hidden> · </span>

@@ -7,19 +7,24 @@ import { Checkbox } from "@/components/ui/Checkbox";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
-import { HR_DEPARTMENT_OPTIONS, HR_EMPLOYMENT_OPTIONS } from "@/lib/hr/labels";
+import { HR_EMPLOYMENT_OPTIONS, displayDepartment } from "@/lib/hr/labels";
+import { HrDepartmentField } from "@/components/hr/HrDepartmentField";
 import type { JobOpening } from "@/lib/careers/types";
 
 type HrJobFormProps = {
   mode: "create" | "edit";
   initial?: JobOpening;
+  departments: string[];
 };
 
-export function HrJobForm({ mode, initial }: HrJobFormProps) {
+export function HrJobForm({ mode, initial, departments: initialDepartments }: HrJobFormProps) {
   const router = useRouter();
   const [title, setTitle] = useState(initial?.title ?? "");
   const [slug, setSlug] = useState(initial?.slug ?? "");
-  const [department, setDepartment] = useState(initial?.department ?? "manufacturing");
+  const [departments, setDepartments] = useState(initialDepartments);
+  const [department, setDepartment] = useState(
+    initial?.department ? displayDepartment(initial.department) : (initialDepartments[0] ?? ""),
+  );
   const [location, setLocation] = useState(initial?.location ?? "Faisalabad");
   const [employmentType, setEmploymentType] = useState(initial?.employmentType ?? "full-time");
   const [experience, setExperience] = useState(initial?.experience ?? "");
@@ -125,12 +130,11 @@ export function HrJobForm({ mode, initial }: HrJobFormProps) {
         placeholder="quality-assurance-officer"
       />
       <div className="grid gap-6 md:grid-cols-2">
-        <Select
-          label="Department"
+        <HrDepartmentField
           value={department}
-          onChange={(event) => setDepartment(event.target.value as JobOpening["department"])}
-          options={HR_DEPARTMENT_OPTIONS.map((item) => ({ value: item.value, label: item.label }))}
-          required
+          departments={departments}
+          onChange={setDepartment}
+          onDepartmentsChange={setDepartments}
         />
         <Select
           label="Employment type"

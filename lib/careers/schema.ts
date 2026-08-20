@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { DEPARTMENT_IDS, EMPLOYMENT_TYPES } from "./types";
+import { EMPLOYMENT_TYPES } from "./types";
 
 export const jobOpeningSchema = z.object({
   slug: z
@@ -8,7 +8,7 @@ export const jobOpeningSchema = z.object({
     .min(1)
     .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Use a lowercase slug with hyphens."),
   title: z.string().trim().min(1).max(120),
-  department: z.enum(DEPARTMENT_IDS),
+  department: z.string().trim().min(1).max(80),
   location: z.string().trim().min(1).max(80),
   employmentType: z.enum(EMPLOYMENT_TYPES),
   experience: z.string().trim().max(80).optional(),
