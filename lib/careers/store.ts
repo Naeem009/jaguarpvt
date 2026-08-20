@@ -40,16 +40,51 @@ async function readFromFilesystem(): Promise<JobOpening[]> {
   return parseOpenings(raw);
 }
 
+function envValue(name: string) {
+  const value = process.env[name]?.trim();
+  return value ? value : undefined;
+}
+
 function githubConfig() {
-  const token = process.env.HR_CMS_GITHUB_TOKEN;
-  const repo = process.env.HR_CMS_GITHUB_REPO ?? "Naeem009/jaguarpvt";
-  const branch = process.env.HR_CMS_GITHUB_BRANCH ?? "master";
+  const token = envValue("HR_CMS_GITHUB_TOKEN");
+  const repo = envValue("HR_CMS_GITHUB_REPO") ?? "Naeem009/jaguarpvt";
+  const branch = envValue("HR_CMS_GITHUB_BRANCH") ?? "master";
 
   if (!token) {
     return null;
   }
 
   return { token, repo, branch };
+}
+
+function isReadOnlyHost() {
+  return Boolean(process.env.VERCEL);
+}
+
+async function persistToGithubOrFilesystem(options: {
+  writeLocal: () => Promise<void>;
+  writeGithub: () => Promise<unknown>;
+}): Promise<"filesystem" | "github"> {
+  if (githubConfig()) {
+    await options.writeGithub();
+    if (!isReadOnlyHost()) {
+      try {
+        await options.writeLocal();
+      } catch (error) {
+        console.error("[careers-store] local write skipped after GitHub save:", error);
+      }
+    }
+    return "github";
+  }
+
+  if (isReadOnlyHost()) {
+    throw new Error(
+      "Cannot save on Vercel without HR_CMS_GITHUB_TOKEN. Add it in the Vercel project settings and redeploy.",
+    );
+  }
+
+  await options.writeLocal();
+  return "filesystem";
 }
 
 async function githubRequest(url: string, token: string, init?: RequestInit) {
@@ -137,21 +172,12 @@ export async function saveJobOpenings(
 ): Promise<SaveResult> {
   const parsed = openings.map((item) => jobOpeningSchema.parse(item));
   const serialized = `${JSON.stringify(parsed, null, 2)}\n`;
+  const persistedVia = await persistToGithubOrFilesystem({
+    writeLocal: () => fs.writeFile(localFilePath, serialized, "utf8"),
+    writeGithub: () => writeToGithub(parsed, message),
+  });
 
-  try {
-    await fs.writeFile(localFilePath, serialized, "utf8");
-    if (githubConfig()) {
-      await writeToGithub(parsed, message);
-      return { openings: parsed, persistedVia: "github" };
-    }
-    return { openings: parsed, persistedVia: "filesystem" };
-  } catch (error) {
-    if (githubConfig()) {
-      await writeToGithub(parsed, message);
-      return { openings: parsed, persistedVia: "github" };
-    }
-    throw error;
-  }
+  return { openings: parsed, persistedVia };
 }
 
 function parseDepartments(raw: string): string[] {
@@ -257,19 +283,10 @@ export async function saveJobDepartments(
 ): Promise<SaveDepartmentsResult> {
   const parsed = uniqueDepartmentNames(departments);
   const serialized = `${JSON.stringify(parsed, null, 2)}\n`;
+  const persistedVia = await persistToGithubOrFilesystem({
+    writeLocal: () => fs.writeFile(localDepartmentsPath, serialized, "utf8"),
+    writeGithub: () => writeDepartmentsToGithub(parsed, message),
+  });
 
-  try {
-    await fs.writeFile(localDepartmentsPath, serialized, "utf8");
-    if (githubConfig()) {
-      await writeDepartmentsToGithub(parsed, message);
-      return { departments: parsed, persistedVia: "github" };
-    }
-    return { departments: parsed, persistedVia: "filesystem" };
-  } catch (error) {
-    if (githubConfig()) {
-      await writeDepartmentsToGithub(parsed, message);
-      return { departments: parsed, persistedVia: "github" };
-    }
-    throw error;
-  }
+  return { departments: parsed, persistedVia };
 }
