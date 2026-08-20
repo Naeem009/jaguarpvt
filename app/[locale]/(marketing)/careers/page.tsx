@@ -25,7 +25,7 @@ export default async function CareersPage({ params }: PageProps) {
   const tCommon = await getTranslations("common");
   const cultureValues = t.raw("culture.values") as Array<{ title: string; body: string; alt: string }>;
   const benefits = t.raw("benefits.items") as Array<{ title: string; body: string }>;
-  const openings = getActiveOpenings();
+  const openings = await getActiveOpenings();
 
   return (
     <main>
@@ -37,8 +37,6 @@ export default async function CareersPage({ params }: PageProps) {
         secondaryCTA={{ label: tCommon("contactUs"), href: "/contact" }}
         media={heroVideoMedia("/images/careers/hero.jpg", t("hero.alt"), "careers")}
       />
-
-      <CurrentOpenings openings={openings} />
 
       <section className="bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
@@ -108,6 +106,8 @@ export default async function CareersPage({ params }: PageProps) {
           </ul>
         </div>
       </section>
+
+      <CurrentOpenings openings={openings} />
     </main>
   );
 }

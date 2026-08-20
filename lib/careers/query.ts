@@ -1,5 +1,5 @@
 import { isClosingSoon, isDeadlineOpen } from "./deadline";
-import { jobOpenings } from "./openings";
+import { loadJobOpenings } from "./store";
 import type { JobOpening, PublicOpening } from "./types";
 
 function compareOpenings(a: JobOpening, b: JobOpening): number {
@@ -19,19 +19,26 @@ export function isOpeningActive(opening: JobOpening, now = new Date()): boolean 
   return opening.published && isDeadlineOpen(opening.applicationDeadline, now);
 }
 
-export function getActiveOpenings(now = new Date()): PublicOpening[] {
-  return jobOpenings
+export async function getAllOpenings(): Promise<JobOpening[]> {
+  return loadJobOpenings();
+}
+
+export async function getActiveOpenings(now = new Date()): Promise<PublicOpening[]> {
+  const openings = await loadJobOpenings();
+  return openings
     .filter((opening) => isOpeningActive(opening, now))
     .sort(compareOpenings)
     .map((opening) => toPublicOpening(opening, now));
 }
 
-export function getOpeningBySlug(slug: string): JobOpening | undefined {
-  return jobOpenings.find((opening) => opening.slug === slug);
+export async function getOpeningBySlug(slug: string): Promise<JobOpening | undefined> {
+  const openings = await loadJobOpenings();
+  return openings.find((opening) => opening.slug === slug);
 }
 
-export function getAllOpeningSlugs(): string[] {
-  return jobOpenings.filter((opening) => opening.published).map((opening) => opening.slug);
+export async function getAllOpeningSlugs(): Promise<string[]> {
+  const openings = await loadJobOpenings();
+  return openings.filter((opening) => opening.published).map((opening) => opening.slug);
 }
 
 export function toPublicOpening(opening: JobOpening, now = new Date()): PublicOpening {

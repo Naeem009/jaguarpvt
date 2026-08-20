@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
       return Response.json({ success: true });
     }
 
-    const opening = getOpeningBySlug(parsed.data.jobSlug);
+    const opening = await getOpeningBySlug(parsed.data.jobSlug);
     if (!opening || !isOpeningActive(opening)) {
       return Response.json({ error: "This opening is closed." }, { status: 410 });
     }

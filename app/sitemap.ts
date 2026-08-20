@@ -3,9 +3,9 @@ import { getActiveOpenings } from "@/lib/careers/query";
 import { buildAlternateLanguages, marketingRoutes, siteUrl } from "@/lib/seo/config";
 import { routing } from "@/i18n/routing";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
-  const careerOpeningRoutes = getActiveOpenings().map((opening) => `/careers/${opening.slug}`);
+  const careerOpeningRoutes = (await getActiveOpenings()).map((opening) => `/careers/${opening.slug}`);
   const routes = [...marketingRoutes, ...careerOpeningRoutes];
 
   for (const route of routes) {

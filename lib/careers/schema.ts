@@ -1,4 +1,24 @@
 import { z } from "zod";
+import { DEPARTMENT_IDS, EMPLOYMENT_TYPES } from "./types";
+
+export const jobOpeningSchema = z.object({
+  slug: z
+    .string()
+    .trim()
+    .min(1)
+    .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Use a lowercase slug with hyphens."),
+  title: z.string().trim().min(1).max(120),
+  department: z.enum(DEPARTMENT_IDS),
+  location: z.string().trim().min(1).max(80),
+  employmentType: z.enum(EMPLOYMENT_TYPES),
+  experience: z.string().trim().max(80).optional(),
+  vacancies: z.coerce.number().int().min(1).max(99),
+  pinned: z.boolean().default(false),
+  published: z.boolean().default(false),
+  applicationDeadline: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Use a YYYY-MM-DD date."),
+  overview: z.array(z.string().trim().min(1)).min(1),
+  requirements: z.array(z.string().trim().min(1)).min(1),
+});
 
 export const MAX_CV_BYTES = 5 * 1024 * 1024;
 

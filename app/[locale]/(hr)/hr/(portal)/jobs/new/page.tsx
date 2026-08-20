@@ -1,0 +1,19 @@
+import { HrJobForm } from "@/components/hr/HrJobForm";
+import { Button } from "@/components/ui/Button";
+
+export default function HrNewJobPage() {
+  return (
+    <main className="space-y-8">
+      <div className="space-y-3">
+        <Button href="/hr" variant="tertiary">
+          All openings
+        </Button>
+        <h1 className="font-display text-4xl font-semibold tracking-[-0.02em] text-ink">New opening</h1>
+        <p className="max-w-2xl text-sm leading-relaxed text-graphite">
+          Fill the form and publish. The role is listed on the Career page until the last date of application.
+        </p>
+      </div>
+      <HrJobForm mode="create" />
+    </main>
+  );
+}

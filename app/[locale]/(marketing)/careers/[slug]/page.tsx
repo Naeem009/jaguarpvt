@@ -15,8 +15,9 @@ type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-export function generateStaticParams() {
-  return getAllOpeningSlugs().map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  const slugs = await getAllOpeningSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export const revalidate = 3600;
@@ -24,7 +25,7 @@ export const revalidate = 3600;
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug, locale } = await params;
   setRequestLocale(locale);
-  const opening = getOpeningBySlug(slug);
+  const opening = await getOpeningBySlug(slug);
 
   if (!opening) {
     return {};
@@ -63,7 +64,7 @@ export default async function CareerOpeningPage({ params }: PageProps) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("careers");
-  const opening = getOpeningBySlug(slug);
+  const opening = await getOpeningBySlug(slug);
 
   if (!opening) {
     notFound();
