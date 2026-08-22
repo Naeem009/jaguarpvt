@@ -16,11 +16,14 @@ export function HrLoginForm({ configured }: { configured: boolean }) {
     setSubmitting(true);
     setError(null);
 
+    const submitted = String(new FormData(event.currentTarget).get("password") ?? password);
+
     try {
       const response = await fetch("/api/hr/login", {
         method: "POST",
+        credentials: "include",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ password: submitted }),
       });
       const data = (await response.json()) as { error?: string };
       if (!response.ok) {
@@ -37,8 +40,8 @@ export function HrLoginForm({ configured }: { configured: boolean }) {
   if (!configured) {
     return (
       <p className="text-sm leading-relaxed text-graphite">
-        The HR portal is not configured yet. Add <code className="font-mono">HR_CMS_PASSWORD</code> and{" "}
-        <code className="font-mono">HR_CMS_SECRET</code> to the environment, then reload this page.
+        The HR portal is locked until <code className="font-mono">HR_CMS_PASSWORD</code> and{" "}
+        <code className="font-mono">HR_CMS_SECRET</code> are set in Vercel (Production), then redeployed.
       </p>
     );
   }

@@ -101,6 +101,16 @@ async function githubRequest(url: string, token: string, init?: RequestInit) {
   return response;
 }
 
+function githubWriteFailure(action: string, response: Response, detail: string) {
+  if (response.status === 403 && detail.includes("Resource not accessible by personal access token")) {
+    return new Error(
+      `${action} This GitHub token can read the repo but cannot write files. On GitHub, edit the fine-grained token → Repository permissions → Contents → Read and write. Then try again (no redeploy needed if the token value is unchanged).`,
+    );
+  }
+
+  return new Error(`${action} ${detail.slice(0, 200)}`);
+}
+
 async function readFromGithub(): Promise<{ openings: JobOpening[]; sha: string } | null> {
   const config = githubConfig();
   if (!config) {
@@ -144,7 +154,7 @@ async function writeToGithub(openings: JobOpening[], message: string) {
 
   if (!response.ok) {
     const detail = await response.text();
-    throw new Error(`Unable to save job openings to GitHub. ${detail.slice(0, 200)}`);
+    throw githubWriteFailure("Unable to save job openings to GitHub.", response, detail);
   }
 
   return true;
@@ -255,7 +265,7 @@ async function writeDepartmentsToGithub(departments: string[], message: string) 
 
   if (!response.ok) {
     const detail = await response.text();
-    throw new Error(`Unable to save departments to GitHub. ${detail.slice(0, 200)}`);
+    throw githubWriteFailure("Unable to save departments to GitHub.", response, detail);
   }
 
   return true;

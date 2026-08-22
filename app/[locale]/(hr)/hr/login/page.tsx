@@ -2,6 +2,8 @@ import { redirect } from "next/navigation";
 import { getHrSession, isHrCmsConfigured } from "@/lib/hr/auth";
 import { HrLoginForm } from "@/components/hr/HrLoginForm";
 
+export const dynamic = "force-dynamic";
+
 export default async function HrLoginPage() {
   if (await getHrSession()) {
     redirect("/hr");

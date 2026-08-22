@@ -83,15 +83,24 @@ export async function DELETE(_request: Request, context: RouteContext) {
   }
 
   const { slug } = await context.params;
-  const openings = await loadCmsJobOpenings();
-  const current = openings.find((item) => item.slug === slug);
-  if (!current) {
-    return NextResponse.json({ error: "Opening not found." }, { status: 404 });
-  }
 
-  const next = openings.filter((item) => item.slug !== slug);
-  const saved = await saveJobOpenings(next, `Remove career opening: ${current.title}`);
-  revalidatePath("/careers");
-  revalidatePath(`/careers/${slug}`);
-  return NextResponse.json({ success: true, persistedVia: saved.persistedVia });
+  try {
+    const openings = await loadCmsJobOpenings();
+    const current = openings.find((item) => item.slug === slug);
+    if (!current) {
+      return NextResponse.json({ error: "Opening not found." }, { status: 404 });
+    }
+
+    const next = openings.filter((item) => item.slug !== slug);
+    const saved = await saveJobOpenings(next, `Remove career opening: ${current.title}`);
+    revalidatePath("/careers");
+    revalidatePath(`/careers/${slug}`);
+    return NextResponse.json({ success: true, persistedVia: saved.persistedVia });
+  } catch (error) {
+    console.error("[hr-jobs] delete failed:", error);
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : "Unable to remove this opening." },
+      { status: 400 },
+    );
+  }
 }
