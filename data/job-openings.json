@@ -120,7 +120,9 @@
     "overview": [
       "This listing is retained to demonstrate closed-role behaviour after the last date of application."
     ],
-    "requirements": ["Not accepting applications."]
+    "requirements": [
+      "Not accepting applications."
+    ]
   },
   {
     "slug": "people-operations-coordinator",
@@ -133,7 +135,29 @@
     "pinned": false,
     "published": false,
     "applicationDeadline": "2026-12-31",
-    "overview": ["Unpublished draft — not visible on the Career page."],
-    "requirements": ["Not published."]
+    "overview": [
+      "Unpublished draft — not visible on the Career page."
+    ],
+    "requirements": [
+      "Not published."
+    ]
+  },
+  {
+    "slug": "oracle-developer",
+    "title": "Oracle Developer",
+    "department": "Information Technology",
+    "location": "Faisalabad",
+    "employmentType": "full-time",
+    "experience": "2-4 Years",
+    "vacancies": 1,
+    "pinned": true,
+    "published": true,
+    "applicationDeadline": "2026-08-23",
+    "overview": [
+      "Oracle"
+    ],
+    "requirements": [
+      "Developer"
+    ]
   }
 ]
